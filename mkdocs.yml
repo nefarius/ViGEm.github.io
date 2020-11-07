@@ -1,0 +1,26 @@
+site_name: Virtual Gamepad Emulation Framework
+theme:
+  name: material
+  favicon: images/favicon.png
+  features:
+    - navigation.expand
+  palette:
+    primary: teal
+plugins:
+  - search:
+      lang: en
+markdown_extensions:
+  - admonition:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+  - pymdownx.tabbed:
+  - pymdownx.superfences:
+  - pymdownx.keys:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details:
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      social_url_shorthand: true
