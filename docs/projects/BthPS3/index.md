@@ -1,4 +1,6 @@
-# About
+# About BthPS3
+
+!!! important "Work in progress"
 
 Welcome to the BthPS3 wiki!
 
