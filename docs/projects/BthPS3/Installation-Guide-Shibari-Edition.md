@@ -61,7 +61,7 @@ Fear not, we're almost at the finish line! Now comes the part that's a bit rough
 
 ### Get all the files
 
-Download and store all the fun listed here somewhere on your battle station :the_horns: 
+Download and store all the fun listed here somewhere on your battle station :the_horns:
 
 - Get the latest `Shibari.zip` [from here](https://buildbot.vigem.org/builds/Shibari/master/) (always pick the highest version number from the bottom for most recent release)
   - This plays the "middle man" between all those drivers you'll install
@@ -79,7 +79,7 @@ Download and store all the fun listed here somewhere on your battle station :the
 
 You made it this far? Great! Remember that `Shibari` archive from earlier? Extract that somewhere and have a look into the resulting folder. Simply fire up `Shibari.Dom.Server.exe` in there and your connected DS3 should spawn a virtual Xbox 360 and DualShock 4 controller which your games can pick up. **Keep `Shibari` running for everything to work properly!** Check the following F.A.Q. to see how to make it run permanently. Enjoy!
 
-![a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png](/assets/uploads/files/1575933331699-a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png) 
+![a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png](/assets/uploads/files/a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png)
 
 ## F.A.Q.
 
@@ -135,7 +135,7 @@ Open `settings.json` in your Shibari folder and check out the comments in the `"
 
 `FireShock` and Sonys official `sixaxis` driver they ship with PSNow unfortunately can't coexist on the same system, if you want "traditional" USB support back you need to uninstall `FireShock`:
 
-![7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png](/assets/uploads/files/1575972083050-7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png) 
+![7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png)
 
 ### Ever since I've installed this, my DS4 isn't connecting anymore at all!
 
@@ -147,7 +147,7 @@ This is a bit tricky at the moment; I've added a workaround to combat this where
 
 [Fire up PowerShell as Administrator](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/) and run the `Shibari.Dom.Server.exe` file with `install` as an argument, like so:
 
-![bca87e6e-473e-4445-8f6b-bc7017518e91-image.png](/assets/uploads/files/1548872939180-bca87e6e-473e-4445-8f6b-bc7017518e91-image.png)
+![bca87e6e-473e-4445-8f6b-bc7017518e91-image.png](/assets/uploads/files/bca87e6e-473e-4445-8f6b-bc7017518e91-image.png)
 
 The path to the executable file has to match the one on your machine of course 😉
 
@@ -163,7 +163,7 @@ Check that the service is running:
 Get-Service Shibari.Dom.Server
 ```
 
-![b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png](/assets/uploads/files/1548872949915-b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png)
+![b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png](/assets/uploads/files/b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png)
 
 Done, delightful 😃
 
@@ -177,7 +177,7 @@ If you sport some of those lovely ~~fake~~ aftermarket devices from questionable
 
 ***Stay tuned, more answers coming soon...***
 
-![Alastor](h/assets/uploads/files/65ffc789b05211faf1585083e2382c0b.gif)
+![Alastor](/assets/uploads/files/65ffc789b05211faf1585083e2382c0b.gif)
 
 ---
 
