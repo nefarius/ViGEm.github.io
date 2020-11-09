@@ -35,7 +35,7 @@ So play along and ensure it's happy, will ya :grinning:
 
 :point_right: Hit Next :eyes:
 
-![a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png](/assets/uploads/files/1574695571454-a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png) 
+![a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png](/assets/uploads/files/1574695571454-a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png)
 
 :point_right: Ignore and accept the license agreement where I get to claim possession over your kitchen appliances :honey_pot:
 
@@ -51,7 +51,7 @@ So play along and ensure it's happy, will ya :grinning:
 
 :tada: You did it! You made it through the setup, I'm so proud of you :heart:
 
-![26e9b22a-70dc-476a-a10a-81377d22015a-image.png](/assets/uploads/files/1574695628467-26e9b22a-70dc-476a-a10a-81377d22015a-image.png) 
+![26e9b22a-70dc-476a-a10a-81377d22015a-image.png](/assets/uploads/files/1574695628467-26e9b22a-70dc-476a-a10a-81377d22015a-image.png)
 
 Now since the "Show next steps" button currently suffers from some existential issues I'll tell you right now where to go next. [Click here and continue!](https://forums.vigem.org/topic/357/bthps3-post-setup-instructions)  
 
@@ -59,4 +59,5 @@ Now since the "Show next steps" button currently suffers from some existential i
 
 !!! important "Copyright (C) 2018-2020 - Nefarius Software Solutions e.U."
     This is a community project and not affiliated with Sony Interactive Entertainment Inc. in any way.
+    
     "PlayStation", "PSP", "PS2", "PS one", "DUALSHOCK" and "SIXAXIS" are registered trademarks of Sony Interactive Entertainment Inc.
