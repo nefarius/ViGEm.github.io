@@ -1,4 +1,4 @@
-# PlayStation(R) 3 Peripherals Unofficial Bluetooth Drivers (BthPS3)
+# Installation Guide (Shibari Edition)
 
 ![Logo](https://forums.vigem.org/assets/uploads/files/b3_resized_256.png)
 
@@ -59,5 +59,5 @@ Now since the "Show next steps" button currently suffers from some existential i
 
 !!! important "Copyright (C) 2018-2020 - Nefarius Software Solutions e.U."
     This is a community project and not affiliated with Sony Interactive Entertainment Inc. in any way.
-    
+
     "PlayStation", "PSP", "PS2", "PS one", "DUALSHOCK" and "SIXAXIS" are registered trademarks of Sony Interactive Entertainment Inc.
