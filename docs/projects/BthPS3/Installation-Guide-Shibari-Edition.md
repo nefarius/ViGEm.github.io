@@ -16,7 +16,7 @@ Sounds exciting? Want to join the herd and risk getting your PC turned into some
 
 Simple! Just **latest Windows 10** and any Bluetooth USB device or integrated card (like those you commonly find in portable computers, a.k.a. Laptops) running stock (a.k.a vanilla) drivers! No [SCP](https://github.com/nefarius/ScpToolkit), no [AirBender](https://github.com/ViGEm/AirBender), just the defaults :smiley: (well, not quite, but keep on reading 'till the bottom of the page! :eyes: )
 
-![802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png](/assets/uploads/files/1575932375332-802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png) 
+![802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png](/assets/uploads/files/802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png)
 
 ## Sweet, give me! How to install
 
