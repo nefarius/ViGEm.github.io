@@ -20,7 +20,7 @@ Simple! Just **latest Windows 10** and any Bluetooth USB device or integrated ca
 
 ## Sweet, give me! How to install
 
-!!! attention "Download Setup for Windows 10"
+!!! info "Download Setup for Windows 10"
     [Latest BthPS3 Bluetooth Drivers](https://github.com/ViGEm/BthPS3/releases/latest)
 
 :point_up: Grab and run the setup, it will tell you everything but I'll repeat again, just in case :wink:
