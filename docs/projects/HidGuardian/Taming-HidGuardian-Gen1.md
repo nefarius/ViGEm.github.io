@@ -8,7 +8,7 @@ Now, first of all let's see if HidGuardian is even present (because if not, well
 
 !!! example "PowerShell"
     ```PowerShell
-    Get-PnpDevice -FriendlyName "HidGuardian Virtual Device"
+    Get-PnpDevice -FriendlyName "HidGuardian Virtual Device" -ErrorAction SilentlyContinue
     ```
 
 This may result in no, one or more new lines like so:
