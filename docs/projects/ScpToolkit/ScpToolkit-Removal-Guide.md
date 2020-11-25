@@ -149,10 +149,10 @@ Not sure if everything's cleaned up like it should? :thinking_face:  Devices sti
 - Extract it somewhere
 - Launch the `DevManView.exe` executable (you'll be prompted to give administrative consent)
 - Look for entries with `Device Name` like
-  - `Scp Virtual Bus Driver`
-  - `Bluetooth Host (ScpToolkit)`
-  - `DualShock 3 Controller (ScpToolkit)`
-  - `DualShock 4 Controller (ScpToolkit)`
+    - `Scp Virtual Bus Driver`
+    - `Bluetooth Host (ScpToolkit)`
+    - `DualShock 3 Controller (ScpToolkit)`
+    - `DualShock 4 Controller (ScpToolkit)`
 
 Example of some ScpToolkit **v1.7.x** residue:
 
