@@ -15,6 +15,12 @@ DS4Windows is a portable program that allows you to get the best experience whil
 
 ## x360ce
 
+"Xbox 360 Controller Emulator" allows your controller (gamepad, joystick, wheel, etc.) to function as an Xbox 360 controller. For example, it lets you play games such as "Grand Theft Auto" (GTA) or "Mafia II" using a Logitech Wheel.
+
+!!! note "Xbox 360 Controller Emulator"
+    👉 **Website:** [www.x360ce.com](https://www.x360ce.com//)  
+    👉 **GitHub:** [github.com/x360ce/x360ce](https://github.com/x360ce/x360ce)
+
 ## XOutput
 
 If you have an older or not supported game controller (gamepad, wheel, joystick, etc.), but XBox 360 controllers are supported you can use this software and enjoy gaming with your controller.
@@ -42,7 +48,15 @@ A tool for configuring and automating HidGuardian.
 
 HIDer is an open source application that allows you to manage HidGuardian in order to hide chosen controllers from being seen by games/applications (that are not whitelisted). This is useful when some games/applications have issues with specific controllers that are connected.
 
-!!! note "HIDer allows you to manage HidGuardian in order to hide chosen controllers from being seen by games/applications"
+!!! note "HIDer allows you to manage HidGuardian..."
     👉 **GitHub:** [github.com/samehb/HIDer](https://github.com/samehb/HIDer)
 
 ## JoyShockMapper
+
+The Sony PlayStation DualSense, DualShock 4, Nintendo Switch JoyCons (used in pairs), and Nintendo Switch Pro Controller have much in common. They have many of the features expected of modern game controllers. They also have an incredibly versatile and underutilised input that their biggest rival (Microsoft's Xbox One controller) doesn't have: a 3-axis gyroscope (from here on, “gyro”).
+
+My goal with JoyShockMapper is to enable you to play PC games with DS, DS4, JoyCons, and Pro Controllers even better than you can on their respective consoles -- and demonstrate that more games should use these features in these ways.
+
+!!! note "About
+A tool for PC gamers to play games with DualShock 4s, JoyCons, ..."
+    👉 **GitHub:** [github.com/JibbSmart/JoyShockMapper](https://github.com/JibbSmart/JoyShockMapper)
