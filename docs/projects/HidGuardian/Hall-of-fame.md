@@ -57,6 +57,5 @@ The Sony PlayStation DualSense, DualShock 4, Nintendo Switch JoyCons (used in pa
 
 My goal with JoyShockMapper is to enable you to play PC games with DS, DS4, JoyCons, and Pro Controllers even better than you can on their respective consoles -- and demonstrate that more games should use these features in these ways.
 
-!!! note "About
-A tool for PC gamers to play games with DualShock 4s, JoyCons, ..."
+!!! note "A tool for PC gamers to play games with DualShock 4s, JoyCons, ..."
     👉 **GitHub:** [github.com/JibbSmart/JoyShockMapper](https://github.com/JibbSmart/JoyShockMapper)
