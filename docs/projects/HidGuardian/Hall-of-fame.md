@@ -10,7 +10,7 @@ Over its lifespan the project has seen some adoption in the following projects. 
 DS4Windows is a portable program that allows you to get the best experience while using a DualShock 4 on your PC. By emulating a Xbox 360 controller, many more games are accessible.
 
 !!! note "Use your PS4 Controller on your PC to its full potential"
-    👉 **Website:** [ryochan7.github.io/ds4windows-site](https://ryochan7.github.io/ds4windows-site/)\
+    👉 **Website:** [ryochan7.github.io/ds4windows-site](https://ryochan7.github.io/ds4windows-site/)  
     👉 **GitHub:** [github.com/Ryochan7/DS4Windows](https://github.com/Ryochan7/DS4Windows/)
 
 ## x360ce
@@ -40,5 +40,9 @@ A tool for configuring and automating HidGuardian.
 
 ## HIDer
 
-## JoyShockMapper
+HIDer is an open source application that allows you to manage HidGuardian in order to hide chosen controllers from being seen by games/applications (that are not whitelisted). This is useful when some games/applications have issues with specific controllers that are connected.
 
+!!! note "HIDer allows you to manage HidGuardian in order to hide chosen controllers from being seen by games/applications"
+    👉 **GitHub:** [github.com/samehb/HIDer](https://github.com/samehb/HIDer)
+
+## JoyShockMapper
