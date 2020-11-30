@@ -1,8 +1,5 @@
 # Users of HidGuardian
 
-!!! attention "Page under construction"
-    🚧
-
 Over its lifespan the project has seen some adoption in the following projects. This list is most probably incomplete, please help expanding it by [contributing to it](https://github.com/ViGEm/ViGEm.github.io). The projects listed are made by 3rd party individuals, we can not provide any form of warranty or support. Appearance in no particular order.
 
 ## DS4Windows
