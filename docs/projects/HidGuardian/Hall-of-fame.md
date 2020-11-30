@@ -7,19 +7,36 @@ Over its lifespan the project has seen some adoption in the following projects. 
 
 ## DS4Windows
 
-!!! note "Project pages"
-    👉 **Website:** [ryochan7.github.io/ds4windows-site](https://ryochan7.github.io/ds4windows-site/)  
-    👉 **GitHub:** [github.com/Ryochan7/DS4Windows](https://github.com/Ryochan7/DS4Windows/)
-
 DS4Windows is a portable program that allows you to get the best experience while using a DualShock 4 on your PC. By emulating a Xbox 360 controller, many more games are accessible.
+
+!!! note "Use your PS4 Controller on your PC to its full potential"
+    👉 **Website:** [ryochan7.github.io/ds4windows-site](https://ryochan7.github.io/ds4windows-site/)\
+    👉 **GitHub:** [github.com/Ryochan7/DS4Windows](https://github.com/Ryochan7/DS4Windows/)
 
 ## x360ce
 
 ## XOutput
 
+If you have an older or not supported game controller (gamepad, wheel, joystick, etc.), but XBox 360 controllers are supported you can use this software and enjoy gaming with your controller.
+
+XOutput is a software that can convert DirectInput into XInput. DirectInput data is read and sent to a virtual XInput (Xbox 360 Controller) device. XInput is the new standard game controller input on windows, and DirectInput can no longer be used with Universal Windows Platform software, but with this tool you can use DirectInput devices as well.
+
+!!! note "DirectInput to XInput wrapper"
+    👉 **GitHub:** [github.com/csutorasa/XOutput](https://github.com/csutorasa/XOutput)
+
 ## InputMapper
 
+Input Mapper is designed to bridge the gap between the devices you use and the games you play.
+
+!!! note "Windows application allowing mapping of input/output devices to other input/output devices"
+    👉 **Website:** [inputmapper.com](https://inputmapper.com/)
+
 ## HidVanguard
+
+A tool for configuring and automating HidGuardian.
+
+!!! note "A tool for configuring and automating HidGuardian"
+    👉 **GitHub:** [github.com/dixonte/HidVanguard](https://github.com/dixonte/HidVanguard)
 
 ## HIDer
 
