@@ -26,6 +26,8 @@ XOutput is a software that can convert DirectInput into XInput. DirectInput data
 
 [![Website](https://img.shields.io/badge/Website-yellowgreen?logo=html5)](https://inputmapper.com/)
 
+Input Mapper is designed to bridge the gap between the devices you use and the games you play.
+
 ## HidVanguard
 
 [![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/dixonte/HidVanguard)
