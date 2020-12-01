@@ -47,3 +47,9 @@ HIDer is an open source application that allows you to manage HidGuardian in ord
 The Sony PlayStation DualSense, DualShock 4, Nintendo Switch JoyCons (used in pairs), and Nintendo Switch Pro Controller have much in common. They have many of the features expected of modern game controllers. They also have an incredibly versatile and underutilised input that their biggest rival (Microsoft's Xbox One controller) doesn't have: a 3-axis gyroscope (from here on, “gyro”).
 
 My goal with JoyShockMapper is to enable you to play PC games with DS, DS4, JoyCons, and Pro Controllers even better than you can on their respective consoles -- and demonstrate that more games should use these features in these ways.
+
+## Joystick Gremlin
+
+[![Website](https://img.shields.io/badge/Website-yellowgreen?logo=html5)](https://whitemagic.github.io/JoystickGremlin/) [![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/WhiteMagic/JoystickGremlin)
+
+Joystick Gremlin is a program that allows the configuration of joystick like devices, similar to what CH Control Manager and Thrustmaster's T.A.R.G.E.T. do for their respectively supported joysticks. However, Joystick Gremlin works with any device be it from different manufacturers or custom devices that appear as a joystick to Windows. Joystick Gremlin uses the virtual joysticks provided by vJoy to map physical to virtual inputs and apply various other transformations such as response curves to analogue axes. In addition to customizing joysticks, Joystick Gremlin also provides powerful macro functionalities, a flexible mode system, scripting using Python, and many other features.
