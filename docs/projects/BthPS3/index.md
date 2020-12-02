@@ -1,5 +1,7 @@
 # About BthPS3
 
+[![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/ViGEm/BthPS3)
+
 !!! important "Work in progress"
 
 Welcome to the BthPS3 wiki!
