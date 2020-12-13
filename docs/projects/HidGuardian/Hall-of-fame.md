@@ -53,3 +53,9 @@ My goal with JoyShockMapper is to enable you to play PC games with DS, DS4, JoyC
 [![Website](https://img.shields.io/badge/Website-yellowgreen?logo=html5)](https://whitemagic.github.io/JoystickGremlin/) [![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/WhiteMagic/JoystickGremlin)
 
 Joystick Gremlin is a program that allows the configuration of joystick like devices, similar to what CH Control Manager and Thrustmaster's T.A.R.G.E.T. do for their respectively supported joysticks. However, Joystick Gremlin works with any device be it from different manufacturers or custom devices that appear as a joystick to Windows. Joystick Gremlin uses the virtual joysticks provided by vJoy to map physical to virtual inputs and apply various other transformations such as response curves to analogue axes. In addition to customizing joysticks, Joystick Gremlin also provides powerful macro functionalities, a flexible mode system, scripting using Python, and many other features.
+
+## BetterJoy
+
+[![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/Davidobot/BetterJoy)
+
+Allows the Nintendo Switch Pro Controller, Joycons and SNES controller to be used with CEMU, Citra, Dolphin, Yuzu and as generic XInput.
