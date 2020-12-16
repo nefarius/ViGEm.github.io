@@ -59,3 +59,9 @@ Joystick Gremlin is a program that allows the configuration of joystick like dev
 [![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/Davidobot/BetterJoy)
 
 Allows the Nintendo Switch Pro Controller, Joycons and SNES controller to be used with CEMU, Citra, Dolphin, Yuzu and as generic XInput.
+
+## ProconXInput
+
+[![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/MTCKC/ProconXInput)
+
+A Windows user-mode XInput driver for the Switch Pro Controller.
