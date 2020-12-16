@@ -65,3 +65,13 @@ Allows the Nintendo Switch Pro Controller, Joycons and SNES controller to be use
 [![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/MTCKC/ProconXInput)
 
 A Windows user-mode XInput driver for the Switch Pro Controller.
+
+## Auto-Whitelister
+
+[![Website](https://img.shields.io/badge/Website-yellowgreen?logo=html5)](https://www.autohotkey.com/boards/viewtopic.php?t=34890)
+
+This is a solution for stopping games from seeing a DirectInput stick (Basically any stick except Xbox controllers) on your system.
+
+For ages we have been able to create virtual controllers and remap a stick to that, but in the past we have not been able to stop the game from seeing the physical stick.
+
+Well now we have a proper solution: The HidGuardian / HidCerberus components from ViGEm. HidGuardian is a device driver that you install which can hide sticks from the system. HidCerberus is a windows service that allows you to "whitelist" a process (eg your AHK script) so that your script is the ONLY thing on the system that can see through HidGuardian and read the stick. The stick even disappears from the joystick control panel in windows!
