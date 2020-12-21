@@ -13,7 +13,7 @@ Now, first of all let's see if HidGuardian is even present (because if not, well
 
 This may result in no, one or more new lines like so:
 
-![hg1.png](/assets/uploads/files/1588618224736-hg1.png)
+[![hg1.png](/assets/uploads/files/1588618224736-hg1.png)](/assets/uploads/files/1588618224736-hg1.png){: .glightbox }
 
 **If** there is at least one result like shown above chances are high we're on the right track. Next, execute:
 
@@ -22,7 +22,7 @@ This may result in no, one or more new lines like so:
     Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Class\{745a17a0-74d3-11d0-b6fe-00a0c90f57da}' -Name 'UpperFilters' -ErrorAction SilentlyContinue
     ```
 
-![adb623e4-a38a-41d6-add4-95b1e27fadc3-image.png](/assets/uploads/files/1588618398718-adb623e4-a38a-41d6-add4-95b1e27fadc3-image.png) 
+[![adb623e4-a38a-41d6-add4-95b1e27fadc3-image.png](/assets/uploads/files/1588618398718-adb623e4-a38a-41d6-add4-95b1e27fadc3-image.png)](/assets/uploads/files/1588618398718-adb623e4-a38a-41d6-add4-95b1e27fadc3-image.png){: .glightbox }
 
 If `UpperFilters` exists and contains the string `HidGuardian`, the track has gotten red hot and we're onto something! Keep on reading!
 
@@ -35,7 +35,7 @@ Next we check a particular registry value:
 
 Chances are you might see a similar output. Now we're certain that HidGuardian is at fault hiding the controller. Oh No!
 
-![a57312e0-3ca3-42d2-b526-4d26d54e3c09-image.png](/assets/uploads/files/1588618303458-a57312e0-3ca3-42d2-b526-4d26d54e3c09-image.png) 
+[![a57312e0-3ca3-42d2-b526-4d26d54e3c09-image.png](/assets/uploads/files/1588618303458-a57312e0-3ca3-42d2-b526-4d26d54e3c09-image.png)](/assets/uploads/files/1588618303458-a57312e0-3ca3-42d2-b526-4d26d54e3c09-image.png){: .glightbox }
 
 Let's mitigate the situation by safely removing this value:
 
