@@ -16,7 +16,7 @@ Sounds exciting? Want to join the herd and risk getting your PC turned into some
 
 Simple! Just **latest Windows 10** and any Bluetooth USB device or integrated card (like those you commonly find in portable computers, a.k.a. Laptops) running stock (a.k.a vanilla) drivers! No [SCP](https://github.com/nefarius/ScpToolkit), no [AirBender](https://github.com/ViGEm/AirBender), just the defaults :smiley: (well, not quite, but keep on reading 'till the bottom of the page! :eyes: )
 
-![802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png](/assets/uploads/files/802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png)
+[![802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png](/assets/uploads/files/802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png)](/assets/uploads/files/802ebf28-a2a8-4c78-902d-1370a3d01b25-image.png){: .glightbox }
 
 ## Sweet, give me! How to install
 
@@ -35,29 +35,29 @@ So play along and ensure it's happy, will ya :grinning:
 
 :point_right: Hit Next :eyes:
 
-![a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png](/assets/uploads/files/1574695571454-a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png)
+[![a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png](/assets/uploads/files/1574695571454-a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png)](/assets/uploads/files/1574695571454-a1de6fcc-0bf3-4c59-bf28-ac4a8c0f3e04-image.png){: .glightbox }
 
 :point_right: Ignore and accept the license agreement where I get to claim possession over your kitchen appliances :honey_pot:
 
-![56821155-69c8-4692-9a7b-22ff3ef3041b-image.png](/assets/uploads/files/1581628856979-56821155-69c8-4692-9a7b-22ff3ef3041b-image.png)
+[![56821155-69c8-4692-9a7b-22ff3ef3041b-image.png](/assets/uploads/files/1581628856979-56821155-69c8-4692-9a7b-22ff3ef3041b-image.png)](/assets/uploads/files/1581628856979-56821155-69c8-4692-9a7b-22ff3ef3041b-image.png){: .glightbox }
 
 :point_right: Only one more step, you're almost there! Hit Install :eyes:
 
-![efb25f48-0496-45b6-9b87-b6cac300f076-image.png](/assets/uploads/files/1574695595080-efb25f48-0496-45b6-9b87-b6cac300f076-image.png)
+[![efb25f48-0496-45b6-9b87-b6cac300f076-image.png](/assets/uploads/files/1574695595080-efb25f48-0496-45b6-9b87-b6cac300f076-image.png)](/assets/uploads/files/1574695595080-efb25f48-0496-45b6-9b87-b6cac300f076-image.png){: .glightbox }
 
 :point_right: Oh my, things are happening :astonished:
 
-![1cc17b1e-537e-4456-a355-008e767e74d3-image.png](/assets/uploads/files/1574695607872-1cc17b1e-537e-4456-a355-008e767e74d3-image.png)
+[![1cc17b1e-537e-4456-a355-008e767e74d3-image.png](/assets/uploads/files/1574695607872-1cc17b1e-537e-4456-a355-008e767e74d3-image.png)](/assets/uploads/files/1574695607872-1cc17b1e-537e-4456-a355-008e767e74d3-image.png){: .glightbox }
 
 :tada: You did it! You made it through the setup, I'm so proud of you :heart:
 
-![26e9b22a-70dc-476a-a10a-81377d22015a-image.png](/assets/uploads/files/1574695628467-26e9b22a-70dc-476a-a10a-81377d22015a-image.png)
+[![26e9b22a-70dc-476a-a10a-81377d22015a-image.png](/assets/uploads/files/1574695628467-26e9b22a-70dc-476a-a10a-81377d22015a-image.png)](/assets/uploads/files/1574695628467-26e9b22a-70dc-476a-a10a-81377d22015a-image.png){: .glightbox }
 
 Now since the "Show next steps" button currently suffers from some existential issues I'll tell you right now what to do next.
 
 ## Alright, that was scary, what to do next?
 
-Fear not, we're almost at the finish line! Now comes the part that's a bit rough but together we shall succeed! 
+Fear not, we're almost at the finish line! Now comes the part that's a bit rough but together we shall succeed!
 
 ### Get all the files
 
@@ -79,7 +79,7 @@ Download and store all the fun listed here somewhere on your battle station :the
 
 You made it this far? Great! Remember that `Shibari` archive from earlier? Extract that somewhere and have a look into the resulting folder. Simply fire up `Shibari.Dom.Server.exe` in there and your connected DS3 should spawn a virtual Xbox 360 and DualShock 4 controller which your games can pick up. **Keep `Shibari` running for everything to work properly!** Check the following F.A.Q. to see how to make it run permanently. Enjoy!
 
-![a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png](/assets/uploads/files/a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png)
+[![a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png](/assets/uploads/files/a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png)](/assets/uploads/files/a86fcc5f-bfd5-4c29-9b47-633d7ffbdc72-image.png){: .glightbox }
 
 ## F.A.Q.
 
@@ -111,11 +111,11 @@ That is possible but out of the scope of this project.
 
 That is possible but out of the scope of this project.
 
-### I want some battery charge indicator, like SCP! 
+### I want some battery charge indicator, like SCP!
 
 That is possible but out of the scope of this project.
 
-### Can I have all SCP features like quick disconnect combo etc.? 
+### Can I have all SCP features like quick disconnect combo etc.?
 
 That is possible but out of the scope of this project.
 
@@ -129,13 +129,13 @@ That's intentional; not every tweak and fix the setup itself receives necessaril
 
 ### I want a DualShock 4 emulated, not an Xbox 360 controller!
 
-Open `settings.json` in your Shibari folder and check out the comments in the `"sinks"` section :wink: 
+Open `settings.json` in your Shibari folder and check out the comments in the `"sinks"` section :wink:
 
 ### Ever since I've installed this, my DS3 isn't working anymore in PSNow!
 
 `FireShock` and Sonys official `sixaxis` driver they ship with PSNow unfortunately can't coexist on the same system, if you want "traditional" USB support back you need to uninstall `FireShock`:
 
-![7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png)
+[![7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png)](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png){: .glightbox }
 
 ### Ever since I've installed this, my DS4 isn't connecting anymore at all!
 
@@ -147,7 +147,7 @@ This is a bit tricky at the moment; I've added a workaround to combat this where
 
 [Fire up PowerShell as Administrator](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/) and run the `Shibari.Dom.Server.exe` file with `install` as an argument, like so:
 
-![bca87e6e-473e-4445-8f6b-bc7017518e91-image.png](/assets/uploads/files/bca87e6e-473e-4445-8f6b-bc7017518e91-image.png)
+[![bca87e6e-473e-4445-8f6b-bc7017518e91-image.png](/assets/uploads/files/bca87e6e-473e-4445-8f6b-bc7017518e91-image.png)](/assets/uploads/files/bca87e6e-473e-4445-8f6b-bc7017518e91-image.png){: .glightbox }
 
 The path to the executable file has to match the one on your machine of course 😉
 
@@ -163,7 +163,7 @@ Check that the service is running:
 Get-Service Shibari.Dom.Server
 ```
 
-![b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png](/assets/uploads/files/b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png)
+[![b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png](/assets/uploads/files/b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png)](/assets/uploads/files/b99c4a26-c6fa-4c3d-8186-f63d21412955-image.png){: .glightbox }
 
 Done, delightful 😃
 
