@@ -21,7 +21,7 @@ Once open, paste the following three lines into it "as is" and hit enter:
 
 Should looks similar to this:
 
-![PowerShell](/images/35cnHUOIwv.png)
+[![PowerShell](/images/35cnHUOIwv.png)](/images/35cnHUOIwv.png){: .glightbox }
 
 ### Perform the action you want captured
 
@@ -38,7 +38,7 @@ Once everything we like to know has been captured, stop the session so the data 
 
 The log file should now exist under the C:\\-Drive:
 
-![Folder](/images/AnyDesk_LVe8LzooAQ.png)
+[![Folder](/images/AnyDesk_LVe8LzooAQ.png)](/images/AnyDesk_LVe8LzooAQ.png){: .glightbox }
 
 ## Great, I got it, what now
 
@@ -55,10 +55,10 @@ Obtain a copy of [MGTEK TraceView Plus 3](https://www.mgtek.com/traceview) and i
 !!! important "MGTEK TraceView Plus 3"
     This software is **not** freeware. It offers a free evaluation version with a generous time of 30 days trial limit and a simple nag screen. If you plan on utilizing its features frequently [you can obtain a licensed copy on their shop](https://www.mgtek.com/traceview/shop). Thanks for supporting great software 🥰
 
-![TraceView_PZJBtRmyn5.png](/images/TraceView_PZJBtRmyn5.png)
+[![TraceView_PZJBtRmyn5.png](/images/TraceView_PZJBtRmyn5.png)](/images/TraceView_PZJBtRmyn5.png){: .glightbox }
 
-![TraceView_OtoTHylNPh.png](/images/TraceView_OtoTHylNPh.png)
+[![TraceView_OtoTHylNPh.png](/images/TraceView_OtoTHylNPh.png)](/images/TraceView_OtoTHylNPh.png){: .glightbox }
 
-![TraceView_GC5KAg7ee8.png](/images/TraceView_GC5KAg7ee8.png)
+[![TraceView_GC5KAg7ee8.png](/images/TraceView_GC5KAg7ee8.png)](/images/TraceView_GC5KAg7ee8.png){: .glightbox }
 
-![TraceView_ju8ERmEEUL.png](/images/TraceView_ju8ERmEEUL.png)
+[![TraceView_ju8ERmEEUL.png](/images/TraceView_ju8ERmEEUL.png)](/images/TraceView_ju8ERmEEUL.png){: .glightbox }

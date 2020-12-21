@@ -17,20 +17,20 @@ Alternative names:
 
 ## Product pictures
 
-![Controller](/images/61qdiSaiePL._AC_SX679_.jpg)
+[![Controller](/images/61qdiSaiePL._AC_SX679_.jpg)](/images/61qdiSaiePL._AC_SX679_.jpg){: .glightbox }
 
-![Controller](/images/71dnU4cCpnL._AC_SX679_.jpg)
+[![Controller](/images/71dnU4cCpnL._AC_SX679_.jpg)](/images/71dnU4cCpnL._AC_SX679_.jpg){: .glightbox }
 
-![Controller](/images/20201104_225115.jpg)
+[![Controller](/images/20201104_225115.jpg)](/images/20201104_225115.jpg){: .glightbox }
 
 ## Wireshark
 
 A packet capture exposes the channel open response sent by the Windows Bluetooth stack as set to `Result: Refused - security block (0x0003)`:
 
-![Wireshark](/images/fHOkn7s9Be.png)
+[![Wireshark](/images/fHOkn7s9Be.png)](/images/fHOkn7s9Be.png){: .glightbox }
 
 ## Event Viewer
 
 This type of connection error is logged in the Windows Event Log in the System log, reported by `BTHUSB` as `Windows rejected a device connection because the device didn't establish encryption prior to the service level connection.`:
 
-![Eventviewer](/images/AnyDesk_1st9aPmQro.png)
+[![Eventviewer](/images/AnyDesk_1st9aPmQro.png)](/images/AnyDesk_1st9aPmQro.png){: .glightbox }
