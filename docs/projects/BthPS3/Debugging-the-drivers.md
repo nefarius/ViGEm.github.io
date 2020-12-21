@@ -55,10 +55,28 @@ Obtain a copy of [MGTEK TraceView Plus 3](https://www.mgtek.com/traceview) and i
 !!! important "MGTEK TraceView Plus 3"
     This software is **not** freeware. It offers a free evaluation version with a generous time of 30 days trial limit and a simple nag screen. If you plan on utilizing its features frequently [you can obtain a licensed copy on their shop](https://www.mgtek.com/traceview/shop). Thanks for supporting great software 🥰
 
+You should now be able to simply double-click the `BthPS3.etl` we created before and it should open in TraceView Plus. If not, open Trace View Plus and use `File / Open Trace Log...` and navigate to the `BthPS3.etl` file like so:
+
+[![HaKTOUJbIE.png](/images/HaKTOUJbIE.png)](/images/HaKTOUJbIE.png){: .glightbox }
+
+Once opened you should see some oddly formatted lines similar to this:
+
 [![TraceView_PZJBtRmyn5.png](/images/TraceView_PZJBtRmyn5.png)](/images/TraceView_PZJBtRmyn5.png){: .glightbox }
+
+Trat's no good, TraceView Plus needs some information on how to decode the content into a useful format. So we navigate to `Session / Add Trace Files...` like so:
 
 [![TraceView_OtoTHylNPh.png](/images/TraceView_OtoTHylNPh.png)](/images/TraceView_OtoTHylNPh.png){: .glightbox }
 
+Now navigate to the BthPS3 installation folder on your local drive and select **both** PDB files like shown:
+
 [![TraceView_GC5KAg7ee8.png](/images/TraceView_GC5KAg7ee8.png)](/images/TraceView_GC5KAg7ee8.png){: .glightbox }
 
+Now the display should change and readable text will appear:
+
 [![TraceView_ju8ERmEEUL.png](/images/TraceView_ju8ERmEEUL.png)](/images/TraceView_ju8ERmEEUL.png){: .glightbox }
+
+Alright, now you can navigate the content of the trace, newest events on the bottom, oldest on top.
+
+## Fancy, but what do I do with that
+
+Once you've made it this far, you can see the inner workings of the drivers. Have a look for the levels `TRACE_LEVEL_WARNING` or `TRACE_LEVEL_ERROR`, which indicates a failure in the driver. This hints at the potential issue with the connection, which may or may not be solvable.
