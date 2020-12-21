@@ -6,6 +6,10 @@ theme:
     - navigation.expand
   palette:
     primary: teal
+extra_css:
+  - stylesheets/glightbox.css
+extra_javascript:
+  - javascripts/glightbox.js
 plugins:
   - search:
       lang: en
