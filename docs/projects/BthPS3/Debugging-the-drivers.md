@@ -44,4 +44,21 @@ The log file should now exist under the C:\\-Drive:
 
 So we've captured the `BthPS3.etl` file, but what now? Well, the easy way is to submit it to Nefarius for analysis 😁 Or, you can take a peek at its contents for yourself if you read on.
 
-To be continued...
+## Decipher the trace file content
+
+The trace files are not readable with a traditional text editor, some special tools are required to get the spicy bits out of it. Microsoft provides tools for the task but they are awfully verbose and not easy on the beginner in the authors humble opinion, so use of a 3rd party tool is highly recommended.
+
+### Using MGTEK TraceView Plus 3
+
+Obtain a copy of [MGTEK TraceView Plus 3](https://www.mgtek.com/traceview) and install it.
+
+!!! important "MGTEK TraceView Plus 3"
+    This software is **not** freeware. It offers a free evaluation version with a generous time of 30 days trial limit and a simple nag screen. If you plan on utilizing its features frequently [you can obtain a licensed copy on their shop](https://www.mgtek.com/traceview/shop). Thanks for supporting great software 🥰
+
+![TraceView_PZJBtRmyn5.png](/images/TraceView_PZJBtRmyn5.png)
+
+![TraceView_OtoTHylNPh.png](/images/TraceView_OtoTHylNPh.png)
+
+![TraceView_GC5KAg7ee8.png](/images/TraceView_GC5KAg7ee8.png)
+
+![TraceView_ju8ERmEEUL.png](/images/TraceView_ju8ERmEEUL.png)
