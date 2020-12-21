@@ -10,6 +10,7 @@ extra_css:
   - stylesheets/glightbox.css
 extra_javascript:
   - javascripts/glightbox.js
+  - javascripts/main.js
 plugins:
   - search:
       lang: en
