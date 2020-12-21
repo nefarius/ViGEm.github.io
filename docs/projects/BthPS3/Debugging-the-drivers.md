@@ -8,7 +8,7 @@ Kernel Drivers typically don't write traditional log files that end up on the di
 
 Fire up PowerShell with administrative privileges by pressing ++win+x++ and selecting it from the appearing menu like so:
 
-![Start PowerShell](/images/Y2bzZWdYK4.png)
+[![Start PowerShell](/images/Y2bzZWdYK4.png)](/images/Y2bzZWdYK4.png){: .glightbox }
 
 Once open, paste the following three lines into it "as is" and hit enter:
 
