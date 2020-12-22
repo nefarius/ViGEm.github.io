@@ -1,6 +1,6 @@
 # Taming HidGuardian (Gen1)
 
-Is your Xbox/DualShock/Switch Pro/<insert gaming peripheral here> controller device not detectable by games, Steam or even the entire Windows system (`joy.cpl`)? Then you might have installed software which in turn placed a driver called [HidGuardian](https://github.com/ViGEm/HidGuardian) on your machine and left its configuration in a state which accidentally permanently hid this device from other processes. Worry not though, with a bit of command line magic outlined below you'll be back in the game in no time! :grin: 
+Is your Xbox/DualShock/Switch Pro/*insert gaming peripheral here* controller device not detectable by games, Steam or even the entire Windows system (`joy.cpl`)? Then you might have installed software which in turn placed a driver called [HidGuardian](https://github.com/ViGEm/HidGuardian) on your machine and left its configuration in a state which accidentally permanently hid this device from other processes. Worry not though, with a bit of command line magic outlined below you'll be back in the game in no time! :grin: 
 
 First, [fire up PowerShell as Administrator](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/), then proceed with the outlined steps below. Copy and paste the commands as one line unaltered, hit enter afterwards and observe the returned information.
 
