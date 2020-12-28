@@ -4,11 +4,11 @@ Got questions? Who can blame you 😅 we can provide some answers, though! Read 
 
 ## What Bluetooth hosts are supported?
 
-In short: all of them manufactured within the last decade and running proper stock drivers (means no ScpServer/ScpToolkit, no AirBender, stock as the manufacturer intended). [For details see this article](Compatible-Bluetooth-Devices).
+In short: all of them manufactured within the last decade and running proper stock drivers (means no ScpServer/ScpToolkit, no AirBender, stock as the manufacturer intended). [For details see this article](../Compatible-Bluetooth-Devices).
 
 ## What controllers are supported?
 
-This is unfortunately impossible to answer a 100% correctly. These drivers have been designed with compromises in mind. They aim to support the **original genuine Sony SIXAXIS/DualShock 3** (and Navigation, Move) controllers while operating within the realms of possibilities the Microsoft Bluetooth stack offers and allows. The DualSHock 3 (or DS3 in short) has been a fairly popular piece of hardware and many clones have arisen over time, some coming close to the quality of the original, some... well, not quite as much. Aftermarket devices spoof (forge) the Hardware Identification Information that Windows sees and the labels and manufacturer notes on the housing itself. There simply is no rock-solid way to properly identify these devices to separate the good from the ugly. That's the inconvenient truth, any other statement would be a wild guess and not facts. [For details see this article](About-Controller-Compatibility).
+This is unfortunately impossible to answer a 100% correctly. These drivers have been designed with compromises in mind. They aim to support the **original genuine Sony SIXAXIS/DualShock 3** (and Navigation, Move) controllers while operating within the realms of possibilities the Microsoft Bluetooth stack offers and allows. The DualShock 3 (or DS3 in short) has been a fairly popular piece of hardware and many clones have arisen over time, some coming close to the quality of the original, some... well, not quite as much. Aftermarket devices spoof (forge) the Hardware Identification Information that Windows sees and the labels and manufacturer notes on the housing itself. There simply is no rock-solid way to properly identify these devices to separate the good from the ugly. That's the inconvenient truth, any other statement would be a wild guess and not facts. [For details see this article](../About-Controller-Compatibility).
 
 **TL;DR:** the genuine Sony hardware, anything else is a nice-to-have that may or may not work.
 
