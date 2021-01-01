@@ -1,4 +1,4 @@
-# F.A.Q.
+# Frequently Asked Questions about BthPS3
 
 Got questions? Who can blame you 😅 we can provide some answers, though! Read on, traveler!
 
