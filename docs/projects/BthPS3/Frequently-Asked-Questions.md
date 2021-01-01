@@ -6,6 +6,9 @@ Got questions? Who can blame you 😅 we can provide some answers, though! Read 
 
 In short: all of them manufactured within the last decade and running proper stock drivers (means no ScpServer/ScpToolkit, no AirBender, stock as the manufacturer intended). [For details see this article](../Compatible-Bluetooth-Devices).
 
+!!! warning "There's a catch"
+    Only host radios using **USB** are supported! This includes the majority of external dongles or integrated cards (they use USB under the hood to connect to the rest of the system). So if your device is using something more exotic like I²C or UART, I'm afraid that's not gonna work 😔
+
 ## What controllers are supported?
 
 This is unfortunately impossible to answer a 100% correctly. These drivers have been designed with compromises in mind. They aim to support the **original genuine Sony SIXAXIS/DualShock 3** (and Navigation, Move) controllers while operating within the realms of possibilities the Microsoft Bluetooth stack offers and allows. The DualShock 3 (or DS3 in short) has been a fairly popular piece of hardware and many clones have arisen over time, some coming close to the quality of the original, some... well, not quite as much. Aftermarket devices spoof (forge) the Hardware Identification Information that Windows sees and the labels and manufacturer notes on the housing itself. There simply is no rock-solid way to properly identify these devices to separate the good from the ugly. That's the inconvenient truth, any other statement would be a wild guess and not facts. [For details see this article](../About-Controller-Compatibility).
