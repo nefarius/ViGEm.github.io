@@ -1,10 +1,12 @@
+# Compatible Bluetooth Devices
+
 Non-exhaustive list of Bluetooth host devices known to work with the drivers and supported controller devices. Meaning of Status column:
 
 - ✔️ = tested and confirmed working
 - ❔ = assumed to work (ported over from old Wiki)
 - ❌ = has issues (see Remarks)
 
-# USB Dongles
+## USB Dongles
 
 Hardware ID | Name | Status | Remarks
 ----------- | ---- | ------ | -------
@@ -18,7 +20,7 @@ Hardware ID | Name | Status | Remarks
 `USB\VID_1131&PID_1001` | ISSC KY-BT100 | ❔ | 
 `USB\VID_0BB4&PID_0306` | Broadcom BCM20703 | ❌ | HTC VIVE (Steam OpenVR) customized device. Can be used in parallel with "vanilla" dongle without issues though.
 
-# Integrated Modules/Chips in Laptops or other Devices
+## Integrated Modules/Chips in Laptops or other Devices
 
 Hardware ID | Name | Status | Remarks
 ----------- | ---- | ------ | -------
@@ -78,7 +80,7 @@ Hardware ID | Name | Status | Remarks
 `USB\VID_8086&PID_0189` | Intel Centrino Advanced-N 6230 Bluetooth adapter | ❔ | 
 `USB\VID_8087&PID_07DA` | Intel Centrino Wireless Bluetooth 4.0 + High Speed Adapter | ❔ | 
 
-# Unknown Devices
+## Unknown Devices
 
 Hardware ID | Name | Status | Remarks
 ----------- | ---- | ------ | -------
