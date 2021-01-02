@@ -5,6 +5,7 @@ Rough road map with useful features (in no particular order):
 - [ ] Implement support for Navigation controller ⚡
     - [X] Add USB and Bluetooth Hardware IDs to INF
     - [ ] Adapt feature report for setting/getting Bluetooth master address
+    - [ ] Implement device-specific low battery indicator (LED rapid flashing?)
 - [ ] Implement auto-disconnect on wireless after idle timeout to save battery ⚡
 - [ ] Implement/expose more options to control pairing behavior ⬇️
 - [ ] UI tool for configuration file ⬇️
@@ -18,11 +19,11 @@ Rough road map with useful features (in no particular order):
 - [ ] Add configurable Turbo Mode for buttons ⬇️
     - Might be redundant due to existing tools
 - [ ] Test and document setup with PCSX2, RetroArch ⚡
-- [ ] Implement/expose rumble support via PID/FFB ⚡
+- [X] Implement/expose rumble support via PID/FFB ⚡
     - [X] Craft and test necessary PID section for report descriptor
     - [X] Add OEM registry values for DirectInput to detect effects
     - [X] Decode and implement output and feature reports
-        - Currently only `Constant Force` effect is implemented
+        - `Constant Force` effect is implemented
 - [ ] Implement/expose gyro and accelerometer via some channel ❓
 - [ ] Bluetooth: replace current verbose code with `DMF_ContinuousRequestTarget` ⬇️
 - [ ] Add option to chose between event based and periodic output report sending ⚡
