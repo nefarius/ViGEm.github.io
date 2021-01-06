@@ -31,3 +31,7 @@ Controller emulation is *not* the job of these drivers, they provide the plumbin
 ## Is there any noticeable input lag over Bluetooth?
 
 Another stellar question! With no definite answer 😅 The truthful answer would be: don't know, don't care since it hasn't been measured with scientific equipment. The more down-to-earth answer comes from simple experience and interaction, human to machine: no. You might feel it working better or worse compared to USB, real or placebo. Those who ask this question usually just wanna hear "nope, it's all fine" so that they can move on. Well, there you have it, you can move on now 😘
+
+## Why is the DualShock 4 even supported?
+
+Because I can 😜 literally. It wasn't much extra work to add DS4 compatibility, as under the hood it operates quite similar to the DS3, without the unnecessary quirks. The DualShock 4 works natively without any custom drivers on Windows if paired in "PC mode" (PS and share button pressed at the same time until the light bar flashes rapidly), but a little known "secret" about this device is, that by default it operates in "PS mode" (PlayStation Bluetooth compatible) which BthPS3 can emulate! For now this doesn't really have any real-world advantages but leaves a backdoor for experimentation, if adventurous developers wanna talk to it they way the PlayStation originally does.
