@@ -16,3 +16,42 @@
         ```cpp
         #include <BthPS3.h>
         ```
+
+!!! example "Device detection dependencies"
+    === "C#"
+        ```PowerShell
+        Install-Package Nefarius.Devcon
+        Install-Package PInvoke.Kernel32
+        ```
+
+    === "C/C++"
+        ```cpp
+        #define WIN32_LEAN_AND_MEAN
+        #include <Windows.h>
+        #include <SetupAPI.h>
+        #pragma comment(lib, "SetupAPI.lib")
+        ```
+
+!!! example "Enumerate detected devices"
+    === "C#"
+        ```csharp
+        var instanceId = 0;
+
+        //
+        // Enumerate GUID_DEVINTERFACE_BTHPS3_SIXAXIS
+        // 
+        while (Devcon.Find(
+            GUID_DEVINTERFACE_BTHPS3_SIXAXIS,
+            out var path,
+            out var instance,
+            instanceId++
+        ))
+        {
+            // Connected SIXAXIS/DualShock 3 found
+        }
+        ```
+
+    === "C/C++"
+        ```cpp
+        /* to be filled */
+        ```
