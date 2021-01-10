@@ -1,8 +1,7 @@
 # Installation Guide (Shibari Edition)
 
-![Logo](https://forums.vigem.org/assets/uploads/files/b3_resized_256.png)
-
-Logo by [graphicriver__](https://www.fiverr.com/graphicriver__)
+!!! attention "Kinda-SCP-Successor for Windows 10"
+    The following instructions are currently the best way to get your beloved PS3 peripherals to work, it still is quite the clutter but should get you into the game until DsHidMini is ready for the public :innocent:
 
 ## What's this
 
