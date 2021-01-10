@@ -6,7 +6,7 @@ Got questions? Who can blame you 😅 we can provide some answers, though! Read 
 
 [![glvDeYjpQi.png](/images/glvDeYjpQi.png)](/images/glvDeYjpQi.png){: .glightbox }
 
-Your Bluetooth isn't working 🙂 If you're on a Laptop, make sure you haven't disabled wireless either via a physical switch or a key combination (depends on the device model). On Desktop, make sure you actually have a Bluetooth dongle plugged in 😉 If you had other solutions like ScpToolkit or AirBender installed, make sure they have been removed completely and you run stock drivers. If you don't see the little Bluetooth try icon in your taskbar, chances are your Bluetooth isn't working or turned on. Fix it and setup will be happy 😘
+Your Bluetooth isn't working 🙂 If you're on a Laptop, make sure you haven't disabled wireless either via a physical switch or a key combination (depends on the device model). On Desktop, make sure you actually have a Bluetooth dongle plugged in 😉 If you had other solutions like ScpToolkit or AirBender installed, make sure they have been removed completely and you run stock drivers. If you don't see the little Bluetooth tray icon in your taskbar, chances are your Bluetooth isn't working or turned on. Fix it and setup will be happy 😘
 
 ## What Bluetooth hosts are supported?
 
