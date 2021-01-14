@@ -41,3 +41,13 @@ Another stellar question! With no definite answer 😅 The truthful answer would
 ## Why is the DualShock 4 even supported?
 
 Because I can 😜 literally. It wasn't much extra work to add DS4 compatibility, as under the hood it operates quite similar to the DS3, without the unnecessary quirks. The DualShock 4 works natively without any custom drivers on Windows if paired in "PC mode" (PS and share button pressed at the same time until the light bar flashes rapidly), but a little known "secret" about this device is, that by default it operates in "PS mode" (PlayStation Bluetooth compatible) which BthPS3 can emulate! For now this doesn't really have any real-world advantages but leaves a backdoor for experimentation, if adventurous developers wanna talk to it they way the PlayStation originally does.
+
+## How do I uninstall this?
+
+In case you don't want/need the software anymore or you're getting this setup message:
+
+[![msiexec_2e33lI1uwF.png](/images/msiexec_2e33lI1uwF.png)](/images/msiexec_2e33lI1uwF.png){: .glightbox }
+
+Simply head over to Apps & features and uninstall from there:
+
+[![qBS61SD83D.png](/images/qBS61SD83D.png)](/images/qBS61SD83D.png){: .glightbox }
