@@ -51,3 +51,5 @@ In case you don't want/need the software anymore or you're getting this setup me
 Simply head over to Apps & features and uninstall from there:
 
 [![qBS61SD83D.png](/images/qBS61SD83D.png)](/images/qBS61SD83D.png){: .glightbox }
+
+Follow the instructions of the uninstaller and you're all set! 👋
