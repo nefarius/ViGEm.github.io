@@ -160,7 +160,7 @@ If you sport some of those lovely ~~fake~~ aftermarket devices from questionable
 
 ---
 
-!!! important "Copyright (C) 2018-2020 - Nefarius Software Solutions e.U."
+!!! important "Copyright (C) 2018-2021 - Nefarius Software Solutions e.U."
     This is a community project and not affiliated with Sony Interactive Entertainment Inc. in any way.
 
     "PlayStation", "PSP", "PS2", "PS one", "DUALSHOCK" and "SIXAXIS" are registered trademarks of Sony Interactive Entertainment Inc.
