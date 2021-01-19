@@ -2,9 +2,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/ViGEm/BthPS3)
 
-!!! important "Work in progress"
-
-Welcome to the BthPS3 wiki!
+Welcome to the BthPS3 extended documentation!
 
 Here you can find extended documentation about the different parts of this project, the devices it supports and answers to common issues and questions.
 
