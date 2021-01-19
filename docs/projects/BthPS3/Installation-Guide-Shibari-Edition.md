@@ -70,7 +70,9 @@ Well, obviously not, as clearly stated literally everywhere! It's a research pro
 
 ### Does this thing phone home? I see some network traffic once a day...
 
-I ship a self-updater with my drivers since pushing security/stability critical enhancements is vital for drivers. The updater checks [updates.vigem.org](https://updates.vigem.org) once a day and remains silent if you're sporting the most recent version. There's a scheduled task called `BthPS3Updater` you can disable/delete by hand if this makes you nervous.
+~~I ship a self-updater with my drivers since pushing security/stability critical enhancements is vital for drivers. The updater checks [updates.vigem.org](https://updates.vigem.org) once a day and remains silent if you're sporting the most recent version. There's a scheduled task called `BthPS3Updater` you can disable/delete by hand if this makes you nervous.~~
+
+Not a thing anymore since v1.3.x of BthPS3.
 
 ### Why don't you cover Windows versions lower than 10?
 
