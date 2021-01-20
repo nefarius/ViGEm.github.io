@@ -25,6 +25,7 @@ Hardware ID | Name | Status | Remarks
 Hardware ID | Name | Status | Remarks
 ----------- | ---- | ------ | -------
 `USB\VID_8087&PID_07DC` | Intel(R) Wireless Bluetooth(R) | ✔️ | 
+`USB\VID_0489&PID_E052` | Broadcom BCM20702 Bluetooth USB Device | ✔️ | 
 `USB\VID_03F0&PID_231D` | HP Integrated module with Bluetooth wireless technology (Broadcom BCM2070) | ❔ | 
 `USB\VID_044E&PID_3010` | ALPS-UGPZ9-BCM2046 | ❔ | 
 `USB\VID_046D&PID_C709` | HP Bluetooth Module with trace filter | ❔ | 
