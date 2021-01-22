@@ -6,7 +6,7 @@
 
 ### Get Blacklist
 
-| Parameter | Description |
+| <div style="width:140px">Parameter</div> | Description |
 |---|---|
 | `dwIoControlCode` | `IOCTL_GET_BLACKLIST` |
 | `lpInBuffer` | `NULL` |
