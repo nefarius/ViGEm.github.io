@@ -6,7 +6,7 @@
 
 ### Get Blacklist
 
-| Parameter | Description |
+| Parameter<img width=100/> | Description |
 |---|---|
 | `dwIoControlCode` | `IOCTL_GET_BLACKLIST` |
 | `lpInBuffer` | `NULL` |
@@ -17,7 +17,7 @@
 
 ### Set Blacklist
 
-| Parameter | Description |
+| Parameter<img width=100/> | Description |
 |---|---|
 | `dwIoControlCode` | `IOCTL_SET_BLACKLIST` |
 | `lpInBuffer` | Buffer containing the new list of blocked (hidden) [device instance identifiers](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/device-instance-ids) as a [double-null-terminated](https://devblogs.microsoft.com/oldnewthing/20091008-00/?p=16443) [wide-character-string literal](https://docs.microsoft.com/en-us/cpp/c-language/multibyte-and-wide-characters?view=msvc-160). |
@@ -27,7 +27,7 @@
 
 ### Get Whitelist
 
-| Parameter | Description |
+| Parameter<img width=100/> | Description |
 |---|---|
 | `dwIoControlCode` | `IOCTL_GET_WHITELIST` |
 | `lpInBuffer` | `NULL` |
@@ -38,7 +38,7 @@
 
 ### Set Whitelist
 
-| Parameter | Description |
+| Parameter<img width=100/> | Description |
 |---|---|
 | `dwIoControlCode` | `IOCTL_SET_WHITELIST` |
 | `lpInBuffer` | Buffer containing the new list of whitelisted (allowed) file paths to processes in [DOS device notation](https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-querydosdevicew#parameters) as a [double-null-terminated](https://devblogs.microsoft.com/oldnewthing/20091008-00/?p=16443) [wide-character-string literal](https://docs.microsoft.com/en-us/cpp/c-language/multibyte-and-wide-characters?view=msvc-160). |
@@ -48,7 +48,7 @@
 
 ### Get Status
 
-| Parameter | Description |
+| Parameter<img width=100/> | Description |
 |---|---|
 | `dwIoControlCode` | `IOCTL_GET_ACTIVE` |
 | `lpInBuffer` | `NULL` |
@@ -58,7 +58,7 @@
 
 ### Set Status
 
-| Parameter | Description |
+| Parameter<img width=100/> | Description |
 |---|---|
 | `dwIoControlCode` | `IOCTL_SET_ACTIVE` |
 | `lpInBuffer` | Sets the new state of the hiding capabilities (`1` = device hiding active, `0` = device hiding inactive). |
