@@ -27,6 +27,7 @@ Rough road map with useful features (in no particular order):
 - [ ] Implement/expose gyro and accelerometer via some channel ❓
 - [ ] Bluetooth: replace current verbose code with `DMF_ContinuousRequestTarget` ⬇️
 - [ ] Add option to chose between event based and periodic output report sending ⚡
+- [ ] Address issue of both USB and Bluetooth connection being able at the same time ⚡
 
 ## Key explanation
 
