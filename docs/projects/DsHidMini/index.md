@@ -13,6 +13,6 @@ DsHidMini is a universal driver for the dated yet beloved DualShock 3, Navigatio
 
 ### 2020-10-20 Rumble Racing ForeFeedback packet tracing PCSX2 1.5.0
 
-<a href="https://www.youtube.com/watch?v=WMlaEr3g3dw" class="glightbox3">
+<a href="https://www.youtube.com/watch?v=WMlaEr3g3dw" class="glightbox">
 	<img src="https://i3.ytimg.com/vi/WMlaEr3g3dw/hqdefault.jpg" alt="image">
 </a>
