@@ -1,6 +1,6 @@
 # A word about controller compatibility
 
-!!! attention "TL;DR:"
+!!! important "TL;DR:"
     If your controller works, great! If it doesn't, well, life's not always fair 😜
 
 An important statement from the author, I highly encourage the read 🙂
