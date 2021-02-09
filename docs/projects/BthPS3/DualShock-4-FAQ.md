@@ -11,12 +11,12 @@ Reconnecting the controller (a.k.a. powering it on via the PS button and letting
 **Without** BthPS3 installed, the reconnecting process of the DS4 to Windows is as follows:
 
 - Wake Up the PS4 controller with the PS button
-  - Controller successfully connects to Windows after a few seconds
+    - Controller successfully connects to Windows after a few seconds
 
 **With** BthPS3 installed, the reconnecting process of the DS4 to Windows requires 2 attempts:
 
 - **1st Attempt:** Wake Up the PS4 controller with the PS Button
-  - Controller's Lightbar will blink white for a few short seconds before the controller turns itself off again (_expected_)
+    - Controller's Lightbar will blink white for a few short seconds before the controller turns itself off again (_expected_)
 - **2nd Attempt:** After the 1st Attempt fails, the user has 10 seconds to
     1. turn on the controller again and
     2. wait for the controller to successfully connect to Windows. If the controller does not connect in this 10s time windows, the user will have to go back to the 1st Attempt and retry
@@ -26,7 +26,7 @@ Reconnecting the controller (a.k.a. powering it on via the PS button and letting
 With BthPS3 installed there are two modes of operation:
 
 - BthPS3's filter is enabled
-  - PS3 controllers can be connected to Windows, but not the DS4 (DS4 will connect, but Windows won't recognize it as a controller and tools like DS4Windows, Steam etc. will not detect it).
+    - PS3 controllers can be connected to Windows, but not the DS4 (DS4 will connect, but Windows won't recognize it as a controller and tools like DS4Windows, Steam etc. will not detect it).
 - BthPS3's filter is disabled: you can connect DS4 controllers normally, but DS3s won't connect anymore.
 
 Unless BthPS3's registry parameters have been altered from the defaults, this is what happens normally when trying to reconnect a DS4 to Windows with BthPS3 present:
