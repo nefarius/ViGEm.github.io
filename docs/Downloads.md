@@ -8,8 +8,8 @@ Here you'll find quick-links to binaries for popular projects 👇
 
 | Product |  |  |
 |---|---|---|
-| ViGEm Bus Driver Setup | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/ViGEmBus/releases) | [![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/ViGEmBus/total)](https://somsubhra.com/github-release-stats/?username=ViGEm&repository=ViGEmBus) |
-| BthPS3 Bluetooth Drivers Setup | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/BthPS3/releases) | [![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/BthPS3/total)](https://somsubhra.com/github-release-stats/?username=ViGEm&repository=BthPS3) |
+| ViGEm Bus Driver Setup | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/ViGEmBus/releases) | ![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/ViGEmBus/total) |
+| BthPS3 Bluetooth Drivers Setup | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/BthPS3/releases) | ![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/BthPS3/total) |
 
 ## Mirrors & Archives
 
