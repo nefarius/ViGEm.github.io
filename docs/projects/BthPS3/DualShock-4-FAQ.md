@@ -18,8 +18,8 @@ Reconnecting the controller (a.k.a. powering it on via the PS button and letting
 - **1st Attempt:** Wake Up the PS4 controller with the PS Button
   - Controller's Lightbar will blink white for a few short seconds before the controller turns itself off again (_expected_)
 - **2nd Attempt:** After the 1st Attempt fails, the user has 10 seconds to
-  1. turn on the controller again and
-  2. wait for the controller to successfully connect to Windows. If the controller does not connect in this 10s time windows, the user will have to go back to the 1st Attempt and retry
+    1. turn on the controller again and
+    2. wait for the controller to successfully connect to Windows. If the controller does not connect in this 10s time windows, the user will have to go back to the 1st Attempt and retry
 
 ## What is different after installing BthPS3 for the reconnect process?
 
