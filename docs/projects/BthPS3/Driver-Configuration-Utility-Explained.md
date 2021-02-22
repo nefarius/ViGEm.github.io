@@ -1,7 +1,5 @@
 # Driver Configuration Utility Explained
 
-!!! important "Under construction ⚒️"
-
 The `BthPS3 Driver Configuration Tool` is a small self-contained .NET application shipped with the setup providing the user with a simple way to adapt the drivers operation to their liking. You can find it in your start menu, just search for it 😉
 
 ## Profile Driver Settings
@@ -110,7 +108,7 @@ The Danger Zone hosts some of the more advanced settings of the solution. You're
 | Shibari | On |
 | DsHidMini | Off |
 
-If this setting is on, the resulting child devices (PDO, Physical Device Object) of the profile driver can be brought up "driverless" and will be accessible for communication by any non-driver user-land application (like Shibari). Its HID Control/Interrupt channels can directly be consumed by the Windows API in any high-level language (see [API-Documentation](API-Documentation)). This mode is great for prototyping and experimenting with the devices without the need to write any (kernel- or user-mode) driver code.
+If this setting is on, the resulting child devices (PDO, Physical Device Object) of the profile driver can be brought up "driverless" and will be accessible for communication by any non-driver user-land application (like Shibari). Its HID Control/Interrupt channels can directly be consumed by the Windows API in any high-level language (see [API-Documentation](/API-Documentation)). This mode is great for prototyping and experimenting with the devices without the need to write any (kernel- or user-mode) driver code.
 
 ### Hide PDO from Device Manager
 
