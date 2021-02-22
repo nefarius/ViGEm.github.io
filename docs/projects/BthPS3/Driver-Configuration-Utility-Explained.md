@@ -110,13 +110,19 @@ The Danger Zone hosts some of the more advanced settings of the solution. You're
 
 If this setting is on, the resulting child devices (PDO, Physical Device Object) of the profile driver can be brought up "driverless" and will be accessible for communication by any non-driver user-land application (like Shibari). Its HID Control/Interrupt channels can directly be consumed by the Windows API in any high-level language (see [API-Documentation](../API-Documentation)). This mode is great for prototyping and experimenting with the devices without the need to write any (kernel- or user-mode) driver code.
 
+The default is on.
+
 ### Hide PDO from Device Manager
 
 When enabled, the connected controller devices will be hidden in Device Manager. They can still be examined by enabling `View / Show hidden devices`. This setting has no effect on any other operational logic and is there only for cosmetics.
 
+The default is off.
+
 ### Restrict PDO access to elevated users
 
-If enabled, devices in RAW mode can only be enumerated and accessed from elevated processes (applications started as Administrator, System services). This might be useful if some companion solutions have to run as an elevated process anyway for whatever reason. The default is off which allows any user to enumerate the devices.
+If enabled, devices in RAW mode can only be enumerated and accessed from elevated processes (applications started as Administrator, System services). This might be useful if some companion solutions have to run as an elevated process anyway for whatever reason.
+
+The default is off which allows any user to enumerate the devices.
 
 ### Exclusive PDO access enforced
 
