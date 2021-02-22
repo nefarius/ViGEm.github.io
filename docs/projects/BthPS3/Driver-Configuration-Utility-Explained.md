@@ -48,6 +48,8 @@ The following PowerShell snippet returns the currently configured names which id
     Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\BthPS3\Parameters" -Name "MOTIONSupportedNames" | Select-Object -ExpandProperty "MOTIONSupportedNames"
     ```
 
+This setting is off by default to not conflict with the [PSMoveService](https://github.com/psmoveservice/PSMoveService) project.
+
 ### Enable Wireless Controller (DualShock™️ 4) Support
 
 If ticked, the pre-configured list of remote device names will be used to attempt to identify and connect a Wireless/DualShock 4 compatible device. The process is skipped and the connection denied, if the setting is off.
@@ -58,6 +60,8 @@ The following PowerShell snippet returns the currently configured names which id
     ```PowerShell
     Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\BthPS3\Parameters" -Name "WIRELESSSupportedNames" | Select-Object -ExpandProperty "WIRELESSSupportedNames"
     ```
+
+This setting is off by default to not conflict with the [DS4Windows](https://github.com/Ryochan7/DS4Windows) project.
 
 ### Automatically re-enable filter after grace period has passed
 
