@@ -2,13 +2,13 @@
 
 Rough road map with useful features (in no particular order):
 
-- [ ] Implement support for Navigation controller ⚡
+- [ ] Implement support for Navigation controller ⬇️
     - [X] Add USB and Bluetooth Hardware IDs to INF
     - [ ] Adapt feature report for setting/getting Bluetooth master address
     - [ ] Implement device-specific low battery indicator (LED rapid flashing?)
-- [ ] Implement auto-disconnect on wireless after idle timeout to save battery ⚡
+- [X] Implement auto-disconnect on wireless after idle timeout to save battery ⚡
 - [ ] Implement/expose more options to control pairing behavior ⬇️
-- [ ] UI tool for configuration file ⬇️
+- [X] UI tool for configuration 🚧
 - [ ] UDP server for `cemuhook` compatibility ❓
     - See [ds4drv](https://github.com/TheDrHax/ds4drv-cemuhook)
 - [X] Test/fix power behavior (like, what happens when the system wants to sleep with controllers connected etc.) ⚡
@@ -26,8 +26,8 @@ Rough road map with useful features (in no particular order):
         - `Constant Force` effect is implemented
 - [ ] Implement/expose gyro and accelerometer via some channel ❓
 - [ ] Bluetooth: replace current verbose code with `DMF_ContinuousRequestTarget` ⬇️
-- [ ] Add option to chose between event based and periodic output report sending ⚡
-- [ ] Address issue of both USB and Bluetooth connection being able at the same time ⚡
+- [X] Add option to chose between event based and periodic output report sending ⚡
+- [X] Address issue of both USB and Bluetooth connection being able at the same time ⚡
 
 ## Key explanation
 
