@@ -1,6 +1,6 @@
 # About the HID Device Modes
 
-DsHidMini aims for maximum possible compatibility with existing tools or games without the need for any custom code. It supports different "HID Device emulation modes", meaning upon boot-up it can present the controller as different types of HID devices, each sporting a unique set of specialized features outlined below. The device mode you chose dictates the level of compatibility with certain 3rd party software and how the controller is "seen" by processes. Read on for details.
+DsHidMini aims for maximum possible compatibility with existing tools or games without the need for any custom code. It supports different "HID Device emulation modes", meaning upon boot-up it can present the controller as different types of HID devices, each sporting a unique set of specialized features outlined below. The device mode you choose dictates the level of compatibility with certain 3rd party software and how the controller is "seen" by processes. Read on for details.
 
 ## How to adjust the settings
 
@@ -8,16 +8,16 @@ This is a per device, per connection type setting and can be adjusted in the DsH
 
 ## HID Device Modes
 
-The games and tools outlined here are **recommendations**, please feel free to experiment to your hearts 
+The games and tools outlined here are **recommendations**, please feel free to experiment to your heart's content ❤️
 
 ### SDF
 
 !!! important "TL;DR:"
     Use this mode for best compatibility with the [**PCSX2 PlayStation 2 Emulator**](https://pcsx2.net/).
 
-**Single Device** with **Force Feedback** mode. In this mode, the controller is presented as one "almost"-DirectInput-compatible HID device with **pressure sensitive** features exposed as additional sliders. The rumble motors can be controlled via **Force Feedback effects**. The advantage of this mode is a 100% compatibility with all unmodified versions of PCSX2 with the LilyPad gamepad plugin (shipped by default). 
+**Single Device** with **Force Feedback** mode. In this mode, the controller is presented as one "almost"-DirectInput-compatible HID device with **pressure sensitive** features exposed as additional sliders. The rumble motors can be controlled via **Force Feedback effects**. The advantage of this mode is a 100% compatibility with all unmodified versions of PCSX2 with the LilyPad gamepad plugin (shipped by default).
 
-The downside of this mode is, that the pressure axes exceed the limit of supported axes per device and therefore pressure sensitive axes will not be available in games using DirectInput. They will however work fine with any engine using the low level HID API instead. 
+The downside of this mode is, that the pressure axes exceed the limit of supported axes per device and therefore pressure sensitive axes will not be available in games using DirectInput. They will however work fine with any engine using the low level HID API instead.
 
 The default LED behavior in this mode is the charging animation and can't be altered.
 
