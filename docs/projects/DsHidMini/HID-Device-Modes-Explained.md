@@ -13,7 +13,9 @@ This is a per device, per connection type setting and can be adjusted in the DsH
 !!! important "TL;DR:"
     Use this mode for best compatibility with the [**PCSX2 PlayStation 2 Emulator**](https://pcsx2.net/).
 
-**Single Device** with **Force Feedback** mode. In this mode, the controller is presented as one "almost"-DirectInput-compatible HID device with **pressure sensitive** features exposed as additional sliders. The rumble motors can be controlled via **Force Feedback effects**. The advantage of this mode is a 100% compatibility with all unmodified versions of PCSX2 with the LilyPad gamepad plugin (shipped by default). The downside of this mode is, that the pressure axes exceed the limit of supported axes per device and therefore pressure sensitive axes will not be available in games using DirectInput. They will however work fine with any engine using the low level HID API instead. 
+**Single Device** with **Force Feedback** mode. In this mode, the controller is presented as one "almost"-DirectInput-compatible HID device with **pressure sensitive** features exposed as additional sliders. The rumble motors can be controlled via **Force Feedback effects**. The advantage of this mode is a 100% compatibility with all unmodified versions of PCSX2 with the LilyPad gamepad plugin (shipped by default). 
+
+The downside of this mode is, that the pressure axes exceed the limit of supported axes per device and therefore pressure sensitive axes will not be available in games using DirectInput. They will however work fine with any engine using the low level HID API instead. 
 
 The default LED behavior in this mode is the charging animation and can't be altered.
 
@@ -22,7 +24,9 @@ The default LED behavior in this mode is the charging animation and can't be alt
 !!! important "TL;DR:"
     Use this mode to experiment with older games.
 
-**Gamepad plus Joystick** mode. In this mode, the controller is presented as **two separate HID devices**; a traditional gamepad featuring the same set of features like a common Xbox 360 controller and a Joystick, only handling the pressure axes. This mode guarantees the best potential compatibility with legacy solutions purely relying on DirectInput and works around the mentioned axis limit. **Disclaimer:** the pressure values for the **shoulder buttons** are not supported as they exceed the axis limit. This mode does not support Force Feedback and doesn't expose any path to invoke rumble or alter LED states.
+**Gamepad plus Joystick** mode. In this mode, the controller is presented as **two separate HID devices**; a traditional gamepad featuring the same set of features like a common Xbox 360 controller and a Joystick, only handling the pressure axes. This mode guarantees the best potential compatibility with legacy solutions purely relying on DirectInput and works around the mentioned axis limit.
+
+**Disclaimer:** the pressure values for the **shoulder buttons** are not supported as they exceed the axis limit. This mode does not support Force Feedback and doesn't expose any path to invoke rumble or alter LED states.
 
 The default LED behavior in this mode is the charging animation and can't be altered.
 
