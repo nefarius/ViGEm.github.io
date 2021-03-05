@@ -15,4 +15,4 @@ Wanna have a quick chat? [Be our guest on Discord](https://discord.vigem.org)! V
 
 ## GitHub issues
 
-Please respect that the GitHub issue tracker of the individual repositories is a collaboration platform dor mainly developers and advanced users; kindly don't use it to ask for help, use the channels mentioned above. Mods shall close non-relevant issues without further notice to keep discussions clean 👮
+Please respect that the GitHub issue tracker of the individual repositories is a collaboration platform for mainly developers and advanced users; kindly don't use it to ask for help, use the channels mentioned above. Mods shall close non-relevant issues without further notice to keep discussions clean 👮
