@@ -8,6 +8,8 @@ This is a per device, per connection type setting and can be adjusted in the DsH
 
 ## HID Device Modes
 
+The games and tools outlined here are **recommendations**, please feel free to experiment to your hearts 
+
 ### SDF
 
 !!! important "TL;DR:"
@@ -41,4 +43,7 @@ The default LED behavior in this mode is the charging animation. If a compatible
 
 ### DS4
 
-Work in progress...
+!!! important "TL;DR:"
+    Use this mode with [DS4Windows](https://github.com/Ryochan7/DS4Windows/).
+
+**DualShock 4** mode. In this mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [DS4Windows](https://github.com/Ryochan7/DS4Windows/). You can use almost all features DS4Windows offers with a DualShock 3 (excluding nonexistent features like the track pad or the light bar) including **Xinput emulation**.
