@@ -18,7 +18,7 @@ See [https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/] on how to
 2. Extract the package to an easily accessible folder;
 3. Download the latest Beta Build from [here](https://github.com/mika-n/DS4Windows/raw/debugVerWPF/extras/DS4WindowsWPF_DeviceDetectDebug.zip);
 4. Extract the Beta Build Archive inside the DS4Windows that was extracted in step 2;
-5. If everything is alright your DS4Windows should look like this:
+5. If everything is alright your DS4Windows folder should look like this:
 
 ![ds4windows beta](https://user-images.githubusercontent.com/24910442/110256819-b9ce2f80-7f79-11eb-9b42-afa8207eaae9.png)
 
