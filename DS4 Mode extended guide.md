@@ -42,7 +42,6 @@ Beware that functions in DS4windows that make the lightbar flash, pulse or rando
 + Only 1 LED can be ON at a time
 + Simple to set-up;
 + Necessary for some macros and to let DS4Windows take hold of showing the controlers battery level;
-+ Useful for indicating current selected profile;
 
 To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "0". After that, the Red color value will be translated to the LEDs state according to the following table:
 
@@ -53,10 +52,29 @@ To activate this form of lightbar color translation, both the values of the Gree
 | 128-191 | 80-BF | LED 3 ON |
 | 192-255 | C0-FF | LED 4 ON |
 
+e.g. 1: Setting up a profile to be represented as LED 3.
+
+![SimpleLedControl eg 1 - LED 3 on](https://user-images.githubusercontent.com/24910442/110249922-795dba00-7f57-11eb-9be1-1141a3d59bae.png)
+
+
+e.g. 2: Setting up a macro to make the LEDs reflect the controller's battery level.
+
+![SimpleLedControl eg 2 - Macro example](https://user-images.githubusercontent.com/24910442/110249934-88446c80-7f57-11eb-8f3e-721fc3ba2812.png)
+
+
+e.g. 3: Setting up DS4Windows to control the LEDs in order to show the controller's battery level all the time.
+
+![SimpleLedControl eg 3 - Battery chagre indication](https://user-images.githubusercontent.com/24910442/110249936-8b3f5d00-7f57-11eb-85e8-e678cd184443.png)
+
+
+
 #### COMPLETE LED CONTROL
 
++ Harder" to set-up (not really).
++ Allows any combination of LEDs on.
++ Useful if the user wants to differentiatie between more than 4 profiles
 
-To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
+To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table, where the value of "0" on the LEDs comumns means that the LED is OFF and "1" means "ON":
 
 | LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |  RED value (Hex)
 | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -76,6 +94,11 @@ To activate this form of lightbar color translation, both the values of the Gree
 | 1 | 1 | 0 | 1 | 13 | D |
 | 1 | 1 | 1 | 0 | 14 | E |
 | 1 | 1 | 1 | 1 | 15 | F |
+
+e.g. Setting up a profile to be represented as LEDs 4 and 2.
+
+![TotalLedControl eg - LEDs 4 and 2](https://user-images.githubusercontent.com/24910442/110250406-f4c06b00-7f59-11eb-8039-bae3f8b2a1db.png)
+
 
 ### SOLVING DOBLE INPUT ISSUE ON GAMES
 
