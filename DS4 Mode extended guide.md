@@ -11,7 +11,7 @@ See [https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/] on how to
 
 ### USING THE CONTROLLER WITH DS4WINDOWS
 
-1. Download the latest DS4Windows release package from here [https://github.com/Ryochan7/DS4Windows/releases] according to your Windows' version (x86 for 32bits, x64 for 64bits);
+1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows' version (x86 for 32bits, x64 for 64bits);
 2. Extract the package to an easily accessible folder;
 3. Run DS4Windows.exe;
 4. Install the ViGEm BUS Driver if asked to.
@@ -105,7 +105,7 @@ Some games can end-up detecting two controllers/inputs when using DS3 with DS4Wi
 #### Hiding the real controller with the "Hide DS4 controller" function in DS4Windows
 
 On the settings tab of DS4Windows there is a option named "Hide DS4 controller". When checked, DS4Windows will attempt on getting exclusive access to the controller, preventing games/other aplications of receiving inputs from the real controller, essentially solving the issue.
-Unfortunaly, there are many factors that may cause DS4Windows to fail in getting exclusive access. More information on this and on how to solve it can be found here [https://github.com/Ryochan7/DS4Windows/wiki/Exclusive-Mode-(Hide-DS4-Controller-config-option)-tips-and-issues].
+Unfortunaly, there are many factors that may cause DS4Windows to fail in getting exclusive access. More information on this and on how to solve it can be found [here](https://github.com/Ryochan7/DS4Windows/wiki/Exclusive-Mode-(Hide-DS4-Controller-config-option)-tips-and-issues).
 
 ![Hide DS4 Controller](https://user-images.githubusercontent.com/24910442/110252768-b5981700-7f65-11eb-972e-7a5db0e0808f.png)
 
@@ -124,8 +124,8 @@ The installer tool that will be used to install HidGuardian is also capable of c
 
 
 In case things go wrong (and they shouldn't as long as the user carefully follows the steps described in this section) or the unninstaller fails here are 2 guides on how to solve the issue:
-+ If the unninstaller fails: https://vigem.org/projects/HidGuardian/Taming-HidGuardian-Gen1/
-+ If the user loses access to keyboard and mouse: https://github.com/x360ce/x360ce/wiki/HID-Guardian
++ [If the unninstaller fails](https://vigem.org/projects/HidGuardian/Taming-HidGuardian-Gen1/)
++ [If the user loses access to keyboard and mouse](https://github.com/x360ce/x360ce/wiki/HID-Guardian)
 
 ##### Installing HidGuardian
 
