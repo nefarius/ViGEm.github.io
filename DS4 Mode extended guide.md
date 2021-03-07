@@ -1,7 +1,10 @@
 # DS4 MODE SETTTINGS GUIDE
 
-!!! important "TL;DR:"
-    You **NEED** to use [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows) along this mode to present the controller as a Xinput device or an actual Dualshock 4, otherwise it won't be detected by most games.
+!!! important "TL;DR: 1"
+    DsHidMini v1.0.6 has a bug that causes buttons and triggers to mix, making it impossible to correctly use the controller. This should be fixed in the next release, so keep an eye [here](https://github.com/ViGEm/DsHidMini/releases) to remain updated.
+
+!!! important "TL;DR: 2"
+    You **NEED** to use [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows) for now along this mode to present the controller as a Xinput device or an actual Dualshock 4, otherwise it won't be detected by most games. Moreover, the Beta Build is required until DS3 support goes live on the stable build.
 
 **DualShock 4** mode. In this mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [DS4Windows](https://github.com/Ryochan7/DS4Windows/). 
 
@@ -13,8 +16,15 @@ See [https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/] on how to
 
 1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows' version (x86 for 32bits, x64 for 64bits);
 2. Extract the package to an easily accessible folder;
-3. Run DS4Windows.exe;
-4. Install the ViGEm BUS Driver if asked to.
+3. Download the latest Beta Build from [here](https://github.com/mika-n/DS4Windows/raw/debugVerWPF/extras/DS4WindowsWPF_DeviceDetectDebug.zip);
+4. Extract the Beta Build Archive inside the DS4Windows that was extracted in step 2;
+5. If everything is alright your DS4Windows should look like this:
+
+![ds4windows beta](https://user-images.githubusercontent.com/24910442/110256819-b9ce2f80-7f79-11eb-9b42-afa8207eaae9.png)
+
+
+6. Run DS4WindowsDebug.exe (make sure no other instance of DS4Windows.exe is running before this;
+7. Install the ViGEm BUS Driver if asked to.
 
 After that, the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
 
