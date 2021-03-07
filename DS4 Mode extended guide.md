@@ -5,7 +5,7 @@
 
 **DualShock 4** mode. In this mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [DS4Windows](https://github.com/Ryochan7/DS4Windows/). 
 
-### VERIFYING AND CHANGING CURRENT DS3 MODE ON DSHIDMINI'S CONTROl PANEL
+### VERIFYING AND CHANGING CURRENT DS3 MODE ON DSHIDMINI'S CONTROL PANEL
  
 1. Locate the DsHidMini Control Panel (**DSHMC.exe**) that came with the downloaded DsHidMini driver achieve, then run it **as an administrator**;
 2. With the controller connected, check on "HID device mode" selection if its mode is "DS4 (DS4Windows)". If it's not, change to it and click on "apply settings". Reconnect the controller if it was disconnected on Bluetooth;
