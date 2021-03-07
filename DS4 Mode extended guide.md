@@ -1,4 +1,4 @@
-# DS4 MODE SETTTINGS GUIDE
+# DS4 MODE EXTENDED GUIDE
 
 !!! important "TL;DR: 1"
     DsHidMini v1.0.6 has a bug that causes buttons and triggers to mix, making it impossible to correctly use the controller. This should be fixed in the next release, so keep an eye [here](https://github.com/ViGEm/DsHidMini/releases) to remain updated.
