@@ -15,6 +15,12 @@ DsHidMini is a universal driver for the dated yet beloved DualShock 3, Navigatio
 	<img src="https://i3.ytimg.com/vi/4jJHpZ77-Qc/hqdefault.jpg" alt="image">
 </a>
 
+### 2021-03-08 DsHidMini SDF mode explained with PCSX2 v1.7.0
+
+<a href="https://www.youtube.com/watch?v=9htp8RTO33M" class="glightbox">
+	<img src="https://i3.ytimg.com/vi/9htp8RTO33M/hqdefault.jpg" alt="image">
+</a>
+
 ### 2021-02-27 DsHidMini Demo RPCS3
 
 <a href="https://www.youtube.com/watch?v=ICLOeU4-XTw" class="glightbox">
