@@ -24,7 +24,7 @@ The default LED behavior in this mode is the charging animation and can't be alt
 ### GPJ
 
 !!! important "TL;DR:"
-    Use this mode to experiment with older games.
+    Use this mode with [x360ce](https://www.x360ce.com/) or to experiment with older games.
 
 **Gamepad plus Joystick** mode. In this mode, the controller is presented as **two separate HID devices**; a traditional gamepad featuring the same set of features like a common Xbox 360 controller and a Joystick, only handling the pressure axes. This mode guarantees the best potential compatibility with legacy solutions purely relying on DirectInput and works around the mentioned axis limit. The rumble motors can be controlled via **Force Feedback effects** (Constant Force Effect).
 
