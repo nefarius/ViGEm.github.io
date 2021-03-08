@@ -21,7 +21,7 @@ See [https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/] on how to
 4. Extract the Beta Build Archive inside the DS4Windows that was extracted in step 2;
 5. If everything is alright your DS4Windows folder should look like this:
 
-![ds4windows beta](https://user-images.githubusercontent.com/24910442/110256819-b9ce2f80-7f79-11eb-9b42-afa8207eaae9.png)
+![ds4windows beta](/images/DsHidMini_DS4ModeGuide/ds4windows_beta_folder.png)
 
 
 6. Run DS4WindowsDebug.exe (make sure no other instance of DS4Windows.exe is running before this;
@@ -29,15 +29,19 @@ See [https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/] on how to
 
 After that, the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
 
-## WHAT DOES (NOT) WORK
+## WHAT DOES WORK
 
 + XInput / DualShock 4 emulation according to the selected profile settings.
-+ DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows.
-+ Motion/UDP server is not supported and will remain so until someone manages to translate the motion info from the DS3 to the DS4 motion standard.
 + Rumble works as normal.
 + DS3's LEDs can be controlled by setting the correct Lightbar colors (more on that on a later section).
++ Basically every other DS4Windows function that is not related to the lightbar or motion works as intended.
+
+## WHAT DOES NOT WORK
+
++ DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows.
++ Motion/UDP server is not supported and will remain so until someone manages to translate the motion info from the DS3 to the DS4 motion standard.
++ Settings that make the lightbar color flash, pulse or change randomly (rainbow mode) are not supported.
 + DS3 touchpad not supported for obvious reasons. To use the touchpad click when emulating a Dualshock 4 it needs to be set up as a macro (as for the day this guide was written, march 07, 2021, DS4Windows does not support this function).
-+ Basically every other DS4Windows function works as intended.
 
 ## LIGHTBAR COLOR -> LED CONVERSION
 
@@ -63,17 +67,17 @@ To activate this form of lightbar color translation, both the values of the Gree
 
 e.g. 1: Setting up a profile to be represented as LED 3.
 
-![SimpleLedControl eg 1 - LED 3 on](https://user-images.githubusercontent.com/24910442/110249922-795dba00-7f57-11eb-9be1-1141a3d59bae.png)
+![SimpleLedControl eg 1 - LED 3 on](/images/DsHidMini_DS4ModeGuide/SimpleLedControl_eg1_LED3on.png)
 
 
 e.g. 2: Setting up a macro to make the LEDs reflect the controller's battery level.
 
-![SimpleLedControl eg 2 - Macro example](https://user-images.githubusercontent.com/24910442/110249934-88446c80-7f57-11eb-8f3e-721fc3ba2812.png)
+![SimpleLedControl eg 2 - Macro example](/images/DsHidMini_DS4ModeGuide/SimpleLedControl_eg2_Macro.png)
 
 
 e.g. 3: Setting up DS4Windows to control the LEDs in order to show the controller's battery level all the time.
 
-![SimpleLedControl eg 3 - Battery chagre indication](https://user-images.githubusercontent.com/24910442/110249936-8b3f5d00-7f57-11eb-85e8-e678cd184443.png)
+![SimpleLedControl eg 3 - Battery chagre indication](/images/DsHidMini_DS4ModeGuide/SimpleLedControl_eg3_Battery.png)
 
 
 
@@ -106,7 +110,7 @@ To activate this form of lightbar color translation, both the values of the Gree
 
 e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
-![TotalLedControl eg - LEDs 4 and 2](https://user-images.githubusercontent.com/24910442/110250406-f4c06b00-7f59-11eb-8039-bae3f8b2a1db.png)
+![TotalLedControl eg - LEDs 4 and 2](/images/DsHidMini_DS4ModeGuide/TotalLedControl_eg_LEDs_4_2.png)
 
 
 ## SOLVING DOBLE INPUT ISSUE ON GAMES
@@ -118,7 +122,7 @@ Some games can end-up detecting two controllers/inputs when using DS3 with DS4Wi
 On the settings tab of DS4Windows there is a option named "Hide DS4 controller". When checked, DS4Windows will attempt on getting exclusive access to the controller, preventing games/other aplications of receiving inputs from the real controller, essentially solving the issue.
 Unfortunaly, there are many factors that may cause DS4Windows to fail in getting exclusive access. More information on this and on how to solve it can be found [here](https://github.com/Ryochan7/DS4Windows/wiki/Exclusive-Mode-(Hide-DS4-Controller-config-option)-tips-and-issues).
 
-![Hide DS4 Controller](https://user-images.githubusercontent.com/24910442/110252768-b5981700-7f65-11eb-972e-7a5db0e0808f.png)
+![Hide DS4 Controller](/images/DsHidMini_DS4ModeGuide/Hide_DS4_Controller.png)
 
 
 ### Hiding the real controller by using HidGuardian
@@ -131,7 +135,7 @@ HidGuardian is a driver created to act as a barrier between every HID device and
 
 The installer tool that will be used to install HidGuardian is also capable of correctly unninstalling it if the user chooses, just open it and hit "Unninstall", then reboot the computer.
 
-![unninstall hidguardian](https://user-images.githubusercontent.com/24910442/110253910-74a30100-7f6b-11eb-8546-1d7ba6f8d3e7.png)
+![unninstall hidguardian](/images/DsHidMini_DS4ModeGuide/unninstall_hidguardian.png)
 
 
 In case things go wrong (and they shouldn't as long as the user carefully follows the steps described in this section) or the unninstaller fails here are 2 guides on how to solve the issue:
@@ -143,26 +147,30 @@ In case things go wrong (and they shouldn't as long as the user carefully follow
 1. Download and extract the archieve from [https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing] (link from Ryochan7's DS4Windows wiki);
 2. Inside the extracted folder, run HidGuardianInstaller.exe;
 3. Click on Install. Wait until the utility finishes downloading then installing HidGuardian;
+
+![install hidguardian success](/images/DsHidMini_DS4ModeGuide/Installing_HidGuardian_Success.png)
+
+
 4. After the "HidGuardian is now installed" appears on the utility, close it and then reboot the computer;
 
 #### Hiding the controller
 
 1. Connect the DS3 controller;
-2. Open DS44Windows;
+2. Open DS4Windows;
 3. On the Settings Tab, open HidNinja;
 
-![DS4Windows HidNinja](https://user-images.githubusercontent.com/24910442/110254505-3529e400-7f6e-11eb-9ba1-d47260b5b8ee.png)
+![DS4Windows HidNinja](/images/DsHidMini_DS4ModeGuide/DS4Windows HidNinja.png)
 
 5. On the top-left list, select the PLAYSTATION(R)3 Controller;
 6. Select on the right list the key named "HID\VID_7331&UP:0001_U:0005", then click on the "add" button on the top-right corner;
 7. Check if the "HID\VID_7331&UP:0001_U:0005" key is now present on the bootm list;
 
-![HidNinja DS3](https://user-images.githubusercontent.com/24910442/110255551-1c6ffd00-7f73-11eb-970e-c587340faf22.png)
+![HidNinja DS3](/images/DsHidMini_DS4ModeGuide/HidNinja_DS3.png)
 
 8. Close HidNinja;
 9. Disconnect then reconnect the controller;
 10. Check if the controller is recognized by DS4Windows and if the "Key" icon is active, showing that exclusive access is active;
 11. End.
 
-![DS4Windows DS3 Exclusive access](https://user-images.githubusercontent.com/24910442/110255672-a6b86100-7f73-11eb-9627-938757bf4299.png)
+![DS4Windows DS3 Exclusive access](/images/DsHidMini_DS4ModeGuide/DS4Windows_DS3_exclusive_access.png)
 
