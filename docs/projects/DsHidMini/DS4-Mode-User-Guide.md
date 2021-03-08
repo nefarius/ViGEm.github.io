@@ -1,16 +1,30 @@
-# DS4 MODE USER GUIDE
+# DS4 Mode User Guide
 
-!!! important "TL;DR: 2"
-    You **NEED** to use [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows) along this mode to present the controller as a Xinput device or an actual Dualshock 4, otherwise it won't be detected by most games. Moreover, the Beta Build is required until DS3 support goes live on the stable build.
+!!! important "TL;DR:"
+    The Beta Build of Ryochan7's DS4Windows is required until DS3 support goes live on the stable build.
 
 
-**DualShock 4** mode. In this mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [DS4Windows](https://github.com/Ryochan7/DS4Windows/). 
+In "DS4 (DS4Windows)" HID Device Mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows) , allowing the user to emulate a DS4 or XInput controller as well as using most of its functions. Because games will not directly detect the controller as a DS4, the use of DS4Windows is required for use with most modern games and aplications.
 
-## VERIFYING AND CHANGING CURRENT DS3 DEVICE HID MODE TO "DS4 (DS4WINDOWS)" ON DSHIDMINI'S CONTROL PANEL
+## What does work
+
++ XInput / DualShock 4 emulation according to the selected profile settings in DS4Windows.
++ Rumble works as normal.
++ DS3's LEDs can be controlled by setting the correct Lightbar colors (more on that on a later section).
++ Basically every other DS4Windows function that is not related to the lightbar or motion works as intended.
+
+## What does not work
+
++ DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows. The buil-in equivalent functions of DsHidMini should be used instead. 
++ Motion/UDP server is not supported and will remain so until someone manages to translate the motion info from the DS3 to the DS4 motion standard.
++ Settings that make the lightbar color flash, pulse or change randomly (rainbow mode) are not supported.
++ DS3 touchpad not supported for obvious reasons. To use the touchpad click when emulating a Dualshock 4 it needs to be set up as a macro (as for the day this guide was written, march 07, 2021, DS4Windows does not support this function).
+
+## Verifying/Changing current DS3 HID Device Mode
  
-See [https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/] on how to do so.
+Go [here](https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/) on how to do so. The DS3 needs to be in "DS4 (DS4Windows)" mode to be detected by DS4Windows.
 
-## USING THE CONTROLLER WITH DS4WINDOWS
+## Using the controller with DS4Windows
 
 1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows' version (x86 for 32bits, x64 for 64bits);
 2. Extract the package to an easily accessible folder;
@@ -24,23 +38,12 @@ See [https://vigem.org/projects/DsHidMini/HID-Device-Modes-Explained/] on how to
 6. Run DS4WindowsDebug.exe (make sure no other instance of DS4Windows.exe is running before this;
 7. Install the ViGEm BUS Driver if asked to.
 
-After that, the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
+After that controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
 
-## WHAT DOES WORK
+From here, DS4Windows can be used as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Enjoy!
 
-+ XInput / DualShock 4 emulation according to the selected profile settings.
-+ Rumble works as normal.
-+ DS3's LEDs can be controlled by setting the correct Lightbar colors (more on that on a later section).
-+ Basically every other DS4Windows function that is not related to the lightbar or motion works as intended.
 
-## WHAT DOES NOT WORK
-
-+ DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows. The buil-in equivalent functions of DsHidMini should be used instead. 
-+ Motion/UDP server is not supported and will remain so until someone manages to translate the motion info from the DS3 to the DS4 motion standard.
-+ Settings that make the lightbar color flash, pulse or change randomly (rainbow mode) are not supported.
-+ DS3 touchpad not supported for obvious reasons. To use the touchpad click when emulating a Dualshock 4 it needs to be set up as a macro (as for the day this guide was written, march 07, 2021, DS4Windows does not support this function).
-
-## LIGHTBAR COLOR -> LED CONVERSION
+## Lightbar color -> LEDs translation
 
 By default, DsHidMini sets the LEDs on the DS3 to show the current battery level (4 = full -> 1 = low). When setting the correct lightbar color values with DS4Windows it is possible to control the LEDs on the DS3, which can be useful to represent the current selected profile or alternative ways on showing the battery level by using macros or the built-in battery level indicator.
 Beware that functions in DS4windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and will make the LEDs won't behave as expected. Because of this, the function "Flash Lightbar at High Latency" does not work as intended when a DS3.
@@ -84,7 +87,7 @@ e.g. 3: Setting up DS4Windows to control the LEDs in order to show the controlle
 + Allows any combination of LEDs on.
 + Useful if the user wants to differentiatie between more than 4 profiles
 
-To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table, where the value of "0" and "1" on the LEDs columns set the corresponding LED to "OFF" and "ON", respectively":
+To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table, where the value of "0" and "1" on the LEDs columns set the corresponding LED to "OFF" and "ON", respectively:
 
 | LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |  RED value (Hex)
 | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -111,7 +114,7 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 
 
-## SOLVING DOBLE INPUT ISSUE ON GAMES
+## Solving double input issues on games
 
 Some games can end-up detecting two controllers/inputs when using DS3 with DS4Windows. This happens because the game is picking both the real controller input and the emulated Xbox/Dualshock 4 controller created by DS4Windows. As of the moment of writing (March 07, 2021) there are 2 ways on attempting to solve this issue:
 
