@@ -9,6 +9,12 @@ DsHidMini is a universal driver for the dated yet beloved DualShock 3, Navigatio
 
 ## Demo-Videos
 
+### 2021-03-08 DsHidMini DS4 mode custom LED Demo
+
+<a href="https://www.youtube.com/watch?v=4jJHpZ77-Qc" class="glightbox">
+	<img src="https://i3.ytimg.com/vi/4jJHpZ77-Qc/hqdefault.jpg" alt="image">
+</a>
+
 ### 2021-02-27 DsHidMini Demo RPCS3
 
 <a href="https://www.youtube.com/watch?v=ICLOeU4-XTw" class="glightbox">
