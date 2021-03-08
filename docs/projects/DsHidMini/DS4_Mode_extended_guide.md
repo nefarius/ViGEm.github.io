@@ -113,7 +113,7 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 Some games can end-up detecting two controllers/inputs when using DS3 with DS4Windows. This happens because the game is picking both the real controller input and the emulated Xbox/Dualshock 4 controller created by DS4Windows. As of the moment of writing (March 07, 2021) there are 2 ways on attempting to solve this issue:
 
-### Hiding the real controller with the "Hide DS4 controller" function in DS4Windows
+### Hiding the real controller by using "Hide DS4 controller" in DS4Windows
 
 On the settings tab of DS4Windows there is a option named "Hide DS4 controller". When checked, DS4Windows will attempt on getting exclusive access to the controller, preventing games/other aplications of receiving inputs from the real controller, essentially solving the issue.
 Unfortunaly, there are many factors that may cause DS4Windows to fail in getting exclusive access. More information on this and on how to solve it can be found [here](https://github.com/Ryochan7/DS4Windows/wiki/Exclusive-Mode-(Hide-DS4-Controller-config-option)-tips-and-issues).
