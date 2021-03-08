@@ -4,7 +4,7 @@
     The Beta Build of Ryochan7's DS4Windows is required until DS3 support goes live on the stable build.
 
 
-In "DS4 (DS4Windows)" HID Device Mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows) , allowing the user to emulate a DS4 or XInput controller as well as using most of its functions. Because games will not directly detect the controller as a DS4, the use of DS4Windows is required for use with most modern games and aplications.
+In "DS4 (DS4Windows)" HID Device Mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows), allowing the user to emulate a DS4 or XInput controller as well as using most of its functions.
 
 ## What does work
 
