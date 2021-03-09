@@ -1,5 +1,7 @@
 # How to Install
 
+!!! important "Work in progress"
+
 DsHidMini can only work its magic if it's the dominant driver for your controller, you may have others preinstalled that need removal, this guide covers most of the known cases.
 
 ## Installation
@@ -46,4 +48,3 @@ If you have/had PS Now installed, chances are high you have the official Sony `s
 ![eW3QhFytrY.png](images/eW3QhFytrY.png){: .glightbox }
 - Follow the wizard:
     ![DOVKWWOZpJ.png](images/DOVKWWOZpJ.png)
-    
