@@ -134,7 +134,7 @@ In case things go wrong (and they shouldn't as long as the user carefully follow
 
 #### Installing HidGuardian
 
-1. Download and extract the archive from [https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing] (link from Ryochan7's DS4Windows wiki)
+1. [Download and extract the archive](https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing)
 2. Inside the extracted folder, run HidGuardianInstaller.exe
 3. Click on Install. Wait until the utility finishes downloading then installing HidGuardian  
 ![install hidguardian success](images/Installing_HidGuardian_Success.png){: .glightbox }
