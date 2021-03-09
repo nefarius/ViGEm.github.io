@@ -21,13 +21,13 @@ No matter what software you may have preinstalled, this step is always the same 
 - Run `DSHMC.exe` to see if the controller gets detected
     - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
 
-By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#addressing-conflicts)!
+By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
 
 ## Updating
 
 New releases are expected to appear quite frequently during Beta Testing, so make sure to regularly come back and check the GitHub releases page. If you want to update, simply [follow all the same steps of the installation](#installation) and overwrite any existing files. Reboot your machine to be extra safe if it didn't work right away.
 
-## Addressing conflicts
+## Troubleshooting
 
 We need to first determine if any other conflicting device driver is present on the system and remove it so DsHidMini can take over that job. The steps outlined here may or may not be applicable to your system, it entirely depends on your past 😜 and the stuff you potentially installed. Worry not though, together we shall succeed ✨
 
