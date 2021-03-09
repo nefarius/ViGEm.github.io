@@ -51,3 +51,16 @@ If you have/had PS Now installed, chances are high you have the official Sony `s
 ![f6RHUblPhy.png](images/f6RHUblPhy.png){: .glightbox }  
 ![27yW8gUtaC.png](images/27yW8gUtaC.png){: .glightbox }  
 ![mmc_Vn3zp43Xg3.png](images/mmc_Vn3zp43Xg3.png){: .glightbox }  
+- Use [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases) to remove the `sixaxis.inf` driver:  
+![Ip5SHUMzrE.png](images/Ip5SHUMzrE.png){: .glightbox }  
+
+Done 🎉
+
+### FireShock
+
+If you've used [Shibari](https://github.com/ViGEm/Shibari) before you probably have FireShock installed, lets rectify that:
+
+- Use [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases) to remove the `sixaxis.inf` driver:  
+![EMS2RXFoc4.png](images/EMS2RXFoc4.png){: .glightbox }  
+
+Done 🎉
