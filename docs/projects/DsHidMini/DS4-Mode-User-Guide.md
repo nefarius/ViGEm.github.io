@@ -48,8 +48,8 @@ Beware that functions in DS4windows that make the lightbar flash, pulse or rando
 ### Simple LED control
 
 - Only 1 LED can be ON at a time
-- Simple to set-up;
-- Necessary for some macros and to let DS4Windows take hold of showing the controllers battery level;
+- Simple to set-up
+- Necessary for some macros and to let DS4Windows take hold of showing the controllers battery level
 
 To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "0". After that, the Red color value will be translated to the LEDs state according to the following table:
 
