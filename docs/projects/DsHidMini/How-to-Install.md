@@ -17,7 +17,7 @@ No matter what software you may have preinstalled, this step is always the same 
     - On x86 navigate to `x86\dshidmini`
 - Right-click on `dshidmini.inf` and select Install
     ![hIh7PcxkC9.png](images/hIh7PcxkC9.png)
-    - (Optional) if you've never installed great software before 😉 this might show up (hit Install):  
+    - If you've never installed great software before 😉 this might show up (hit Install):  
     ![DRYeurZsPs.png](images/DRYeurZsPs.png)
     - Should only take a moment until success dialog
     ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
