@@ -12,6 +12,7 @@ theme:
     primary: teal
   features:
     - navigation.tabs
+  custom_dir: overrides
 
 extra:
   social:
