@@ -1,7 +1,7 @@
 # Installation Guide (Shibari Edition)
 
 !!! attention "🚨 Obsolete solution 🚨"
-    [DsHidMini](../DsHidMini/) (official successor) has been released, you might consider checking that out instead! 
+    [DsHidMini](../DsHidMini/index) (official successor) has been released, you might consider checking that out instead! 
 
 ## What's this
 
