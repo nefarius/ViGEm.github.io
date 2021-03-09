@@ -8,7 +8,14 @@ No matter what software you may have preinstalled, this step is always the same 
 
 - [Go to the latest release on GitHub](https://github.com/ViGEm/DsHidMini/releases/latest)
 - Download the attached `dshidmini_vX.X.X.X.zip` archive to an arbitrary location on your machine
-- Extract the archive
+- Extract the archive (doesn't matter where to, e.g. your Downloads folder)
+- [Make sure you know your architecture](https://vigem.org/research/How-to-check-architecture/)
+    - On x64 navigate to `x64\dshidmini`
+    - On x86 navigate to `x86\dshidmini`
+- Right-click on `dshidmini.inf` and select Install
+    - ![hIh7PcxkC9.png](images/hIh7PcxkC9.png)
+    - Should only take a moment until success dialog
+    ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
 
 
 ## Preparation
