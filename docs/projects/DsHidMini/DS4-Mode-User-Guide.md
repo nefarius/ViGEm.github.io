@@ -30,7 +30,7 @@ Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in
 3. Download the latest Beta Build from [here](https://github.com/mika-n/DS4Windows/raw/debugVerWPF/extras/DS4WindowsWPF_DeviceDetectDebug.zip);
 4. Extract the Beta Build Archive inside the DS4Windows that was extracted in step 2;
 5. If everything is alright your DS4Windows folder should look like this:  
-![ds4windows beta](images/ds4windows_beta_folder.png)  
+![ds4windows beta](images/ds4windows_beta_folder.png){: .glightbox }  
 6. Run DS4WindowsDebug.exe (make sure no other instance of DS4Windows.exe is running before this;
 7. Install the ViGEm BUS Driver if asked to.
 
@@ -62,15 +62,15 @@ To activate this form of lightbar color translation, both the values of the Gree
 
 e.g. 1: Setting up a profile to be represented as LED 3.
 
-![SimpleLedControl eg 1 - LED 3 on](images/SimpleLedControl_eg1_LED3on.png)
+![SimpleLedControl eg 1 - LED 3 on](images/SimpleLedControl_eg1_LED3on.png){: .glightbox }
 
 e.g. 2: Setting up a macro to make the LEDs reflect the controller's battery level.
 
-![SimpleLedControl eg 2 - Macro example](images/SimpleLedControl_eg2_Macro.png)
+![SimpleLedControl eg 2 - Macro example](images/SimpleLedControl_eg2_Macro.png){: .glightbox }
 
 e.g. 3: Setting up DS4Windows to control the LEDs in order to show the controller's battery level all the time.
 
-![SimpleLedControl eg 3 - Battery charge indication](images/SimpleLedControl_eg3_Battery.png)
+![SimpleLedControl eg 3 - Battery charge indication](images/SimpleLedControl_eg3_Battery.png){: .glightbox }
 
 ### Complete LED control
 
@@ -101,7 +101,7 @@ To activate this form of lightbar color translation, both the values of the Gree
 
 e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
-![TotalLedControl eg - LEDs 4 and 2](/projects/DsHidMini/images/TotalLedControl_eg_LEDs_4_2.png)
+![TotalLedControl eg - LEDs 4 and 2](/projects/DsHidMini/images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
 
 ## Solving double input issues on games
 
@@ -112,7 +112,7 @@ Some games can end-up detecting two controllers/inputs when using DS3 with DS4Wi
 On the settings tab of DS4Windows there is a option named "Hide DS4 controller". When checked, DS4Windows will attempt on getting exclusive access to the controller, preventing games/other applications of receiving inputs from the real controller, essentially solving the issue.
 Unfortunately, there are many factors that may cause DS4Windows to fail in getting exclusive access. More information on this and on how to solve it can be found [here](https://github.com/Ryochan7/DS4Windows/wiki/Exclusive-Mode-(Hide-DS4-Controller-config-option)-tips-and-issues).
 
-![Hide DS4 Controller](images/Hide_DS4_Controller.png)
+![Hide DS4 Controller](images/Hide_DS4_Controller.png){: .glightbox }
 
 ### Hiding the real controller by using HidGuardian
 
@@ -125,7 +125,7 @@ HidGuardian is a driver created to act as a barrier between every HID device and
 
 The installer tool that will be used to install HidGuardian is also capable of correctly uninstalling it if the user chooses, just open it and hit "Uninstall", then reboot the computer.
 
-![unninstall hidguardian](images/unninstall_hidguardian.png)
+![unninstall hidguardian](images/unninstall_hidguardian.png){: .glightbox }
 
 In case things go wrong (and they shouldn't as long as the user carefully follows the steps described in this section) or the uninstaller fails here are 2 guides on how to solve the issue:
 
@@ -137,7 +137,7 @@ In case things go wrong (and they shouldn't as long as the user carefully follow
 1. Download and extract the archive from [https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing] (link from Ryochan7's DS4Windows wiki)
 2. Inside the extracted folder, run HidGuardianInstaller.exe
 3. Click on Install. Wait until the utility finishes downloading then installing HidGuardian  
-![install hidguardian success](images/Installing_HidGuardian_Success.png)
+![install hidguardian success](images/Installing_HidGuardian_Success.png){: .glightbox }
 4. After the "HidGuardian is now installed" appears on the utility, close it and then reboot the computer
 
 #### Hiding the controller
@@ -145,13 +145,13 @@ In case things go wrong (and they shouldn't as long as the user carefully follow
 1. Connect the DS3 controller
 2. Open DS4Windows
 3. On the Settings Tab, open HidNinja  
-![DS4Windows HidNinja](images/DS4Windows_HidNinja.png)  
+![DS4Windows HidNinja](images/DS4Windows_HidNinja.png){: .glightbox }  
 4. On the top-left list, select the PLAYSTATION(R)3 Controller;
 5. Select on the right list the key named "HID\VID_7331&UP:0001_U:0005", then click on the "add" button on the top-right corner;
 6. Check if the "HID\VID_7331&UP:0001_U:0005" key is now present on the bottom list  
-![HidNinja DS3](images/HidNinja_DS3.png)  
+![HidNinja DS3](images/HidNinja_DS3.png){: .glightbox }  
 7. Close HidNinja
 8. Disconnect then reconnect the controller
 9. Check if the controller is recognized by DS4Windows and if the "Key" icon is active, showing that exclusive access is active
 10. End  
-![DS4Windows DS3 Exclusive access](images/DS4Windows_DS3_exclusive_access.png)
+![DS4Windows DS3 Exclusive access](images/DS4Windows_DS3_exclusive_access.png){: .glightbox }
