@@ -1,7 +1,7 @@
 # Community and Support
 
 !!! attention "Don't email developers for support requests"
-    It's sad that it has to be addressed but please use the resources below to seek help, free help has to happen via **public** channel, thank you for understanding 🥰 Messages in violation of this simple request will be discarded without any further comment 👮
+    It's sad that it has to be addressed but please use the resources below to seek assistance, **free support** has to happen via **public channels**, thank you for understanding 🥰 Mails in violation of this simple request will be discarded without any further comment 👮
 
 Struggling with some project and need help? We've got you covered! In addition to the articles on this site there's the possibility of human interaction 😉
 
