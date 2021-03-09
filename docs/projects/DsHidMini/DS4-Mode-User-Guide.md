@@ -9,15 +9,15 @@ In "DS4 (DS4Windows)" HID Device Mode, the driver emulates a DualShock 4 with an
 
 - XInput / DualShock 4 emulation according to the selected profile settings in DS4Windows.
 - Rumble works as normal.
-- DS3's LEDs can be controlled by setting the correct Lightbar colors (more on that on a later section).
+- DS3's LEDs can be controlled by setting the correct lightbar colors (more on that on a later section).
 - Basically every other DS4Windows function that is not related to the lightbar or motion works as intended.
 
 ## What does not work
 
-- DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows. The buil-in equivalent functions of DsHidMini should be used instead. 
+- DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows. The built-in equivalent functions of DsHidMini should be used instead.
 - Motion/UDP server is not supported and will remain so until someone manages to translate the motion info from the DS3 to the DS4 motion standard.
 - Settings that make the lightbar color flash, pulse or change randomly (rainbow mode) are not supported.
-- DS3 touchpad not supported for obvious reasons. To use the touchpad click when emulating a Dualshock 4 it needs to be set up as a macro (as for the day this guide was written, march 07, 2021, DS4Windows does not support this function).
+- DS3 touchpad not supported for obvious reasons. To use the touchpad click when emulating a DualShock 4 it needs to be set up as a macro (as for the day this guide was written, march 07, 2021, DS4Windows does not support this function).
 
 ## Verifying/Changing current DS3 HID Device Mode
 
@@ -25,14 +25,14 @@ Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in
 
 ## Using the controller with DS4Windows
 
-1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows' version (x86 for 32bits, x64 for 64bits);
-2. Extract the package to an easily accessible folder;
-3. Download the latest Beta Build from [here](https://github.com/mika-n/DS4Windows/raw/debugVerWPF/extras/DS4WindowsWPF_DeviceDetectDebug.zip);
-4. Extract the Beta Build Archive inside the DS4Windows that was extracted in step 2;
+1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows' version (x86 for 32bits, x64 for 64bits)
+2. Extract the package to an easily accessible folder
+3. Download the latest Beta Build from [here](https://github.com/mika-n/DS4Windows/raw/debugVerWPF/extras/DS4WindowsWPF_DeviceDetectDebug.zip)
+4. Extract the Beta Build Archive inside the DS4Windows that was extracted in step 2
 5. If everything is alright your DS4Windows folder should look like this:  
 ![ds4windows beta](images/ds4windows_beta_folder.png){: .glightbox }  
-6. Run DS4WindowsDebug.exe (make sure no other instance of DS4Windows.exe is running before this;
-7. Install the ViGEm BUS Driver if asked to.
+6. Run DS4WindowsDebug.exe (make sure no other instance of DS4Windows.exe is running before this
+7. Install the ViGEmBus Driver if asked to.
 
 After that controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
 
@@ -41,7 +41,7 @@ From here, DS4Windows can be used as usual. XInput and DS4 emulation, as well ot
 ## Lightbar color -> LEDs translation
 
 By default, DsHidMini sets the LEDs on the DS3 to show the current battery level (4 = full -> 1 = low). When setting the correct lightbar color values with DS4Windows it is possible to control the LEDs on the DS3, which can be useful to represent the current selected profile or alternative ways on showing the battery level by using macros or the built-in battery level indicator.
-Beware that functions in DS4windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and will make the LEDs won't behave as expected. Because of this, the function "Flash Lightbar at High Latency" does not work as intended when a DS3.
+Beware that functions in DS4windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and will make the LEDs won't behave as expected. Because of this, the function "Flash lightbar at High Latency" does not work as intended when a DS3.
 
 !!! Unsupported color values won't change the LEDs any further until a new supported color value is set.
 
