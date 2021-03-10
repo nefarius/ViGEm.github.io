@@ -42,7 +42,7 @@ If you had ScpToolkit installed, you need to purge every remains from your machi
 
 ### Official Sony driver
 
-If you have/had PS Now installed, chances are high you have the official Sony `sixaxis.sys` on your system. [Follow this procedure to remove it](./SIXAXIS.SYS-to-DsHidMini-Guide).
+If you have/had PS Now installed, chances are high you have the official Sony `sixaxis.sys` on your system. [Follow this procedure to remove it](../SIXAXIS.SYS-to-DsHidMini-Guide).
 
 ### FireShock
 
