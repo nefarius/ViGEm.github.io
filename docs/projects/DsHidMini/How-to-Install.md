@@ -21,10 +21,14 @@ No matter what software you may have preinstalled, this step is always the same 
     ![DRYeurZsPs.png](images/DRYeurZsPs.png)
     - Should only take a moment until success dialog
     ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
-- Run `DSHMC.exe` to see if the controller gets detected
+- Run `DSHMC.exe` (DsHidMini Control Utility) to see if the controller gets detected
     - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
 
 By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
+
+## Beta builds
+
+[You can get the latest automatic build of the DsHidMini control utility here](https://ci.appveyor.com/api/projects/nefarius/dshidmini/artifacts/bin/DSHMC.exe?job=Platform%3A%20x64) which can contain newer yet unfinished features. May contain bugs 🐛 use with care 😊 It's unsigned so you'll get a warning when launched as Administrator, this is expected. Happy testing!
 
 ## Updating
 
