@@ -1,5 +1,7 @@
 # Switch from SIXAXIS.SYS to DsHidMini
 
+If the Sony SIXAXIS.SYS driver is present on your system, it may take priority over DsHidMini (on USB) and you need to manually switch drivers like outlined below:
+
 - Plug in your controller
 - Open Device Manager by pressing ++win+x++ and select it from the menu:  
 ![6dCenuSsFr.png](images/6dCenuSsFr.png){: .glightbox }  
