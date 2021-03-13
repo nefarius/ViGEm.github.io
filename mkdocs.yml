@@ -8,12 +8,11 @@ copyright: |
 theme:
   name: material
   favicon: images/favicon.png
-  features:
-    - navigation.expand
   palette:
     primary: teal
   features:
     - navigation.tabs
+  custom_dir: overrides
 
 extra:
   social:

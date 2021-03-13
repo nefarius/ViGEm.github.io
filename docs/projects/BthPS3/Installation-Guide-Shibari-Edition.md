@@ -1,7 +1,7 @@
 # Installation Guide (Shibari Edition)
 
-!!! attention "Kinda-SCP-Successor for Windows 10"
-    The following instructions are currently the best way to get your beloved PS3 peripherals to work, it still is quite the clutter but should get you into the game until DsHidMini is ready for the public :innocent:
+!!! attention "🚨 Obsolete solution 🚨"
+    [DsHidMini](https://vigem.org/projects/DsHidMini/) (official successor) has been released, you might consider checking that out instead! 
 
 ## What's this
 

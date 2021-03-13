@@ -1,6 +1,6 @@
 # About BthPS3
 
-[![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/ViGEm/BthPS3)
+[![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/ViGEm/BthPS3) ![Maintained](https://img.shields.io/badge/Project%20actively%20maintained-brightgreen)
 
 Welcome to the BthPS3 extended documentation!
 
