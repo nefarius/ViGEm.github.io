@@ -34,7 +34,7 @@ From here, DS4Windows can be used as usual. XInput and DS4 emulation, as well ot
 ## Lightbar color to LEDs translation
 
 By default, DsHidMini sets the LEDs on the DS3 to show the current battery level (4 = full -> 1 = low). When setting the correct lightbar color values with DS4Windows it is possible to control the LEDs on the DS3, which can be useful to represent the current selected profile or alternative ways on showing the battery level by using macros or the built-in battery level indicator.
-Beware that functions in DS4windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and can make the LEDs change to an undesired state. Because of this, the function "Flash lightbar at High Latency" does not work as intended when a DS3.
+Beware that functions in DS4Windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and can make the LEDs change to an undesired state. Because of this, the function "Flash lightbar at High Latency" does not work as intended when a DS3.
 
 !!! important "Keep in mind"
     Unsupported color values won't change the LEDs any further until a new supported color value is set.
