@@ -38,7 +38,7 @@ After that controller should be properly recognized by DS4Windows. If it is not,
 
 From here, DS4Windows can be used as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Enjoy!
 
-## Lightbar color -> LEDs translation
+## Lightbar color to LEDs translation
 
 By default, DsHidMini sets the LEDs on the DS3 to show the current battery level (4 = full -> 1 = low). When setting the correct lightbar color values with DS4Windows it is possible to control the LEDs on the DS3, which can be useful to represent the current selected profile or alternative ways on showing the battery level by using macros or the built-in battery level indicator.
 Beware that functions in DS4windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and will make the LEDs won't behave as expected. Because of this, the function "Flash lightbar at High Latency" does not work as intended when a DS3.
@@ -76,7 +76,7 @@ e.g. 3: Setting up DS4Windows to control the LEDs in order to show the controlle
 
 - "Harder" to set-up (not really).
 - Allows any combination of LEDs on.
-- Useful if the user wants to differentiate between more than 4 profiles
+- Useful if the user wants to differentiate between more than 4 profiles.
 
 To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table, where the value of "0" and "1" on the LEDs columns set the corresponding LED to "OFF" and "ON", respectively:
 
@@ -125,7 +125,7 @@ HidGuardian is a driver created to act as a barrier between every HID device and
 
 The installer tool that will be used to install HidGuardian is also capable of correctly uninstalling it if the user chooses, just open it and hit "Uninstall", then reboot the computer.
 
-![unninstall hidguardian](images/unninstall_hidguardian.png){: .glightbox }
+![UninstallHG](images/uninstall_hidguardian.png){: .glightbox }
 
 In case things go wrong (and they shouldn't as long as the user carefully follows the steps described in this section) or the uninstaller fails here are 2 guides on how to solve the issue:
 
