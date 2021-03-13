@@ -1,8 +1,5 @@
 # DS4 Mode User Guide
 
-!!! important "TL;DR:"
-    The Beta Build of Ryochan7's DS4Windows is required until DS3 support goes live on the stable build.
-
 In "DS4 (DS4Windows)" HID Device Mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows), allowing the user to emulate a DS4 or XInput controller as well as using most of its functions.
 
 ## What does work
@@ -25,25 +22,22 @@ Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in
 
 ## Using the controller with DS4Windows
 
-1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows' version (x86 for 32bits, x64 for 64bits)
+1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows version (x86 for 32bits, x64 for 64bits)
 2. Extract the package to an easily accessible folder
-3. Download the latest Beta Build from [here](https://github.com/mika-n/DS4Windows/raw/debugVerWPF/extras/DS4WindowsWPF_DeviceDetectDebug.zip)
-4. Extract the Beta Build Archive inside the DS4Windows that was extracted in step 2
-5. If everything is alright your DS4Windows folder should look like this:  
-![ds4windows beta](images/ds4windows_beta_folder.png){: .glightbox }  
-6. Run DS4WindowsDebug.exe (make sure no other instance of DS4Windows.exe is running before this
-7. Install the ViGEmBus Driver if asked to.
+3. Run DS4Windows.exe
+4. Install the ViGEmBus Driver if asked to
 
-After that controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
+After that the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
 
 From here, DS4Windows can be used as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Enjoy!
 
 ## Lightbar color to LEDs translation
 
 By default, DsHidMini sets the LEDs on the DS3 to show the current battery level (4 = full -> 1 = low). When setting the correct lightbar color values with DS4Windows it is possible to control the LEDs on the DS3, which can be useful to represent the current selected profile or alternative ways on showing the battery level by using macros or the built-in battery level indicator.
-Beware that functions in DS4windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and will make the LEDs won't behave as expected. Because of this, the function "Flash lightbar at High Latency" does not work as intended when a DS3.
+Beware that functions in DS4windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and can make the LEDs change to an undesired state. Because of this, the function "Flash lightbar at High Latency" does not work as intended when a DS3.
 
-!!! Unsupported color values won't change the LEDs any further until a new supported color value is set.
+!!! important "Keep in mind"
+    Unsupported color values won't change the LEDs any further until a new supported color value is set.
 
 ### Simple LED control
 
@@ -101,7 +95,7 @@ To activate this form of lightbar color translation, both the values of the Gree
 
 e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
-![TotalLedControl eg - LEDs 4 and 2](/projects/DsHidMini/images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
+![TotalLedControl eg - LEDs 4 and 2](images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
 
 ## Solving double input issues on games
 
@@ -146,8 +140,8 @@ In case things go wrong (and they shouldn't as long as the user carefully follow
 2. Open DS4Windows
 3. On the Settings Tab, open HidNinja  
 ![DS4Windows HidNinja](images/DS4Windows_HidNinja.png){: .glightbox }  
-4. On the top-left list, select the PLAYSTATION(R)3 Controller;
-5. Select on the right list the key named "HID\VID_7331&UP:0001_U:0005", then click on the "add" button on the top-right corner;
+4. On the top-left list, select your DS3 controller
+5. Select on the right list the key named "HID\VID_7331&UP:0001_U:0005", then click on the "add" button on the top-right corner
 6. Check if the "HID\VID_7331&UP:0001_U:0005" key is now present on the bottom list  
 ![HidNinja DS3](images/HidNinja_DS3.png){: .glightbox }  
 7. Close HidNinja
