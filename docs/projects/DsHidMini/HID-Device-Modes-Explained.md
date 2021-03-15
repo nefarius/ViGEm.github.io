@@ -7,7 +7,13 @@ DsHidMini aims for maximum possible compatibility with existing tools or games w
 
 ## How to adjust the settings
 
-This is a per device, per connection type setting and can be adjusted in the DsHidMini Control UI tool.
+Connected PS3 controllers using DsHidMini can be adjusted in the DsHidMini Control UI tool (DHMC.exe) that is downloaded along the driver (DHMC.exe needs to be run as Administrator to allow changing the current HID Device Mode). After changing the current mode, press the "Apply changes" button to make them effective, which will cause the affected controller to disconnect. If wired, the controller will promptly reconnect, on bluetooth it needs to be powered on again by pressing the "PS" button for the device to reconnect.
+
+![DsHidMini Control UI Tool](images/ModesExplained_DsHidMiniControlUI.png){: .glightbox }
+
+The HID Device Mode is a per device, per connection type setting, meaning that:
+- Each connected controller can be set to a different mode
+- The same controller can be in different modes when Wired and on Bluetooth, so always check which mode the device is set when changing between between the form of connection
 
 ## HID Device Modes
 
