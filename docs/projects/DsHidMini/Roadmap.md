@@ -1,5 +1,8 @@
 # Roadmap
 
+!!! important "Getting migrated"
+    Since the project is now public on GitHub, new problems and feature requests will be recorded and discussed on the [issue tracker](https://github.com/ViGEm/DsHidMini/issues). This page might not be up to date until fully migrated.
+
 Rough road map with useful features (in no particular order):
 
 - [ ] Implement support for Navigation controller ⬇️
