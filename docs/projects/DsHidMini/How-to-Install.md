@@ -21,6 +21,7 @@ No matter what software you may have preinstalled, this step is always the same 
     ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
 - Run `DSHMC.exe` (DsHidMini Control Utility) to see if the controller gets detected
     - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
+    - It is not required to keep the utility running for the driver to function, only if you want to observe battery level or change settings
 
 By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
 

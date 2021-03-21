@@ -1,10 +1,20 @@
 # HID Device Modes Explained
 
+!!! hint "Important topic"
+    This is one of *the* core features of the driver and understanding it is vital for great gaming experience so take your time and study thoroughly 😘
+
 DsHidMini aims for maximum possible compatibility with existing tools or games without the need for any custom code. It supports different "HID Device emulation modes", meaning upon boot-up it can present the controller as different types of HID devices, each sporting a unique set of specialized features outlined below. The device mode you choose dictates the level of compatibility with certain 3rd party software and how the controller is "seen" by processes. Read on for details.
 
 ## How to adjust the settings
 
-This is a per device, per connection type setting and can be adjusted in the DsHidMini Control UI tool.
+Connected controllers using DsHidMini can be adjusted in the DsHidMini Control UI tool (`DHMC.exe`) that is downloaded along the driver. It needs to be run as Administrator to allow changing the current HID Device Mode. After every change, press the "Apply changes" button to make them effective, which will cause the affected controller to disconnect on Bluetooth and restart on USB. For Bluetooth it needs to be powered on again manually afterwards by pressing the "PS" button.
+
+![DsHidMini Control UI Tool](images/ModesExplained_DsHidMiniControlUI.png){: .glightbox }
+
+The HID Device Mode is a per device, per connection type setting, meaning that:
+
+- Each connected controller can be set to a different mode
+- The same controller can be in different modes when wired or wireless, so always check which mode the device is set to when transitioning from wired to wireless and vice versa
 
 ## HID Device Modes
 
@@ -48,4 +58,6 @@ The default LED behavior in this mode is the charging animation. If a compatible
 
 **DualShock 4** mode. In this mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [DS4Windows](https://github.com/Ryochan7/DS4Windows/). You can use almost all features DS4Windows offers with a DualShock 3 (excluding nonexistent features like the track pad or the light bar) including **XInput emulation**.
 
-The default LED behavior in this mode is the charging animation. Once the controller is picked up by DS4Windows, light bar changes will get translated to LED states ([see this article for details](./DS4-Mode-User-Guide)) and rumble requests passed through.
+The default LED behavior in this mode is the charging animation. Once the controller is picked up by DS4Windows, light bar changes will get translated to LED states ([see this article for details](../DS4-Mode-User-Guide)) and rumble requests passed through.
+
+**Motion controls** are currently **not supported** (no gyroscope or accelerometer) and therefore **will not work with [CEMU](https://cemu.info/)** when the UDP Server is active.
