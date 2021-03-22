@@ -38,8 +38,6 @@ The default LED behavior in this mode is the charging animation and can't be alt
 
 **Gamepad plus Joystick** mode. In this mode, the controller is presented as **two separate HID devices**; a traditional gamepad featuring the same set of features like a common Xbox 360 controller and a Joystick, only handling the pressure axes. This mode guarantees the best potential compatibility with legacy solutions purely relying on DirectInput and works around the mentioned axis limit. The rumble motors can be controlled via **Force Feedback effects** (Constant Force Effect).
 
-**Disclaimer:** the pressure values for the **shoulder buttons** are not supported as they exceed the axis limit.
-
 The default LED behavior in this mode is the charging animation and can't be altered.
 
 ### SXS
