@@ -2,6 +2,48 @@
 
 !!! important "Work in progress"
 
+## Control Device
+
+The filter driver uses the common concept of exposing a [Control Device](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/using-control-device-objects) which can be opened from any user-land process and used to send [I/O Control Commands](::io-control-commands) to.
+
+Use the [`CreateFile`](https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API within the language/framework of your choice and open the path `\\.\HidHide`.
+
+!!! example "Obtain Control Device handle"
+
+    === "C#"
+        ```csharp
+        using (var handle = Kernel32.CreateFile("\\\\.\\HidHide",
+                    Kernel32.ACCESS_MASK.GenericRight.GENERIC_READ | Kernel32.ACCESS_MASK.GenericRight.GENERIC_WRITE,
+                    Kernel32.FileShare.FILE_SHARE_READ | Kernel32.FileShare.FILE_SHARE_WRITE,
+                    IntPtr.Zero, Kernel32.CreationDisposition.OPEN_EXISTING,
+                    Kernel32.CreateFileFlags.FILE_ATTRIBUTE_NORMAL
+                    | Kernel32.CreateFileFlags.FILE_FLAG_NO_BUFFERING
+                    | Kernel32.CreateFileFlags.FILE_FLAG_WRITE_THROUGH,
+                    Kernel32.SafeObjectHandle.Null
+                ))
+                {
+                    // call DeviceIoControl here
+                }
+        ```
+
+    === "C/C++"
+        ```cpp
+        #include <Windows.h>
+
+        HANDLE handle = CreateFile(
+            "\\\\.\\HidHide", 
+            GENERIC_READ, 
+            (FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE), 
+            NULL, 
+            OPEN_EXISTING, 
+            FILE_ATTRIBUTE_NORMAL, 
+            NULL);
+
+        // call DeviceIoControl here
+
+        CloseHandle(handle);
+        ```
+
 ## I/O Control Commands
 
 ### Get Blacklist
