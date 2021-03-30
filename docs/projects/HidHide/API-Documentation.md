@@ -13,7 +13,7 @@ Use the [`CreateFile`](https://docs.microsoft.com/en-us/windows/win32/api/fileap
     === "C#"
         ```csharp
         using (var handle = Kernel32.CreateFile("\\\\.\\HidHide",
-            Kernel32.ACCESS_MASK.GenericRight.GENERIC_READ | Kernel32.ACCESS_MASK.GenericRight.GENERIC_WRITE,
+            Kernel32.ACCESS_MASK.GenericRight.GENERIC_READ,
             Kernel32.FileShare.FILE_SHARE_READ | Kernel32.FileShare.FILE_SHARE_WRITE,
             IntPtr.Zero, Kernel32.CreationDisposition.OPEN_EXISTING,
             Kernel32.CreateFileFlags.FILE_ATTRIBUTE_NORMAL
@@ -44,7 +44,12 @@ Use the [`CreateFile`](https://docs.microsoft.com/en-us/windows/win32/api/fileap
         CloseHandle(handle);
         ```
 
+!!! important "Exclusive handle access enforced"
+    Reading and altering the lists of denied/allowed entities is not an atomic operation, therefore only one handle (process) is allowed to open the control device and issue requests at a time. Make sure to close the handle shortly after your operations are done to not block other processes which may want to talk to the driver.
+
 ## I/O Control Commands
+
+Driver behavior is altered entirely through the [DeviceIoControl](https://docs.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) Windows API and outlined below. Arrays of strings are exchanged as a [double-null-terminated](https://devblogs.microsoft.com/oldnewthing/20091008-00/?p=16443) [wide-character-string literal](https://docs.microsoft.com/en-us/cpp/c-language/multibyte-and-wide-characters?view=msvc-160) so make sure to apply proper conversion and specify the correct buffer lengths (include all NULL-characters and multiply times `sizeof(wchar_t)`).
 
 ### Get Blacklist
 
