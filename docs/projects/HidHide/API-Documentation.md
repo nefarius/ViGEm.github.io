@@ -18,9 +18,7 @@ Use the [`CreateFile`](https://docs.microsoft.com/en-us/windows/win32/api/fileap
             Kernel32.ACCESS_MASK.GenericRight.GENERIC_READ,
             Kernel32.FileShare.FILE_SHARE_READ | Kernel32.FileShare.FILE_SHARE_WRITE,
             IntPtr.Zero, Kernel32.CreationDisposition.OPEN_EXISTING,
-            Kernel32.CreateFileFlags.FILE_ATTRIBUTE_NORMAL
-            | Kernel32.CreateFileFlags.FILE_FLAG_NO_BUFFERING
-            | Kernel32.CreateFileFlags.FILE_FLAG_WRITE_THROUGH,
+            Kernel32.CreateFileFlags.FILE_ATTRIBUTE_NORMAL,
             Kernel32.SafeObjectHandle.Null
         ))
         {
