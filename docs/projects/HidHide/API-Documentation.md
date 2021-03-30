@@ -12,6 +12,8 @@ Use the [`CreateFile`](https://docs.microsoft.com/en-us/windows/win32/api/fileap
 
     === "C#"
         ```csharp
+        // Use e.g. https://github.com/dotnet/pinvoke/
+        // Install-Package PInvoke.Kernel32
         using (var handle = Kernel32.CreateFile("\\\\.\\HidHide",
             Kernel32.ACCESS_MASK.GenericRight.GENERIC_READ,
             Kernel32.FileShare.FILE_SHARE_READ | Kernel32.FileShare.FILE_SHARE_WRITE,
