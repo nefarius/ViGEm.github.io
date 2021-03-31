@@ -115,4 +115,201 @@ Driver behavior is altered entirely through the [DeviceIoControl](https://docs.m
 
 ## Usage examples
 
-To be filled...
+The API usage should be fairly self-explanatory to anyone experienced with the basic Windows API, if in doubt, consult the Microsoft documentation for usage details 😉 For other high-level languages like C#/.NET wrapper libraries exist for the few required functions. A sample implementation is provided below (C#).
+
+First, since .NET doesn't really offer any convenience methods to deal with double-null-terminated wide-character-string literals I've thrown together this simple helper class:
+
+!!! example "String manipulation helper tools"
+
+    === "C#"
+        ```csharp
+        /// <summary>
+        ///     String manipulation helper methods.
+        /// </summary>
+        internal static class StringHelperUtil
+        {
+            /// <summary>
+            ///     Converts an array of <see cref="string" /> into a double-null-terminated multi-byte character memory block.
+            /// </summary>
+            /// <param name="instances">Source array of strings.</param>
+            /// <param name="length">The length of the resulting byte array.</param>
+            /// <returns>The allocated memory buffer.</returns>
+            public static IntPtr StringArrayToMultiSzPointer(this IEnumerable<string> instances, out int length)
+            {
+                // Temporary byte array
+                IEnumerable<byte> multiSz = new List<byte>();
+
+                // Convert each string into wide multi-byte and add NULL-terminator in between
+                multiSz = instances.Aggregate(multiSz,
+                    (current, entry) => current.Concat(Encoding.Unicode.GetBytes(entry))
+                        .Concat(Encoding.Unicode.GetBytes(new[] {char.MinValue})));
+
+                // Add another NULL-terminator to signal end of the list
+                multiSz = multiSz.Concat(Encoding.Unicode.GetBytes(new[] {char.MinValue}));
+
+                // Convert expression to array
+                var multiSzArray = multiSz.ToArray();
+
+                // Convert array to managed native buffer
+                var buffer = Marshal.AllocHGlobal(multiSzArray.Length);
+                Marshal.Copy(multiSzArray, 0, buffer, multiSzArray.Length);
+
+                length = multiSzArray.Length;
+
+                // Return usable buffer, don't forget to free!
+                return buffer;
+            }
+
+            /// <summary>
+            ///     Converts a double-null-terminated multi-byte character memory block into a string array.
+            /// </summary>
+            /// <param name="buffer">The memory buffer.</param>
+            /// <param name="length">The size in bytes of the memory buffer.</param>
+            /// <returns>The extracted string array.</returns>
+            public static IEnumerable<string> MultiSzPointerToStringArray(this IntPtr buffer, int length)
+            {
+                // Temporary byte array
+                var rawBuffer = new byte[length];
+
+                // Grab data from buffer
+                Marshal.Copy(buffer, rawBuffer, 0, length);
+
+                // Trims away potential redundant NULL-characters and splits at NULL-terminator
+                return Encoding.Unicode.GetString(rawBuffer).TrimEnd(char.MinValue).Split(char.MinValue);
+            }
+        }
+        ```
+
+With that out of the way we need the IOCTL definitions for the `DeviceIoControl` call. The values are simply computed from the helper macros which are not available in managed code:
+
+!!! example "IOCTL code definitions"
+
+    === "C#"
+        ```csharp
+        private const uint IOCTL_GET_WHITELIST = 0x80016000;
+        private const uint IOCTL_SET_WHITELIST = 0x80016004;
+        private const uint IOCTL_GET_BLACKLIST = 0x80016008;
+        private const uint IOCTL_SET_BLACKLIST = 0x8001600C;
+        private const uint IOCTL_GET_ACTIVE = 0x80016010;
+        private const uint IOCTL_SET_ACTIVE = 0x80016014;
+        ```
+
+The following snippet enables the blocking capabilities and adds three device instance IDs to the deny list:
+
+!!! example "Retrieve, alter and submit deny-list"
+
+    === "C#"
+        ```csharp
+        // Use e.g. https://github.com/dotnet/pinvoke/
+        // Install-Package PInvoke.Kernel32
+        using (var handle = Kernel32.CreateFile("\\\\.\\HidHide",
+            Kernel32.ACCESS_MASK.GenericRight.GENERIC_READ,
+            Kernel32.FileShare.FILE_SHARE_READ | Kernel32.FileShare.FILE_SHARE_WRITE,
+            IntPtr.Zero, Kernel32.CreationDisposition.OPEN_EXISTING,
+            Kernel32.CreateFileFlags.FILE_ATTRIBUTE_NORMAL,
+            Kernel32.SafeObjectHandle.Null
+        ))
+        {
+            var buffer = Marshal.AllocHGlobal(sizeof(bool));
+
+            // Enable blocking logic, if not enabled already
+            try
+            {
+                Marshal.WriteInt32(buffer, 1);
+
+                // Check return value for success
+                Kernel32.DeviceIoControl(
+                    handle,
+                    unchecked((int) IOCTL_SET_ACTIVE),
+                    buffer,
+                    sizeof(bool),
+                    IntPtr.Zero,
+                    0,
+                    out _,
+                    IntPtr.Zero
+                );
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(buffer);
+            }
+
+            // List of blocked instances
+            IList<string> instances = new List<string>();
+
+            // Get existing list of blocked instances
+            // This is important to not discard entries other processes potentially made
+            // Always get the current list before altering/submitting it
+            try
+            {
+                // Get required buffer size
+                // Check return value for success
+                Kernel32.DeviceIoControl(
+                    handle,
+                    unchecked((int) IOCTL_GET_BLACKLIST),
+                    IntPtr.Zero,
+                    0,
+                    IntPtr.Zero,
+                    0,
+                    out var required,
+                    IntPtr.Zero
+                );
+
+                buffer = Marshal.AllocHGlobal(required);
+
+                // Get actual buffer content
+                // Check return value for success
+                Kernel32.DeviceIoControl(
+                    handle,
+                    unchecked((int) IOCTL_GET_BLACKLIST),
+                    IntPtr.Zero,
+                    0,
+                    buffer,
+                    required,
+                    out _,
+                    IntPtr.Zero
+                );
+
+                // Store existing block-list in a more manageable "C#" fashion
+                instances = buffer.MultiSzPointerToStringArray(required).ToList();
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(buffer);
+            }
+
+            // Manipulate block-list and submit it
+            try
+            {
+                buffer = instances
+                    .Concat(new[] // Add our own instance paths to the existing list
+                    {
+                        // Hides wireless PlayStation 3 Controller
+                        @"HID\{53f88889-1aaf-4353-a047-556b69ec6da6}&Col01\c&3945a91b&3&0000",
+                        // Hides Xbox 360 Controller from XInput
+                        @"USB\VID_045E&PID_028E\13FCFDC",
+                        // Hides Xbox 360 Controller from DirectInput/HID-API
+                        @"HID\VID_045E&PID_028E&IG_00\A&22872CBD&0&0000"
+                    })
+                    .Distinct() // Remove duplicates, if any
+                    .StringArrayToMultiSzPointer(out var length); // Convert to usable buffer
+                
+                // Submit new list
+                // Check return value for success
+                Kernel32.DeviceIoControl(
+                    handle,
+                    unchecked((int) IOCTL_SET_BLACKLIST),
+                    buffer,
+                    length,
+                    IntPtr.Zero,
+                    0,
+                    out _,
+                    IntPtr.Zero
+                );
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(buffer);
+            }
+        }
+        ```
