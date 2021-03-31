@@ -51,31 +51,6 @@ Use the [`CreateFile`](https://docs.microsoft.com/en-us/windows/win32/api/fileap
 
 Driver behavior is altered entirely through the [DeviceIoControl](https://docs.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) Windows API and outlined below. Arrays of strings are exchanged as a [double-null-terminated](https://devblogs.microsoft.com/oldnewthing/20091008-00/?p=16443) [wide-character-string literal](https://docs.microsoft.com/en-us/cpp/c-language/multibyte-and-wide-characters?view=msvc-160) so make sure to apply proper conversion and specify the correct buffer lengths (include all NULL-characters and multiply times `sizeof(wchar_t)`).
 
-!!! example "Device hiding example"
-
-    === "C#"
-        ```csharp
-        const uint IOCTL_GET_WHITELIST = 0x80016000;
-        const uint IOCTL_SET_WHITELIST = 0x80016004;
-        const uint IOCTL_GET_BLACKLIST = 0x80016008;
-        const uint IOCTL_SET_BLACKLIST = 0x8001600C;
-        const uint IOCTL_GET_ACTIVE    = 0x80016010;
-        const uint IOCTL_SET_ACTIVE    = 0x80016014;
-
-        // Use e.g. https://github.com/dotnet/pinvoke/
-        // Install-Package PInvoke.Kernel32
-        using (var handle = Kernel32.CreateFile("\\\\.\\HidHide",
-            Kernel32.ACCESS_MASK.GenericRight.GENERIC_READ,
-            Kernel32.FileShare.FILE_SHARE_READ | Kernel32.FileShare.FILE_SHARE_WRITE,
-            IntPtr.Zero, Kernel32.CreationDisposition.OPEN_EXISTING,
-            Kernel32.CreateFileFlags.FILE_ATTRIBUTE_NORMAL,
-            Kernel32.SafeObjectHandle.Null
-        ))
-        {
-            // TODO: finish example
-        }
-        ```
-
 ### Get Blacklist
 
 | <div style="width:140px">Parameter</div> | Description |
@@ -126,7 +101,7 @@ Driver behavior is altered entirely through the [DeviceIoControl](https://docs.m
 | `lpInBuffer` | `NULL` |
 | `nInBufferSize` | `0` |
 | `lpOutBuffer` | Gets the current state of the hiding capabilities (`1` = device hiding active, `0` = device hiding inactive). |
-| `nOutBufferSize` | `sizeof(BOOLEAN)` (4 bytes) |
+| `nOutBufferSize` | `sizeof(BOOLEAN)` (1 byte) |
 
 ### Set Status
 
@@ -134,6 +109,10 @@ Driver behavior is altered entirely through the [DeviceIoControl](https://docs.m
 |---|---|
 | `dwIoControlCode` | `IOCTL_SET_ACTIVE` |
 | `lpInBuffer` | Sets the new state of the hiding capabilities (`1` = device hiding active, `0` = device hiding inactive). |
-| `nInBufferSize` | `sizeof(BOOLEAN)` (4 bytes) |
+| `nInBufferSize` | `sizeof(BOOLEAN)` (1 byte) |
 | `lpOutBuffer` | `NULL` |
 | `nOutBufferSize` | `0` |
+
+## Usage examples
+
+To be filled...
