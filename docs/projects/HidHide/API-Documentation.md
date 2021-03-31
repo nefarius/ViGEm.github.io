@@ -215,7 +215,7 @@ The following snippet enables the blocking capabilities and adds three device in
             // Enable blocking logic, if not enabled already
             try
             {
-                Marshal.WriteInt32(buffer, 1);
+                Marshal.WriteByte(buffer, 1);
 
                 // Check return value for success
                 Kernel32.DeviceIoControl(
