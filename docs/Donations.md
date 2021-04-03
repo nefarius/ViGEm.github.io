@@ -7,7 +7,7 @@ A vast majority of [my](https://github.com/nefarius) work is available for free 
 
 ## Reoccurring subscriptions
 
-If you wanna stay a while and listen you can use these reoccurring services. Click the badge for more information:
+If you wanna stay a while and listen you can use these reoccurring services:
 
 [![Donate](https://img.shields.io/badge/Subscribe-Patreon-orange.svg)](https://www.patreon.com/nefarius)
 
