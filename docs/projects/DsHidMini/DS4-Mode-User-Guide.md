@@ -101,21 +101,7 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 Some games can end-up detecting two controllers/inputs when using DS3 with DS4Windows. This happens because the game is picking both the real controller input and the emulated Xbox/DualShock 4 controller created by DS4Windows. As of the moment of writing (March 07, 2021) there are 2 ways on attempting to solve this issue:
 
-### Hiding the real controller by using "Hide DS4 controller" in DS4Windows
-
-On the settings tab of DS4Windows there is a option named "Hide DS4 controller". When checked, DS4Windows will attempt on getting exclusive access to the controller, preventing games/other applications of receiving inputs from the real controller, essentially solving the issue.
-Unfortunately, there are many factors that may cause DS4Windows to fail in getting exclusive access. More information on this and on how to solve it can be found [here](https://github.com/Ryochan7/DS4Windows/wiki/Exclusive-Mode-(Hide-DS4-Controller-config-option)-tips-and-issues).
-
-![Hide DS4 Controller](images/Hide_DS4_Controller.png){: .glightbox }
-
-### Hiding the real controller by using HidGuardian
-
-!!! important "Read carefully"
-    If HidGuardian is incorrectly set-up/uninstalled, the user may lose access to all its connected HID devices, including keyboard and mouse (albeit it can be reversed)!
-
-HidGuardian is a driver created to act as a barrier between every HID device and Windows, thus allowing the user to hide specific devices and only allow chosen applications to reach them. Because of this, it needs to be correctly set-up and carefully used to avoid complications (like the user temporarily losing access to their own keyboard and mouse).
-
-#### Correctly uninstalling HidGuardian (in case things go wrong)
+### Correctly uninstalling HidGuardian (in case things go wrong)
 
 The installer tool that will be used to install HidGuardian is also capable of correctly uninstalling it if the user chooses, just open it and hit "Uninstall", then reboot the computer.
 
@@ -126,26 +112,3 @@ In case things go wrong (and they shouldn't as long as the user carefully follow
 - [If the uninstaller fails](../HidGuardian/Taming-HidGuardian-Gen1/)
 - [If the user loses access to keyboard and mouse](https://github.com/x360ce/x360ce/wiki/HID-Guardian)
 
-#### Installing HidGuardian
-
-1. [Download and extract the archive](https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing)
-2. Inside the extracted folder, run HidGuardianInstaller.exe
-3. Click on Install. Wait until the utility finishes downloading then installing HidGuardian  
-![install hidguardian success](images/Installing_HidGuardian_Success.png){: .glightbox }
-4. After the "HidGuardian is now installed" appears on the utility, close it and then reboot the computer
-
-#### Hiding the controller
-
-1. Connect the DS3 controller
-2. Open DS4Windows
-3. On the Settings Tab, open HidNinja  
-![DS4Windows HidNinja](images/DS4Windows_HidNinja.png){: .glightbox }  
-4. On the top-left list, select your DS3 controller
-5. Select on the right list the key named "HID\VID_7331&UP:0001_U:0005", then click on the "add" button on the top-right corner
-6. Check if the "HID\VID_7331&UP:0001_U:0005" key is now present on the bottom list  
-![HidNinja DS3](images/HidNinja_DS3.png){: .glightbox }  
-7. Close HidNinja
-8. Disconnect then reconnect the controller
-9. Check if the controller is recognized by DS4Windows and if the "Key" icon is active, showing that exclusive access is active
-10. End  
-![DS4Windows DS3 Exclusive access](images/DS4Windows_DS3_exclusive_access.png){: .glightbox }
