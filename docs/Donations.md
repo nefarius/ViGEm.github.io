@@ -22,3 +22,9 @@ If you wanna "drive-by-contribute" and throw a few coins in the hat you can do s
 [![Donate](https://img.shields.io/badge/Donate-buymeacoffee-yellow.svg)](https://www.buymeacoffee.com/Nefarius)
 
 [![Donate](https://img.shields.io/badge/Donate-Kofi-red.svg)](https://ko-fi.com/nefariusmaximus)
+
+## Cryptocurrencies
+
+Have some virtual coin to spare? I'll take good care of it:
+
+[![Donate with Bitcoin](https://en.cryptobadges.io/badge/big/16B4e53KVRu8DNkXLF5DEoziwGpgvGNQcm)](https://en.cryptobadges.io/donate/16B4e53KVRu8DNkXLF5DEoziwGpgvGNQcm)
