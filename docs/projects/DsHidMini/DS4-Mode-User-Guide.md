@@ -210,10 +210,54 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 ![TotalLedControl eg - LEDs 4 and 2](images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
 
+## Frequently Asked Questions
 
+### "_Why this convoluted setup? I just want to use my DS3 as a XInput/DS4 controller!_"
 
+Basically, because it was easier. By off-loading XInput and DS4 emulation to DS4Windows, DsHidMini's BETA release "to-do" list got smaller, more important features and issues could/can be prioritized and it's easier to solve bugs with a smaller code. This all led to the BETA release of DsHidMini happening sooner.
+With that said, we are aware that it _is_ convoluted right now and we hope things get easier for the user if/when:
 
+- DS4Windows has native integration to HidHide, white-listing itself and automatically hiding detected controllers
+- DS4 Mode is made "invisible" to games/application by default on DsHidMini. This is being considered but it's not certain since it requires alterations on DS4Windows side
+- Direct XInput/DS4 emulation is implemented
 
+### "_So direct XInput/DS4 emulation is a possibility?_"
 
+Yes. Actually, it is dead easy right now to directly emulate a DS4 since the DS3 in "DS4 Mode" _is_ a DS4, the only difference is that its hardware ID was changed to something only DS4Windows recognizes. The problems with allowing the user to enable direct DS4 emulation right now are:
 
+- Some games that support DS4 use the TouchPad button for things like maps or options menu. Because the D4's TP Button is an extra button that the DS3 don't have, this means that the TP Button would need to be a button combination or replace another used button, which means: having to actually implement all the logic involved in the driver _and_ in the DsHidMini Control Utility, which means more work and more code, so more chances of bugs, more things to test etc
+- XInput emulation is more difficult for _reasons_ and its _way easier_ to off-load this work to something else. If the user would need to use some program to emulate XInput, then why not DS4Windows? And in this case, why not leave DS4 emulation to it as well?
+- Users that would want to remap buttons/axis would end up in this situation anyway
 
+DS4Windows offers macros, remap function, the ability to change modes without disconnecting the controller, control the DS3 LEDs and more _already_. Not Later, __right now__. While direct emulation is a possibility and on DsHidMini's _To-Do_ list it's in no way a priority, so don't hold your breath for it.
+
+### "_I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360 one_"
+
+Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. This _should_ not matter for 99% games, as they are supposed to recognize the emulated DS4 regardless if Steam is ignoring it.
+To solve this, you can run DS4Windows under a custom ".exe" name. Just open DS4Windows -> Go into the _Settings_ Tab -> Write the name you want on the "Custom exe name" box (In the image below the name "DS4Win" is used as an example). After the name is set, fully close then re-open DS4Windows and the issue should be fixed. It's also recommended to go into the Steam's settings -> Controller -> General Controller Configurations -> Leave "Playstation Configuration Supported" UNCHECKED, so Steam doesn't remap your controller when you don't want to.
+
+!!! important "Attention!"
+    When running DS4Windows under a custom name it uses a different .exe file that has the chosen custom name. If you are using HidHide remember to add this new file to the applications list on its Configuration Client, otherwise DS4Windows won't be able to pick the real DS3 controller anymore.
+
+![FAQ_DS4WCustomName](images/FAQ_DS4WCustomName.png){: .glightbox }
+
+### "_X game does not detect my emulated DS4 / my game is not showing PS button icons_"
+
+- First, double check if the game actually supports DS4 controllers _and_ has native PS icons when played with a DualShock 4. There is no direct way to check this besides Googling around and looking at forums
+- If the game does not support DualShock 4/PS icons then that's in no way related to us and we can't do anything about it
+- If you are 100% sure the game supports PS button icons/DualShock 4, then this could be related to the issue above that is related to Steam not detecting the controller
+- If the game still doesn't recognize the emulated DualShock 4 then we have no idea what's going on and you are welcome on reaching us (through here)[https://vigem.org/Community-Support/]
+
+### "_How do I use DS4's TouchPad button?_"
+
+Because DS4Windows does not support mapping a button combination to anything TouchPad related right now, you'll need to remap a button to it:
+
+- Duplicate your DS4 profile, choose a different name to it
+- Edit the new profile
+- On the left side, click on the button you want to remap in the DualShock 4 picture
+- On the new window that appears select the middle of the touchpad
+- Save your profile and switch to it
+
+### "_How do I do 'X' thing on DS4Windows_"
+
+DS4Windows is a really amazing tool that can do lots of things, but the purpose of this guide isn't covering DS4Windows in itself, it's to give users the minimum necessary to have XInput/DS4 emulation and to cover DsHidMini related functions, like Light Bar color to LEDs translation. Because the other things it can do are not related to DsHidMini then it's recommended that you look in [its wiki](https://github.com/Ryochan7/DS4Windows/wiki/Settings) or google around for online tutorials. 
