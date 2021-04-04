@@ -76,7 +76,9 @@ Not a thing anymore since v1.3.x of BthPS3.
 
 ### Why don't you cover Windows versions lower than 10?
 
-Production-signing is unfortunately fairly annoying and unnecessary complicated for drivers targeting multiple major revisions of Windows so to keep my sanity I went for Windows 10 only. The code of BthPS3 is - as we speak - technically compatible from Windows 7 to 10 so it could be back-ported in the future with little efforts.
+Production-signing is unfortunately fairly annoying and unnecessary complicated for drivers targeting multiple major revisions of Windows so to keep my sanity I went for Windows 10 only. ~~The code of BthPS3 is - as we speak - technically compatible from Windows 7 to 10 so it could be back-ported in the future with little efforts.~~
+
+Starting with [this commit](https://github.com/ViGEm/BthPS3/commit/7959c119609138b9f5776ac99804f6062771ee4a) Windows 7 support is no longer given due to the introduction of a dependency not present in older OS versions.
 
 ### Why is this Shibari thingy necessary to run this clutter?
 
