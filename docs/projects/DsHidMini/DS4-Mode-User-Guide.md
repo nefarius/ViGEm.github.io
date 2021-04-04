@@ -26,22 +26,39 @@ Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in
 
 ## Using the controller with DS4Windows
 
-1. Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your Windows version (x86 for 32bits, x64 for 64bits)
-2. Extract the package to an easily accessible folder
-3. Run DS4Windows.exe
-4. Install the ViGEmBus Driver if asked to
+- Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
+- Extract the package to an easily accessible folder
+- Run DS4Windows.exe
+- Install the ViGEmBus Driver if asked to
 
-After that the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
+After that, the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
 
-From here, DS4Windows can be used as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Enjoy!
+### Changing between XInput and DS4 emulation
 
-## Lightbar color to LEDs translation
+The controller that DS4Windows emulates is dependent on the current selected profile. By default, the profile that comes with DS4Windows called... _Default_... is set to emulate a Xbox 360 controller. To change to DS4 emulation:
 
-By default, DsHidMini sets the LEDs on the DS3 to show the current battery level (4 = full -> 1 = low). When setting the correct lightbar color values with DS4Windows it is possible to control the LEDs on the DS3, which can be useful to represent the current selected profile or alternative ways on showing the battery level by using macros or the built-in battery level indicator.
-Beware that functions in DS4Windows that make the lightbar flash, pulse or randomize the colors (rainbow mode) are not supported and can make the LEDs change to an undesired state. Because of this, the function "Flash lightbar at High Latency" does not work as intended when a DS3.
+- Go to the _Profiles_ tab
+- Click on the "New" button to create a new profile
+- When asked if a preset is to be used, choose "yes" then "Gamepad"
+- On the right side go the _Other_ tab
+- In the final option of the _Other_ tab, "Emulated Controller", change from _Xbox 360_ to _DualShock 4_
+- On the left side, click on the Light Bar inside the image of the DualShock 4 which will open the _Color Picker Window_, as shown in the picture below. For now, pick any color as long as "G" or "B" are __not__ 0 or 255 (read the _Light Bar color to LEDs translation_ section later to know why)
+- Give a name to your profile (e.g.: DS3 to DS4)
+- Save the profile
+- Back in the _Controllers_ tab, click on the _Selected profile_ box and change from default to the profile you just created
 
-!!! important "Keep in mind"
-    Unsupported color values won't change the LEDs any further until a new supported color value is set.
+![Ds4Profile](images/Ds4Profile.png){: .glightbox }
+
+And done, now you can switch between XInput/DS4 emulation by changing between profiles. Profiles can also be switched by button combinations by setting a _Special action_ inside each profile settings, though we will not cover this in this guide.
+
+## What now?
+
+From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
+
+- __It is highly recommended that the next section, _Solving double input issues on games_, is followed through to prevent issues__
+- _At least_ the start of the _Light Bar color to LEDs translation_ should be read to prevent undesired LED behavior
+- It's recommended you have a quick look at the _FAQ_ section, read at least the title of the topics
+
 
 ### Simple LED control
 
