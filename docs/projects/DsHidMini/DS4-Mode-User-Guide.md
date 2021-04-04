@@ -101,11 +101,11 @@ HidGuardian's installer utility can check if it's installed and correctly unnins
 
 ### Hiding the controller
 
-- Search on the start menu and then open the "HidHide Configuration Client". The Client window should open
+- Open the "HidHide Configuration Client" in the start menu
 ![HidHideClient_StartMenu](images/HidHideClient_StartMenu.png){: .glightbox }
 - On the applications tab, click on the "+" button. On the new window that appears, locate and add the DS4Windows.exe file inside the DS4Windows folder
 - ___If___ you have set your DS4Windows to run under a custom name then you __must also add the custom ".exe" file__ that you defined to the HidHide's application list
-- With all your DS3 controllers connected, __double check if they all are in DS4 Mode__ (You can just check if all the controllers are being picked by DS4Windows)
+- With all your DS3 controllers connected, __double check if they all are in DS4 Mode__ by verifying if they all are being detected by DS4Windows
 - On HidHide's Client, go to the _Devices tab and locate your DS3 controller. Its name should start with "Nefarius Software Solutions e.U."
 - On your DS3 controllers entry, mark the white box before their names. A red lock icon should appear
 - Mark the box in the bottom called "Enable Device Hiding" to (obviously) activate the hiding of the marked devices
