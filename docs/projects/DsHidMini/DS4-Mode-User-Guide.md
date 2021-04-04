@@ -1,6 +1,9 @@
+!!! important "Fear not!"
+    The guide has lots of images, a optional _Light Bar to LEDs translation_ section and a FAQ, so the actual setup part is not as long as it looks. Still, read and follow carefully.
+
 # DS4 Mode User Guide
 
-In "DS4 (DS4Windows)" HID Device Mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows), allowing the user to emulate a DS4 or XInput controller as well as using most of its functions.
+In "DS4 (DS4Windows)" HID Device Mode, the controller appears as a custom device that can be detected by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows), allowing the user to then emulate a DS4 or XInput controller as well as make use of most of its features.
 
 ## What does work
 
