@@ -210,7 +210,6 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 ![TotalLedControl eg - LEDs 4 and 2](images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
 
-## Solving double input issues on games
 
 Some games can end-up detecting two controllers/inputs when using DS3 with DS4Windows. This happens because the game is picking both the real controller input and the emulated Xbox/DualShock 4 controller created by DS4Windows. As of the moment of writing (March 07, 2021) there are 2 ways on attempting to solve this issue:
 
