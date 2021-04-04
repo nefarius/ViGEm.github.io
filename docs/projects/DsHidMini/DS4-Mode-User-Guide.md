@@ -94,9 +94,7 @@ HidGuardian's installer utility can check if it's installed and correctly unnins
 ### Installing HidHide
 
 - Install [HidHide's prerequisites](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
-
 ![VisualCpp](images/HidHide_VisualCpp.png){: .glightbox }
-
 - Download the [Latest release of HidHide](https://github.com/ViGEm/HidHide/releases) (It should be a file called HidHideMSI.msi)
 - Open the downloaded file and install HidHide as instructed
 - After the installation, reboot your computer
@@ -104,9 +102,7 @@ HidGuardian's installer utility can check if it's installed and correctly unnins
 ### Hiding the controller
 
 - Search on the start menu and then open the "HidHide Configuration Client". The Client window should open
-
 ![HidHideClient_StartMenu](images/HidHideClient_StartMenu.png){: .glightbox }
-
 - On the applications tab, click on the "+" button. On the new window that appears, locate and add the DS4Windows.exe file inside the DS4Windows folder
 - ___If___ you have set your DS4Windows to run under a custom name then you __must also add the custom ".exe" file__ that you defined to the HidHide's application list
 - With all your DS3 controllers connected, __double check if they all are in DS4 Mode__ (You can just check if all the controllers are being picked by DS4Windows)
@@ -114,13 +110,10 @@ HidGuardian's installer utility can check if it's installed and correctly unnins
 - On your DS3 controllers entry, mark the white box before their names. A red lock icon should appear
 - Mark the box in the bottom called "Enable Device Hiding" to (obviously) activate the hiding of the marked devices
 - Your HidHid Configuration Client tabs should look more or less similar to picture below
-
 ![HidHideExampleSetup](images/HidHideClient_ExampleSetup.png){: .glightbox }
-
 - Disconnect-reconnect your controllers and they should now be properly hidden
 - Check if DS4Windows is detecting your controller. If it's not, you've incorrectly set the location of the DS4Windows ".exe" file
 - To check if the DS3 controller is properly hidden, search on the windows start menu and then open "Set up USB game controllers". Your _Game Controllers_ window should look like the picture below depending on the selected profile in DS4Windows
-
 ![DS3Hidden](images/DS3Hidden.png){: .glightbox }
 
 Keep in mind that:
