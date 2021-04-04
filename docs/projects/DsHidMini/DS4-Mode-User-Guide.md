@@ -185,7 +185,7 @@ e.g. 3: Setting up a profile to reflect the controller's battery level.
 - Allows any combination of LEDs on.
 - Useful if the user wants to differentiate between more than 4 profiles.
 
-To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table, where the value of "0" and "1" on the LEDs columns set the corresponding LED to "OFF" and "ON", respectively:
+To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table, where the value of "0" and "1" on the LEDs columns set the corresponding LED to "OFF" and "ON", respectively:
 
 | LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |  RED value (Hex)
 | :---: | :---: | :---: | :---: | :---: | :---: |
