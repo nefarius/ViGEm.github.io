@@ -106,7 +106,7 @@ HidGuardian's installer utility can check if it's installed and correctly unnins
 - On the applications tab, click on the "+" button. On the new window that appears, locate and add the DS4Windows.exe file inside the DS4Windows folder
 - ___If___ you have set your DS4Windows to run under a custom name then you __must also add the custom ".exe" file__ that you defined to the HidHide's application list
 - With all your DS3 controllers connected, __double check if they all are in DS4 Mode__ by verifying if they all are being detected by DS4Windows
-- On HidHide's Client, go to the _Devices tab and locate your DS3 controller. Its name should start with "Nefarius Software Solutions e.U."
+- On HidHide's Client, go to the _Devices_ tab and locate your DS3 controller. Its name should start with "Nefarius Software Solutions e.U."
 - On your DS3 controllers entry, mark the white box before their names. A red lock icon should appear
 - Mark the box in the bottom called "Enable Device Hiding" to (obviously) activate the hiding of the marked devices
 - Your HidHid Configuration Client tabs should look more or less similar to picture below
@@ -149,7 +149,7 @@ By default, DsHidMini sets the LEDs on the DS3 to show the current battery level
 
 - Only 1 LED can be ON at a time
 - Simple to set-up
-- Necessary for some macros and to let DS4Windows show the current battery level
+- Necessary for some _Special Actions_ and to let DS4Windows show the current battery level
 
 To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "0". After that, the Red color value will be translated to the LEDs state according to the following table:
 
