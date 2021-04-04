@@ -33,27 +33,9 @@ Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in
 
 After that, the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
 
-### Changing between XInput and DS4 emulation
-
-The controller that DS4Windows emulates is dependent on the current selected profile. By default, the profile that comes with DS4Windows called... _Default_... is set to emulate a Xbox 360 controller. To change to DS4 emulation:
-
-- Go to the _Profiles_ tab
-- Click on the "New" button to create a new profile
-- When asked if a preset is to be used, choose "yes" then "Gamepad"
-- On the right side go the _Other_ tab
-- In the final option of the _Other_ tab, "Emulated Controller", change from _Xbox 360_ to _DualShock 4_
-- On the left side, click on the Light Bar inside the image of the DualShock 4 which will open the _Color Picker Window_, as shown in the picture below. For now, pick any color as long as "G" or "B" are __not__ 0 or 255 (read the _Light Bar color to LEDs translation_ section later to know why)
-- Give a name to your profile (e.g.: DS3 to DS4)
-- Save the profile
-- Back in the _Controllers_ tab, click on the _Selected profile_ box and change from default to the profile you just created
-
-![Ds4Profile](images/Ds4Profile.png){: .glightbox }
-
-And done, now you can switch between XInput/DS4 emulation by changing between profiles. Profiles can also be switched by button combinations by setting a _Special action_ inside each profile settings, though we will not cover this in this guide.
-
 ## What now?
 
-From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
+From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Read the _FAQ_ if you wante more detailed instructions on how to change to DS4 emulation. Besides that:
 
 - __It is highly recommended that the next section, _Solving double input issues on games_, is followed through to prevent issues__
 - _At least_ the start of the _Light Bar color to LEDs translation_ should be read to prevent undesired LED behavior
@@ -204,6 +186,24 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 ![TotalLedControl eg - LEDs 4 and 2](images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
 
 ## Frequently Asked Questions
+
+### "_How do I change between XInput and DS4 emulation?_"Changing between XInput and DS4 emulation
+
+The controller that DS4Windows emulates is dependent on the current selected profile. By default, the profile that comes with DS4Windows called... _Default_... is set to emulate a Xbox 360 controller. To change to DS4 emulation you can Edit the _Default_ profile, though it is recommended you create a new specific for DS4 emulation. To create a new profile:
+
+- Go to the _Profiles_ tab
+- Click on the "New" button to create a new profile
+- When asked if a preset is to be used, choose "yes" then "Gamepad"
+- On the right side go the _Other_ tab
+- In the final option of the _Other_ tab, "Emulated Controller", change from _Xbox 360_ to _DualShock 4_
+- On the left side, click on the Light Bar inside the image of the DualShock 4 which will open the _Color Picker Window_, as shown in the picture below. For now, pick any color as long as "G" or "B" are __not__ 0 or 255 to keep the default DsHidMini's LED behavior (read the _Light Bar color to LEDs translation_ section later to know why)
+- Give a name to your profile (e.g.: DS3 to DS4)
+- Save the profile
+- Back in the _Controllers_ tab, click on the _Selected profile_ box and change from default to the profile you just created
+
+![Ds4Profile](images/Ds4Profile.png){: .glightbox }
+
+And done, now you can switch between XInput/DS4 emulation by changing between profiles. Profiles can also be switched by button combinations by setting a _Special action_ inside each profile settings, though we will not cover this in this guide.
 
 ### "_Why this convoluted setup? I just want to use my DS3 as a XInput/DS4 controller!_"
 
