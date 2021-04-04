@@ -86,7 +86,7 @@ I have plans for getting completely rid of this requirement, but that requires a
 
 ### How do I get pressure sensitive buttons in PCSX2 with this?
 
-That is possible but out of the scope of this project.
+That is possible but out of the scope of this project. [DsHidMini can do that for you](https://vigem.org/projects/DsHidMini/)!
 
 ### Can I use the motion capabilities of the PS3 controllers?
 
@@ -94,11 +94,11 @@ That is possible but out of the scope of this project.
 
 ### I want some battery charge indicator, like SCP!
 
-That is possible but out of the scope of this project.
+That is possible but out of the scope of this project. [DsHidMini can do that for you](https://vigem.org/projects/DsHidMini/)!
 
 ### Can I have all SCP features like quick disconnect combo etc.?
 
-That is possible but out of the scope of this project.
+That is possible but out of the scope of this project. [DsHidMini can do that for you](https://vigem.org/projects/DsHidMini/)!
 
 ### I sometimes need to power on the controller twice or more until it stays connected...
 
@@ -152,13 +152,7 @@ Done, delightful 😃
 
 Nope, this isn't and never was a software issue. Any misbehavior in regards to reported inputs comes from the controller hardware itself, not my tools. In short: your device is damaged or reached the end of its lifespan, sorry! Time to replace! 😔
 
-If you sport some of those lovely ~~fake~~ aftermarket devices from questionable stores from far away costing only a dime or two then you might have been screwed over and my software is not here to fix hardware manufacturers cuts, get proper genuine hardware or at least higher quality replicas :wink: 
-
----
-
-***Stay tuned, more answers coming soon...***
-
-![Alastor](/assets/uploads/files/65ffc789b05211faf1585083e2382c0b.gif)
+If you sport some of those lovely ~~fake~~ aftermarket devices from questionable stores from far away costing only a dime or two then you might have been screwed over and my software is not here to fix hardware manufacturers cuts, get proper genuine hardware or at least higher quality replicas :wink:
 
 ---
 
