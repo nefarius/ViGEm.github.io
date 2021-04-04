@@ -156,9 +156,9 @@ By default, DsHidMini sets the LEDs on the DS3 to show the current battery level
 
 - Only 1 LED can be ON at a time
 - Simple to set-up
-- Necessary for some macros and to let DS4Windows take hold of showing the controllers battery level
+- Necessary for some macros and to let DS4Windows show the current battery level
 
-To activate this form of lightbar color translation, both the values of the Green and Blue colors must be set as "0". After that, the Red color value will be translated to the LEDs state according to the following table:
+To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "0". After that, the Red color value will be translated to the LEDs state according to the following table:
 
 | RED value (Dec) |  RED value (Hex) | LED state |
 | :---: | :---: | :---: |
@@ -171,11 +171,11 @@ e.g. 1: Setting up a profile to be represented as LED 3.
 
 ![SimpleLedControl eg 1 - LED 3 on](images/SimpleLedControl_eg1_LED3on.png){: .glightbox }
 
-e.g. 2: Setting up a macro to make the LEDs reflect the controller's battery level.
+e.g. 2: Setting up a _Special Action_ to make the LEDs reflect the controller's battery level.
 
 ![SimpleLedControl eg 2 - Macro example](images/SimpleLedControl_eg2_Macro.png){: .glightbox }
 
-e.g. 3: Setting up DS4Windows to control the LEDs in order to show the controller's battery level all the time.
+e.g. 3: Setting up a profile to reflect the controller's battery level.
 
 ![SimpleLedControl eg 3 - Battery charge indication](images/SimpleLedControl_eg3_Battery.png){: .glightbox }
 
