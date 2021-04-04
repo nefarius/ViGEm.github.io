@@ -48,3 +48,8 @@ Join the test-gang and [follow the installation instructions](./How-to-Install)!
 <a href="https://www.youtube.com/watch?v=RCy2B2cUr_w" class="glightbox">
     <img src="http://i3.ytimg.com/vi/RCy2B2cUr_w/hqdefault.jpg" alt="image">
 </a>
+
+!!! important "Copyright (C) 2020-2021 - Nefarius Software Solutions e.U."
+    This is a community project and not affiliated with Sony Interactive Entertainment Inc. in any way.
+
+    "PlayStation", "PSP", "PS2", "PS one", "DUALSHOCK" and "SIXAXIS" are registered trademarks of Sony Interactive Entertainment Inc.
