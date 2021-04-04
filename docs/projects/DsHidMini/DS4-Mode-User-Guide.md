@@ -131,6 +131,26 @@ We sure hope this whole section becomes obsolete soon when DS4Windows adds nativ
 
 From here, everything should be correctly set. Your DS3 is now a Xbox 360 / DS4 controller and the real DS3 is properly hidden. All that's left is to enjoy your games! It's recommended that you have a quick look at the start of the next section and at least read the _FAQ_ topics.
 
+## Light Bar color to LEDs translation
+
+!!! important "Be warned!"
+    Even if you are not interested in this, you should _at least_ read the introduction and the "Keep DsHidMini's default LED behavior" part of this section
+
+By setting the correct Light Bar color values in the profile settings it is possible to control the LEDs on the DS3, which can be useful to:
+
+- Represent the current selected profile as a specific LED
+- Make the controller's LEDs represent the current battery level 
+- Indicate the battery level by using _Special Actions_ in the profile's settings
+
+Beware that functions in DS4Windows that make the Light Bar flash, pulse or randomize the colors (rainbow mode) are not supported and can make the LEDs change to an undesired state. Because of this, the function "Flash Light Bar at High Latency" does not work as intended with a DS3.
+
+
+### Keep DsHidMini's default LED behavior
+
+By default, DsHidMini sets the LEDs on the DS3 to show the current battery level, from "4 = full" until  "1 = low". To keep this behavior you only need to ___not___ use a supported Light Bar color value. __Keep in mind that once a supported color is set the LED behavior will NOT revert to the default behavior, with the LED state remaining on the last supported Light Bar color translation UNTIL THE CONTROLLER IS RECONNECTED__. The pratical implications of this are:
+
+- If you intend to use DsHidMini's default LED behavior it's better that __ALL__ your profiles to have unsupported color values (just make sure that the ___G/B___ subcolors are never 0 or 255)
+- If you want a custom LED in one profile and the default LED behavior in another it's better if you _replicate_ the default "LED as battery" behavior in DS4Windows itself (read the _Simple LED control_ part on how to do this, specially its example 3)
 
 ### Simple LED control
 
