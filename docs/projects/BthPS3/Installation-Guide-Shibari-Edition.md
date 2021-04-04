@@ -1,7 +1,7 @@
 # Installation Guide (Shibari Edition)
 
 !!! attention "🚨 Obsolete solution 🚨"
-    [DsHidMini](https://vigem.org/projects/DsHidMini/) (official successor) has been released, you might consider checking that out instead! 
+    [DsHidMini](https://vigem.org/projects/DsHidMini/) (official successor) has been released, please use that instead! This article will remain online for historic reasons but use is discouraged as no more updates will follow!
 
 ## What's this
 
@@ -82,7 +82,9 @@ Starting with [this commit](https://github.com/ViGEm/BthPS3/commit/7959c11960913
 
 ### Why is this Shibari thingy necessary to run this clutter?
 
-I have plans for getting completely rid of this requirement, but that requires additional drivers which I've started working on but currently don't have the drive or capacity to deal with. Maybe if support and interest from the community rises above a certain threshold I'll tackle that topic some day again!
+~~I have plans for getting completely rid of this requirement, but that requires additional drivers which I've started working on but currently don't have the drive or capacity to deal with. Maybe if support and interest from the community rises above a certain threshold I'll tackle that topic some day again!~~
+
+No need, [use DsHidMini instead](https://vigem.org/projects/DsHidMini/) of Shibari and FireShock!
 
 ### How do I get pressure sensitive buttons in PCSX2 with this?
 
