@@ -212,14 +212,8 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 
 
-### Correctly uninstalling HidGuardian (in case things go wrong)
 
-The installer tool that will be used to install HidGuardian is also capable of correctly uninstalling it if the user chooses, just open it and hit "Uninstall", then reboot the computer.
 
-![UninstallHG](images/uninstall_hidguardian.png){: .glightbox }
 
-In case things go wrong (and they shouldn't as long as the user carefully follows the steps described in this section) or the uninstaller fails here are 2 guides on how to solve the issue:
 
-- [If the uninstaller fails](../HidGuardian/Taming-HidGuardian-Gen1/)
-- [If the user loses access to keyboard and mouse](https://github.com/x360ce/x360ce/wiki/HID-Guardian)
 
