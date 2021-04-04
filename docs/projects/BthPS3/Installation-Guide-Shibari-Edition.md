@@ -62,7 +62,7 @@ You made it this far? Great! Remember that `Shibari` archive from earlier? Extra
 
 ### Have you gone insane?
 
-Maybe! When you stare into the kernel for too long, the kernel stares back :ghost: 
+Maybe! When you stare into the kernel for too long, the kernel stares back :ghost:
 
 ### Is this some official Sony thing?
 
@@ -119,6 +119,8 @@ Open `settings.json` in your Shibari folder and check out the comments in the `"
 `FireShock` and Sonys official `sixaxis` driver they ship with PSNow unfortunately can't coexist on the same system, if you want "traditional" USB support back you need to uninstall `FireShock`:
 
 [![7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png)](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png){: .glightbox }
+
+[Use DsHidMini instead](https://vigem.org/projects/DsHidMini/) to get that feature back!
 
 ### Ever since I've installed this, my DS4 isn't connecting anymore at all!
 
