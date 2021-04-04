@@ -7,17 +7,18 @@ In "DS4 (DS4Windows)" HID Device Mode, the controller appears as a custom device
 
 ## What does work
 
-- XInput / DualShock 4 emulation according to the selected profile settings in DS4Windows.
-- Rumble works as normal.
-- DS3's LEDs can be controlled by setting the correct lightbar colors (more on that on a later section).
-- Basically every other DS4Windows function that is not related to the lightbar or motion works as intended.
+- Xbox 360 (__XInput__) / DualShock 4 emulation according to the selected profile settings in DS4Windows
+- Rumble works as normal
+- DS4's Touchpad Button can be used by remapping a button to it (e.g.: use Select as the _TP button_ instead of _Share_)
+- DS3's LEDs can be controlled by setting the correct Light Bar colors (more on that on a later section)
+- Basically every other DS4Windows function that is not related to the Light Bar or motion works as intended
 
 ## What does not work
 
-- DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows. The built-in equivalent functions of DsHidMini should be used instead.
-- Motion/UDP server is not supported and will remain so until someone manages to translate the motion info from the DS3 to the DS4 motion standard.
-- Settings that make the lightbar color flash, pulse or change randomly (rainbow mode) are not supported.
-- DS3 touchpad not supported for obvious reasons. To use the touchpad click when emulating a DualShock 4 it needs to be set up as a macro (as for the day this guide was written, march 07, 2021, DS4Windows does not support this function).
+- DS3 controllers are always recognized as if they were connected by USB. As such, DS4Windows Bluetooth functions like auto-disconnect on idle and disconnect on button combo are not supported. This is a limitation on DsHidMini side and can't be fixed by DS4Windows. [The built-in equivalent functions of DsHidMini](https://github.com/ViGEm/DsHidMini#features) should be used instead
+- Motion/UDP server is not supported and will remain so until someone manages to translate the motion info from the DS3 to the DS4 motion standard
+- Settings that make the Light Bar color flash, pulse or change randomly (rainbow mode) are not supported
+- Specific DS4 touchpad movements are not supported, only the Touchpad Button and to use it another button needs to be remapped
 
 ## Verifying/Changing current DS3 HID Device Mode
 
