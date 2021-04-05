@@ -227,6 +227,7 @@ DS4Windows offers macros, remap function, the ability to change modes without di
 ### "_I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360 one_"
 
 Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. Regardless if Steam is detecting or not the emulated DS4, 99.9% of the games that support DS4 controllers should detect the emulated one as normal.
+
 For Steam to properly detect the emulated controller you need run DS4Windows under a custom ".exe" name. Just open DS4Windows -> Go into the _Settings_ Tab -> Write the name you want on the "Custom exe name" box (In the image below the name "DS4Win" is used as an example). After the name is set, fully close then re-open DS4Windows and then Steam shoud detect it as normal. It's also recommended to go into the Steam's settings -> Controller -> General Controller Configurations -> Leave "Playstation Configuration Supported" UNCHECKED, so Steam doesn't remap your controller when you don't want it to.
 
 !!! important "Attention!"
@@ -239,7 +240,7 @@ For Steam to properly detect the emulated controller you need run DS4Windows und
 - First, double check if the game actually supports DS4 controllers _and_ has native PS icons when played with a DualShock 4. There is no direct way to check this besides Googling around and looking at forums
 - If the game does not support DualShock 4/PS icons then that's in no way related to us and we can't do anything about it
 - If you are 100% sure the game supports PS button icons/DualShock 4, then this could be related to the issue above that is related to Steam not detecting the controller
-- If the game still doesn't recognize the emulated DualShock 4 then we have no idea what's going on and you are welcome on reaching us (through here)[https://vigem.org/Community-Support/]
+- If the game still doesn't recognize the emulated DualShock 4 then we have no idea what's going on and you are welcome on reaching us [through here](https://vigem.org/Community-Support/)
 
 ### "_How do I use DS4's TouchPad button?_"
 
