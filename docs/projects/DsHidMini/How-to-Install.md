@@ -1,4 +1,4 @@
-# How to Install
+# How to Install/Remove
 
 DsHidMini can only work its magic if it's the dominant driver for your controller, you may have others preinstalled that need removal, this guide covers most of the known cases.
 
@@ -32,6 +32,24 @@ By now if you plug in your controller (or reboot the machine) chances are high t
 ## Updating
 
 New releases are expected to appear quite frequently during Beta Testing, so make sure to regularly come back and check the GitHub releases page. If you want to update, simply [follow all the same steps of the installation](#installation) and overwrite any existing files. Reboot your machine to be extra safe if it didn't work right away.
+
+## Removing
+
+If you want to remove DsHidMini from your computer you first need to delete it from Windows Driver Store:
+
+- Use [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases) to remove the `dshidmini.inf` driver:  
+![RemoveDsHidMini_DriverStore.png](images/RemoveDsHidMini_DriverStore.png){: .glightbox }
+
+The driver will still be loaded for controllers that were using it, so be sure to unninstall them from Device's manager:
+
+- Plug in your controllers
+- Open Device Manager by pressing ++win+x++ and select it from the menu:
+![6dCenuSsFr.png](images/6dCenuSsFr.png){: .glightbox }
+- Expand `Nefarius HID Devices`
+- For each device contained in `Nefarius HID Devices`, right click them and select `Unninstall Device`, then select `Unninstall` on the confirmation window that appears
+![RemoveDsHidMini_UnninsDevices.png](images/RemoveDsHidMini_UnninsDevices.png){: .glightbox }  
+
+After that, DsHidMini should be fully gone from your computer.
 
 ## Troubleshooting
 
