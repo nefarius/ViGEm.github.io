@@ -38,10 +38,8 @@ New releases are expected to appear quite frequently during Beta Testing, so mak
 If you want to remove DsHidMini from your computer you first need to delete it from Windows Driver Store:
 
 - Use [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases) to remove the `dshidmini.inf` driver:  
-![RemoveDsHidMini_DriverStore.png](images/RemoveDsHidMini_DriverStore.png){: .glightbox }
-
-The driver will still be loaded for controllers that were using it, so be sure to uninstall them from Device's manager:
-
+![RemoveDsHidMini_DriverStore.png](images/RemoveDsHidMini_DriverStore.png){: .glightbox }  
+The driver will still be loaded for controllers that were using it, so be sure to uninstall them from Device Manager  
 - Plug in your controllers
 - Open Device Manager by pressing ++win+x++ and select it from the menu:  
 ![6dCenuSsFr.png](images/6dCenuSsFr.png){: .glightbox }  
