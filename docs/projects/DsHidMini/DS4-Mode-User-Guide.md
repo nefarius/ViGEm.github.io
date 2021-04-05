@@ -189,7 +189,7 @@ The controller that DS4Windows emulates is dependent on the current selected pro
 - When asked if a preset is to be used, choose "yes" then "Gamepad"
 - On the right side go the _Other_ tab
 - In the final option of the _Other_ tab, "Emulated Controller", change from _Xbox 360_ to _DualShock 4_
-- On the left side, click on the Light Bar inside the image of the DualShock 4 which will open the _Color Picker Window_, as shown in the picture below. For now, pick any color as long as "G" or "B" are __not__ 0 or 255 to keep the default DsHidMini's LED behavior (read the _Light Bar color to LEDs translation_ section later to know why)
+- Adjust the Light Bar color related settings according to what you want according to the _Light Bar to LEDs translation_ section (in the example below the profile will be represented by LED 2)
 - Give a name to your profile (e.g.: DS3 to DS4)
 - Save the profile
 - Back in the _Controllers_ tab, click on the _Selected profile_ box and change from default to the profile you just created
