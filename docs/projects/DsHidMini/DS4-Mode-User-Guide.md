@@ -38,7 +38,8 @@ After that, the controller should be properly recognized by DS4Windows. If it is
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Read the _FAQ_ if you wante more detailed instructions on how to change to DS4 emulation. Besides that:
 
 - __It is highly recommended that the next section, _Solving double input issues on games_, is followed through to prevent issues__
-- _At least_ the start of the _Light Bar color to LEDs translation_ should be read to prevent undesired LED behavior
+- If you want your controller's LEDs to represent the current battery level, go to _Example 2_ of the _Simple Led Control_ of the _Light Bar to LEDs translation_ section
+- If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the _Light Bar to LEDs translation_ section 
 - It's recommended you have a quick look at the _FAQ_ section, read at least the title of the topics
 
 ## Solving double input issues on games
@@ -104,34 +105,24 @@ Keep in mind that:
 
 We sure hope this whole section becomes obsolete soon when DS4Windows adds native support to HidHide and white-lists itself/lock controllers automatically.
 
-From here, everything should be correctly set. Your DS3 is now a Xbox 360 / DS4 controller and the real DS3 is properly hidden. All that's left is to enjoy your games! It's recommended that you have a quick look at the start of the next section and at least read the _FAQ_ topics.
+From here, everything should be correctly set. Your DS3 is now a Xbox 360 / DS4 controller and the real DS3 is properly hidden. All that's left is to enjoy your games!
 
 ## Light Bar color to LEDs translation
 
-!!! important "Be warned!"
-    Even if you are not interested in this, you should _at least_ read the introduction and the "Keep DsHidMini's default LED behavior" part of this section
-
 By setting the correct Light Bar color values in the profile settings it is possible to control the LEDs on the DS3, which can be useful to:
 
-- Represent the current selected profile as a specific LED
 - Make the controller's LEDs represent the current battery level 
+- Represent the current selected profile as a specific LED
 - Indicate the battery level by using _Special Actions_ in the profile's settings
 
 Beware that functions in DS4Windows that make the Light Bar flash, pulse or randomize the colors (rainbow mode) are not supported and can make the LEDs change to an undesired state. Because of this, the function "Flash Light Bar at High Latency" does not work as intended with a DS3.
-
-
-### Keep DsHidMini's default LED behavior
-
-By default, DsHidMini sets the LEDs on the DS3 to show the current battery level, from "4 = full" until  "1 = low". To keep this behavior you only need to ___not___ use a supported Light Bar color value. __Keep in mind that once a supported color is set the LED behavior will NOT revert to the default behavior, with the LED state remaining on the last supported Light Bar color translation UNTIL THE CONTROLLER IS RECONNECTED__. The pratical implications of this are:
-
-- If you intend to use DsHidMini's default LED behavior it's better that __ALL__ your profiles to have unsupported color values (just make sure that the ___G/B___ subcolors are never 0 or 255)
-- If you want a custom LED in one profile and the default LED behavior in another it's better if you _replicate_ the default "LED as battery" behavior in DS4Windows itself (read the _Simple LED control_ part on how to do this, specially its example 3)
 
 ### Simple LED control
 
 - Only 1 LED can be ON at a time
 - Simple to set-up
-- Necessary for some _Special Actions_ and to let DS4Windows show the current battery level
+- Good to represent which profile is active (see example 1)
+- Necessary when making DS4Windows show the controller's battery level and for battery related _Special Actions_ (see examples 2 and 3 respectively)
 
 To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "0". After that, the Red color value will be translated to the LEDs state according to the following table:
 
@@ -146,13 +137,15 @@ e.g. 1: Setting up a profile to be represented as LED 3.
 
 ![SimpleLedControl eg 1 - LED 3 on](images/SimpleLedControl_eg1_LED3on.png){: .glightbox }
 
-e.g. 2: Setting up a _Special Action_ to make the LEDs reflect the controller's battery level.
+e.g. 2: Setting up a profile to reflect the controller's battery level.
 
-![SimpleLedControl eg 2 - Macro example](images/SimpleLedControl_eg2_Macro.png){: .glightbox }
+![SimpleLedControl eg 2 - Battery charge indication](images/SimpleLedControl_eg2_Battery.png){: .glightbox }
 
-e.g. 3: Setting up a profile to reflect the controller's battery level.
+e.g. 3: Setting up a _Special Action_ to make the LEDs reflect the controller's battery level.
 
-![SimpleLedControl eg 3 - Battery charge indication](images/SimpleLedControl_eg3_Battery.png){: .glightbox }
+![SimpleLedControl eg 3 - Macro example](images/SimpleLedControl_eg3_Macro.png){: .glightbox }
+
+
 
 ### Complete LED control
 
@@ -160,26 +153,26 @@ e.g. 3: Setting up a profile to reflect the controller's battery level.
 - Allows any combination of LEDs on.
 - Useful if the user wants to differentiate between more than 4 profiles.
 
-To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table, where the value of "0" and "1" on the LEDs columns set the corresponding LED to "OFF" and "ON", respectively:
+To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
 
 | LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |  RED value (Hex)
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 0 | 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 1 | 1 |
-| 0 | 0 | 1 | 0 | 2 | 2 |
-| 0 | 0 | 1 | 1 | 3 | 3 |
-| 0 | 1 | 0 | 0 | 4 | 4 |
-| 0 | 1 | 0 | 1 | 5 | 5 |
-| 0 | 1 | 1 | 0 | 6 | 6 |
-| 0 | 1 | 1 | 1 | 7 | 7 |
-| 1 | 0 | 0 | 0 | 8 | 8 |
-| 1 | 0 | 0 | 1 | 9 | 9 |
-| 1 | 0 | 1 | 0 | 10 | A |
-| 1 | 0 | 1 | 1 | 11 | B |
-| 1 | 1 | 0 | 0 | 12 | C |
-| 1 | 1 | 0 | 1 | 13 | D |
-| 1 | 1 | 1 | 0 | 14 | E |
-| 1 | 1 | 1 | 1 | 15 | F |
+|  |  |  |  | 0 | 0 |
+|  |  |  | ON | 1 | 1 |
+|  |  | ON |  | 2 | 2 |
+|  |  | ON | ON | 3 | 3 |
+|  | ON |  |  | 4 | 4 |
+|  | ON |  | ON | 5 | 5 |
+|  | ON | ON |  | 6 | 6 |
+|  | ON | ON | ON | 7 | 7 |
+| ON |  |  |  | 8 | 8 |
+| ON |  |  | ON | 9 | 9 |
+| ON |  | ON |  | 10 | A |
+| ON |  | ON | ON | 11 | B |
+| ON | ON |  |  | 12 | C |
+| ON | ON |  | ON | 13 | D |
+| ON | ON | ON |  | 14 | E |
+| ON | ON | ON | ON | 15 | F |
 
 e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
@@ -187,7 +180,7 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 ## Frequently Asked Questions
 
-### "_How do I change between XInput and DS4 emulation?_"Changing between XInput and DS4 emulation
+### "_How do I change between XInput and DS4 emulation?_"
 
 The controller that DS4Windows emulates is dependent on the current selected profile. By default, the profile that comes with DS4Windows called... _Default_... is set to emulate a Xbox 360 controller. To change to DS4 emulation you can Edit the _Default_ profile, though it is recommended you create a new specific for DS4 emulation. To create a new profile:
 
