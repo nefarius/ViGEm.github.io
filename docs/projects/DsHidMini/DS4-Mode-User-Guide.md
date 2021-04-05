@@ -52,7 +52,7 @@ Some games can end-up detecting two controllers/inputs when using DS3 with DS4Wi
 Because the first option is not recommended and the second is now obsolete, we'll follow the HidHide route.
 
 !!! important "If you are using Windows 10 32 bits, read this!"
-    HidHide only has a x64 version for now, so you'll need to follow the [old HidGuardian guide](https://vigem.org/projects/HidGuardian/DsHidMini-HidGuardian-Guide/) for now to prevent the double input issue until a x86 version of HidHide is released.
+    HidHide only has a x64 version for now, so if you are on a 32bits/x86 system you'll need to follow the [old HidGuardian guide](https://vigem.org/projects/HidGuardian/DsHidMini-HidGuardian-Guide/) for now to prevent the double input issue until a x86 version of HidHide is released.
 
 ### Verifying if HidGuardian is installed and unninstalling it
 
