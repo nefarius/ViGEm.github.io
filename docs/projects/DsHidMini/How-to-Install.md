@@ -42,10 +42,10 @@ If you want to remove DsHidMini from your computer you first need to delete it f
 The driver will still be loaded for controllers that were using it, so be sure to uninstall them from Device Manager  
 - Plug in your controllers
 - Open Device Manager by pressing ++win+x++ and select it from the menu:  
-![6dCenuSsFr.png](images/6dCenuSsFr.png){: .glightbox }  
+![Device Manager](images/6dCenuSsFr.png){: .glightbox }  
 - Expand `Nefarius HID Devices`
 - For each device under `Nefarius HID Devices`, right click it and select `Uninstall Device`, then select `Uninstall` on the appearing confirmation window  
-![RemoveDsHidMini_UnninsDevices.png](images/RemoveDsHidMini_UnninsDevices.png){: .glightbox }  
+![Uninstall Driver](images/RemoveDsHidMini_UninsDevices.png){: .glightbox }  
 
 After that, DsHidMini should be fully gone from your computer 😥
 
