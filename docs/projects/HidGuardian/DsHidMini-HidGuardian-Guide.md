@@ -39,8 +39,8 @@ In case things go wrong (and they shouldn't as long as the user carefully follow
 - On the _Affected Device List_ at the bottom, click on each entry and then on the "remove" button until there's no entry left on the list  
 ![HidNinja DS3](/projects/DsHidMini/images/HidGuardian_DS4v1.png){: .glightbox }  
 - On the top-left list, select your DS3 controller
-- Select on the right list the key named "HID\VID_7331&UP:0001_U:0005", then click on the "add" button on the top-right corner
-- Check if the "HID\VID_7331&UP:0001_U:0005" key is now present on the bottom list  
+- Select on the right list the key named `HID\VID_7331&UP:0001_U:0005`, then click on the "add" button on the top-right corner
+- Check if the `HID\VID_7331&UP:0001_U:0005` key is now present on the bottom list  
 ![HidNinja DS3](/projects/DsHidMini/images/HidNinja_DS3.png){: .glightbox }  
 - Close HidNinja
 - Disconnect then reconnect the controller
