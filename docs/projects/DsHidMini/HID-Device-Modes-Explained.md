@@ -7,7 +7,7 @@ DsHidMini aims for maximum possible compatibility with existing tools or games w
 
 ## How to adjust the settings
 
-Connected controllers using DsHidMini can be adjusted in the DsHidMini Control UI tool (`DHMC.exe`) that is downloaded along the driver. It needs to be run as Administrator to allow changing the current HID Device Mode. After every change, press the "Apply changes" button to make them effective, which will cause the affected controller to disconnect on Bluetooth and restart on USB. For Bluetooth it needs to be powered on again manually afterwards by pressing the "PS" button.
+Connected controllers using DsHidMini can be adjusted in the DsHidMini Control UI tool (`DSHMC.exe`) that is downloaded along the driver. It needs to be run as Administrator to allow changing the current HID Device Mode. After every change, press the "Apply changes" button to make them effective, which will cause the affected controller to disconnect on Bluetooth and restart on USB. For Bluetooth it needs to be powered on again manually afterwards by pressing the "PS" button.
 
 ![DsHidMini Control UI Tool](images/ModesExplained_DsHidMiniControlUI.png){: .glightbox }
 
