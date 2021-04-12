@@ -51,6 +51,19 @@ After that, DsHidMini should be fully gone from your computer 😥
 
 ## Troubleshooting
 
+### Verifying if the controller is loading the correct driver
+
+The driver can't do anything if it is not being used, so to check this:
+
+- Connect your controller __by USB__ 
+- Open Device Manager by pressing ++win+x++ and select it from the menu
+- Look around and expand `Nefarius HID Devices`, your controller should appear there. Double click on it to check the driver status:
+![DsHidMini_DeviceManager](images/DsHidMini_Correctly_Loaded.png){: .glightbox } 
+
+If the device appears there but the driver status indicates some error (e.g. `This device cannot start (Error Code 10)`) try pressing the `Reset` button on the back of your controller and then reconnecting it. Rebooting your computer is also worth a shot.
+
+If the controller does not appear under `Nefarius HID Devices`/if this section doesn't exist, you probably have another driver taking priority over DsHidMini. To solve this you need to remove those rogue drivers. See how to do so on the [_removing conflicting drivers_](#Removing-conflicting-drivers) section.
+
 ### Removing conflicting drivers
 
 We need to first determine if any other conflicting device driver is present on the system and remove it so DsHidMini can take over that job. The steps outlined here may or may not be applicable to your system, it entirely depends on your past 😜 and the stuff you potentially installed. Worry not though, together we shall succeed ✨
