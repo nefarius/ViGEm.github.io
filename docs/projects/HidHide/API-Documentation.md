@@ -7,7 +7,7 @@ This article describes how an application can interact with the driver to influe
 
 ## Control Device
 
-The filter driver uses the common concept of exposing a [Control Device](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/using-control-device-objects) which can be opened from any user-land process and used to send [I/O Control Commands](::io-control-commands) to. No elevated privileges are required (and thus should be avoided) to access the control device.
+The filter driver uses the common concept of exposing a [Control Device](https://docs.microsoft.com/en-us/windows-hardware/drivers/wdf/using-control-device-objects) which can be opened from any user-land process and used to send [I/O Control Commands](#io-control-commands) to. No elevated privileges are required (and thus should be avoided) to access the control device.
 
 Use the [`CreateFile`](https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea) Windows API within the language/framework of your choice and open the path `\\.\HidHide`. See examples below for .NET or good ol' C/C++:
 
