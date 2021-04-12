@@ -84,3 +84,24 @@ If you've used [Shibari](https://github.com/ViGEm/Shibari) before you probably h
 ![EMS2RXFoc4.png](images/EMS2RXFoc4.png){: .glightbox }  
 
 Done 🎉
+
+### Controller does not connect by Bluetooth
+
+Let's go step-by-step with this:
+
+- Open Device Manager by pressing ++win+x++ and select it from the menu
+- [Check if your Bluetooth Link Manager spec is supported](https://github.com/ViGEm/BthPS3#supported-bluetooth-host-devices)
+- Check if BthPS3 is correctly installed, its status and if its version is `v1.3.108` or higher:
+![BthPS3](images/BthPS3_DeviceManager.png){: .glightbox }
+- Connect your controller by USB
+- Open the DsHidMini Control Utility (`DSHMC.exe` file that comes along the driver archive)
+- Check if your device is correctly paired to the current Bluetooth host address. If it's not, try reconnecting your controller by USB sometimes until the pairing completes successfully
+![DSHMC_PairingCheck](images/DSHMC_PairingCheck.png){: .glightbox }
+- If the "pairing" check is _Ok_ like in the picture above but the device is still not connecting by Bluetooth, try resetting your controller by pressing the `reset` button on its back, connecting by USB again to have it re-paired to the current Bluetooth address then trying connecting wirelessly again. Remember to always confirm in the DsHidMini Control UI Tool if the pairing was successful before trying to connect wirelessly
+
+If after all those tries the device still fails to connect, then ___maybe___:
+
+- Your Bluetooth dongle is somehow faulty/unsupported. Try other ones/try using DsHidMini/BthPS3 in another computer/notebook with Bluetooth support to try your luck
+- You have a fake/copycat controller that expects some specific PS3 behavior that is not mimicked by DsHidMini. You can try [reaching us](https://vigem.org/Community-Support/) to try seeing this through 
+- You may have a fake, copy-cat DS3 controller that uses insecure connections (unfixable issue). [Be sure to see how to check if this is the case](https://github.com/ViGEm/DsHidMini/issues/61) before giving up, since this is a really rare and specific case, not a common issue
+
