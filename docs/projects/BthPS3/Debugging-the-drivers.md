@@ -2,13 +2,27 @@
 
 Kernel Drivers typically don't write traditional log files that end up on the disk somewhere, instead [Event Tracing for Windows](https://docs.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows) is used to write messages to a special logging facility we can tap into with a bit of command line magic.
 
-## Capture the trace
-
-### Start trace session
+## Prepare verbose tracing
 
 Fire up PowerShell with administrative privileges by pressing ++win+x++ and selecting it from the appearing menu like so:
 
 [![Start PowerShell](/images/Y2bzZWdYK4.png)](/images/Y2bzZWdYK4.png){: .glightbox }
+
+Keep it open until we're done, we'll need it throughout the process 😉
+
+By default verbose tracing is **off**, which means we will lose a lot of potentially interesting information. To enable verbose tracing, execute the following commands in PowerShell:
+
+!!! example "PowerShell"
+    ```PowerShell
+    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\BthPS3\Parameters" -Name "VerboseOn" -Type DWord -Value 1 -Force
+    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\BthPS3\Parameters\Wdf" -Name "VerboseOn" -Type DWord -Value 1 -Force
+    ```
+
+After that **reboot the machine** before you proceed with the next step!
+
+## Capture the trace
+
+### Start trace session
 
 Once open, paste the following three lines into it "as is" and hit enter:
 
