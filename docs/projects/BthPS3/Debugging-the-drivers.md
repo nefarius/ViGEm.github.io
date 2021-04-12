@@ -24,7 +24,7 @@ After that **reboot the machine** before you proceed with the next step!
 
 ### Start trace session
 
-Once open, paste the following three lines into it "as is" and hit enter:
+Once you've got PowerShell open again, paste the following three lines into it "as is" and hit enter:
 
 !!! example "PowerShell"
     ```PowerShell
