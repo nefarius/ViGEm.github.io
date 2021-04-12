@@ -31,7 +31,7 @@ By now if you plug in your controller (or reboot the machine) chances are high t
 
 ## Updating
 
-New releases are expected to appear quite frequently during Beta Testing, so make sure to regularly come back and check the GitHub releases page. If you want to update, simply [follow all the same steps of the installation](#installation) and overwrite any existing files. Reboot your machine to be extra safe if it didn't work right away.
+If you want to update, simply [follow all the same steps of the installation](#installation) and overwrite any existing files. Reboot your machine to be extra safe if it didn't work right away.
 
 ## Removal
 
