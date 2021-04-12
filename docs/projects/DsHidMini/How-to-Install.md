@@ -19,7 +19,7 @@ No matter what software you may have preinstalled, this step is always the same 
     ![DRYeurZsPs.png](images/DRYeurZsPs.png)
     - Should only take a moment until success dialog
     ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
-- Run `DSHMC.exe` (DsHidMini Control Utility) to see if the controller gets detected
+- With your controller connected by USB, open the DsHidMini Control Utility (It's the `DSHMC.exe` file that comes along the driver archive) to see if the controller gets detected
     - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
     - It is not required to keep the utility running for the driver to function, only if you want to observe battery level or change settings
 
