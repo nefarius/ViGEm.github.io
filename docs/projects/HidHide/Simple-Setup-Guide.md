@@ -1,6 +1,6 @@
 # Simple setup guide
 
-!!! important "HidHide is only supported on 32 bits Windows 10 as for the day this article was written."
+!!! important "HidHide is only supported on 64 bits Windows 10 as for the day this article was written."
 
 ## What is HidHide and why one might need it
 
