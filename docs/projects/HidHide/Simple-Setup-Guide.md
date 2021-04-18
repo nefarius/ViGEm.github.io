@@ -14,7 +14,7 @@ If the games you are playing don't even detect your Real Controller, then all go
 
 - Rocket league will start 2 player mode randomly
 - Blasphemous will switch ramdonly between generic and XInput button icons
-- Need for Speed: Most Wanted (2012) will keep warning the player an unknown device needs to be setup, interfiring with gameplay
+- Need for Speed: Most Wanted (2012) will keep warning the player an unknown device needs to be setup, interfering with gameplay
 
 This issue can be solved by using HidHide to:
 
