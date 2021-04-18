@@ -134,20 +134,19 @@ The controller that DS4Windows emulates is dependent on the current selected pro
 
 And done, now you can switch between XInput/DS4 emulation by changing between profiles. Profiles can also be switched by button combinations by setting a _Special action_ inside each profile settings, though we will not cover this in this guide.
 
-### "_Why this convoluted setup? I just want to use my DS3 as a XInput/DS4 controller!_"
+### "_Why the need of R7's DS4Windows? Couldn't DsHidMini directly have XInput/DS4?_"
 
 Basically, because it was easier. By off-loading XInput and DS4 emulation to DS4Windows, DsHidMini's release "to-do" list got smaller, more important features and issues could/can be prioritized and it's easier to solve bugs with a smaller code. This all led to the release of DsHidMini happening sooner.
 
+### "_But is direct XInput/DS4 emulation a possibility?_"
 
-### "_So direct XInput/DS4 emulation is a possibility?_"
-
-Yes. Actually, it is dead easy right now to directly emulate a DS4 since the DS3 in "DS4 Mode" _is_ a DS4, the only difference is that its hardware ID was changed to something only DS4Windows recognizes. The problems with allowing the user to enable direct DS4 emulation right now are:
+Yes. Actually, it is dead easy right now to directly emulate a DS4 since the DS3 in "DS4Windows" _is_ a DS4, the only difference is that it's in a format that only R7's DS4Windows recognizes. The problems with allowing the user to enable direct DS4 emulation right now are:
 
 - Some games that support DS4 use the TouchPad button for things like maps or options menu. Because the D4's TP Button is an extra button that the DS3 don't have, this means that the TP Button would need to be a button combination or replace another used button, which means: having to actually implement all the logic involved in the driver _and_ in the DsHidMini Control Utility, which means more work and more code, so more chances of bugs, more things to test etc
 - XInput emulation is more difficult for _reasons_ and its _way easier_ to off-load this work to something else. If the user would need to use some program to emulate XInput, then why not DS4Windows? And in this case, why not leave DS4 emulation to it as well?
 - Users that would want to remap buttons/axis would end up in this situation anyway
 
-DS4Windows offers macros, remap function, the ability to change modes without disconnecting the controller, control the DS3 LEDs and more _already_. Not Later, __right now__. While direct emulation is a possibility and on DsHidMini's _To-Do_ list it's in no way a priority, so don't hold your breath for it.
+DS4Windows offers macros, remap function, the ability to change modes without disconnecting the controller, control the DS3 LEDs and more _already_. While direct emulation is a possibility and on DsHidMini's _To-Do_ list it's in no way a priority, so don't hold your breath for it.
 
 ### "_I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360 one_"
 
