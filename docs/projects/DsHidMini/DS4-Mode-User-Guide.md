@@ -38,76 +38,10 @@ After that, the controller should be properly recognized by DS4Windows. If it is
 
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
 
-- __It is highly recommended that the next section, _Solving double input issues on games_, is followed through to prevent issues__
 - If you want your controller's LEDs to represent the current battery level, go to _Example 2_ of the _Simple Led Control_ of the _Light Bar to LEDs translation_ section
 - If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the _Light Bar to LEDs translation_ section 
 - Read the _FAQ_ if you want more detailed instructions on how to change to DS4 emulation
 - It's recommended you have a quick look at the _FAQ_ section, read at least the title of the topics
-
-## Solving double input issues on games
-
-Some games can end-up detecting two controllers/inputs when using DS3 with DS4Windows. This happens because the game is picking both the real controller input and the emulated Xbox/DualShock 4 controller created by DS4Windows. The 3 possible ways to solve this are:
-
-- Using the built-in DS4Windows' function "Hide DS4" Controller (which can easily fail and is not recommended)
-- Installing and using HidGuardian (works, but is complicated to use and is now obsolete because of the release of its successor, HidHide)
-- Installing and using HidHide (HidGuardian's successor, recommended solution)
-
-Because the first option is not recommended and the second is now obsolete, we'll follow the HidHide route.
-
-!!! important "If you are using Windows 10 32 bits, read this!"
-    HidHide only has a x64 version for now, so if you are on a 32bits/x86 system you'll need to follow the [old HidGuardian guide](https://vigem.org/projects/HidGuardian/DsHidMini-HidGuardian-Guide/) for now to prevent the double input issue until a x86 version of HidHide is released.
-
-### Verifying if HidGuardian is installed and unninstalling it
-
-!!! important "If you are definitely sure you don't have HidGuardian installed you can skip this part."
-
-!!! important "If you use HidGuardian for other softwares, read this:"
-    _To-Do_  :)
-
-HidGuardian's installer utility can check if it's installed and correctly unninstall it in case it is, so that's what we are going to use:
-
-- [Download and extract this archive](https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing)
-- Inside the extracted folder, run HidGuardianInstaller.exe
-- Check in the text log if HidGuardian is installed. If it is not, you can close the utility and move on to the next section
-
-![UninstallHG](images/uninstall_hidguardian.png){: .glightbox }
-
-- If HidGuardian is installed, click on the "Unninstall" button
-- Wait until the utility finishes unninstalling HidGuardian, keep and eye on the text log to know what its status
-- After the tool finishes unninstalling HidGuardian, close it then reboot your PC
-
-### Installing HidHide
-
-- Install [HidHide's prerequisites](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
-![VisualCpp](images/HidHide_VisualCpp.png){: .glightbox }
-- Download the [Latest release of HidHide](https://github.com/ViGEm/HidHide/releases) (It should be a file called HidHideMSI.msi)
-- Open the downloaded file and install HidHide as instructed
-- After the installation, reboot your computer
-
-### Hiding the controller
-
-- Open the "HidHide Configuration Client" in the start menu
-![HidHideClient_StartMenu](images/HidHideClient_StartMenu.png){: .glightbox }
-- On the applications tab, click on the "+" button. On the new window that appears, locate and add the DS4Windows.exe file inside the DS4Windows folder
-- ___If___ you have set your DS4Windows to run under a custom name then you __must also add the custom ".exe" file__ that you defined to the HidHide's application list
-- With all your DS3 controllers connected, __double check if they all are in DS4 Mode__ by verifying if they all are being detected by DS4Windows
-- On HidHide's Client, go to the _Devices_ tab and locate your DS3 controller. Its name should start with "Nefarius Software Solutions e.U."
-- On your DS3 controllers entry, mark the white box before their names. A red lock icon should appear
-- Mark the box in the bottom called "Enable Device Hiding" to (obviously) activate the hiding of the marked devices
-- Your HidHid Configuration Client tabs should look more or less similar to picture below
-![HidHideExampleSetup](images/HidHideClient_ExampleSetup.png){: .glightbox }
-- Disconnect-reconnect your controllers and they should now be properly hidden
-- Check if DS4Windows is detecting your controller. If it's not, you've incorrectly set the location of the DS4Windows ".exe" file
-- To check if the DS3 controller is properly hidden, search on the windows start menu and then open "Set up USB game controllers". Your _Game Controllers_ window should look like the picture below depending on the selected profile in DS4Windows
-![DS3Hidden](images/DS3Hidden.png){: .glightbox }
-
-Keep in mind that:
-
-- If the path to DS4Windows changes in any way (If you move/rename its folder or one of the folders where it is located) you will need to indicate the new path to HidHide, otherwise DS4W won't be able to detect the controller, so just re-open HidHide Configuration Client and add the .exe file on the new path
-
-We sure hope this whole section becomes obsolete soon when DS4Windows adds native support to HidHide and white-lists itself/lock controllers automatically.
-
-From here, everything should be correctly set. Your DS3 is now a Xbox 360 / DS4 controller and the real DS3 is properly hidden. All that's left is to enjoy your games!
 
 ## Light Bar color to LEDs translation
 
@@ -202,12 +136,8 @@ And done, now you can switch between XInput/DS4 emulation by changing between pr
 
 ### "_Why this convoluted setup? I just want to use my DS3 as a XInput/DS4 controller!_"
 
-Basically, because it was easier. By off-loading XInput and DS4 emulation to DS4Windows, DsHidMini's BETA release "to-do" list got smaller, more important features and issues could/can be prioritized and it's easier to solve bugs with a smaller code. This all led to the BETA release of DsHidMini happening sooner.
-With that said, we are aware that it _is_ convoluted right now and we hope things get easier for the user if/when:
+Basically, because it was easier. By off-loading XInput and DS4 emulation to DS4Windows, DsHidMini's release "to-do" list got smaller, more important features and issues could/can be prioritized and it's easier to solve bugs with a smaller code. This all led to the release of DsHidMini happening sooner.
 
-- DS4Windows has native integration to HidHide, white-listing itself and automatically hiding detected controllers
-- DS4 Mode is made "invisible" to games/application by default on DsHidMini. This is being considered but it's not certain since it requires alterations on DS4Windows side
-- Direct XInput/DS4 emulation is implemented
 
 ### "_So direct XInput/DS4 emulation is a possibility?_"
 
@@ -223,10 +153,7 @@ DS4Windows offers macros, remap function, the ability to change modes without di
 
 Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. Regardless if Steam is detecting or not the emulated DS4, 99.9% of the games that support DS4 controllers should detect the emulated one as normal.
 
-For Steam to properly detect the emulated controller you need run DS4Windows under a custom ".exe" name. Just open DS4Windows -> Go into the _Settings_ Tab -> Write the name you want on the "Custom exe name" box (In the image below the name "DS4Win" is used as an example). After the name is set, fully close then re-open DS4Windows and then Steam shoud detect it as normal. It's also recommended to go into the Steam's settings -> Controller -> General Controller Configurations -> Leave "Playstation Configuration Supported" UNCHECKED, so Steam doesn't remap your controller when you don't want it to.
-
-!!! important "Attention!"
-    When running DS4Windows under a custom name it uses a different .exe file that has the chosen custom name. If you are using HidHide remember to add this new file to the applications list on its Configuration Client, otherwise DS4Windows won't be able to pick the real DS3 controller anymore.
+For Steam to properly detect the emulated controller you need run DS4Windows under a custom ".exe" name. Just open DS4Windows -> Go into the _Settings_ Tab -> Write the name you want on the "Custom exe name" box (In the image below the name "DS4Win" is used as an example). After the name is set, fully close then re-open DS4Windows and then Steam should detect it as normal. It's also recommended to go into the Steam's settings -> Controller -> General Controller Configurations -> Leave "Playstation Configuration Supported" UNCHECKED, so Steam doesn't remap your controller when you don't want it to.
 
 ![FAQ_DS4WCustomName](images/FAQ_DS4WCustomName.png){: .glightbox }
 
