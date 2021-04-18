@@ -4,7 +4,7 @@
 
 ## What is HidHide and why one might need it
 
-HidHide is a filter driver than can "hide" Gamepads/joysticks devices (ensuring Windows and other applications stop detecting it as a game controller) and allowing only chosen aplications to see them.
+HidHide is a filter driver than can "hide" Gamepads/joysticks devices (ensuring Windows and other applications stop detecting it as a game controller) and allowing only chosen applications to see them.
 
 You don't understand how that could be useful? Imagine the following scenario: you have a Generic Gamepad that you want to _convert_ into a __XInput Device__ (a Xbox 360 controller) since most games are already pre-configured to the XInput layout, or maybe the game doesn't even detect your controller as it is. So you start using a remapping program ( [x360ce](https://www.x360ce.com/) / [XOutput](https://github.com/csutorasa/XOutput) / [UCR](https://github.com/Snoothy/UCR) / etc ) that allows you to remap your controller into a virtual XInput / DS4 controller.
 
@@ -13,7 +13,7 @@ This put you in a problematic situation: you don't end-up ___just___ with the vi
 If the games you are playing don't even detect your Real Controller, then all good. The issue starts when the game detects both real and virtual controllers while you only want it to recognize the virtual one. Since most games auto-detect controllers, the game will think there are 2 separate controllers connected, leading to the famous Double-Input and mis-input issue. Eg.:
 
 - Rocket league will start 2 player mode randomly
-- Blasphemous will switch ramdonly between generic and XInput button icons
+- Blasphemous will switch randomly between generic and XInput button icons
 - Need for Speed: Most Wanted (2012) will keep warning the player an unknown device needs to be setup, interfering with gameplay
 
 This issue can be solved by using HidHide to:
@@ -84,27 +84,27 @@ Now that your controllers are hidden, you need to select which applications shou
 
 - On the Configuration Client, click on the `Applications` tab
 - Click on the `+` icon and add the executable file of your application (`ApplicationName.exe`)  to whitelist it
-- Repeat the step above for each application that should white-listed
+- Repeat the step above for each application that should whitelisted
 - After that, __RECONNECT__ your controllers so the changes are effective
 
 From this point, the applications on the list should be able to detect the hidden devices. The image below is an example of the application "UCR" being able to see a hidden Controller and creating a Virtual DS4: 
 ![HidHideExampleSetup](images/HidHideClient_ExampleSetup.png){: .glightbox }
 
-!!! important "Users of DS4Windows: PAY ATTETION!"
+!!! important "Users of DS4Windows: PAY ATTENTION!"
     If you are running DS4Windows under a custom `.exe` name (look at the DS4Windows' `Other` tab) then the custom named executable must also be on the list
 
 ## What now?
 
-If you've set everything correctly then all that is left is for you to enjoy! Before you leave, have a quick look in the next section and on the `Frequently Asked Questions` article on the side-bar (I mean... If it has already been created).
+If you've set everything correctly then all that is left is for you to enjoy! Before you leave, have a quick look in the next section and on the `Frequently Asked Questions` article on the side-bar (I mean... if it has already been created).
 
 ## Things to keep in mind
 
 Common things to know regarding using HidHide with your controllers:
 
 - Contrary to HidGuardian, HidHide affects isolated devices instead of device types. This means that if you have (for example) 4 different controllers that are the exact same model, you would still need to mark each one as hidden separately, both on USB and on Bluetooth
-- HidHide white-lists applications based on their location in your computer. This means that if you white-list "UCR.exe" that is on your desktop, but then move it to another folder you will need to white-list it again on its new location
 - If you think something is wrong and want to disable HidHide to run tests, just open the `HidHide Configuration Utility`, go into the `Devices` tab and un-check the `Enable Device Hiding` checkbox (if this doesn't make the devices visible again, try then reconnecting them)
-- Applications may add native support to HidHide in future updates, automating the process by white-listing themselves and auto-hiding detected controllers
+- HidHide whitelists applications based on their location in your computer. This means that if you whitelist "UCR.exe" that is on your desktop, but then move it to another folder you will need to whitelist it again on its new location
+- Applications may add native support to HidHide in future updates, automating the process by whitelisting themselves and auto-hiding detected controllers
 
 
 
