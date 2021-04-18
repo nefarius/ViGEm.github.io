@@ -102,8 +102,8 @@ If you've set everything correctly then all that is left is for you to enjoy! Be
 Common things to know regarding using HidHide with your controllers:
 
 - Contrary to HidGuardian, HidHide affects isolated devices instead of device types. This means that if you have (for example) 4 different controllers that are the exact same model, you would still need to mark each one as hidden separately, both on USB and on Bluetooth
-- If you think something is wrong and want to disable HidHide to run tests, just open the `HidHide Configuration Utility`, go into the `Devices` tab and un-check the `Enable Device Hiding` checkbox (if this doesn't make the devices visible again, try then reconnecting them)
 - HidHide whitelists applications based on their location in your computer. This means that if you whitelist "UCR.exe" that is on your desktop, but then move it to another folder you will need to whitelist it again on its new location
+- If you think something is wrong and want to disable HidHide to run tests, just open the `HidHide Configuration Utility`, go into the `Devices` tab and un-check the `Enable Device Hiding` checkbox. If this doesn't make the devices visible again, try then reconnecting them
 - Applications may add native support to HidHide in future updates, automating the process by whitelisting themselves and auto-hiding detected controllers
 
 
