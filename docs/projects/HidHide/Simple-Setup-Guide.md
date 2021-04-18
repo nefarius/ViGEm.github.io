@@ -70,7 +70,7 @@ Assuming the hidden controllers are the only ones connected to the system, no de
 Now that your controllers are hidden, you need to select which applications should be able to detect them:
 
 - On the Configuration Client, click on the `Applications` tab
-- Click on the `+` icon and add the executable file of your application (_`YourWhateverApplication`_`.exe`)  to whitelist it
+- Click on the `+` icon and add the executable file of your application (`ApplicationName.exe`)  to whitelist it
 - Repeat the step above for each application that should white-listed
 - After that, __RECONNECT__ your controllers so the changes are effective
 
