@@ -91,7 +91,7 @@ From this point, the applications on the list should be able to detect the hidde
 ![HidHideExampleSetup](images/HidHideClient_ExampleSetup.png){: .glightbox }
 
 !!! important "Users of DS4Windows: PAY ATTENTION!"
-    If you are running DS4Windows under a custom `.exe` name (look at the DS4Windows' `Other` tab) then the custom named executable must also be on the list
+    If you are running DS4Windows under a custom `.exe` name (look at the DS4Windows' `Other` tab) then the custom named executable must also be added to the list
 
 ## What now?
 
