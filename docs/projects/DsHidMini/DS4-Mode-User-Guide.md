@@ -3,7 +3,7 @@
 !!! important "Jay2Kings' DS4Windows __IS NOT SUPPORTED__!"
     If you just search "DS4Windows" on Google/Bing/whatever the first result will probably be the obsolete Jay2Kings' version
 
-In "DS4 (DS4Windows)" HID Device Mode, the controller appears as a custom device that can be detected by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows), allowing the user to then emulate a DS4 or XInput controller as well as make use of most of its features.
+In "DS4Windows" HID Device Mode, the controller appears as a custom device that can only be detected by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows), allowing the user to then emulate a DualShock 4 or Xbox 360 (__XInput__) controller as well as make use of most of its features.
 
 ## What does work
 
