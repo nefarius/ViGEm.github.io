@@ -36,11 +36,12 @@ After that, the controller should be properly recognized by DS4Windows. If it is
 
 ## What now?
 
-From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Read the _FAQ_ if you wante more detailed instructions on how to change to DS4 emulation. Besides that:
+From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
 
 - __It is highly recommended that the next section, _Solving double input issues on games_, is followed through to prevent issues__
 - If you want your controller's LEDs to represent the current battery level, go to _Example 2_ of the _Simple Led Control_ of the _Light Bar to LEDs translation_ section
 - If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the _Light Bar to LEDs translation_ section 
+- Read the _FAQ_ if you want more detailed instructions on how to change to DS4 emulation
 - It's recommended you have a quick look at the _FAQ_ section, read at least the title of the topics
 
 ## Solving double input issues on games
