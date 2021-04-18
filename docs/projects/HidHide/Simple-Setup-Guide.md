@@ -39,7 +39,20 @@ HidGuardian's installer utility can check if it's installed and correctly uninst
 - Wait until the utility finishes uninstalling HidGuardian, keep and eye on the text log to know what its status
 - After the tool finishes uninstalling HidGuardian, close it then reboot your PC
 
-## Installing HidHide
+## Setting up HidHide (Simple guide)
+
+- Download the [Latest release of HidHide](https://github.com/ViGEm/HidHide/releases) (It should be a file called HidHideMSI.msi). Remember to install its prerequisites as written on the page
+- After installation, reboot your computer
+- Open the `HidHide Configuration Client` in the start menu
+- On the `Applications` tab, add the applications that should be able to see the devices even when they are hidden
+- On the `Devices` tab mark the controllers you want to be hidden, then mark the `Enable device hiding` Checkbox
+- Reconnect your controllers to make the changes effective
+
+DONE. Be happy.
+
+## Setting up Hidhide (Step-by-step guide)
+
+### Installing HidHide
 
 - Install [HidHide's prerequisites](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) according to your [Windows 10 version](https://vigem.org/research/How-to-check-architecture/)
 ![VisualCpp](images/HidHide_VisualCpp.png){: .glightbox }
@@ -47,7 +60,7 @@ HidGuardian's installer utility can check if it's installed and correctly uninst
 - Open the downloaded file and install HidHide as instructed
 - After the installation, reboot your computer
 
-## Hiding the controller
+### Hiding the controller
 
 - Open the "HidHide Configuration Client" in the start menu
 ![HidHideClient_StartMenu](images/HidHideClient_StartMenu.png){: .glightbox }
@@ -65,7 +78,7 @@ At this point, your controllers should be hidden. To verify, open Windows' `joy.
 
 Assuming the hidden controllers are the only ones connected to the system, no device should show up in the Game Controller's list 
 
-## Allowing chosen applications to see hidden devices
+### Allowing chosen applications to see hidden devices
 
 Now that your controllers are hidden, you need to select which applications should be able to detect them:
 
