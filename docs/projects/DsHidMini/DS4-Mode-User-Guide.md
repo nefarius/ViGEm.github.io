@@ -169,8 +169,8 @@ Because DS4Windows does not support mapping a button combination to anything Tou
 
 - Duplicate your DS4 profile, choose a different name to it
 - Edit the new profile
-- On the left side, click on the button you want to remap in the DualShock 4 picture
-- On the new window that appears select the middle of the touchpad
+- On the left side, in the DualShock 4 picture, click on the button you want to remap
+- On the new window that appears, select the middle of the touchpad
 - Save your profile and switch to it
 
 ### "_How do I do 'X' thing on DS4Windows_"
