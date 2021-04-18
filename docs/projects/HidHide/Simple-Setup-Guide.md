@@ -22,12 +22,12 @@ This issue can be solved by using HidHide to:
 - Only allow the remapping tool of your choice to see the controller, since it needs to pick its input to translate them to the Virtual one 
 ![BeforeAfterHidHide](images/BeforeAfterHidHide.png){: .glightbox }
 
-## Verifying if HidGuardian is installed and unninstalling it
+## Verifying if HidGuardian is installed and uninstalling it
 
 !!! important "If you are definitely sure you don't have HidGuardian installed you can skip this part."
     HidHide is HidGuardian's successor. Since both have the same function, it's better if HidGuardian is not present in your system to prevent confusion on what software is hiding which controller
 
-HidGuardian's installer utility can check if it's installed and correctly unninstall it in case it is, so that's what we are going to use:
+HidGuardian's installer utility can check if it's installed and correctly uninstall it in case it is, so that's what we are going to use:
 
 - [Download and extract this archive](https://drive.google.com/file/d/1PNL3uv_4KektN00S9fm61djypSQ-3HED/view?usp=sharing)
 - Inside the extracted folder, run HidGuardianInstaller.exe
@@ -35,9 +35,9 @@ HidGuardian's installer utility can check if it's installed and correctly unnins
 
 ![UninstallHG](images/uninstall_hidguardian.png){: .glightbox }
 
-- If HidGuardian is installed, click on the "Unninstall" button
-- Wait until the utility finishes unninstalling HidGuardian, keep and eye on the text log to know what its status
-- After the tool finishes unninstalling HidGuardian, close it then reboot your PC
+- If HidGuardian is installed, click on the "Uninstall" button
+- Wait until the utility finishes uninstalling HidGuardian, keep and eye on the text log to know what its status
+- After the tool finishes uninstalling HidGuardian, close it then reboot your PC
 
 ## Installing HidHide
 
@@ -88,10 +88,10 @@ If you've set everything correctly then all that is left is for you to enjoy! Be
 
 Common things to know regarding using HidHide with your controllers:
 
-- Contrary to HidGuardian, HidHide affects isolated devices instead of device types. This means that if you have (for example) 4 differen controllers that are the exact same model, you would still need to mark each one as hidden separately, both on USB and on Bluetooth
+- Contrary to HidGuardian, HidHide affects isolated devices instead of device types. This means that if you have (for example) 4 different controllers that are the exact same model, you would still need to mark each one as hidden separately, both on USB and on Bluetooth
 - HidHide white-lists applications based on their location in your computer. This means that if you white-list "UCR.exe" that is on your desktop, but then move it to another folder you will need to white-list it again on its new location
-- If you think something is wrong and want to disable HidHide to run tests, just open the `HidHide Configuration Utility`, go into the `Devices` tab and un-check the `Enable Device Hiding` (if this doesn't make the devices visible again, try then reconnecting them)
-- Aplications may add native support to HidHide in future updates, automating the proccess by white-listing themselves and auto-hiding detected controllers
+- If you think something is wrong and want to disable HidHide to run tests, just open the `HidHide Configuration Utility`, go into the `Devices` tab and un-check the `Enable Device Hiding` checkbox (if this doesn't make the devices visible again, try then reconnecting them)
+- Applications may add native support to HidHide in future updates, automating the process by white-listing themselves and auto-hiding detected controllers
 
 
 
