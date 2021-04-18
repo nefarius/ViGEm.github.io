@@ -49,7 +49,7 @@ The default LED behavior in this mode is the charging animation and can't be alt
 
 The default LED behavior in this mode is the charging animation. If a compatible application sends output reports to the device, the driver will "hand over" control to the application and stops the charging indicator until the device has been restarted.
 
-### DS4
+### DS4Windows
 
 !!! important "TL;DR:"
     Use this mode with [DS4Windows](https://github.com/Ryochan7/DS4Windows/).
