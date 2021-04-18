@@ -38,9 +38,9 @@ After that, the controller should be properly recognized by DS4Windows. If it is
 
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
 
-- If you want your controller's LEDs to represent the current battery level, go to _Example 2_ of the _Simple Led Control_ of the _Light Bar to LEDs translation_ section
-- If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the _Light Bar to LEDs translation_ section 
 - Read the _FAQ_ if you want more detailed instructions on how to change to DS4 emulation
+- If you want your controller's LEDs to represent the current battery level, see `Simple Led Control -> Example 2` in the_`Light Bar to LEDs translation` section
+- If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the `Light Bar to LEDs translation` section 
 - It's recommended you have a quick look at the _FAQ_ section, read at least the title of the topics
 
 ## Light Bar color to LEDs translation
