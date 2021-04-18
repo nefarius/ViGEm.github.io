@@ -11,6 +11,7 @@ In "DS4Windows" HID Device Mode, the controller appears as a custom device that 
 - Rumble works as normal
 - DS4's Touchpad Button can be used by remapping a button to it (e.g.: use Select as the _TP button_ instead of _Share_)
 - DS3's LEDs can be controlled by setting the correct Light Bar colors (more on that on a later section)
+- DS4Windows's "Flash Lightbar at High Latency" function makes the LEDs flash accordingly
 - Basically every other DS4Windows function that is not related to the Light Bar or motion works as intended
 
 ## What does not work
