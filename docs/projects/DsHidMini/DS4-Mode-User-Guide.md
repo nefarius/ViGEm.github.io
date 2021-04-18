@@ -23,7 +23,7 @@ In "DS4Windows" HID Device Mode, the controller appears as a custom device that 
 
 ## Verifying/Changing current DS3 HID Device Mode
 
-Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in "DS4 (DS4Windows)" mode to be detected by DS4Windows.
+Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in "DS4Windows" mode to be detected by DS4Windows.
 
 ## Using the controller with DS4Windows
 
