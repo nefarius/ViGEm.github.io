@@ -27,7 +27,7 @@ Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in
 
 ## Using the controller with DS4Windows
 
-- Download the latest DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
+- Download the latest __Ryochan7's__ DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
 - Extract the package to an easily accessible folder
 - Run DS4Windows.exe
 - Install the ViGEmBus Driver if asked to
