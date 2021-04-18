@@ -45,7 +45,7 @@ HidGuardian's installer utility can check if it's installed and correctly uninst
 - After installation, reboot your computer
 - Open the `HidHide Configuration Client` in the start menu
 - On the `Applications` tab, add the applications that should be able to see the devices even when they are hidden
-- On the `Devices` tab mark the controllers you want to be hidden, then mark the `Enable device hiding` Checkbox
+- On the `Devices` tab mark the controllers you want to be hidden (a red lock should appear), then mark the `Enable device hiding` Checkbox
 - Reconnect your controllers to make the changes effective
 
 DONE. Be happy.
