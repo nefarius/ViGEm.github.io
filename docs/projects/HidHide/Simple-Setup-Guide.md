@@ -4,7 +4,7 @@
 
 ## What is HidHide
 
-HidHide is a filter driver than can "hide" Gamepads/joysticks devices (ensuring Windows and other applications stop detecting it as a game controller) and allowing only chosen applications to see them. Specially useful when the user is remapping a real controller into a virtual one.
+HidHide is a filter driver than can "hide" Gamepads/joysticks devices, ensuring Windows and other applications stop detecting it as a game controller and allowing only chosen applications to see them. Specially useful when the user is remapping a real controller into a virtual one.
 
 ![BeforeAfterHidHide](images/BeforeAfterHidHide.png){: .glightbox }
 
