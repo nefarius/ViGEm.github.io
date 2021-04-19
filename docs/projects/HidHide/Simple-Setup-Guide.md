@@ -4,17 +4,17 @@
 
 ## What is HidHide
 
-HidHide is a filter driver than can "hide" Gamepads/joysticks devices, ensuring Windows and other applications stop detecting it as a game controller and allowing only chosen applications to see them. Specially useful when the user is remapping a real controller into a virtual one.
+HidHide is a filter driver than can "hide" Gamepads/joysticks devices, ensuring Windows and other applications stop detecting it as a game controller and allowing only chosen applications to see them. Specially useful when the user is remapping a real controller into an emulated one.
 
 ![BeforeAfterHidHide](images/BeforeAfterHidHide.png){: .glightbox }
 
 ## Why one might need it
 
-You don't understand how that could be useful? Imagine the following scenario: you have a Generic Gamepad that you want to _convert_ into a __XInput Device__ (a Xbox 360 controller) or DualShock 4, since most games are already pre-configured to these controllers or maybe your game doesn't even detect your controller as it is. So you start using a remapping program ( [x360ce](https://www.x360ce.com/) / [XOutput](https://github.com/csutorasa/XOutput) / [UCR](https://github.com/Snoothy/UCR) / etc ) to do so.
+You don't understand how that could be useful? Imagine the following scenario: you have a generic gamepad that you want to _"convert"_ into a __XInput Device__ (a Xbox 360 controller) or DualShock 4, since most games are already pre-configured to these controllers, or maybe your game doesn't even detect your generic one as it is. So you start using a remapping program ( [x360ce](https://www.x360ce.com/) / [XOutput](https://github.com/csutorasa/XOutput) / [UCR](https://github.com/Snoothy/UCR) / etc ) to do so.
 
-This put you in a problematic situation: you don't end-up ___just___ with the virtual controller that you want to use. No no, you end-up with 2 controllers: the real and the virtual one.
+This put you in a problematic situation: you don't end-up ___just___ with the emulated controller that you want to use. No no, you end-up with 2 controllers: the real and the emulated one.
 
-If the games you are playing don't even detect your real controller, then all good. The issue starts when the game detects both real and virtual controllers while you only want it to recognize the virtual one. Since most games auto-detect controllers, the game will think there are 2 separate controllers connected, leading to the famous Double-Input and mis-input issue. Examples:
+If the games you are playing don't even detect your real controller, then all good. The issue starts when the game detects both real and emulated controllers while you only want it to recognize the latter. Since most games auto-detect controllers, the game will think there are 2 separate controllers connected, leading to the famous Double-Input and mis-input issue. Examples:
 
 - Rocket league will start 2 player mode randomly
 - Blasphemous will switch randomly between generic and XInput/DS4 button icons
@@ -23,7 +23,7 @@ If the games you are playing don't even detect your real controller, then all go
 This issue can be solved by using HidHide to:
 
 - Hide the real controller
-- Only allow the remapping tool of your choice to see the controller, since it needs to pick its input to translate them to the Virtual one 
+- Only allow the remapping tool of your choice to see the controller, since it needs to pick its input to translate them to the emulated one 
 
 ## Verifying if HidGuardian is installed and uninstalling it
 
@@ -92,7 +92,7 @@ Now that your controllers are hidden, you need to select which applications shou
 - Repeat the step above for each application that should whitelisted
 - After that, fully close then reopen your application (in case it was running) for it to detect the hidden devices. Alternatively, just reconnect your controllers.
 
-From this point, the applications on the list should be able to detect the hidden devices. The image below is an example of the application "UCR" being able to see a hidden Controller and creating a Virtual DS4: 
+From this point, the applications on the list should be able to detect the hidden devices. The image below is an example of the application "UCR" being able to see a hidden Controller and emulating a DualShock 4: 
 ![HidHideExampleSetup](images/HidHideClient_ExampleSetup.png){: .glightbox }
 
 !!! important "Users of DS4Windows: PAY ATTENTION!"
