@@ -9,7 +9,7 @@ Certain revisions (meaning: the same model has been reworked slightly over time 
 
 ## How
 
-Adding artificial delays in between packets seems like an easy fix, but causes a clearly user-noticeable delay to rumble requests for games which trigger a series of small rumble on/off requests per second. Simply dropping packets when the driver is flagged "busy" can work too, but runs the risk of e.g. rumble *off* commands getting discarded on error which causes the controller to rumble longer than intended, or even indefinitely. The following "intelligent" mechanisms are available to mitigate the issue as transparent and clever as possible.
+Adding artificial delays in between packets seems like an easy fix, but causes a clearly user-noticeable delay to rumble requests for games which trigger a series of small rumble on/off requests per second. Simply dropping packets when the driver is flagged "busy" can work too, but runs the risk of e.g. *rumble off* commands getting discarded on error which causes the controller to rumble longer than intended, or even indefinitely. The following "intelligent" mechanisms are available to mitigate the issue as transparent and clever as possible.
 
 ### Output Report Rate Control
 
