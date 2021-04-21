@@ -22,7 +22,7 @@ This is the big brain one 😁 When the time period between to-be-sent output re
 - *If* new packets arrive *during* the timer is active, the last cached packet will be replaced by the current to-be-sent-but-still-to-fast-packet
     - This prevents the *rumble off* command getting lost, which typically comes in **last** after a "packet burst"
 - After the timer wait period has elapsed the **most recent cached packet** is queued to get sent again with a "high priority" flag so it won't get accidentally stuck in a timer delay loop again
-- The timer is finished and reset, the cycle begins again *if* a flooding condition is detected again
+- The timer is finished and reset, the cycle begins again *if* another flooding condition is detected
 
 This may appear confusing and over-engineered at first but in our tests fixed around 99.9% of all known controller lockup issues so I'd say we did a rather fabulous job 😊
 
