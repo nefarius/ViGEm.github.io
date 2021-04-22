@@ -10,6 +10,8 @@ Here you'll find quick-links to binaries for popular projects 👇
 |---|---|---|
 | ViGEm Bus Driver Setup | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/ViGEmBus/releases) | ![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/ViGEmBus/total) |
 | BthPS3 Bluetooth Drivers Setup | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/BthPS3/releases) | ![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/BthPS3/total) |
+| DsHidMini Driver | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/DsHidMini/releases) | ![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/DsHidMini/total) |
+| HidHide Setup | [![Download](https://img.shields.io/badge/Download-brightgreen)](https://github.com/ViGEm/HidHide/releases) | ![GitHub All Releases](https://img.shields.io/github/downloads/ViGEm/HidHide/total) |
 
 ## Mirrors & Archives
 

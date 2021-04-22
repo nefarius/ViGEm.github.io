@@ -5,13 +5,13 @@
 
 Struggling with some project and need help? We've got you covered! In addition to the articles on this site there's the possibility of human interaction 😉
 
-## Forums
-
-Browse [the forums](https://forums.vigem.org/) to find discussions about similar issues you face or start a new conversation. Sign-up only requires an email account, wait for approval and you're ready to go ❤️
-
 ## Discord
 
 Wanna have a quick chat? [Be our guest on Discord](https://discord.vigem.org)! Various helpful people can be found here happy to chat. Do keep in mind that time zones are a thing so answers might come with a delay 😉 Read and respect the rules ❤️
+
+## Forums
+
+Browse [the forums](https://forums.vigem.org/) to find discussions about similar issues you face or start a new conversation. Sign-up only requires an email account, wait for approval and you're ready to go ❤️
 
 ## GitHub issues
 

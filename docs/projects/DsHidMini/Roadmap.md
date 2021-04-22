@@ -5,28 +5,15 @@
 
 Rough road map with useful features (in no particular order):
 
-- [ ] Implement support for Navigation controller ⬇️
-    - [X] Add USB and Bluetooth Hardware IDs to INF
-    - [ ] Adapt feature report for setting/getting Bluetooth master address
-    - [ ] Implement device-specific low battery indicator (LED rapid flashing?)
 - [X] Implement auto-disconnect on wireless after idle timeout to save battery ⚡
 - [ ] Implement/expose more options to control pairing behavior ⬇️
     - [ ] Add toggle option to UI to globally disable or enable auto-pairing
     - [ ] Add per-device action to UI to pair to user-defined MAC address 
 - [X] UI tool for configuration 🚧
-- [ ] UDP server for `cemuhook` compatibility ❓
-    - Might become obsolete by potential collaboration with DS4Windows
-    - See [ds4drv](https://github.com/TheDrHax/ds4drv-cemuhook)
 - [X] Test/fix power behavior (like, what happens when the system wants to sleep with controllers connected etc.) ⚡
 - [ ] Integrate ViGEm client SDK for XInput support ⚡
     - Might become obsolete by potential collaboration with DS4Windows
-- [ ] Add remapping capabilities ⬇️
-    - See [jfes](https://github.com/dmitrii-eremin/jfes)
-    - Might be redundant due to existing tools
-- [ ] Add configurable Turbo Mode for buttons ⬇️
-    - Might be redundant due to existing tools
-    - Might become obsolete by potential collaboration with DS4Windows
-- [ ] Test and document setup with PCSX2, RetroArch ⚡
+- [X] Test and document setup with PCSX2, RetroArch ⚡
 - [X] Implement/expose rumble support via PID/FFB ⚡
     - [X] Craft and test necessary PID section for report descriptor
     - [X] Add OEM registry values for DirectInput to detect effects

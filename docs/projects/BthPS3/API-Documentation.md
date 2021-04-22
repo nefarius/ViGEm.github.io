@@ -1,57 +1,10 @@
 # API Documentation
 
-!!! important "Work in progress"
+!!! important "Topic intended for developers"
+    This topic is intended for **developers** who'd like to build upon the capabilities of BthPS3 and directly talk to devices for prototyping or other experimental tasks.
 
-!!! example "Define/include necessary types"
+Devices connected through BthPS3 can be interfaced with "driverless" by opening a handle and directly communicating with the HID Control and Interrupt channels. They can be enumerated via [SetupAPI](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/setupapi) by using the [Device Interface GUIDs documented in the project sources](https://github.com/ViGEm/BthPS3/blob/e28e815fe50d91aeb5af692cff29946647d0fa24/common/include/BthPS3.h#L189-L211). Reading from and writing to the L2CAP channels is done via [DeviceIoControl](https://docs.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) utilizing [these IOCTL commands](https://github.com/ViGEm/BthPS3/blob/e28e815fe50d91aeb5af692cff29946647d0fa24/common/include/BthPS3.h#L357-L375).
 
-    === "C#"
-        ```csharp
-        public static Guid GUID_DEVINTERFACE_BTHPS3_SIXAXIS => Guid.Parse("7B0EAE3D-4414-4024-BCBD-1C21523768CE");
-        public static Guid GUID_DEVINTERFACE_BTHPS3_NAVIGATION => Guid.Parse("3E53723A-440C-40AF-8895-EA439D75E7BE");
-        public static Guid GUID_DEVINTERFACE_BTHPS3_MOTION => Guid.Parse("BCEC605D-233C-4BEF-9A10-F2B81B5297F6");
-        public static Guid GUID_DEVINTERFACE_BTHPS3_WIRELESS => Guid.Parse("64CB1EE2-B428-4CE8-8794-F68036E57BE5");
-        ```
+## Example implementation
 
-    === "C/C++"
-        ```cpp
-        #include <BthPS3.h>
-        ```
-
-!!! example "Device detection dependencies"
-    === "C#"
-        ```PowerShell
-        Install-Package Nefarius.Devcon
-        Install-Package PInvoke.Kernel32
-        ```
-
-    === "C/C++"
-        ```cpp
-        #define WIN32_LEAN_AND_MEAN
-        #include <Windows.h>
-        #include <SetupAPI.h>
-        #pragma comment(lib, "SetupAPI.lib")
-        ```
-
-!!! example "Enumerate detected devices"
-    === "C#"
-        ```csharp
-        var instanceId = 0;
-
-        //
-        // Enumerate GUID_DEVINTERFACE_BTHPS3_SIXAXIS
-        // 
-        while (Devcon.Find(
-            GUID_DEVINTERFACE_BTHPS3_SIXAXIS,
-            out var path,
-            out var instance,
-            instanceId++
-        ))
-        {
-            // Connected SIXAXIS/DualShock 3 found
-        }
-        ```
-
-    === "C/C++"
-        ```cpp
-        /* to be filled */
-        ```
+[Check out this archived project](https://github.com/ViGEm/Shibari/tree/master/Sources/Shibari.Sub.Source.BthPS3) for a reference implementation on how to enumerate and interact with devices exposed by BthPS3 (C#/.NET).

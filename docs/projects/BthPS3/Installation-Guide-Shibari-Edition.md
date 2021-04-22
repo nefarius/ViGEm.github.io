@@ -1,7 +1,7 @@
 # Installation Guide (Shibari Edition)
 
 !!! attention "🚨 Obsolete solution 🚨"
-    [DsHidMini](https://vigem.org/projects/DsHidMini/) (official successor) has been released, you might consider checking that out instead! 
+    [DsHidMini](https://vigem.org/projects/DsHidMini/) (official successor) has been released, please use that instead! This article will remain online for historic reasons but use is discouraged as no more updates will follow!
 
 ## What's this
 
@@ -62,7 +62,7 @@ You made it this far? Great! Remember that `Shibari` archive from earlier? Extra
 
 ### Have you gone insane?
 
-Maybe! When you stare into the kernel for too long, the kernel stares back :ghost: 
+Maybe! When you stare into the kernel for too long, the kernel stares back :ghost:
 
 ### Is this some official Sony thing?
 
@@ -76,15 +76,19 @@ Not a thing anymore since v1.3.x of BthPS3.
 
 ### Why don't you cover Windows versions lower than 10?
 
-Production-signing is unfortunately fairly annoying and unnecessary complicated for drivers targeting multiple major revisions of Windows so to keep my sanity I went for Windows 10 only. The code of BthPS3 is - as we speak - technically compatible from Windows 7 to 10 so it could be back-ported in the future with little efforts.
+Production-signing is unfortunately fairly annoying and unnecessary complicated for drivers targeting multiple major revisions of Windows so to keep my sanity I went for Windows 10 only. ~~The code of BthPS3 is - as we speak - technically compatible from Windows 7 to 10 so it could be back-ported in the future with little efforts.~~
+
+Starting with [this commit](https://github.com/ViGEm/BthPS3/commit/7959c119609138b9f5776ac99804f6062771ee4a) Windows 7 support is no longer given due to the introduction of a dependency not present in older OS versions.
 
 ### Why is this Shibari thingy necessary to run this clutter?
 
-I have plans for getting completely rid of this requirement, but that requires additional drivers which I've started working on but currently don't have the drive or capacity to deal with. Maybe if support and interest from the community rises above a certain threshold I'll tackle that topic some day again!
+~~I have plans for getting completely rid of this requirement, but that requires additional drivers which I've started working on but currently don't have the drive or capacity to deal with. Maybe if support and interest from the community rises above a certain threshold I'll tackle that topic some day again!~~
+
+No need, [use DsHidMini instead](https://vigem.org/projects/DsHidMini/) of Shibari and FireShock!
 
 ### How do I get pressure sensitive buttons in PCSX2 with this?
 
-That is possible but out of the scope of this project.
+That is possible but out of the scope of this project. [DsHidMini can do that for you](https://vigem.org/projects/DsHidMini/)!
 
 ### Can I use the motion capabilities of the PS3 controllers?
 
@@ -92,11 +96,11 @@ That is possible but out of the scope of this project.
 
 ### I want some battery charge indicator, like SCP!
 
-That is possible but out of the scope of this project.
+That is possible but out of the scope of this project. [DsHidMini can do that for you](https://vigem.org/projects/DsHidMini/)!
 
 ### Can I have all SCP features like quick disconnect combo etc.?
 
-That is possible but out of the scope of this project.
+That is possible but out of the scope of this project. [DsHidMini can do that for you](https://vigem.org/projects/DsHidMini/)!
 
 ### I sometimes need to power on the controller twice or more until it stays connected...
 
@@ -115,6 +119,8 @@ Open `settings.json` in your Shibari folder and check out the comments in the `"
 `FireShock` and Sonys official `sixaxis` driver they ship with PSNow unfortunately can't coexist on the same system, if you want "traditional" USB support back you need to uninstall `FireShock`:
 
 [![7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png)](/assets/uploads/files/7f5092c2-15e8-4dd8-bdb1-5a300607db15-image.png){: .glightbox }
+
+[Use DsHidMini instead](https://vigem.org/projects/DsHidMini/) to get that feature back!
 
 ### Ever since I've installed this, my DS4 isn't connecting anymore at all!
 
@@ -150,13 +156,7 @@ Done, delightful 😃
 
 Nope, this isn't and never was a software issue. Any misbehavior in regards to reported inputs comes from the controller hardware itself, not my tools. In short: your device is damaged or reached the end of its lifespan, sorry! Time to replace! 😔
 
-If you sport some of those lovely ~~fake~~ aftermarket devices from questionable stores from far away costing only a dime or two then you might have been screwed over and my software is not here to fix hardware manufacturers cuts, get proper genuine hardware or at least higher quality replicas :wink: 
-
----
-
-***Stay tuned, more answers coming soon...***
-
-![Alastor](/assets/uploads/files/65ffc789b05211faf1585083e2382c0b.gif)
+If you sport some of those lovely ~~fake~~ aftermarket devices from questionable stores from far away costing only a dime or two then you might have been screwed over and my software is not here to fix hardware manufacturers cuts, get proper genuine hardware or at least higher quality replicas :wink:
 
 ---
 
