@@ -25,10 +25,6 @@ No matter what software you may have preinstalled, this step is always the same 
 
 By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
 
-## Beta builds
-
-[You can get the latest automatic build of the DsHidMini control utility here](https://ci.appveyor.com/api/projects/nefarius/dshidmini/artifacts/bin/DSHMC.exe?job=Platform%3A%20x64) which can contain newer yet unfinished features. May contain bugs 🐛 use with care 😊 It's unsigned so you'll get a warning when launched as Administrator, this is expected. Happy testing!
-
 ## Updating
 
 If you want to update, simply [follow all the same steps of the installation](#installation) and overwrite any existing files. Reboot your machine to be extra safe if it didn't work right away.
