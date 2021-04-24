@@ -27,8 +27,8 @@ This issue can be solved by using HidHide to:
 
 ## Verifying if HidGuardian is installed and uninstalling it
 
-!!! important "If you are definitely sure you don't have HidGuardian installed you can skip this part"
-    HidHide is HidGuardian's successor. Since both have the same function, it's better if HidGuardian is not present in your system to prevent confusion on what software is hiding which controller.
+!!! important "HidHide and HidGuardian MUST NOT be together on the same system"
+    HidHide is HidGuardian's successor and both have the same function. Having the two installed simultaneously can cause confusion at best and actual issues at worst.
 
 HidGuardian's installer utility can check if it's installed and correctly uninstall it in case it is, so that's what we are going to use:
 
