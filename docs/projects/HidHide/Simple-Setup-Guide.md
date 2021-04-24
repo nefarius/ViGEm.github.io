@@ -102,7 +102,7 @@ From this point, the applications on the list should be able to detect the hidde
 
 ## What now?
 
-If you've set everything correctly then all that is left is for you to enjoy! Before you leave, have a quick look in the next section and on the `Frequently Asked Questions` article on the side-bar (I mean... if it has already been created).
+If you've set everything correctly then all that is left is for you to enjoy! Before you leave, have a quick look in the next section and on the `Frequently Asked Questions` article on the left side-bar (I mean... if it has already been created).
 
 ## Things to keep in mind
 
