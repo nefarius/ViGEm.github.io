@@ -87,7 +87,7 @@ Assuming the hidden controllers are the only ones connected to the system and th
 
 ### Allowing chosen applications to see hidden devices
 
-Now that your controllers are hidden, you need to select which applications should be able to detect them:
+Now that it's confirmed your controllers are hidden, you need to select which applications should be able to detect them anyway:
 
 - On the Configuration Client, click on the `Applications` tab
 - Click on the `+` icon and add the executable file of your application (`ApplicationName.exe`)  to whitelist it
