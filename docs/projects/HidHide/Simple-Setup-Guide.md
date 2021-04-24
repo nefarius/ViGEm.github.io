@@ -76,12 +76,14 @@ DONE. Be happy. Still, be sure to give a read on the last sections of this artic
 - If your controller can connect both via cable and Bluetooth, reconnect your controllers via the other connection method and also mark their new entries
 - Mark the box in the bottom called "Enable Device Hiding" to (obviously) activate the hiding of the marked devices
 
-At this point, your controllers should be hidden. To verify, open Windows' `joy.cpl` by one of the following methods:
+### Verifying if the controllers are hidden
+
+At this point, your controllers should be hidden to everything. To verify, open Windows' `joy.cpl` by one of the following methods:
 
 - Pressing the key combination ++win+r++ and then entering `joy.cpl` ___OR___
 - Searching and opening on Windows' Start Menu `Set up USB Game Controllers` 
 
-Assuming the hidden controllers are the only ones connected to the system, no device should show up in the Game Controller's list. If they are, try reconnecting them. 
+Assuming the hidden controllers are the only ones connected to the system and there are no virtual controllers being emulated, no device should show up in the Game Controller's list. If your real controller is still on the list, try reconnecting them. 
 
 ### Allowing chosen applications to see hidden devices
 
