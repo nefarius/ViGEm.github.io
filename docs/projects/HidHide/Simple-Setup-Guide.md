@@ -63,7 +63,7 @@ DONE. Be happy. Still, be sure to give a read on the last sections of this artic
 - Install [HidHide's prerequisites](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) according to your [Windows 10 version](https://vigem.org/research/How-to-check-architecture/)
 ![VisualCpp](images/HidHide_VisualCpp.png){: .glightbox }
 - Download the [Latest release of HidHide](https://github.com/ViGEm/HidHide/releases) (it should be a file called `HidHideMSI.msi`)
-- Open the downloaded file and install HidHide as instructed
+- Open the downloaded file and install HidHide as instructed at default settings (just click `Next` until it finishes installing)
 - After the installation, reboot your computer
 
 ### Hiding the controller
