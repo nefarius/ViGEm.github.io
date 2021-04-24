@@ -10,7 +10,7 @@ HidHide is a filter driver than can "hide" Gamepads/joysticks devices, ensuring 
 
 ## Why one might need it
 
-You don't understand how that could be useful? Imagine the following scenario: you have a generic gamepad that you want to _"convert"_ into a __XInput Device__ (a Xbox 360 controller) or DualShock 4, since most games are already pre-configured to these controllers, or maybe your game doesn't even detect your generic one as it is. So you start using a remapping program ( [x360ce](https://www.x360ce.com/) / [XOutput](https://github.com/csutorasa/XOutput) / [UCR](https://github.com/Snoothy/UCR) / etc ) to do so.
+Imagine the following scenario: you have a generic gamepad that you want to _"convert"_ into a __XInput Device__ (a Xbox 360 controller) or DualShock 4, since most games are already pre-configured to these controllers, or maybe your game doesn't even detect your generic one as it is. So you start using a remapping program ( [x360ce](https://www.x360ce.com/) / [XOutput](https://github.com/csutorasa/XOutput) / [UCR](https://github.com/Snoothy/UCR) / etc ) to do so.
 
 This put you in a problematic situation: you don't end-up ___just___ with the emulated controller that you want to use. No no, you end-up with 2 controllers: the real and the emulated one.
 
