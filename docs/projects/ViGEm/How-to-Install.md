@@ -54,14 +54,9 @@ If everything matches the instructions, then things should work as expected. A s
 
 ### Setup error, code 2503
 
-!!! note "If the vigem setup finishes installing without error messages then you are not facing this issue"
+!!! note "If the ViGEmBus setup finishes installing without error messages then you are not facing this issue"
 
-This issue is related to the Windows' `Temp` folder having broken permissions or the user not having administrator privileges. There are 2 ways to fix this:
-
-- The proper way, which involves fixing the folder's permission, or...
-- The lazy way, which just force the installer to run with administrator privileges
-
-#### Fixing the Temp folder's permissions
+This issue is related to the Windows' `Temp` folder having broken permissions or the user not having administrator privileges. Those permissions must be fixed for the setup to finish installation.
 
 !!! important "Be aware of your system language!"
     The images and instructions used as examples may not match perfectly your experience, so do things accordingly to how your system presents itself on its language.
@@ -81,17 +76,6 @@ This issue is related to the Windows' `Temp` folder having broken permissions or
 - When all is done, confirm the changes in every window by selecting `OK`  
 
 After Windows finishes applying the changes, try running Vigem's installer again and it should succeed now.
-
-#### Running the .msi installer with administrator privileges
-!!! important "Not recommended!"
-    This is the "_I don't want to solve the actual issue, just install vigem no matter how_". You will probably succeed, but not fixing the folder's permission can cause issues in other situations.
-
-- Move the ViGEmBus `.msi` installer to the root of your Local Disk
-- Open `Command Prompt (Admin)` by pressing ++win+x++ and selecting it from the menu
-- On the command prompt, write `C:\ExactNameOfTheInstallerHere.msi`, then press Enter. See the example in the image to better understand it
-![RootDiskVigem](images/RootDiskVigem.png){: .glightbox } 
-
-And done. This should be enough for the Setup to complete installation, though if your windows `Temp` folder permissions are actually broken they will remain so, possibly causing issues in other situations.
 
 ### Purging every trace of ViGEmBus
 
