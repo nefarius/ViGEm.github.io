@@ -118,41 +118,25 @@ e.g. Setting up a profile to be represented as LEDs 4 and 2.
 
 ### "_How do I change between XInput and DS4 emulation?_"
 
-The controller that DS4Windows emulates is dependent on the current selected profile. By default, the profile that comes with DS4Windows called... _Default_... is set to emulate a Xbox 360 controller. To change to DS4 emulation you can Edit the _Default_ profile, though it is recommended you create a new specific for DS4 emulation. To create a new profile:
+The controller that DS4Windows emulates is dependent on the current selected profile. By default, the profile that comes with DS4Windows called... _Default_... is set to emulate a Xbox 360 controller. You can create new profiles with different settings to best fit your use case, though this section will focus solely on creating a profile with DS4 emulation:
 
 - Go to the _Profiles_ tab
 - Click on the "New" button to create a new profile
-- When asked if a preset is to be used, choose "yes" then "Gamepad"
-- On the right side go the _Other_ tab
-- In the final option of the _Other_ tab, "Emulated Controller", change from _Xbox 360_ to _DualShock 4_
+- When asked if a preset is to be used, choose "yes"
+- Select `Gamepad` and then `DualShock 4` at the Output Controller
 - Adjust the Light Bar color related settings according to what you want according to the _Light Bar to LEDs translation_ section (in the example below the profile will be represented by LED 2)
 - Give a name to your profile (e.g.: DS3 to DS4)
 - Save the profile
-- Back in the _Controllers_ tab, click on the _Selected profile_ box and change from default to the profile you just created
-
+- Back in the _Controllers_ tab, click on the _Selected profile_ box and change from default to the profile you just created  
 ![Ds4Profile](images/Ds4Profile.png){: .glightbox }
 
-And done, now you can switch between XInput/DS4 emulation by changing between profiles. Profiles can also be switched by button combinations by setting a _Special action_ inside each profile settings, though we will not cover this in this guide.
-
-### "_Why the need of R7's DS4Windows? Couldn't DsHidMini directly have XInput/DS4?_"
-
-Basically, because it was easier. By off-loading XInput and DS4 emulation to DS4Windows, DsHidMini's release "to-do" list got smaller, more important features and issues could/can be prioritized and it's easier to solve bugs with a smaller code. This all led to the release of DsHidMini happening sooner.
-
-### "_But is direct XInput/DS4 emulation a possibility?_"
-
-Yes. Actually, it is dead easy right now to directly emulate a DS4 since the DS3 in "DS4Windows" _is_ a DS4, the only difference is that it's in a format that only R7's DS4Windows recognizes. The problems with allowing the user to enable direct DS4 emulation right now are:
-
-- Some games that support DS4 use the TouchPad button for things like maps or options menu. Because the D4's TP Button is an extra button that the DS3 don't have, this means that the TP Button would need to be a button combination or replace another used button, which means: having to actually implement all the logic involved in the driver _and_ in the DsHidMini Control Utility, which means more work and more code, so more chances of bugs, more things to test etc
-- XInput emulation is more difficult for _reasons_ and its _way easier_ to off-load this work to something else. If the user would need to use some program to emulate XInput, then why not DS4Windows? And in this case, why not leave DS4 emulation to it as well?
-- Users that would want to remap buttons/axis would end up in this situation anyway
-
-DS4Windows offers macros, remap function, the ability to change modes without disconnecting the controller, control the DS3 LEDs and more _already_. While direct emulation is a possibility and on DsHidMini's _To-Do_ list it's in no way a priority, so don't hold your breath for it.
+And done, now you can switch between XInput/DS4 emulation by changing between profiles.
 
 ### "_I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360 one_"
 
 Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. Regardless if Steam is detecting or not the emulated DS4, 99.9% of the games that support DS4 controllers should detect the emulated one as normal.
 
-For Steam to properly detect the emulated controller you need run DS4Windows under a custom ".exe" name. Just open DS4Windows -> Go into the _Settings_ Tab -> Write the name you want on the "Custom exe name" box (In the image below the name "DS4Win" is used as an example). After the name is set, fully close then re-open DS4Windows and then Steam should detect it as normal. It's also recommended to go into the Steam's settings -> Controller -> General Controller Configurations -> Leave "Playstation Configuration Supported" UNCHECKED, so Steam doesn't remap your controller when you don't want it to.
+For Steam to properly detect the emulated controller you need run DS4Windows under a custom `.exe` name. Just open DS4Windows -> Go into the _Settings_ Tab -> Write the name you want on the `Custom exe name` box (In the image below the name "DS4Win" is used as an example). After the name is set, fully close then re-open DS4Windows and then Steam should detect it as normal. It's also recommended to go into the Steam's settings -> Controller -> General Controller Configurations -> Leave "Playstation Configuration Supported" UNCHECKED, so Steam doesn't remap your controller when you don't want it to.
 
 ![FAQ_DS4WCustomName](images/FAQ_DS4WCustomName.png){: .glightbox }
 
