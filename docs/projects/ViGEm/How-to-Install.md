@@ -18,13 +18,23 @@ If you want to update, simply follow all the same steps of the installation.
 
 ## Removal
 
-If you want to remove ViGEm from your computer you just need to use its built-in uninstaller:
+### Apps and Features method
+
+The usual way consists in using its built-in uninstaller:
 
 - Open Windows 10's `Apps and Features` by pressing ++win+x++ and selecting it from the menu
 - Use the search box _in the middle_ to look for `Emulation` or `Nefarius`
 - Click on the `Nefarius Nefarius Gamepad Emulation Bus Driver` and select  `Uninstall`  
 ![UninstallingViGEm](images/UninstallingViGEm.png){: .glightbox }  
 - Follow the uninstaller's instructions
+- After ViGEm is uninstalled, reboot your computer
+
+### .msi installer method
+
+This method is useful when the ViGEmBus entry doesn't appear in the Windows' Apps lists at `Apps and Features`:
+
+- Just follow the same steps of the [installation section](#installation), but choose the `remove` when it appears  
+![SetupRemoveVigem](images/SetupRemoveVigem.png){: .glightbox }  
 - After ViGEm is uninstalled, reboot your computer
 
 That should do the trick. If you want to be absolutely sure that there are no traces left of the ViGEmBus on your system, have a look at our [troubleshooting section](#troubleshooting)
