@@ -43,7 +43,9 @@ The ViGEmBus has no user interface, but don't worry, it's easy to verify if ever
 - Click on the `View` tab at the top and change the view type to `Devices by connection`
 - Look for entries named `Nefarius Virtual Gamepad Emulation Bus` _and_ `Virtual Gamepad Emulation Bus`
 
-If when counting both types you have more than one entry, then you have multiple version of ViGEmBus installed and it is better if you follow the [full clean section](#purging-every-trace-of-vigembus). If you have only one entry and it is the one starting with `Nefarius` then continue following this section:
+If when counting both types you have more than one entry, then you have multiple version of ViGEmBus installed and it is better if you follow the [full clean section](#purging-every-trace-of-vigembus).
+
+If you have only one entry and it is the one starting with `Nefarius` then continue following this section:
 
 - Right click on the `Nefarius Virtual Gamepad Emulation Bus` then select `properties`
 - At the `General` tab, its status should be `working properly`
