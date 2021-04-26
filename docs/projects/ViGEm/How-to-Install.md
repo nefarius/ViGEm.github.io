@@ -58,26 +58,9 @@ If everything matches the instructions, then things should work as expected. A s
 
 !!! note "If the ViGEmBus setup finishes installing without error messages then you are not facing this issue"
 
-This issue is related to the Windows' `Temp` folder having broken permissions or the user not having administrator privileges. Those permissions must be fixed for the setup to finish installation.
+This issue is related to the Windows' `Temp` folder having broken permissions, which need to be fixed for the setup to finish installation. 
 
-!!! important "Be aware of your system language!"
-    The images and instructions used as examples may not match perfectly your experience, so do things accordingly to how your system presents itself on its language.
-
-- Navigate to the `Windows` folder at the root of your local disk
-- Find the `Temp` folder, right-click on it then select `Properties`  
-![TempFolderProperties](images/TempFolderProperties.png){: .glightbox } 
-- Go to the `Security` tab and then select `Advanced`
-- Below the `Click Continue to attempt the operation with administrative permissions` message select `Continue`
-![TempFolderPermissionsCheck](images/TempFolderPermissionsCheck.png){: .glightbox } 
-- Verify if the `Owner`, at the top, is `System`. If it's not, select the `Change` button at its right side, write `System` on the appearing window and then confirm  
-![TempFolderOwner](images/TempFolderOwner.png){: .glightbox } 
-- On the middle list, select the entry `Users (Your Username/Users)` and select `Edit`. At the right side of the appearing window, select `Show advanced permissions` and then leave only the following three permissions marked: `Traverse folder / execute file`, `Create files / write data` and `Create folders / append data`  
-![UserPermissionsFix](images/UserPermissionsFix.png){: .glightbox } 
-- Edit the `Administrators`, `SYSTEM` and `CREATOR OWNER` entries so they have `Full Control`  
-![OthersPermissionsFix](images/OthersPermissionsFix.png){: .glightbox } 
-- When all is done, confirm the changes in every window by selecting `OK`  
-
-After Windows finishes applying the changes, try running Vigem's installer again and it should succeed now.
+[Click Here and look for the comment that has the step-by-step guide on how to fix the issue](https://github.com/ViGEm/ViGEmBus/issues/91#issuecomment-826477486)
 
 ### Purging every trace of ViGEmBus
 
