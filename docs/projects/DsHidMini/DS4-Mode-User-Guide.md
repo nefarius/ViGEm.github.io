@@ -21,8 +21,6 @@ In "DS4Windows" HID Device Mode, the controller appears as a custom device that 
 - Settings that make the Light Bar color flash, pulse or change randomly (rainbow mode) are not supported
 - Specific DS4 touchpad movements are not supported, only the Touchpad Button (another button needs to be remapped to it)
 
-Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in "DS4Windows" mode to be detected by DS4Windows.
-
 ## Using the controller with DS4Windows
 
 - To start, the controller must be in `DS4Windows` mode. [See here](../HID-Device-Modes-Explained) how to verify and change modes
