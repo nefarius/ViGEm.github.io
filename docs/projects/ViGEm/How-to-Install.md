@@ -62,6 +62,12 @@ This issue is related to the Windows' `Temp` folder having broken permissions, w
 
 [Click Here and look for the comment that has the step-by-step guide on how to fix the issue](https://github.com/ViGEm/ViGEmBus/issues/91#issuecomment-826477486).
 
+### Vigem issues in HP Omen laptops
+
+HP's line of Omen gaming laptops come pre-installed with a modified version of the ViGEmBus driver. Apps trying to locate the latest ViGEmBus may end up detecting the modified HP driver instead, causing all sorts of issue since it is based on an older version.
+
+If this is your situation, [follow the guide here](https://github.com/ViGEm/ViGEmBus/issues/99).
+
 ### Purging every trace of ViGEmBus
 
 If you are facing issues and/or have multiple ViGEmBus entries in your Device Manager it's best to remove every trace of it from your system to start clean again:
@@ -81,12 +87,6 @@ Having no ViGEmBus entries left at the Device Manager does not mean your system 
 - Verify again on the Driver Store Explorer if there are no entries left of `vigembus.inf` and if there are no entries left of `(Nefarius) Virtual Gamepad Emulation Bus` on the Device Manager. If there are, repeat this section
 
 And done, no Vigem left anywhere! Now it's safe to try re-installing the latest version according to the [installation section](#installation).
-
-### Vigem issues in HP Omen laptops
-
-HP's line of Omen gaming laptops come pre-installed with a modified version of the ViGEmBus driver. Apps trying to locate the latest ViGEmBus may end up detecting the modified HP driver instead, causing all sorts of issue since it is based on an older version.
-
-If this is your situation, [follow the guide here](https://github.com/ViGEm/ViGEmBus/issues/99).
 
 ### Other issues
 
