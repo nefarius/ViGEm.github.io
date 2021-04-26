@@ -60,7 +60,7 @@ If everything matches the instructions, then things should work as expected. A s
 
 This issue is related to the Windows' `Temp` folder having broken permissions, which need to be fixed for the setup to finish installation. 
 
-[Click Here and look for the comment that has the step-by-step guide on how to fix the issue](https://github.com/ViGEm/ViGEmBus/issues/91#issuecomment-826477486)
+[Click Here and look for the comment that has the step-by-step guide on how to fix the issue](https://github.com/ViGEm/ViGEmBus/issues/91#issuecomment-826477486).
 
 ### Purging every trace of ViGEmBus
 
