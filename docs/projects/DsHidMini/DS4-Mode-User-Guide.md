@@ -21,18 +21,17 @@ In "DS4Windows" HID Device Mode, the controller appears as a custom device that 
 - Settings that make the Light Bar color flash, pulse or change randomly (rainbow mode) are not supported
 - Specific DS4 touchpad movements are not supported, only the Touchpad Button (another button needs to be remapped to it)
 
-## Verifying/Changing current DS3 HID Device Mode
-
 Go [here](../HID-Device-Modes-Explained) on how to do so. The DS3 needs to be in "DS4Windows" mode to be detected by DS4Windows.
 
 ## Using the controller with DS4Windows
 
+- To start, the controller must be in `DS4Windows` mode. [See here](../HID-Device-Modes-Explained) how to verify and change modes
 - Download the latest __Ryochan7's__ DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
 - Extract the package to an easily accessible folder
 - Run DS4Windows.exe
 - Install the ViGEmBus Driver if asked to
 
-After that, the controller should be properly recognized by DS4Windows. If it is not, go back to the previous section on how to verify/change the current DS3 mode.
+After that, the controller should be properly recognized by DS4Windows. If it is not, [go back to the previous section](#) on how to verify/change the current DS3 mode.
 
 ## What now?
 
