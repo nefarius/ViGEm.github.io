@@ -68,9 +68,10 @@ If everything matches the instructions, then things should work as expected. A s
 
 !!! note "If the ViGEmBus setup finishes installing without error messages then you are not facing this issue"
 
-This issue is related to the Windows' `Temp` folder having broken permissions, which need to be fixed for the setup to finish installation. 
+This issue is related to the Windows' `Temp` folder having broken permissions, which need to be fixed for the setup to finish installation. Whatever caused the issue __is not our fault__. None of the Vigem softwares edit permissions in any way. We do have a guide on how to  try solving this, but...
 
-[Click Here and look for the comment that has the step-by-step guide on how to fix the issue](https://github.com/ViGEm/ViGEmBus/issues/91#issuecomment-826477486).
+!!! important "Editing Windows permissions is risky!"
+    We prepared a guide on how to fix Windows' `Temp` folder permissions, but be warned: even though it was carefully created and with the best intentions, editing Windows' folders permissions has its risks and can cause even more issues if things go wrong. __If you understand that we take NO responsibility for whatever happens to your system and want to take the risk anyway__, the guide is [here](https://github.com/ViGEm/ViGEmBus/issues/91#issuecomment-826477486).
 
 ### Vigem issues in HP Omen laptops
 
