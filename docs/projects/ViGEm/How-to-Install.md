@@ -84,22 +84,9 @@ And done, no Vigem left anywhere! Now it's safe to try re-installing the latest 
 
 ### Vigem issues in HP Omen laptops
 
-HP's line of Omen gaming laptops come pre-installed with a modified version of the ViGEmBus driver. Apps trying to locate the latest ViGEmBus may end up detecting the modified HP driver instead, causing all sorts of issue since it is based on an older version (v1.4.3.X).
+HP's line of Omen gaming laptops come pre-installed with a modified version of the ViGEmBus driver. Apps trying to locate the latest ViGEmBus may end up detecting the modified HP driver instead, causing all sorts of issue since it is based on an older version.
 
-To fix this, HP's ViGEm driver must be disabled and its entry in Windows' registry deleted:
-
-- Open Device Manager by pressing ++win+x++ and selecting it from the menu
-- Click on the `View` tab at the top and change the view type to `Devices by connection`
-- Look for the `HP Omen Driver` and expand it, then right-click on the `Virtual Gamepad Emulation Bus` under it and select `Disable device`  
-![DeviceManagerHPOmenDriver](images/DeviceManagerHPOmenDriver.png){: .glightbox } 
-- After confirming the driver is disabled, open the Windows `Run` tool by pressing ++win+r++ and executing the `regedit` command. Windows' registry should then open
-- Navigate, __carefully__, to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceClasses`, as shown in the image below. When you reach `DeviceClasses`, right click on it and choose `Find`. Paste `{96e42b22-f5e9-42f8-b043-ed0f932f014f}` on the appearing search box and then select `Find Next`
-![RegistryHPOmenSearch](images/RegistryHPOmenSearch.png){: .glightbox }  
-- The search function should lead you to a folder. Expand it and look for a folder called `SWD\DRIVERENUM{2abac65e-84b2-4dbd-8ab1-2a2894991813}#HPIncVigemBusOmenFusionSoftware&4&14eddee5&0` (Emphazis on the __HPIncVigemBUS__ in the middle of its name)
-- Right click on the `(...)HPIncVigemBUS(...)` entry and then delete it. Be EXTRA CAREFUL so you don't delete the wrong entry  
-![RegistryHPOmeDelete](images/RegistryHPOmeDelete.png){: .glightbox } 
-
-Deleting that entry should solve the problem for good, but keep in mind that HP's `Virtual Gamepad Emulation Bus` must remain disabled on the Device Manager, otherwise it will recreate that entry after every system reboot... like a virus...  
+If this is your situation, [follow the guide here](https://github.com/ViGEm/ViGEmBus/issues/99).
 
 ### Other issues
 
