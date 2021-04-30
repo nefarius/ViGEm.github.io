@@ -166,4 +166,4 @@ The following snippet enables the blocking capabilities and adds three device in
 
 ### Retrieve, alter and submit allow-list
 
-To be done.
+<script src="https://gist.github.com/nefarius/85c737da316ca5b68169a29f6e71d770.js"></script>
