@@ -158,8 +158,6 @@ With that out of the way we need the IOCTL definitions for the `DeviceIoControl`
         private const uint IOCTL_SET_ACTIVE = 0x80016014;
         ```
 
-The following snippet enables the blocking capabilities and adds three device instance IDs to the deny list.
-
 ### Retrieve, alter and submit deny-list
 
 <script src="https://gist.github.com/nefarius/880845646d177c74e94880f0568909d1.js"></script>
