@@ -10,7 +10,7 @@ HidHide is a filter driver than can "hide" Gamepads/joysticks devices, ensuring 
 
 ## Why one might need it
 
-You don't understand how that could be useful? Imagine the following scenario: you have a generic gamepad that you want to _"convert"_ into a __XInput Device__ (a Xbox 360 controller) or DualShock 4, since most games are already pre-configured to these controllers, or maybe your game doesn't even detect your generic one as it is. So you start using a remapping program ( [x360ce](https://www.x360ce.com/) / [XOutput](https://github.com/csutorasa/XOutput) / [UCR](https://github.com/Snoothy/UCR) / etc ) to do so.
+Imagine the following scenario: you have a generic gamepad that you want to _"convert"_ into a __XInput Device__ (a Xbox 360 controller) or DualShock 4, since most games are already pre-configured to these controllers, or maybe your game doesn't even detect your generic one as it is. So you start using a remapping program ( [x360ce](https://www.x360ce.com/) / [XOutput](https://github.com/csutorasa/XOutput) / [UCR](https://github.com/Snoothy/UCR) / etc ) to do so.
 
 This put you in a problematic situation: you don't end-up ___just___ with the emulated controller that you want to use. No no, you end-up with 2 controllers: the real and the emulated one.
 
@@ -27,8 +27,8 @@ This issue can be solved by using HidHide to:
 
 ## Verifying if HidGuardian is installed and uninstalling it
 
-!!! important "If you are definitely sure you don't have HidGuardian installed you can skip this part"
-    HidHide is HidGuardian's successor. Since both have the same function, it's better if HidGuardian is not present in your system to prevent confusion on what software is hiding which controller.
+!!! important "HidHide and HidGuardian MUST NOT be together on the same system"
+    HidHide is HidGuardian's successor and both have the same function. Having the two installed simultaneously can cause confusion at best and actual issues at worst.
 
 HidGuardian's installer utility can check if it's installed and correctly uninstall it in case it is, so that's what we are going to use:
 
@@ -63,7 +63,7 @@ DONE. Be happy. Still, be sure to give a read on the last sections of this artic
 - Install [HidHide's prerequisites](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) according to your [Windows 10 version](https://vigem.org/research/How-to-check-architecture/)
 ![VisualCpp](images/HidHide_VisualCpp.png){: .glightbox }
 - Download the [Latest release of HidHide](https://github.com/ViGEm/HidHide/releases) (it should be a file called `HidHideMSI.msi`)
-- Open the downloaded file and install HidHide as instructed
+- Open the downloaded file and install HidHide as instructed at default settings (just click `Next` until it finishes installing)
 - After the installation, reboot your computer
 
 ### Hiding the controller
@@ -76,16 +76,18 @@ DONE. Be happy. Still, be sure to give a read on the last sections of this artic
 - If your controller can connect both via cable and Bluetooth, reconnect your controllers via the other connection method and also mark their new entries
 - Mark the box in the bottom called "Enable Device Hiding" to (obviously) activate the hiding of the marked devices
 
-At this point, your controllers should be hidden. To verify, open Windows' `joy.cpl` by one of the following methods:
+### Verifying if the controllers are hidden
+
+At this point, your controllers should be hidden to everything. To verify, open Windows' `joy.cpl` by one of the following methods:
 
 - Pressing the key combination ++win+r++ and then entering `joy.cpl` ___OR___
 - Searching and opening on Windows' Start Menu `Set up USB Game Controllers` 
 
-Assuming the hidden controllers are the only ones connected to the system, no device should show up in the Game Controller's list. If they are, try reconnecting them. 
+Assuming the hidden controllers are the only ones connected to the system and there are no virtual controllers being emulated, no device should show up in the Game Controller's list. If your real controller is still on the list, try reconnecting them. 
 
 ### Allowing chosen applications to see hidden devices
 
-Now that your controllers are hidden, you need to select which applications should be able to detect them:
+Now that it's confirmed your controllers are hidden, you need to select which applications should be able to detect them anyway:
 
 - On the Configuration Client, click on the `Applications` tab
 - Click on the `+` icon and add the executable file of your application (`ApplicationName.exe`)  to whitelist it
@@ -100,7 +102,7 @@ From this point, the applications on the list should be able to detect the hidde
 
 ## What now?
 
-If you've set everything correctly then all that is left is for you to enjoy! Before you leave, have a quick look in the next section and on the `Frequently Asked Questions` article on the side-bar (I mean... if it has already been created).
+If you've set everything correctly then all that is left is for you to enjoy! Before you leave, have a quick look in the next section and on the `Frequently Asked Questions` article on the left side-bar (I mean... if it has already been created).
 
 ## Things to keep in mind
 
