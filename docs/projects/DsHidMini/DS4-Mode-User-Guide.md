@@ -11,7 +11,7 @@ In "DS4Windows" HID Device Mode, the controller appears as a custom device that 
 - Rumble works as normal
 - DS4's Touchpad Button can be used by remapping a button to it (e.g.: use Select as the _TP button_ instead of _Share_)
 - DS3's LEDs can be controlled by setting the correct Light Bar colors (more on that on a later section)
-- DS4Windows's "Flash Lightbar at High Latency" function makes the LEDs flash accordingly
+- DS4Windows's `Flash Lightbar at High Latency` function makes the LEDs flash accordingly
 - Basically every other DS4Windows function that is not related to the Light Bar or motion works as intended
 
 ## What does not work
@@ -51,7 +51,7 @@ By setting the correct Light Bar color values in the profile settings it is poss
 - Represent the current selected profile as a specific LED
 - Indicate the battery level by using _Special Actions_ in the profile's settings
 
-Beware that functions in DS4Windows that make the Light Bar flash, pulse or randomize the colors (rainbow mode) are not supported and can make the LEDs change to an undesired state. Because of this, the function "Flash Light Bar at High Latency" does not work as intended with a DS3.
+Beware that functions in DS4Windows that make the Light Bar flash, pulse or randomize the colors (`rainbow mode`) are not supported and can make the LEDs change to an undesired state, though the function `Flash Light Bar at High Latency` fuction do is supported and will make the LEDs flash at a high frequency.
 
 ### Simple LED control
 
@@ -158,7 +158,7 @@ For Steam to stop ignoring the emulated DS4 controller you need run DS4Windows u
 
 ### _'X' game does not detect my emulated DS4 / my game is not showing PS button icons_
 
-- First, double check if the game actually supports DS4 controllers _and_ has native PS icons when played with a DualShock 4. There is no direct way to check this besides Googling around and looking at forums
+- First, double check if the game actually supports DS4 controllers _and_ has native PS icons when played with a DualShock 4. There is no direct way to check this besides just testing, Googling around and looking at forums
 - If the game does not support DualShock 4/PS icons then that's in no way related to us and we can't do anything about it
 - If you are 100% sure the game supports PS button icons/DualShock 4, then it may be detecting that DS4Windows is running and then ignoring DS4 controllers (super rare case, only 1 game is known to do it). Check the [topic above](#i-cant-control-steams-big-picture-when-using-a-emulated-ds4-steam-doesnt-detect-my-controller-when-its-emulated-as-a-ds4-only-when-emulated-as-a-xbox-360) on how to solve this
 - If the game still doesn't recognize the emulated DualShock 4 then we have no idea what's going on and you are welcome on [reaching us through the proper means](https://vigem.org/Community-Support/)
