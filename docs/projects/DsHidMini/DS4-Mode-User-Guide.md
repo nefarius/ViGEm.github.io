@@ -55,33 +55,37 @@ Beware that functions in DS4Windows that make the Light Bar flash, pulse or rand
 
 ### Simple LED control
 
-- Only 1 LED can be ON at a time
 - Simple to set-up
 - Good to represent which profile is active (see example 1)
-- Necessary when making DS4Windows show the controller's battery level and for battery related _Special Actions_ (see examples 2 and 3 respectively)
+- Necessary when making DS4Windows show the controller's battery level and for battery related `Special Actions` (see examples 2 and 3 respectively)
 
-To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "0". After that, the Red color value will be translated to the LEDs state according to the following table:
+When this form of translation is active, the `Red color value` will be translated to the LEDs state according to the following table:
 
 | RED value (Dec) |  RED value (Hex) | LED state |
 | :---: | :---: | :---: |
-| 0-63 | 00-3F | LED 1 ON |
-| 64-127 | 40-7F | LED 2 ON |
-| 128-191 | 80-BF | LED 3 ON |
-| 192-255 | C0-FF | LED 4 ON |
+| 0-63 | 00-3F | LED 1 |
+| 64-127 | 40-7F | LED 2 |
+| 128-191 | 80-BF | LED 3 |
+| 192-255 | C0-FF | LED 4 |
 
-e.g. 1: Setting up a profile to be represented as LED 3.
+__FORMS OF ACTIVATION:__
+
+| Simple LED control mode | How to activate | Description |
+| :---: | :---: | :---: |
+| __Single mode__ | Green and Blue = 0 | Only the chosen LED is ON |
+| __Filling Mode__ | Green = 0, Blue = 255 | The chosen LED and the ones before it are ON |
+
+__e.g. 1:__ Setting up a profile to be represented as LED 3 only (__single mode__).
 
 ![SimpleLedControl eg 1 - LED 3 on](images/SimpleLedControl_eg1_LED3on.png){: .glightbox }
 
-e.g. 2: Setting up a profile to reflect the controller's battery level.
+__e.g. 2:__ Setting up a profile to reflect the controller's battery level.
 
 ![SimpleLedControl eg 2 - Battery charge indication](images/SimpleLedControl_eg2_Battery.png){: .glightbox }
 
-e.g. 3: Setting up a _Special Action_ to make the LEDs reflect the controller's battery level.
+__e.g. 3:__ Setting up a _Special Action_ to make the LEDs reflect the controller's battery level.
 
 ![SimpleLedControl eg 3 - Macro example](images/SimpleLedControl_eg3_Macro.png){: .glightbox }
-
-
 
 ### Complete LED control
 
