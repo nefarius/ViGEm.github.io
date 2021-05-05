@@ -89,11 +89,13 @@ __e.g. 3:__ Setting up a _Special Action_ to make the LEDs reflect the controlle
 
 ### Complete LED control
 
-- "Harder" to set-up (not really).
-- Allows any combination of LEDs on.
-- Useful if the user wants to differentiate between more than 4 profiles.
+- "Harder" to set-up (not really)
+- Allows any combination of LEDs on
+- Useful if the user wants to differentiate between more than 4 profiles
 
-To activate this form of Light Bar color translation, both the values of the Green and Blue colors must be set as "255". After that, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
+__HOW TO ACTIVATE:__ Green and Blue = 255
+
+When this form of translation is active, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
 
 | LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |  RED value (Hex)
 | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -114,7 +116,7 @@ To activate this form of Light Bar color translation, both the values of the Gre
 | ON | ON | ON |  | 14 | E |
 | ON | ON | ON | ON | 15 | F |
 
-e.g. Setting up a profile to be represented as LEDs 4 and 2.
+__e.g.:__ Setting up a profile to be represented as LEDs 4 and 2.
 
 ![TotalLedControl eg - LEDs 4 and 2](images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
 
