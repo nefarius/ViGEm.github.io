@@ -51,7 +51,7 @@ By setting the correct Light Bar color values in the profile settings it is poss
 - Represent the current selected profile as a specific LED
 - Indicate the battery level by using _Special Actions_ in the profile's settings
 
-Beware that functions in DS4Windows that make the Light Bar flash, pulse or randomize the colors (`rainbow mode`) are not supported and can make the LEDs change to an undesired state, though the function `Flash Light Bar at High Latency` fuction do is supported and will make the LEDs flash at a high frequency.
+Beware that functions in DS4Windows that make the Light Bar flash, pulse or randomize the colors (`rainbow mode`) are not supported and can make the LEDs change to an undesired state, though the `Flash Light Bar at High Latency` function do is supported and will make the LEDs flash at a high frequency.
 
 ### Simple LED control
 
