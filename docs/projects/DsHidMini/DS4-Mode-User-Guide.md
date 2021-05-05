@@ -1,7 +1,7 @@
 # DS4Windows Mode User Guide
 
-!!! important "Jay2Kings' DS4Windows __IS NOT SUPPORTED__!"
-    If you just search "DS4Windows" on Google/Bing/whatever the first result will probably be the obsolete Jay2Kings' version
+!!! important "Jays2Kings' DS4Windows __IS NOT SUPPORTED__!"
+    If you just search "DS4Windows" on Google/Bing/whatever the first result will probably be the obsolete Jays2Kings' version
 
 In "DS4Windows" HID Device Mode, the controller appears as a custom device that can only be detected by [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows), allowing the user to then emulate a DualShock 4 or Xbox 360 (__XInput__) controller as well as make use of most of its features.
 
@@ -23,8 +23,8 @@ In "DS4Windows" HID Device Mode, the controller appears as a custom device that 
 
 ## Using the controller with DS4Windows
 
-- To start, the controller must be in `DS4Windows` mode. [See here](../HID-Device-Modes-Explained) how to verify and change modes
-- Download the latest __Ryochan7's__ DS4Windows release package from [here](https://github.com/Ryochan7/DS4Windows/releases) according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
+- To start, [the controller must be in `DS4Windows` mode](../HID-Device-Modes-Explained)
+- Download the latest [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows/releases) release package according to your [Windows 10 version](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/)
 - Extract the package to an easily accessible folder
 - Run DS4Windows.exe
 - Install the ViGEmBus Driver if asked to
@@ -35,12 +35,15 @@ After that, the controller should be properly recognized by DS4Windows. If it is
 
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
 
-- Read the _FAQ_ if you want more detailed instructions on how to change to DS4 emulation
+- In case you need, there are more detailed instructions on [how to change to DS4 emulation](#how-do-i-change-between-xinput-and-ds4-emulation)
 - If you want your controller's LEDs to represent the current battery level, see [Simple Led Control -> Example 2](#simple-led-control)
 - If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the [Light Bar to LEDs translation section](#light-bar-color-to-leds-translation) 
-- It's recommended you have a quick look at the _FAQ_ section, read at least the title of the topics
+- It's recommended you have a quick look at the [_DS4Windows Frequently Asked Questions_](#frequently-asked-questions) section, read at least the title of the topics
 
 ## Light Bar color to LEDs translation
+
+!!! note "Optional section"
+    Read this section if you want to control your controller's LEDs to show the current battery or selected profile
 
 By setting the correct Light Bar color values in the profile settings it is possible to control the LEDs on the DS3, which can be useful to:
 
@@ -121,7 +124,7 @@ The controller that DS4Windows emulates is dependent on the current selected pro
 - Click on the "New" button to create a new profile
 - When asked if a preset is to be used, choose "yes"
 - Select `Gamepad` and then `DualShock 4` at the Output Controller
-- Adjust the Light Bar color related settings according to what you want according to the _Light Bar to LEDs translation_ section (in the example below the profile will be represented by LED 2)
+- Adjust the Light Bar color to what you desire acordingly to the [_Light Bar to LEDs translation_ section](#light-bar-color-to-leds-translation) (in the example below the profile will be represented by LED 2)
 - Give a name to your profile (e.g.: DS3 to DS4)
 - Save the profile
 - Back in the _Controllers_ tab, click on the _Selected profile_ box and change from default to the profile you just created  
@@ -131,7 +134,7 @@ And done, now you can switch between XInput/DS4 emulation by changing between pr
 
 ### _How do I use DS4's TouchPad button?_
 
-Because DS4Windows does not support mapping a button combination to anything TouchPad related right now, you'll need to remap a button to it:
+You need to have a profile with `DS4` emulation and remap an existing button to the TouchPad:
 
 - Duplicate your DS4 profile, choose a different name to it
 - Edit the new profile
@@ -141,17 +144,24 @@ Because DS4Windows does not support mapping a button combination to anything Tou
 
 ### _I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360_
 
-Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. Regardless if Steam is detecting or not the emulated DS4, 99.9% of the games that support DS4 controllers should detect the emulated one as normal.
+Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. __Regardless if Steam is detecting or not the emulated DS4, 99.9% of the games that support DS4 controllers should detect the emulated one as normal__.
 
-For Steam to stop ignoring the emulated DS4 controller you need run DS4Windows under a custom `.exe` name. Just open DS4Windows -> Go into the _Settings_ Tab -> Write the name you want on the `Custom exe name` box (In the image below the name "DS4Win" is used as an example). After the name is set, fully close then re-open DS4Windows and then Steam should detect it as normal. It's also recommended going into the Steam's settings -> Controller -> General Controller Configurations -> Leave `Playstation Configuration Supported` UNCHECKED, so Steam doesn't remap your controller when you don't want it to.  
+For Steam to stop ignoring the emulated DS4 controller you need run DS4Windows under a custom `.exe` name:
+
+- Open DS4Windows
+- Go into the `Settings` Tab
+- Write the name you want on the `Custom exe name` box (In the image below the name "DS4Win" is used as an example)
+- After the name is set, fully close then re-open DS4Windows and then Steam should detect it as normal  
 ![FAQ_DS4WCustomName](images/FAQ_DS4WCustomName.png){: .glightbox }
+
+ It's also recommended going into the Steam's settings -> Controller -> General Controller Configurations -> Leave `Playstation Configuration Supported` UNCHECKED, so Steam doesn't remap your controller again when you don't want it to.  
 
 ### _'X' game does not detect my emulated DS4 / my game is not showing PS button icons_
 
 - First, double check if the game actually supports DS4 controllers _and_ has native PS icons when played with a DualShock 4. There is no direct way to check this besides Googling around and looking at forums
 - If the game does not support DualShock 4/PS icons then that's in no way related to us and we can't do anything about it
-- If you are 100% sure the game supports PS button icons/DualShock 4, then this could be related to the issue above that is related to Steam not detecting the controller
-- If the game still doesn't recognize the emulated DualShock 4 then we have no idea what's going on and you are welcome on reaching us [through here](https://vigem.org/Community-Support/)
+- If you are 100% sure the game supports PS button icons/DualShock 4, then it may be detecting that DS4Windows is running and then ignoring DS4 controllers (super rare case, only 1 game is known to do it). Check the [topic above](#i-cant-control-steams-big-picture-when-using-a-emulated-ds4-steam-doesnt-detect-my-controller-when-its-emulated-as-a-ds4-only-when-emulated-as-a-xbox-360) on how to solve this
+- If the game still doesn't recognize the emulated DualShock 4 then we have no idea what's going on and you are welcome on [reaching us through the proper means](https://vigem.org/Community-Support/)
 
 ### _How do I do 'X' thing on DS4Windows_
 
