@@ -49,7 +49,7 @@ The default LED behavior in this mode is the charging animation and can't be alt
 
 The default LED behavior in this mode is the charging animation. If a compatible application sends output reports to the device, the driver will "hand over" control to the application and stops the charging indicator until the device has been restarted.
 
-### DS4
+### DS4Windows
 
 !!! important "TL;DR:"
     Use this mode with [DS4Windows](https://github.com/Ryochan7/DS4Windows/).
@@ -59,3 +59,7 @@ The default LED behavior in this mode is the charging animation. If a compatible
 The default LED behavior in this mode is the charging animation. Once the controller is picked up by DS4Windows, light bar changes will get translated to LED states ([see this article for details](../DS4-Mode-User-Guide)) and rumble requests passed through.
 
 **Motion controls** are currently **not supported** (no gyroscope or accelerometer) and therefore **will not work with [CEMU](https://cemu.info/)** when the UDP Server is active.
+
+### XInput
+
+Coming soon...
