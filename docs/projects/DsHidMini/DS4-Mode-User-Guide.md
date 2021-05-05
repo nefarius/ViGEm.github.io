@@ -29,7 +29,7 @@ In `DS4Windows` HID Device Mode, the controller appears as a custom device that 
 - Run DS4Windows.exe
 - Install the ViGEmBus Driver if asked to
 
-After that, the controller should be properly recognized by DS4Windows. If it is not, [go back to the previous section](#) on how to verify/change the current DS3 mode.
+After that, the controller should be properly recognized by DS4Windows. If it's not, verify again if it is in [`DS4Windows` mode](../HID-Device-Modes-Explained).
 
 ## What now?
 
