@@ -31,6 +31,8 @@ In `DS4Windows` HID Device Mode, the controller appears as a custom device that 
 
 After that, the controller should be properly recognized by DS4Windows. If it's not, verify again if it is in [`DS4Windows` mode](../HID-Device-Modes-Explained).
 
+![DS4ModeDS4W](images/DS4ModeDS4W.png){: .glightbox }
+
 ## What now?
 
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
