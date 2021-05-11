@@ -144,15 +144,23 @@ The controller that DS4Windows emulates is dependent on the current selected pro
 
 And done, now you can switch between XInput/DS4 emulation by changing between profiles.
 
-### _How do I use DS4's TouchPad button?_
+Keep in mind that some games that support DS4 controllers use the `Touch Pad` for options/to open the map/etc. In this case, you'll need to [remap a button as the `Touch Pad` button](#select-button-is-not-recognized-in-some-games-when-emulating-a-ds4-how-do-i-use-the-touch-pad-button) on a new profile to use it.
 
-You need to have a profile with `DS4` emulation and remap an existing button to the TouchPad:
+### _Select button is not recognized in some games when emulating a DS4 / How do I use the Touch Pad button?_
+
+A DS3 controller has 13 buttons while a real DS4 controller has 14, this extra button being the `Touch Pad` button which can't be mapped directly to the DS3 by DsHidMini.
+
+Some games that support DS4 controllers use the `Touch Pad` for options, opening the map, etc. To work around this, the user needs to remap an existing button to the `TP` one. 
+
+Usually, games that use the `TP` button don't use the `Share` button (the default `Select`), so the usual bet is to remap it to the `TP`, though any other one can be chosen. So, after creating a profile with `DS4` emulation:
 
 - Duplicate your DS4 profile, choose a different name to it
 - Edit the new profile
 - On the left side, in the DualShock 4 picture, click on the button you want to remap
-- On the new window that appears, select the middle of the touchpad
+- On the new window that appears, select the middle of the Touch Pad
 - Save your profile and switch to it
+
+If a game uses both the `Share` and `TP` buttons, you can have a profile with `Share` as it is and the `PS` button remapped to the `TP`. Or, if you want more advanced solutions, you can use `special actions` in the profile settings so you can switch between different profiles by button combinations mid-game.
 
 ### _I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360_
 
