@@ -37,6 +37,7 @@ After that, the controller should be properly recognized by DS4Windows. If it's 
 
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
 
+- Keep in mind: `Select` and `Start` buttons are recognized as the `Share` and `Options` buttons in DS4Windows
 - In case you need, there are more detailed instructions on [how to change to DS4 emulation](#how-do-i-change-between-xinput-and-ds4-emulation)
 - If you want your controller's LEDs to represent the current battery level, see [Simple Led Control -> Example 2](#simple-led-control)
 - If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the [Light Bar to LEDs translation section](#light-bar-color-to-leds-translation) 
