@@ -63,12 +63,15 @@ Beware that functions in DS4Windows that make the Light Bar flash, pulse or rand
 
 When this form of translation is active, the `Red color value` will be translated to the LEDs state according to the following table:
 
-| RED value (Dec) |  RED value (Hex) | LED state |
-| :---: | :---: | :---: |
-| 0-63 | 00-3F | LED 1 |
-| 64-127 | 40-7F | LED 2 |
-| 128-191 | 80-BF | LED 3 |
-| 192-255 | C0-FF | LED 4 |
+| RED value (Dec) | LED state |
+| :---: | :---: |
+| 0 - 64 | Blinking LED 1 |
+| 65 - 94 | LED 1 |
+| 95 - 148 | LED 2 |
+| 149 - 201 | LED 3 |  
+| 202 - 255 | LED 4 |
+
+
 
 __FORMS OF ACTIVATION:__
 
@@ -99,24 +102,24 @@ __HOW TO ACTIVATE:__ Green and Blue = 255
 
 When this form of translation is active, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
 
-| LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |  RED value (Hex)
-| :---: | :---: | :---: | :---: | :---: | :---: |
-|  |  |  |  | 0 | 0 |
-|  |  |  | ON | 1 | 1 |
-|  |  | ON |  | 2 | 2 |
-|  |  | ON | ON | 3 | 3 |
-|  | ON |  |  | 4 | 4 |
-|  | ON |  | ON | 5 | 5 |
-|  | ON | ON |  | 6 | 6 |
-|  | ON | ON | ON | 7 | 7 |
-| ON |  |  |  | 8 | 8 |
-| ON |  |  | ON | 9 | 9 |
-| ON |  | ON |  | 10 | A |
-| ON |  | ON | ON | 11 | B |
-| ON | ON |  |  | 12 | C |
-| ON | ON |  | ON | 13 | D |
-| ON | ON | ON |  | 14 | E |
-| ON | ON | ON | ON | 15 | F |
+| LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |
+| :---: | :---: | :---: | :---: | :---: |
+|  |  |  |  | 0 |
+|  |  |  | ON | 1 |
+|  |  | ON |  | 2 |
+|  |  | ON | ON | 3 |
+|  | ON |  |  | 4 |
+|  | ON |  | ON | 5 |
+|  | ON | ON |  | 6 |
+|  | ON | ON | ON | 7 |
+| ON |  |  |  | 8 |
+| ON |  |  | ON | 9 |
+| ON |  | ON |  | 10 |
+| ON |  | ON | ON | 11 |
+| ON | ON |  |  | 12 |
+| ON | ON |  | ON | 13 |
+| ON | ON | ON |  | 14 |
+| ON | ON | ON | ON | 15 |
 
 __e.g.:__ Setting up a profile to be represented as LEDs 4 and 2.
 
