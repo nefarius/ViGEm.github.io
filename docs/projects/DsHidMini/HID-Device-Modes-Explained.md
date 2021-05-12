@@ -54,8 +54,12 @@ The default LED behavior in this mode is the charging animation. If a compatible
 !!! important "TL;DR:"
     Use this mode with [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows/). Follow [this mode's user guide](../DS4-Mode-User-Guide) for instructions.
 
-**DualShock 4** mode. In this mode, the driver emulates a Custom Device that ___ONLY_ [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows/)__ can recognize as a fake DualShock 4. After R7's DS4Windows picks the DS3, you can then use almost all of its features, including **XInput and DualShock 4 emulation**. Nonexistent features like the track pad are not supported.
+**DualShock 4** mode. In this mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by the "Ryochan7 Edition" of [DS4Windows](https://github.com/Ryochan7/DS4Windows/). You can use almost all features DS4Windows offers with a DualShock 3 (excluding nonexistent features like the track pad or the light bar) including **XInput emulation**.
 
 The default LED behavior in this mode is the charging animation. Once the controller is picked up by DS4Windows, light bar changes will get translated to LED states ([see this article for details](../DS4-Mode-User-Guide)) and rumble requests passed through.
 
 **Motion controls** are currently **not supported** (no gyroscope or accelerometer) and therefore **will not work with [CEMU](https://cemu.info/)** when the UDP Server is active.
+
+### XInput
+
+Coming soon...

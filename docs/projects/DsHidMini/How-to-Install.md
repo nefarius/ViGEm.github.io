@@ -19,6 +19,8 @@ No matter what software you may have preinstalled, this step is always the same 
     ![DRYeurZsPs.png](images/DRYeurZsPs.png)
     - Should only take a moment until success dialog
     ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
+- Now **connect your controller via USB**
+    - This will automatically pair it to your Windows Bluetooth host *if* you have working Bluetooth at the time of plugging it in
 - With your controller connected by USB, open the DsHidMini Control Utility (the `DSHMC.exe` file that comes along the driver archive) to see if the controller gets detected
     - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
     - It is not required to keep the utility running for the driver to function, only if you want to observe battery level or change settings
@@ -58,7 +60,7 @@ The driver can't do anything if it is not being used, so to check this:
 
 If the device appears there but the driver status indicates some error (e.g. `This device cannot start (Error Code 10)`) try pressing the `Reset` button on the back of your controller and then reconnecting it. Rebooting your computer is also worth a shot.
 
-If the controller does not appear under `Nefarius HID Devices` or if this section doesn't exist at all, you probably have another driver taking priority over DsHidMini. To solve this you need to remove those rogue drivers. See how to do so on the [_removing conflicting drivers_](#Removing-conflicting-drivers) section.
+If the controller does not appear under `Nefarius HID Devices` or if this section doesn't exist at all, you probably have another driver taking priority over DsHidMini. To solve this you need to remove those rogue drivers. See how to do so on the [_removing conflicting drivers_](#removing-conflicting-drivers) section.
 
 ### Removing conflicting drivers
 
