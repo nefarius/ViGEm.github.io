@@ -46,8 +46,10 @@ From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, a
 
 ## Light Bar color to LEDs translation
 
-!!! note "Optional section"
-    Read this section if you want to control your controller's LEDs to show the current battery or selected profile
+!!! important "This section is deprecated"
+    As of DsHidMini version `1.4.222` (or newer) **and** DS4Windows version `3.0.4` (or newer) hiding the controller is not necessary anymore!
+
+Some games can end-up detecting two controllers/inputs when using DS3 with DS4Windows. This happens because the game is picking both the real controller input and the emulated Xbox/DualShock 4 controller created by DS4Windows. The 3 possible ways to solve this are:
 
 By setting the correct Light Bar color values in the profile settings it is possible to control the LEDs on the DS3, which can be useful to:
 
