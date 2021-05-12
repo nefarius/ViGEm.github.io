@@ -37,6 +37,8 @@ After that, the controller should be properly recognized by DS4Windows. If it's 
 
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
 
+- Keep in mind: `Select` and `Start` buttons are recognized as the `Share` and `Options` buttons in DS4Windows  
+![DS3toDS4ButtonLayout](images/DS3toDS4ButtonLayout.png){: .glightbox }
 - In case you need, there are more detailed instructions on [how to change to DS4 emulation](#how-do-i-change-between-xinput-and-ds4-emulation)
 - If you want your controller's LEDs to represent the current battery level, see [Simple Led Control -> Example 2](#simple-led-control)
 - If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the [Light Bar to LEDs translation section](#light-bar-color-to-leds-translation) 
@@ -63,12 +65,15 @@ Beware that functions in DS4Windows that make the Light Bar flash, pulse or rand
 
 When this form of translation is active, the `Red color value` will be translated to the LEDs state according to the following table:
 
-| RED value (Dec) |  RED value (Hex) | LED state |
-| :---: | :---: | :---: |
-| 0-63 | 00-3F | LED 1 |
-| 64-127 | 40-7F | LED 2 |
-| 128-191 | 80-BF | LED 3 |
-| 192-255 | C0-FF | LED 4 |
+| RED value (Dec) | LED state |
+| :---: | :---: |
+| 0 - 64 | Blinking LED 1 |
+| 65 - 94 | LED 1 |
+| 95 - 148 | LED 2 |
+| 149 - 201 | LED 3 |  
+| 202 - 255 | LED 4 |
+
+
 
 __FORMS OF ACTIVATION:__
 
@@ -99,24 +104,24 @@ __HOW TO ACTIVATE:__ Green and Blue = 255
 
 When this form of translation is active, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
 
-| LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |  RED value (Hex)
-| :---: | :---: | :---: | :---: | :---: | :---: |
-|  |  |  |  | 0 | 0 |
-|  |  |  | ON | 1 | 1 |
-|  |  | ON |  | 2 | 2 |
-|  |  | ON | ON | 3 | 3 |
-|  | ON |  |  | 4 | 4 |
-|  | ON |  | ON | 5 | 5 |
-|  | ON | ON |  | 6 | 6 |
-|  | ON | ON | ON | 7 | 7 |
-| ON |  |  |  | 8 | 8 |
-| ON |  |  | ON | 9 | 9 |
-| ON |  | ON |  | 10 | A |
-| ON |  | ON | ON | 11 | B |
-| ON | ON |  |  | 12 | C |
-| ON | ON |  | ON | 13 | D |
-| ON | ON | ON |  | 14 | E |
-| ON | ON | ON | ON | 15 | F |
+| LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |
+| :---: | :---: | :---: | :---: | :---: |
+|  |  |  |  | 0 |
+|  |  |  | ON | 1 |
+|  |  | ON |  | 2 |
+|  |  | ON | ON | 3 |
+|  | ON |  |  | 4 |
+|  | ON |  | ON | 5 |
+|  | ON | ON |  | 6 |
+|  | ON | ON | ON | 7 |
+| ON |  |  |  | 8 |
+| ON |  |  | ON | 9 |
+| ON |  | ON |  | 10 |
+| ON |  | ON | ON | 11 |
+| ON | ON |  |  | 12 |
+| ON | ON |  | ON | 13 |
+| ON | ON | ON |  | 14 |
+| ON | ON | ON | ON | 15 |
 
 __e.g.:__ Setting up a profile to be represented as LEDs 4 and 2.
 
@@ -140,15 +145,23 @@ The controller that DS4Windows emulates is dependent on the current selected pro
 
 And done, now you can switch between XInput/DS4 emulation by changing between profiles.
 
-### _How do I use DS4's TouchPad button?_
+Keep in mind that some games that support DS4 controllers use the `Touch Pad` for options/to open the map/etc. In this case, you'll need to [remap a button as the `Touch Pad` button](#select-button-is-not-recognized-in-some-games-when-emulating-a-ds4-how-do-i-use-the-touch-pad-button) on a new profile to use it.
 
-You need to have a profile with `DS4` emulation and remap an existing button to the TouchPad:
+### _Select button is not recognized in some games when emulating a DS4 / How do I use the Touch Pad button?_
+
+A DS3 controller has 13 buttons while a real DS4 controller has 14, this extra button being the `Touch Pad` button which can't be mapped directly to the DS3 by DsHidMini.
+
+Some games that support DS4 controllers use the `Touch Pad` for options, opening the map, etc. To work around this, the user needs to remap an existing button to the `TP` one. 
+
+Usually, games that use the `TP` button don't use the `Share` button (the default `Select`), so the usual bet is to remap it to the `TP`, though any other one can be chosen. So, after creating a profile with `DS4` emulation:
 
 - Duplicate your DS4 profile, choose a different name to it
 - Edit the new profile
 - On the left side, in the DualShock 4 picture, click on the button you want to remap
-- On the new window that appears, select the middle of the touchpad
+- On the new window that appears, select the middle of the Touch Pad
 - Save your profile and switch to it
+
+If a game uses both the `Share` and `TP` buttons, you can have a profile with `Share` as it is and the `PS` button remapped to the `TP`. Or, if you want more advanced solutions, you can use `special actions` in the profile settings so you can switch between different profiles by button combinations mid-game.
 
 ### _I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360_
 
