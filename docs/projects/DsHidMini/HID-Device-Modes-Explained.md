@@ -52,7 +52,7 @@ The default LED behavior in this mode is the charging animation. If a compatible
 ### DS4Windows
 
 !!! important "TL;DR:"
-    Use this mode with [DS4Windows](https://github.com/Ryochan7/DS4Windows/).
+    Use this mode with [Ryochan7's DS4Windows](https://github.com/Ryochan7/DS4Windows/). Follow [these instructions](../DS4-Mode-User-Guide) to set it up properly.
 
 **DualShock 4** mode. In this mode, the driver emulates a DualShock 4 with an artificial Vendor & Product ID supported by the "Ryochan7 Edition" of [DS4Windows](https://github.com/Ryochan7/DS4Windows/). You can use almost all features DS4Windows offers with a DualShock 3 (excluding nonexistent features like the track pad or the light bar) including **XInput emulation**.
 
