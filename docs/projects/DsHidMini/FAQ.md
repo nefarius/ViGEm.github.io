@@ -13,11 +13,7 @@ Check out the repository [README](https://github.com/ViGEm/DsHidMini/blob/master
 
 ## I am already using ScpToolKit / MotionInJoy / Shibari / Whatever, should I move to DsHidMini?
 
-DsHidMini is the better software for all intents and purposes, with its only "downsides" being that it doesn't have an automatic setup and being for Windows 10 only.
-
-It was designed to be the successor of the obsolete and flawed ScpToolKit. It has more features, is lighter on the system and better coded, having already solved many issues and bugs still present on all past softwares related to using PS3 controllers on Windows.
-
-There is __NOTHING__ that any of the others can do better than DsHidMini, with the only difference being that, to cover all use cases (Bluetooth Support, XInput and DS4 emulation), DsHidMini requires the use of other software along with it, though the whole setup process is covered in the guides on this site.
+That is entirely up to you of course 🙂 Do you wish to stick with abandoned, outdated, unmaintained, complex and potentially untrustworthy software that will work less and less the further Windows and Games advance or do you want to step into the light and use fresh, stable, thought-through open software that simple delivers what it promises? Your call 😉
 
 ## How do I use it?
 
