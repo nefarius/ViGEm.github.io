@@ -1,6 +1,7 @@
 # History of SCP
 
 !!! important "Work in progress"
+    My little attempt to piece together a rough timeline of SCPs progression through history 😅
 
 ## August 2011
 
