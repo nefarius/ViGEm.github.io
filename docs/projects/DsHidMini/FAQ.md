@@ -20,7 +20,7 @@ That is entirely up to you of course 🙂 Do you wish to stick with abandoned, o
 - Follow the [_How to Install_ guide](../How-to-Instal)
 - Learn the  about different [DsHidMini HID Device Modes](../HID-Device-Modes-Explained) your controller can be, the characteristics each mode and how to change between them
 
-After DsHidMini is active and the controller connected, you just need to change to the mode best suited to your use case. Keep in mind that if you want to use your controller as a __XInput__ (Xbox 360) or __DualShock 4__ controller, [there are a few extra steps left to be followed](#how-do-i-use-my-controller-as-a-xbox-360-or-dualshock-4). 
+After DsHidMini is active and the controller connected, you just need to change to the mode best suited to your use case. Keep in mind that if you want to use your controller as a __XInput__ (Xbox 360) or __DualShock 4__ controller, [there are a few extra steps left to be followed](#how-do-i-use-my-controller-as-a-xbox-360-or-dualshock-4).
 
 ![HIDDeviceModes](images/HIDDeviceModes.png){: .glightbox }  
 
