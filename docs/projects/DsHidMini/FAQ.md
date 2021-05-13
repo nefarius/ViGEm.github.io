@@ -30,7 +30,7 @@ After DsHidMini is active and the controller connected, you just need to change 
 
 ## Does my fake PS3 controller work with DsHidMini?
 
-Short answer: it depends. Long answer: [it depends](https://vigem.org/projects/BthPS3/About-Controller-Compatibility/) 🙂 This is community software with no ties to any hardware manufacturer, ass we can provide is knowledge based on research and reverse engineering.
+Short answer: it depends. Long answer: [it depends](https://vigem.org/projects/BthPS3/About-Controller-Compatibility/) 🙂 This is community software with no ties to any hardware manufacturer, all we can provide is knowledge based on research and reverse engineering.
 
 ## What are the HID Device Modes? Which one should I use?
 
