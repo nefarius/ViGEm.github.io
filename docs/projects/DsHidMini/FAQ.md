@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-## XInput? DS3? DS4? What are you talking  about?
+## XInput? DS3? DS4? What are you talking about?
 
 !!! note "Know the terms"
     - Standard PS3 controller => DualShock 3 (__DS3__)
@@ -9,9 +9,7 @@
 
 ## What is DsHidMini?
 
-DsHidMini is a Windows 10 driver for Sony Playstation 3 controllers, though only the DS3 is supported for now.
-
-Its main feature is permitting the controller to be presented to the system in different forms (__HID Device Modes__), allowing the user to choose the best mode to each situation.
+Check out the repository [README](https://github.com/ViGEm/DsHidMini/blob/master/README.md) and the [main project page](https://vigem.org/projects/DsHidMini/).
 
 ## I am already using ScpToolKit / MotionInJoy / Shibari / Whatever, should I move to DsHidMini?
 
@@ -32,9 +30,7 @@ After DsHidMini is active and the controller connected, you just need to change 
 
 ## Does my fake PS3 controller work with DsHidMini?
 
-It should, though some fake controllers have trouble working on BT. Basically, just test it and if it works then it works.
-
-__Keep something in mind:__ if the controller doesn't work with DsHidMini then it's almost certain that it also doesn't work with any past Windows software for PS3 controllers, like ScpToolKit. 
+Short answer: it depends. Long answer: [it depends](https://vigem.org/projects/BthPS3/About-Controller-Compatibility/) 🙂 This is community software with no ties to any hardware manufacturer, ass we can provide is knowledge based on research and reverse engineering.
 
 ## What are the HID Device Modes? Which one should I use?
 
@@ -48,15 +44,15 @@ Read the [_Features_ section](https://github.com/ViGEm/DsHidMini#features) of th
 
 ### Recommended method
 
-Set the controller into `DS4Windows Mode` and use it with __Ryochan7's DS4Windows__. For more detailed instructions and other informations, follow the [_DS4Windows Mode User Guide_](../DS4-Mode-User-Guide) and you'll be good to go.
+Set the controller into `DS4Windows Mode` and use it with __Ryochan7's DS4Windows__. For more detailed instructions and other information, follow the [_DS4Windows Mode User Guide_](../DS4-Mode-User-Guide) and you'll be good to go.
 
 ![DS4ModeDS4W](images/DS4ModeDS4W.png){: .glightbox }  
 
 ### Alternative methods
 
-If, for whatever reason, you don't want to use DS4Windows and prefer to choose your own remapping tool, then you have the following options: 
+If, for whatever reason, you don't want to use DS4Windows and prefer to choose your own remapping tool, then you have the following options:
 
-- __Using the Controller in `SXS Mode` + Steam:__ Steam will detect the controller as an official Playstation 3 controller as long as `Playstation configuration support` is enabled. XInput and DS4 emulation are then done automatically according to what Steam thinks the game supports. 
+- __Using the Controller in `SXS Mode` + Steam:__ Steam will detect the controller as an official PlayStation 3 controller as long as `PlayStation configuration support` is enabled. XInput and DS4 emulation are then done automatically according to what Steam thinks the game supports.
 
 - __Using the controller in `SDF or GPJ Mode` + another remapping software:__ in `SDF/GPJ Mode` the controller is presented as a generic gamepad which can then be used with remapping tools like x360ce, UCR etc.
 
@@ -64,9 +60,9 @@ If, for whatever reason, you don't want to use DS4Windows and prefer to choose y
 
 The answer is: ___it depends___.
 
-You need to verify which `input API` is supported in whatever you are using and if you want to use DS3 specific functions, like pressure buttons or motion controls. The following table should help you:
+You need to verify which `Input API` is supported in whatever you are using and if you want to use DS3 specific functions, like pressure buttons or motion controls. The following table should help you:
 
-| "I want to..." | How to use your DS3 (recomendation) | Notes |
+| "I want to..." | How to use your DS3 (recommendation) | Notes |
 | :---: | :---: | :---: |
 | Play modern PC games | `XInput` or `DualShock 4`  | Check the [_How do I use my controller as a Xbox 360 or DualShock 4?_ section](#how-do-i-use-my-controller-as-a-xbox-360-or-dualshock-4). Not all modern games support DS4 controllers, and those that do support it sometimes don't support its rumble |
 | Use the DS3 as a common gamepad for most emulators | `XInput` or `GPJ Mode` | The gamepad part of `GPJ Mode` should be compatible with emulators that support only `DirectInput` |
@@ -78,7 +74,7 @@ You need to verify which `input API` is supported in whatever you are using and 
 
 !!! note "A [video demonstration of DsHidMini with RPCS3 video](../#2021-02-27-dshidmini-demo-rpcs3) is also available"
 
-It's recommened that you use your DS3 controller in `SXS Mode` and then choose on RPCS3's controller settings the `DualShock 3` Handler. When doing so, RPCS3 should automatically pick and set your DS3, with full support to all its functions including LEDs, pressure buttons and motion.
+It's recommended that you use your DS3 controller in `SXS Mode` and then choose on RPCS3's controller settings the `DualShock 3` Handler. When doing so, RPCS3 should automatically pick and set your DS3, with full support to all its functions including LEDs, pressure buttons and motion.
 
 ![SXSModeRPCS3](images/SXSModeRPCS3.png){: .glightbox }  
 
@@ -91,11 +87,12 @@ The recommended method is the following:
 - Set the controller into `SDF Mode`
 - Go to PCSX2 input settings
 - Make sure `DirectInput` is activated at the `Game Devices APIs` options (__DO NOT CHECK__ the `DualShock 3 native mode` box)
-- Open the DsHidMini Control Client and mark the `Mute digital pressure buttons` checkbox
+- Open the DsHidMini Control Client and check the `Mute digital pressure buttons` checkbox
 - Back to PCSX2 input settings, on the `Pad X` tab, __configure everything EXCEPT__ __L3__ / __R3__ / __Start__ / __Select__ / __Analog__ / __Mouse__
-- Go into the DsHidMini Control Client and unmark the `Mute digital pressure buttons`
+- Go into the DsHidMini Control Client and uncheck the `Mute digital pressure buttons`
 - Finish setting the L3 / R3 / Start / Select buttons. The `Analog` and `Mouse` buttons are not necessary
 - At the `Add Force Feedback Effect` select your DS3 controller
+  - Only `Constant Force` is required/supported, don't select any other effect, it will not work
 - Finish by clicking on `OK`
 
 ![SDFModePCSX2](images/SDFModePCSX2.png){: .glightbox }  
