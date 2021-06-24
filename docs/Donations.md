@@ -16,11 +16,3 @@ If you wanna stay a while and listen you can use these reoccurring services:
 If you wanna "drive-by-contribute" and throw a few coins in the hat you can do so through:
 
 [![Donate](https://img.shields.io/badge/Donate-Paypal-blue.svg)](https://paypal.me/NefariusMaximus) [![Donate](https://img.shields.io/badge/Donate-buymeacoffee-yellow.svg)](https://www.buymeacoffee.com/Nefarius) [![Donate](https://img.shields.io/badge/Donate-Kofi-red.svg)](https://ko-fi.com/nefariusmaximus)
-
-## Cryptocurrencies
-
-Have some virtual coin to spare? I'll take good care of it:
-
-[![Donate with Bitcoin](https://en.cryptobadges.io/badge/big/32fLSewjA5gfxLV13Zfm71RZETXxUr4VuQ)](https://en.cryptobadges.io/donate/32fLSewjA5gfxLV13Zfm71RZETXxUr4VuQ)
-
-[![Donate with Ethereum](https://en.cryptobadges.io/badge/big/0xEc1928998F38A7a793694675C9A519769710faDD)](https://en.cryptobadges.io/donate/0xEc1928998F38A7a793694675C9A519769710faDD)
