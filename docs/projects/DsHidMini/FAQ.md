@@ -3,9 +3,9 @@
 ## XInput? DS3? DS4? What are you talking about?
 
 !!! note "Know the terms"
-    - Standard PS3 controller => DualShock 3 (__DS3__)
-    - Standard PS4 controller => DualShock 4 (__DS4__)
-    - __Xbox 360__ controller => __XInput__ controller/device
+    - The controller shipped with the Sony PlayStation 3 👉 DualShock 3 (**DS3**)
+    - The controller shipped with the Sony PlayStation 4 👉 DualShock 4 (**DS4**)
+    - **Xbox 360** controller 👉 **XInput** (compatible) controller/device
 
 ## What is DsHidMini?
 
@@ -40,7 +40,7 @@ Read the [_Features_ section](https://github.com/ViGEm/DsHidMini#features) of th
 
 ### Recommended method
 
-Set the controller into `DS4Windows Mode` and use it with __Ryochan7's DS4Windows__. For more detailed instructions and other information, follow the [_DS4Windows Mode User Guide_](../DS4-Mode-User-Guide) and you'll be good to go.
+Set the controller into `DS4Windows Mode` and use it with **Ryochan7's DS4Windows**. For more detailed instructions and other information, follow the [_DS4Windows Mode User Guide_](../DS4-Mode-User-Guide) and you'll be good to go.
 
 ![DS4ModeDS4W](images/DS4ModeDS4W.png){: .glightbox }  
 
