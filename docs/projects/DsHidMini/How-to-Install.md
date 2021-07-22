@@ -12,8 +12,8 @@ Coming soon...
 
 ### Version 1.x.x
 
-- **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases) (optional for USB)
-- [Go to the latest release on GitHub](https://github.com/ViGEm/DsHidMini/releases/latest)
+- **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/tag/setup-v1.3.127) (optional for USB)
+- [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/tag/v1.4.222.0)
 - Download the attached `dshidmini_vX.X.X.X.zip` archive to an arbitrary location on your machine
 - Extract the archive (doesn't matter where to, e.g. your Downloads folder)
 - [Make sure you know your architecture](https://vigem.org/research/How-to-check-architecture/)
