@@ -45,7 +45,7 @@ The default LED behavior in this mode is the charging animation and can't be alt
 !!! important "TL;DR:"
     Use this mode with [Steam](https://store.steampowered.com/) or the [RPCS3 PlayStation 3 Emulator](https://rpcs3.net/).
 
-**SIXAXIS.SYS** mode. In this mode, the driver emulates the behavior of the official Sony `sixaxis.sys` driver shipped with the PS Now application. This is the driver default when shipped. Use this mode to ensure compatibility with [Steam](https://store.steampowered.com/), the [PS Now](https://www.playstation.com/en-us/ps-now/) application or the [RPCS3 PlayStation 3 Emulator](https://rpcs3.net/).
+**SIXAXIS.SYS** mode. In this mode, the driver emulates the behavior of the official Sony `sixaxis.sys` driver shipped with the PS Now application. Use this mode to ensure compatibility with [Steam](https://store.steampowered.com/), the [PS Now](https://www.playstation.com/en-us/ps-now/) application or the [RPCS3 PlayStation 3 Emulator](https://rpcs3.net/).
 
 The default LED behavior in this mode is the charging animation. If a compatible application sends output reports to the device, the driver will "hand over" control to the application and stops the charging indicator until the device has been restarted.
 
@@ -62,4 +62,9 @@ The default LED behavior in this mode is the charging animation. Once the contro
 
 ### XInput
 
-Coming soon...
+!!! important "TL;DR:"
+    Use this mode with [Steam](https://store.steampowered.com/) or any game with Xbox Controller support.
+
+**Xbox One Controller** mode. This is the driver default when shipped. In this mode, the controller is emulating an Xbox One Controller. This mode guarantees the best potential compatibility with pretty much all modern PC games with Xbox (360/One)Controller support either standalone or shipped through Steam.
+
+The default LED behavior in this mode is the charging animation and can't be altered. The lit LED *does not* represent the player index.
