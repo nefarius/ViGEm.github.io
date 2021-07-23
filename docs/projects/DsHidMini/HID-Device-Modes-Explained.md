@@ -63,7 +63,7 @@ The default LED behavior in this mode is the charging animation. Once the contro
 ### XInput
 
 !!! important "TL;DR:"
-    Use this mode with [Steam](https://store.steampowered.com/) or any game with Xbox Controller support.
+    Use this mode with [RetroArch](https://www.retroarch.com/), [Steam](https://store.steampowered.com/) or any game with Xbox Controller support.
 
 **Xbox One Controller** mode. This is the driver default when shipped. In this mode, the controller is emulating an Xbox One Controller. This mode guarantees the best potential compatibility with pretty much all modern PC games with Xbox (360/One)Controller support either standalone or shipped through Steam.
 
