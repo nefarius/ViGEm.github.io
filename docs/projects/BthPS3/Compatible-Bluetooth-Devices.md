@@ -14,7 +14,7 @@ Hardware ID | Name | Status | Remarks
 `USB\VID_0461&PID_4D75` | Rocketfish™ Bluetooth USB Adapter RF-FLBTAD | ❔ | 
 `USB\VID_050D&PID_065A` | Belkin F8T065bf | ❔ | 
 `USB\VID_07D1&PID_F101` | DBT-122 Wireless USB Bluetooth Adapter | ❔ | 
-`USB\VID_0B05&PID_17CB` | ASUS USB-BT400 | ❔ | 
+`USB\VID_0B05&PID_17CB` | ASUS USB-BT400 | ✔️ | 
 `USB\VID_0DF6&PID_2200` | Sitecom CN-512 | ❔ | 
 `USB\VID_0E5E&PID_6622` | Conwise CW6622 | ❔ | 
 `USB\VID_1131&PID_1001` | ISSC KY-BT100 | ❔ | 
