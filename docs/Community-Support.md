@@ -11,8 +11,14 @@ Wanna have a quick chat? [Be our guest on Discord](https://discord.vigem.org)! V
 
 ## Forums
 
-Browse [the forums](https://forums.vigem.org/) to find discussions about similar issues you face or start a new conversation. Sign-up only requires an email account, wait for approval and you're ready to go ❤️
+Browse [the forums](https://forums.vigem.org/) to find discussions about similar issues you face or start a new conversation. You need a [GitHub](https://github.com/login) account to sign in ❤️
 
-## GitHub issues
+## GitHub Discussions
+
+![Discussions](images/msedge_1qPOS2VyOI.png)
+
+Most (every?) repository has [Discussions](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions) enabled, browse existing topics and open your own if your search didn't bring up satisfying results ❤️
+
+## GitHub Issues
 
 Please respect that the GitHub issue tracker of the individual repositories is a collaboration platform for mainly developers and advanced users; kindly don't use it to ask for help, use the channels mentioned above. Mods shall close non-relevant issues without further notice to keep discussions clean 👮
