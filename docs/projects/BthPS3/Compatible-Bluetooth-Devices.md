@@ -19,6 +19,7 @@ Hardware ID | Name | Status | Remarks
 `USB\VID_0E5E&PID_6622` | Conwise CW6622 | ❔ | 
 `USB\VID_1131&PID_1001` | ISSC KY-BT100 | ❔ | 
 `USB\VID_0BB4&PID_0306` | Broadcom BCM20703 | ❌ | HTC VIVE (Steam OpenVR) customized device. Can be used in parallel with "vanilla" dongle without issues though.
+`USB\VID_0BDA&PID_8771` | Dark Bluetooth 5.0 Mini Dongle Usb Receiver (DK-AC-BTU50) | ❌ | Realtek Bluetooth 5.0 Adapter shown at Device Manager.
 
 ## Integrated Modules/Chips in Laptops or other Devices
 
