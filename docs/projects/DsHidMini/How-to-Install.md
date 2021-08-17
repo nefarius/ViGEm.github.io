@@ -129,6 +129,6 @@ Let's go step-by-step with this:
 
 If after all those tries the device still fails to connect, then ___maybe___:
 
-- You have a fake/copycat controller that expects some specific PS3 behavior that is not mimicked by DsHidMini. You can try [reaching us](https://vigem.org/Community-Support/) to try seeing this through 
 - Your Bluetooth dongle is somehow faulty/unsupported. Try with another model. Also, try using DsHidMini and BthPS3 in another computer or notebook with Bluetooth support to try your luck
+- You have a fake/copycat controller that expects some specific PS3 behavior that is not mimicked by DsHidMini. __This project is focused on official Sony controllers, so aftermarket controllers may or may not work. As such, if a fake controller does not connect via Bluetooth you are on your own and we kindly ask you to refrain from opening support tickets__
 - You may have a fake, copy-cat DS3 controller that uses insecure connections (unsolvable issue). [Be sure to see how to check if this is the case](https://github.com/ViGEm/DsHidMini/issues/61)
