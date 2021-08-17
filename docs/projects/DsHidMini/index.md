@@ -7,6 +7,9 @@ DsHidMini is a universal driver for the dated yet beloved DualShock 3 Controller
 !!! warning "No Windows XP/Vista/7/8/8.1 support"
     DsHidMini heavily depends on amazing libraries and frameworks provided by Microsoft, unfortunately those are not available on anything older than Windows 10. Upgrade now ✨
 
+!!! danger highlight "No fake/aftermarket/3rd-party/non-Sony Controller support"
+    This solution was developed for the **official Sony-designed and sold SIXAXIS/DualShock 3** controller hardware that was shipped with the consoles. Over time countless (cheaply designed and manufactured) copy-cats have been released, some with major compatibility issues with Windows that can't be addressed. So if you attempt to use DsHidMini with wannabe-PS3-Controllers and it doesn't work **you're on your own, do not open issues regarding this, you will receive no help because we can't provide any.** Refund the controller and get a genuine one (new-old-stock) or buy an Xbox controller ❤️
+
 ## Installation
 
 Join the cool-kids-gang and simply [follow the installation instructions](./How-to-Install)!
