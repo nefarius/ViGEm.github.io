@@ -21,6 +21,7 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.vigem.org
 extra_css:
+  - stylesheets/extra.css
   - stylesheets/glightbox.css
 extra_javascript:
   - javascripts/glightbox.js
