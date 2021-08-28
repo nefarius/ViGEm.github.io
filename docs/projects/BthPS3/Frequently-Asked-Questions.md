@@ -8,6 +8,25 @@ Got questions? Who can blame you 😅 we can provide some answers, though! Read 
 
 Your Bluetooth isn't working 🙂 If you're on a Laptop, make sure you haven't disabled wireless either via a physical switch or a key combination (depends on the device model). On Desktop, make sure you actually have a Bluetooth dongle plugged in 😉 If you had other solutions like ScpToolkit or AirBender installed, make sure they have been removed completely and you run stock drivers. If you don't see the little Bluetooth tray icon in your taskbar, chances are your Bluetooth isn't working or turned on. Fix it and setup will be happy 😘
 
+## How to fix Bluetooth device error codes 19 & 39?
+
+If you end up with a damaged/partial installation for whatever reason (computers, right? 😅) the setup or uninstaller might not even be able to do its work. Worry not though, if you check Device Manager and see that yellow exclamation mark on your Bluetooth host device, check the details and if they give you a familiar error code, like...
+
+![host-error-19.png](images/host-error-19.png)
+
+...or...
+
+![host-error-39.png](images/host-error-39.png)
+
+...this may look frightening, but in essence is an easy fix. Fire up PowerShell as Administrator and execute:
+
+!!! example "PowerShell"
+    ```PowerShell
+    Remove-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Class{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}' -Name 'LowerFilters'
+    ```
+
+This removes the requirement to load the filter driver, which might be missing, and therefore prohibiting your radio to boot properly. After this line got executed, either power-cycle your radio or simply reboot and see if that issue got fixed ❤️
+
 ## What Bluetooth hosts are supported?
 
 In short: all of them manufactured within the last decade and running proper stock drivers (means no ScpServer/ScpToolkit, no AirBender, stock as the manufacturer intended). [For details see this article](../Compatible-Bluetooth-Devices).
