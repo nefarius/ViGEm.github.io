@@ -18,7 +18,9 @@ If you end up with a damaged/partial installation for whatever reason (computers
 
 ![host-error-39.png](images/host-error-39.png)
 
-...this may look frightening, but in essence is an easy fix. Fire up PowerShell as Administrator and execute:
+...this may look frightening, but in essence is an easy fix.
+
+Fire up PowerShell as Administrator and execute:
 
 !!! example "PowerShell"
     ```PowerShell
