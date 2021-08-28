@@ -24,7 +24,7 @@ Fire up PowerShell as Administrator and execute:
 
 !!! example "PowerShell"
     ```PowerShell
-    Remove-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Class{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}' -Name 'LowerFilters'
+    Remove-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Class\{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}' -Name 'LowerFilters'
     ```
 
 This removes the requirement to load the filter driver, which might be missing, and therefore prohibiting your radio to boot properly. After this line got executed, either power-cycle your radio or simply reboot and see if that issue got fixed ❤️
