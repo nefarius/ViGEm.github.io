@@ -33,9 +33,9 @@ This list is in no way complete as we rely on community/developer feedback. Some
 
 So the folder structure you end up with should look like so:
 
-![vmware_2018-08-15_16-02-58.png](images/vmware_2018-08-15_16-02-58.png) 
+[![vmware_2018-08-15_16-02-58.png](images/vmware_2018-08-15_16-02-58.png)](images/vmware_2018-08-15_16-02-58.png){: .glightbox }
 
-![2018-08-15_16-04-35.png](images/2018-08-15_16-04-35.png) 
+[![2018-08-15_16-04-35.png](images/2018-08-15_16-04-35.png)](images/2018-08-15_16-04-35.png){: .glightbox }
 
 ## Driver installation
 
@@ -79,7 +79,7 @@ That's it! You're ready to rock 🎉
 !!! important "Attention"
     You'll either need to unplug and plug in your input devices or reboot the machine for the driver to work!
 
-![2018-08-15_16-14-01.png](images/2018-08-15_16-14-01.png) 
+[![2018-08-15_16-14-01.png](images/2018-08-15_16-14-01.png)](images/2018-08-15_16-14-01.png){: .glightbox }
 
 ## Driver removal
 
@@ -111,4 +111,3 @@ In `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HidGuardian\Pa
 - `Force`
 
 The key `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HidGuardian\Parameters\Whitelist` and all sub-keys can be removed as well.
-
