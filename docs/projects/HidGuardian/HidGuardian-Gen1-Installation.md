@@ -18,9 +18,7 @@ Some facts about `HG` v1:
 
 ### Projects known to depend on HG v1
 
-This list is in no way complete as we rely on community/developer feedback. Some known products include:
-
-- [DS4Windows (Ryochan7 fork)](https://github.com/Ryochan7/DS4Windows)
+Check the [_Known Users of HidGuardian_ page](https://vigem.org/projects/HidGuardian/Hall-of-fame/) for a list of software that make use of HidGuardian. This list is in no way complete as we rely on community/developer feedback.
 
 ## Preparations
 
