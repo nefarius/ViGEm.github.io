@@ -111,3 +111,4 @@ In `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HidGuardian\Pa
 - `Force`
 
 The key `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HidGuardian\Parameters\Whitelist` and all sub-keys can be removed as well.
+
