@@ -19,4 +19,4 @@ You can explore mirror copies or archived binaries [on the file server](https://
 
 ## Buildbot Archive
 
-Copies of build artifacts spit out by [AppVeyor](https://www.appveyor.com/) are mirrored [on a separate file server](https://buildbot.vigem.org/) since they get removed automatically from their infrastructure after 6 months. Drivers hosted there are unsigned (or test-signed) and therefore won't work on a non-developer-machine with the right preparations. Build artifacts are of interest typically only to developers or beta-testing folks, explore at your own risk 🦋
+Copies of build artifacts spit out by [AppVeyor](https://www.appveyor.com/) are mirrored [on a separate file server](https://buildbot.vigem.org/) since they get removed automatically from their infrastructure after a month. Drivers hosted there are unsigned (or test-signed) and therefore won't work on a non-developer-machine with the right preparations. Build artifacts are of interest typically only to developers or beta-testing folks, explore at your own risk 🦋
