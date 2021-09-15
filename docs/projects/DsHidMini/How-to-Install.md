@@ -8,11 +8,8 @@ No matter what software you may have preinstalled, this step is always the same 
 
 ### Version 2.x.x
 
-!!! important "Currently in BETA"
-    Version 2 has been release on 23rd of July 2021 and is currently in BETA. It has been tested thoroughly already but keep that in mind!
-
-- **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/tag/setup-v2.1.153) (optional for USB)
-- [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/tag/v2.0.248.0)
+- **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/latest) (optional for USB)
+- [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/latest)
 - Download the attached `dshidmini_vX.X.X.X.zip` archive to an arbitrary location on your machine
 - Extract the archive (doesn't matter where to, e.g. your Downloads folder)
 - [Make sure you know your architecture](https://vigem.org/research/How-to-check-architecture/)
@@ -35,6 +32,9 @@ No matter what software you may have preinstalled, this step is always the same 
 By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
 
 ### Version 1.x.x
+
+!!! important "Obsolete version"
+    Version 1 has been deprecated and replaced by version 2, which is not backwards compatible, so study the installations instructions carefully and make sure you use the versions outlined!
 
 - **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/tag/setup-v1.3.127) (optional for USB)
 - [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/tag/v1.4.222.0)
