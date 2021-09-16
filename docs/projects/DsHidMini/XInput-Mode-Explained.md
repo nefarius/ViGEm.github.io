@@ -3,9 +3,18 @@
 !!! important "Work in progress"
     
 
+![DsHidMini Config](images/GUdcSj3o3M.png){: .glightbox }
+
+
 ![Device Manager - Default view](images/q55cLJbaB4.png){: .glightbox }
 
 ![Device Manager - View by connections](images/CBfdxUmYSe.png){: .glightbox }
+
+
+![SCPUser XInput Test Tool](images/SCPUser_K8QFXdrmxG.png){: .glightbox }
+
+![Gamepad Tester Website](images/msedge_gPmS1GWPZi.png){: .glightbox }
+
 
 ![Steam Controller detection popup](images/mpTzbVnP6k.png){: .glightbox }
 
