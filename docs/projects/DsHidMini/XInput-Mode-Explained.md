@@ -11,7 +11,11 @@
 ![Device Manager - View by connections](images/CBfdxUmYSe.png){: .glightbox }
 
 
+You can download SCPUser [from here](https://github.com/nefarius/ScpToolkit/raw/master/SCPUser.exe).
+
 ![SCPUser XInput Test Tool](images/SCPUser_K8QFXdrmxG.png){: .glightbox }
+
+You can also verify the controllers functionality via the [Gamepad Tester Website](https://gamepad-tester.com/):
 
 ![Gamepad Tester Website](images/msedge_gPmS1GWPZi.png){: .glightbox }
 
