@@ -16,3 +16,5 @@
 ![Road Redemption Example](images/NKd9rKdLq0.png){: .glightbox }
 
 ![Per-Game Controller Settings](images/7wCVPUB6dL.png){: .glightbox }
+
+![In-Game Controller Popup](images/Hocb8Ctq2Z.png){: .glightbox }
