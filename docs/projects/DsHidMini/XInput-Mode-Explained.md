@@ -29,7 +29,7 @@ You can also verify the controllers functionality via the [Gamepad Tester Websit
 
 ![Steam Settings](images/M2TBRIqhL6.png){: .glightbox }
 
-![Steam Controller Settings](images/uD3pvke3D3.png){: .glightbox }
+![Steam Controller Settings](images/VoUdb3Xjqk.png){: .glightbox }
 
 ![Road Redemption Example](images/NKd9rKdLq0.png){: .glightbox }
 
