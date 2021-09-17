@@ -3,6 +3,9 @@
 !!! important "Work in progress"
     
 
+!!! tip "Click on images to expand"
+
+
 ![DsHidMini Config](images/GUdcSj3o3M.png){: .glightbox }
 
 
