@@ -11,6 +11,11 @@
 ![Device Manager - View by connections](images/CBfdxUmYSe.png){: .glightbox }
 
 
+![joy.cpl](images/rundll32_xSUcO4ebpV.png){: .glightbox }
+
+![joy.cpl - Controller](images/rundll32_VsrsALUZe6.png){: .glightbox }
+
+
 You can download SCPUser [from here](https://github.com/nefarius/ScpToolkit/raw/master/SCPUser.exe).
 
 ![SCPUser XInput Test Tool](images/SCPUser_K8QFXdrmxG.png){: .glightbox }
