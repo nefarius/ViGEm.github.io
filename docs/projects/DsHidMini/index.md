@@ -2,10 +2,10 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-yellowgreen?logo=github)](https://github.com/ViGEm/DsHidMini) ![Maintained](https://img.shields.io/badge/Project%20actively%20maintained-brightgreen)
 
-DsHidMini is a universal driver for the dated yet beloved DualShock 3 Controllers used by the Sony PlayStation 3 (Navigation and Motion Controller support is planned). It's aimed to be a full, modern replacement of the discontinued ScpToolkit, feature-rich yet lightweight providing a wide range of compatibility with existing Games, Tools and Emulators. Developed for and compatible with latest Windows 10.
+DsHidMini is a universal driver for the dated yet beloved DualShock 3 Controllers used by the Sony PlayStation 3 (Navigation and Motion Controller support is planned). It's aimed to be a full, modern replacement of the discontinued ScpToolkit, feature-rich yet lightweight providing a wide range of compatibility with existing Games, Tools and Emulators. Developed for and compatible with latest Windows 10/11.
 
 !!! warning "No Windows XP/Vista/7/8/8.1 support"
-    DsHidMini heavily depends on amazing libraries and frameworks provided by Microsoft, unfortunately those are not available on anything older than Windows 10. Upgrade now ✨
+    DsHidMini heavily depends on amazing libraries and frameworks provided by Microsoft, unfortunately those are not available on anything older than Windows 10/11. Upgrade now ✨
 
 !!! danger highlight "No fake/aftermarket/3rd-party/non-Sony Controller support"
     This solution was developed for the **official Sony-designed and sold SIXAXIS/DualShock 3** controller hardware that was shipped with the consoles. Over time countless (cheaply designed and manufactured) copy-cats have been released, some with major compatibility issues with Windows that can't be addressed. So if you attempt to use DsHidMini with wannabe-PS3-Controllers and it doesn't work **you're on your own, do not open issues regarding this, you will receive no help because we can't provide any.** Refund the controller and get a genuine one (new-old-stock) or buy an Xbox controller ❤️
