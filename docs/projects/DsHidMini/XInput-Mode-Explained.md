@@ -3,7 +3,7 @@
 !!! important "Work in progress"
     
 
-!!! tip "Click on images to expand"
+!!! tip "Click on images to enlarge"
 
 
 ![DsHidMini Config](images/GUdcSj3o3M.png){: .glightbox }
@@ -23,16 +23,17 @@ You can download SCPUser [from here](https://github.com/nefarius/ScpToolkit/raw/
 
 ![SCPUser XInput Test Tool](images/SCPUser_K8QFXdrmxG.png){: .glightbox }
 
-You can also verify the controllers functionality via the [Gamepad Tester Website](https://gamepad-tester.com/):
+You can also verify the controllers functionality via the [Gamepad Tester Website](https://gamepad-tester.com/). You may need to wiggle with the controls a bit before it shows up like so:
 
 ![Gamepad Tester Website](images/msedge_gPmS1GWPZi.png){: .glightbox }
 
 
-![Steam Controller detection popup](images/mpTzbVnP6k.png){: .glightbox }
-
 ![Steam Settings](images/M2TBRIqhL6.png){: .glightbox }
 
 ![Steam Controller Settings](images/VoUdb3Xjqk.png){: .glightbox }
+
+![Steam Controller detection popup](images/mpTzbVnP6k.png){: .glightbox }
+
 
 ![Road Redemption Example](images/NKd9rKdLq0.png){: .glightbox }
 
