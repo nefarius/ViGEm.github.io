@@ -3,8 +3,13 @@
 !!! important "Work in progress"
     
 
-!!! tip "Click on images to enlarge"
+DsHidMini ships with "XInput Mode" by default, this article explains what that actually means and what to expect when using DsHidMini with modern games instead of emulators. Thoroughly make yourself familiar with this topic, as it avoids confusion and false bug reports about issues that are not within the powers of the driver to change.
 
+!!! tip "Click on images to enlarge"
+    You can click/tap on each image and it will open in full resolution and become easier to read ❤️
+
+!!! note "Why is this required, shouldn't it just be plug and play?!"
+    TBD
 
 ![DsHidMini Config](images/GUdcSj3o3M.png){: .glightbox }
 
