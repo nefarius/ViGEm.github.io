@@ -18,8 +18,8 @@ Updating simply involves downloading the latest setup and following the exact sa
 
 ## Removal
 
-!!! hint "This depends on the software you use"
-    Some programs "bundle" ViGEmBus with it (e.g. silently install a copy on their own), either with or without the users consent. THis method is out of our reach; please contact the distributor of said software, we can't aid in this case.
+!!! attention "This depends on the software you use"
+    Some programs "bundle" ViGEmBus with it (e.g. silently install a copy on their own), either with or without the users consent. This method is out of our reach; please contact the distributor of said software, we can't aid in this case.
 
 ### Apps and Features method
 
