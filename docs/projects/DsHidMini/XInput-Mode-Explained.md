@@ -85,3 +85,6 @@ Once the game is launched, you should see the gamepad being detected in the over
 Here's an example of the controller working like an Xbox Controller in a game with no native support for the DualShock 3 (Road Redemption):
 
 ![Road Redemption Menu Demo](images/J1LeaKZos2.gif){: .glightbox }
+
+!!! note "Don't expect Sony button overlays"
+    This should be fairly self-explanatory but we repeat it here nonetheless: since the game "sees" only an Xbox One Controller (variant), it will show you the Xbox button layout when navigating, this is expected and can not be altered.
