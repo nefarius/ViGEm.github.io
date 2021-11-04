@@ -1,8 +1,5 @@
 # XInput Mode Explained
 
-!!! important "Work in progress"
-    
-
 DsHidMini ships with "XInput Mode" by default, this article explains what that actually means and what to expect when using DsHidMini with modern games instead of emulators. Thoroughly make yourself familiar with this topic, as it avoids confusion and false bug reports about issues that are not within the powers of the driver to change.
 
 !!! tip "Click on images to enlarge"
@@ -53,18 +50,38 @@ You can also verify the controllers functionality via the [Gamepad Tester Websit
 
 ![Gamepad Tester Website](images/msedge_gPmS1GWPZi.png){: .glightbox }
 
+## Setting up Steam
+
+This mode will work best with games launched through Steam after you configured controller support like outlined here. Open your Steam Settings:
+
+![Steam Menu](images/hWkon6jHKj.png){: .glightbox }
+
+Go to `Controller` / `GENERAL CONTROLLER SETTINGS`:
 
 ![Steam Settings](images/M2TBRIqhL6.png){: .glightbox }
 
+Enable *at least* Xbox Configuration Support **and** Generic Gamepad Configuration Support:
+
 ![Steam Controller Settings](images/VoUdb3Xjqk.png){: .glightbox }
+
+Now after you connected your controller, it should get detected by Steam as an Xbox One Controller like shown below:
 
 ![Steam Controller detection popup](images/mpTzbVnP6k.png){: .glightbox }
 
+### Configure your Steam Games
+
+Now go into your games `Properties...`:
 
 ![Road Redemption Example](images/NKd9rKdLq0.png){: .glightbox }
 
+In the upcoming dialog go to `CONTROLLER` and set the override to `Enable Steam Input`:
+
 ![Per-Game Controller Settings](images/7wCVPUB6dL.png){: .glightbox }
 
+Once the game is launched, you should see the gamepad being detected in the overlay:
+
 ![In-Game Controller Popup](images/Hocb8Ctq2Z.png){: .glightbox }
+
+Here's an example of the controller working like an Xbox Controller in a game with no native support for the DualShock 3 (Road Redemption):
 
 ![Road Redemption Menu Demo](images/J1LeaKZos2.gif){: .glightbox }
