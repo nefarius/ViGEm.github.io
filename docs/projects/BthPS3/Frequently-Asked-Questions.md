@@ -35,7 +35,7 @@ Fire up PowerShell as Administrator and execute:
     Remove-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Class\{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}' -Name 'LowerFilters'
     ```
 
-This removes the requirement to load the filter driver, which might be missing, and therefore prohibiting your radio to boot properly. After this line got executed, either power-cycle your radio or simply reboot and see if that issue got fixed ❤️
+This removes the requirement to load the filter driver, which might be missing, and therefore prohibiting your radio to boot properly. After this line got executed, either power-cycle your radio or simply reboot and see if that issue got fixed ❤️ You may also need to uninstall and install BthPS3 again to completely fix the issue.
 
 ## What Bluetooth hosts are supported?
 
