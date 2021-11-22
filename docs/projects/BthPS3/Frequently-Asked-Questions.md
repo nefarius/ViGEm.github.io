@@ -10,13 +10,21 @@ Your Bluetooth isn't working 🙂 If you're on a Laptop, make sure you haven't d
 
 ## How to fix Bluetooth device error codes 19 & 39?
 
-If you end up with a damaged/partial installation for whatever reason (computers, right? 😅) the setup or uninstaller might not even be able to do its work. Worry not though, if you check Device Manager and see that yellow exclamation mark on your Bluetooth host device, check the details and if they give you a familiar error code, like...
+... or Code 31 or Code 43. If you end up with a damaged/partial installation for whatever reason (computers, right? 😅) the setup or uninstaller might not even be able to do its work. Worry not though, if you check Device Manager and see that yellow exclamation mark on your Bluetooth host device, check the details and if they give you a familiar error code, like...
 
 ![host-error-19.png](images/host-error-19.png)
 
 ...or...
 
 ![host-error-39.png](images/host-error-39.png)
+
+...or...
+
+![intel-driver-error-31.png](images/intel-driver-error-31.png)
+
+...or...
+
+![error-code-43.png](images/error-code-43.png)
 
 ...this may look frightening, but in essence is an easy fix.
 
