@@ -4,7 +4,7 @@ Got questions? Who can blame you 😅 we can provide some answers, though! Read 
 
 ## How to fix this setup message?
 
-[![glvDeYjpQi.png](/images/glvDeYjpQi.png)](/images/glvDeYjpQi.png){: .glightbox }
+[![Error message](/images/glvDeYjpQi.png)](/images/glvDeYjpQi.png){: .glightbox }
 
 Your Bluetooth isn't working 🙂 If you're on a Laptop, make sure you haven't disabled wireless either via a physical switch or a key combination (depends on the device model). On Desktop, make sure you actually have a Bluetooth dongle plugged in 😉 If you had other solutions like ScpToolkit or AirBender installed, make sure they have been removed completely and you run stock drivers. If you don't see the little Bluetooth tray icon in your taskbar, chances are your Bluetooth isn't working or turned on. Fix it and setup will be happy 😘
 
@@ -12,19 +12,19 @@ Your Bluetooth isn't working 🙂 If you're on a Laptop, make sure you haven't d
 
 ... or Code 31 or Code 43. If you end up with a damaged/partial installation for whatever reason (computers, right? 😅) the setup or uninstaller might not even be able to do its work. Worry not though, if you check Device Manager and see that yellow exclamation mark on your Bluetooth host device, check the details and if they give you a familiar error code, like...
 
-![host-error-19.png](images/host-error-19.png)
+![Error Code 19](images/host-error-19.png){: .glightbox }  
 
 ...or...
 
-![host-error-39.png](images/host-error-39.png)
+![Error Code 39](images/host-error-39.png){: .glightbox }  
 
 ...or...
 
-![intel-driver-error-31.png](images/intel-driver-error-31.png)
+![Error Code 31](images/intel-driver-error-31.png){: .glightbox }  
 
 ...or...
 
-![error-code-43.png](images/error-code-43.png)
+![Error Code 43](images/error-code-43.png){: .glightbox }  
 
 ...this may look frightening, but in essence is an easy fix.
 
