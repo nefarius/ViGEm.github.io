@@ -29,7 +29,7 @@ No matter what software you may have preinstalled, this step is always the same 
 - Right-click on `igfilter.inf` and select Install (**no not miss this step**)  
     ![oAjtjJRW9B.png](images/oAjtjJRW9B.png)
 - Now **connect your controller via USB**
-    - This will automatically pair it to your Windows Bluetooth host *if* you have working Bluetooth at the time of plugging it in
+    - 🐵 This will automatically pair it to your Windows Bluetooth host *if* you have working Bluetooth at the time of plugging it in 🐵
 - With your controller connected by USB, open the DsHidMini Control Utility (the `DSHMC.exe` file that comes along the driver archive) to see if the controller gets detected
     - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
     - It is not required to keep the utility running for the driver to function, only if you want to observe battery level or change settings
