@@ -2,10 +2,10 @@
 
 DsHidMini can only work its magic if it's the dominant driver for your controller, you may have others preinstalled that need removal, this guide covers most of the known cases.
 
-!!! danger highlight "Do NOT attempt to manually PAIR it with the built-in methods!"
+!!! danger highlight "Do NOT attempt manual PAIRING with the Windows built-in methods!"
     Do *not* attempt to pair a PS3 Controller on Windows via the built-in device discovery dialog, like:
     ![Pairing Dialog](images/pairing-fail.png)  
-    This will **not work** and can cause Bluetooth connection to fail completely, **so not do this!**
+    This will **not work** and can cause Bluetooth connection to fail completely, **so do not this!**
 
 ## Installation
 
