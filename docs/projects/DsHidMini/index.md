@@ -38,15 +38,7 @@ A few videos about various topics and progress reports over the development cycl
 
 ### 2021-02-10 DsHidMini USB LED Charging Animation
 
-<a href="https://www.youtube.com/watch?v=WK8b8e1hlZ0" class="glightbox">
-	<img src="https://i3.ytimg.com/vi/WK8b8e1hlZ0/hqdefault.jpg" alt="image">
-</a>
-
-### 2020-10-20 Rumble Racing ForeFeedback packet tracing PCSX2 1.5.0
-
-<a href="https://www.youtube.com/watch?v=WMlaEr3g3dw" class="glightbox">
-	<img src="https://i3.ytimg.com/vi/WMlaEr3g3dw/hqdefault.jpg" alt="image">
-</a>
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/2021-02-10-DsHidMini-USB-LED-Charging-Animation/abf028e5873e091de33d3601920b5e1db4446a06?r=EF18PBBCqrYYikMYYk7Gkq32SAU7j8H1" allowfullscreen></iframe>
 
 ### 2020-03-18 DsHidMini Demo PCSX2 1.5.0
 
