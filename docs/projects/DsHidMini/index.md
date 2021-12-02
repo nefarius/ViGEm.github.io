@@ -20,9 +20,7 @@ A few videos about various topics and progress reports over the development cycl
 
 ### 2021-03-08 DsHidMini DS4 mode custom LED Demo
 
-<a href="https://www.youtube.com/watch?v=4jJHpZ77-Qc" class="glightbox">
-	<img src="https://i3.ytimg.com/vi/4jJHpZ77-Qc/hqdefault.jpg" alt="image">
-</a>
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/2021-03-08-DsHidMini-DS4-mode-custom-LED-demo/101bbcf32512380d806b931f124b140ab4b5f24e?r=EF18PBBCqrYYikMYYk7Gkq32SAU7j8H1" allowfullscreen></iframe>
 
 ### 2021-03-08 DsHidMini SDF mode explained with PCSX2 v1.7.0
 
