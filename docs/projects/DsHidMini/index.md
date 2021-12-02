@@ -32,9 +32,7 @@ A few videos about various topics and progress reports over the development cycl
 
 ### 2021-02-27 DsHidMini Demo RPCS3
 
-<a href="https://www.youtube.com/watch?v=ICLOeU4-XTw" class="glightbox">
-	<img src="https://i3.ytimg.com/vi/ICLOeU4-XTw/hqdefault.jpg" alt="image">
-</a>
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/2021-02-27-18-44-37-DsHidMini-Demo-RPCS3/f5d837639dd8bb598c7dad1bcb641a1c0bf74b03?r=EF18PBBCqrYYikMYYk7Gkq32SAU7j8H1" allowfullscreen></iframe>
 
 ### 2021-02-10 DsHidMini USB LED Charging Animation
 
