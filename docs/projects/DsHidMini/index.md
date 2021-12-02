@@ -26,9 +26,7 @@ A few videos about various topics and progress reports over the development cycl
 
 ### 2021-03-08 DsHidMini SDF mode explained with PCSX2 v1.7.0
 
-<a href="https://www.youtube.com/watch?v=9htp8RTO33M" class="glightbox">
-	<img src="https://i3.ytimg.com/vi/9htp8RTO33M/hqdefault.jpg" alt="image">
-</a>
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/2021-03-08-DsHidMini-SDF-mode-explained-with-PCSX2-v1.7.0/58d0da939bc131bda6f9e2aea60952c5fedcef81?r=EF18PBBCqrYYikMYYk7Gkq32SAU7j8H1" allowfullscreen></iframe>
 
 ### 2021-02-27 DsHidMini Demo RPCS3
 
