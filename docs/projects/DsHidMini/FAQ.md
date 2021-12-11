@@ -68,7 +68,7 @@ You need to verify which `Input API` is supported in whatever you are using and 
 
 ## How do I use DsHidMini with RPCS3?
 
-!!! note "A [video demonstration of DsHidMini with RPCS3 video](../#2021-02-27-dshidmini-demo-rpcs3) is also available"
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/2021-02-27-18-44-37-DsHidMini-Demo-RPCS3/f5d837639dd8bb598c7dad1bcb641a1c0bf74b03?r=EF18PBBCqrYYikMYYk7Gkq32SAU7j8H1" allowfullscreen></iframe>
 
 It's recommended that you use your DS3 controller in `SXS Mode` and then choose on RPCS3's controller settings the `DualShock 3` Handler. When doing so, RPCS3 should automatically pick and set your DS3, with full support to all its functions including LEDs, pressure buttons and motion.
 
@@ -76,7 +76,7 @@ It's recommended that you use your DS3 controller in `SXS Mode` and then choose 
 
 ## How do I set the controller's pressure buttons in PCSX2?
 
-!!! note "A [video demonstration of DsHidMini's pressure buttons with PCSX2](../#2021-03-08-dshidmini-sdf-mode-explained-with-pcsx2-v170) is also available"
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/2021-03-08-DsHidMini-SDF-mode-explained-with-PCSX2-v1.7.0/58d0da939bc131bda6f9e2aea60952c5fedcef81?r=EF18PBBCqrYYikMYYk7Gkq32SAU7j8H1" allowfullscreen></iframe>
 
 The recommended method is the following:
 
