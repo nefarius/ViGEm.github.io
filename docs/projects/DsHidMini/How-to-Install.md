@@ -111,12 +111,7 @@ If you have/had PS Now installed, chances are high you have the official Sony `s
 
 #### FireShock
 
-If you've used [Shibari](https://github.com/ViGEm/Shibari) before you probably have FireShock installed, lets rectify that:
-
-- Use [Driver Store Explorer](https://github.com/lostindark/DriverStoreExplorer/releases) to remove the `fireshock.inf` driver:  
-![EMS2RXFoc4.png](images/EMS2RXFoc4.png){: .glightbox }  
-
-Done 🎉
+If you've used [Shibari](https://github.com/ViGEm/Shibari) before you probably have FireShock installed. [Follow this procedure to remove it](../../FireShock/Removal-Guide).
 
 ### Controller does not connect by Bluetooth
 
