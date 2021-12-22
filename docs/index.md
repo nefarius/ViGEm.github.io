@@ -1,13 +1,7 @@
 # Welcome
 
-!!! important "Under construction ⚒️"
+Welcome to the weird and wonderful world of gaming peripherals, better known as Gamepads or Game Controllers!
 
-Landing page for ViGEm.org
+On this site you find tutorials and extensive documentation surrounding the creations of [Benjamin "Nefarius" Höglinger-Stelzer](https://github.com/nefarius), a madman with a love for puzzling and Sony hardware 😁
 
-[👉 Download latest ViGEm Bus Driver here 👈](https://github.com/ViGEm/ViGEmBus/releases)
-
-## Discussions & Support
-
-This page is work in progress, please stay with me 😁
-
-Right now the place to lookup information or ask for help is either [the forums](https://forums.vigem.org/) or on [Discord](https://discord.vigem.org/), see you soon! 😘
+Feel free to look around, you'll find links and documents to popular projects like ScpToolkit, ViGEm and more!
