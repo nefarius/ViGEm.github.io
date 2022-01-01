@@ -4,5 +4,8 @@
 
 HidHide is an "input device firewall" inspired by HidGuardian but designed and written from scratch. It allows for blocking individual applications access to HID and XInput devices, allowing users to re-route and re-map controller inputs as they please.
 
-!!! attention "Fresh release"
-    [The binaries have been released](https://github.com/ViGEm/HidHide/releases/latest)! 🥳 More documentation coming soon 😁
+!!! attention "Downloads"
+    [Get the setup here](https://github.com/ViGEm/HidHide/releases/latest)! 🥳 More documentation coming soon 😁
+
+!!! danger highlight "Kaspersky Anti-Virus can interfere with whitelisting feature"
+    If you run **Kaspersky Anti-Virus** chances are you encounter issues with program whitelisting due to Kaspersky transparently breaking the process detection logic of HidHide. This is an issue with Kaspersky, please consult their support or disable it while you want to use HidHide to its full potential ❤️
