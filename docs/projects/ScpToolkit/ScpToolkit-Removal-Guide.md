@@ -1,5 +1,7 @@
-
 # Manual removal of ScpToolkit residue
+
+!!! attention "🚨 There's a tool available to automate driver removal 🚨"
+    To quickly get rid of the drivers shipped with SCP you can use [the Legacinator](https://github.com/nefarius/Legacinator) in addition to this guide!
 
 This article will walk you through the process of removing any traces of various versions of [ScpToolkit](https://github.com/nefarius/ScpToolkit) from your machine 😊
 
