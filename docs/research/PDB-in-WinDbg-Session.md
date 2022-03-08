@@ -101,3 +101,7 @@ After these steps, the items in the call stack should be resolved to proper func
 0e nt!PspSystemThreadStartup
 0f nt!KiStartSystemThread
 ```
+
+## 3rd party sources
+
+- [PDB files out of the debugger](https://lowleveldesign.org/2011/12/09/pdb-file-out-of-debugger/)
