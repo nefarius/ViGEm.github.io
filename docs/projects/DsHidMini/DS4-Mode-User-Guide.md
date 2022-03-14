@@ -163,7 +163,7 @@ Usually, games that use the `TP` button don't use the `Share` button (the defaul
 
 If a game uses both the `Share` and `TP` buttons, you can have a profile with `Share` as it is and the `PS` button remapped to the `TP`. Or, if you want more advanced solutions, you can use `special actions` in the profile settings so you can switch between different profiles by button combinations mid-game.
 
-### _I can't control Steam's Big Picture when using a emulated DS4 / Steam doesn't detect my controller when it's emulated as a DS4, only when emulated as a Xbox 360_
+### _I can't control Steam's Big Picture when using an emulated DS4 / Steam doesn't detect my controller when emulating a DS4, only when emulating a Xbox 360_
 
 Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. __Regardless if Steam is detecting or not the emulated DS4, 99.9% of the games that support DS4 controllers should detect the emulated one as normal__.
 
