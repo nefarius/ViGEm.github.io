@@ -171,9 +171,27 @@ For Steam to stop ignoring the emulated DS4 controller you need run DS4Windows u
 
 - Open DS4Windows
 - Go into the `Settings` Tab
-- Write the name you want on the `Custom exe name` box (In the image below the name "DS4Win" is used as an example)
-- After the name is set, fully close then re-open DS4Windows and then Steam should detect it as normal  
-![FAQ_DS4WCustomName](images/FAQ_DS4WCustomName.png){: .glightbox }
+- Untick `Run At Startup`
+- Write the name you want on the `Custom exe name` box (In the image below the name "DS4Win" is used as an example):
+
+	![FAQ_DS4WCustomName](images/FAQ_DS4WCustomName.png){: .glightbox }
+
+- After the name is set, Stop and then Start again DS4Windows with the button in the bottom-right corner:
+
+	![gitmod2](https://user-images.githubusercontent.com/26327765/158233398-9ceedf76-0b09-4a1a-9947-9b64aa990a98.png){: .glightbox }
+
+- Fully close DS4Windows from the System tray:
+
+	![DS4WindowsSystemTrayKill](https://user-images.githubusercontent.com/26327765/158232667-2d52d2d1-8b7f-4f26-928d-4047bfb11dd2.png){: .glightbox }
+
+- Navigate to DS4Windows Installation Folder. The custom executable should have been created by DS4Windows (`DS4Win.exe` in our case), execute it
+- Now Steam's Big Picture should recognize your emulated DS4 controller. You can double check in Windows Task Manager `Ctrl + Shift + Esc` if the Custom Executable is running:
+
+	![gitmod3](https://user-images.githubusercontent.com/26327765/158236366-20bd27d7-f20d-431a-aa65-8fcb7bbff30d.png){: .glightbox }
+
+- Re-enable `Run At Startup` into DS4Windows `Settings` Tab
+- From now on, you should launch DS4Windows from the Custom Executable. If you made any Shortcut to the original Executable, make a new one.
+
 
  It's also recommended going into the Steam's settings -> Controller -> General Controller Configurations -> Leave `Playstation Configuration Supported` UNCHECKED, so Steam doesn't remap your controller again when you don't want it to.  
 
