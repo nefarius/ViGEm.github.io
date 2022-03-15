@@ -1,5 +1,7 @@
 # DS4Windows Mode User Guide
 
+## General info
+
 !!! important "Jays2Kings' DS4Windows __IS NOT SUPPORTED__!"
     If you just search "DS4Windows" on Google/Bing/whatever the first result will probably be the obsolete Jays2Kings' version
 
