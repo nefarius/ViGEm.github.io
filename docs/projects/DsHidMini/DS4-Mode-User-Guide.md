@@ -147,6 +147,10 @@ __e.g.:__ Setting up a profile to be represented as LEDs 4 and 2.
 
     Keep in mind that some games that support DS4 controllers use the `Touch Pad` for options/to open the map/etc. In this case, you'll need to [remap a button as the `Touch Pad` button](#select-button-is-not-recognized-in-some-games-when-emulating-a-ds4-how-do-i-use-the-touch-pad-button) on a new profile to use it.
 
+??? question "_Do I need to use HidHide or the "hide ds4 controllers" option to hide my DS3 controller in order to prevent the "double controller" issue?_"
+
+    No need to. The "real" part of the DS3 controller in DsHidMini's DS4Windows Mode can only be recognized by DS4Windows and is therefore already imune to the "double controller" or "double input" issue. Games will only be able to detect the DS3's emulated/virtual Xbox 360/DS4 counterpart.
+
 ??? question "_Select button is not recognized in some games when emulating a DS4 / How do I use the Touch Pad button?_"
 
     A DS3 controller has 13 buttons while a real DS4 controller has 14, this extra button being the `Touch Pad` button which can't be mapped directly to the DS3 by DsHidMini.
