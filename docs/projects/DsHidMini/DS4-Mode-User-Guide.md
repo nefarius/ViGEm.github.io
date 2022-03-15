@@ -43,10 +43,10 @@ From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, a
 
 - Keep in mind: `Select` and `Start` buttons are recognized as the `Share` and `Options` buttons in DS4Windows  
 ![DS3toDS4ButtonLayout](images/DS3toDS4ButtonLayout.png){: .glightbox }
-- In case you need, there are more detailed instructions on [how to change to DS4 emulation](#how-do-i-change-between-xinput-and-ds4-emulation)
-- If you want your controller's LEDs to represent the current battery level, see [Simple Led Control -> Example 2](#simple-led-control)
-- If you want the current selected profile to be represented by a specific LED or LED combination on the controller, read the [Light Bar to LEDs translation section](#light-bar-color-to-leds-translation) 
-- It's recommended you have a quick look at the [_DS4Windows Frequently Asked Questions_](#frequently-asked-questions) section, read at least the title of the topics
+- In case you need, there are more detailed instructions on how to change to DS4 emulation in [the FAQ](#frequently-asked-questions)
+- If you want your controller's LEDs to represent the current battery level, check the **Simple Led Control -> Example 2** in the [Light Bar color to LEDs translation SECTION](#light-bar-color-to-leds-translation)
+    - Read the full Light Bar translation section if you want to check all possible types of LED control that are possible via DS4Windows settings  
+- It's recommended you have a quick look at the [_Frequently Asked Questions_](#frequently-asked-questions) section, read at least the title of the topics
 
 ## Light Bar color to LEDs translation
 
