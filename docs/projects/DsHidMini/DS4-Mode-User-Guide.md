@@ -37,7 +37,7 @@ After that, the controller should be properly recognized by DS4Windows. If it's 
 
 ![DS4ModeDS4W](images/DS4ModeDS4W.png){: .glightbox }
 
-## What now?
+### Important remarks
 
 From here, DS4Windows can be used _mostly_ as usual. XInput and DS4 emulation, as well other functions, can then be set-up in the profiles settings according to the user needs. Besides that:
 
