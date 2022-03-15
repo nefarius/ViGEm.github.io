@@ -163,19 +163,18 @@ Usually, games that use the `TP` button don't use the `Share` button (the defaul
 
 If a game uses both the `Share` and `TP` buttons, you can have a profile with `Share` as it is and the `PS` button remapped to the `TP`. Or, if you want more advanced solutions, you can use `special actions` in the profile settings so you can switch between different profiles by button combinations mid-game.
 
-### _I can't control Steam's Big Picture when using an emulated DS4 / Steam doesn't detect my controller when emulating a DS4, only when emulating a Xbox 360_
+### _Steam/Some emulator or app doesn't detect my controller when emulating a DS4, only when emulating a Xbox 360_
 
-Steam (and some really specific games, super rare case) will fully ignore DS4 controllers if it detects that DS4Windows is running. This happens so users don't accidentally have both DS4Windows and Steam remapping the controller. __Regardless if Steam is detecting or not the emulated DS4, 99.9% of the games that support DS4 controllers should detect the emulated one as normal__.
+Steam and some other apps/emulators (Yuzu/CEMU) will fully ignore DS4 controllers, real or virtual, if they detect that DS4Windows is running. This happens as their own means of preventing the "double controller" issue, which is not a problem for DS3 controllers being used with DS4Windows.
 
-For Steam to stop ignoring the emulated DS4 controller you need run DS4Windows under a custom `.exe` name:
+To workaround this detection and make those apps stop ignoring the DS4 controller, [DS4Windows needs to be running under a custom ".exe" name](https://docs.ds4windows.app/guides/ds4w-custom-name/).
 
-- Open DS4Windows
-- Go into the `Settings` Tab
-- Write the name you want on the `Custom exe name` box (In the image below the name "DS4Win" is used as an example)
-- After the name is set, fully close then re-open DS4Windows and then Steam should detect it as normal  
-![FAQ_DS4WCustomName](images/FAQ_DS4WCustomName.png){: .glightbox }
+!!! note "Some remarks regarding Steam"
 
- It's also recommended going into the Steam's settings -> Controller -> General Controller Configurations -> Leave `Playstation Configuration Supported` UNCHECKED, so Steam doesn't remap your controller again when you don't want it to.  
+    - Regarding most Steam games, 99% of the games that support DS4 controllers should detect the emulated one as normal regardless if Steam itself is not
+    - If using a custom ".exe" name it's also recommended to DISABLE Steam's "**Playstation Configuration Support**", in its controller settings, so Steam doesn't remap your controller _again_ along DS4Windows
+    - A custom ".exe" name must be used with DS4W for the emulated DS4 to interact with Steam's Big Picture Mode
+        - But the "Playstation Configuration Support" option doesn't need to be enabled for this
 
 ### _'X' game does not detect my emulated DS4 / my game is not showing PS button icons_
 
