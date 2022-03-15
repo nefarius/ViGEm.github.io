@@ -61,75 +61,79 @@ By setting the correct Light Bar color values in the profile settings it is poss
 
 Beware that functions in DS4Windows that make the Light Bar flash, pulse or randomize the colors (`rainbow mode`) are not supported and can make the LEDs change to an undesired state, though the `Flash Light Bar at High Latency` function do is supported and will make the LEDs flash at a high frequency.
 
-### Simple LED control
+There are 2 modes of Light Bar to LED control: **Simple** and **Complete**. To learn how to use them and see easy to follow examples expand the following item:
 
-- Simple to set-up
-- Good to represent which profile is active (see example 1)
-- Necessary when making DS4Windows show the controller's battery level and for battery related `Special Actions` (see examples 2 and 3 respectively)
+??? info "Modes of Light Bar Translation (click to expand)"
 
-When this form of translation is active, the `Red color value` will be translated to the LEDs state according to the following table:
+    === "Simple LED control"
 
-| RED value (Dec) | LED state |
-| :---: | :---: |
-| 0 - 64 | Blinking LED 1 |
-| 65 - 94 | LED 1 |
-| 95 - 148 | LED 2 |
-| 149 - 201 | LED 3 |  
-| 202 - 255 | LED 4 |
+        - Simple to set-up
+        - Good to represent which profile is active (see example 1)
+        - Necessary when making DS4Windows show the controller's battery level and for battery related `Special Actions` (see examples 2 and 3 respectively)
+
+        When this form of translation is active, the `Red color value` will be translated to the LEDs state according to the following table:
+
+        | RED value (Dec) | LED state |
+        | :---: | :---: |
+        | 0 - 64 | Blinking LED 1 |
+        | 65 - 94 | LED 1 |
+        | 95 - 148 | LED 2 |
+        | 149 - 201 | LED 3 |  
+        | 202 - 255 | LED 4 |
 
 
 
-__FORMS OF ACTIVATION:__
+        __FORMS OF ACTIVATION:__
 
-| Simple LED control mode | How to activate | Description |
-| :---: | :---: | :---: |
-| __Single mode__ | Green and Blue = 0 | Only the chosen LED is ON |
-| __Filling Mode__ | Green = 0, Blue = 255 | The chosen LED and the ones before it are ON |
+        | Simple LED control mode | How to activate | Description |
+        | :---: | :---: | :---: |
+        | __Single mode__ | Green and Blue = 0 | Only the chosen LED is ON |
+        | __Filling Mode__ | Green = 0, Blue = 255 | The chosen LED and the ones before it are ON |
 
-__e.g. 1:__ Setting up a profile to be represented as LED 3 only (__single mode__).
+        __e.g. 1:__ Setting up a profile to be represented as LED 3 only (__single mode__).
 
-![SimpleLedControl eg 1 - LED 3 on](images/SimpleLedControl_eg1_LED3on.png){: .glightbox }
+        ![SimpleLedControl eg 1 - LED 3 on](images/SimpleLedControl_eg1_LED3on.png){: .glightbox }
 
-__e.g. 2:__ Setting up a profile to reflect the controller's battery level.
+        __e.g. 2:__ Setting up a profile to reflect the controller's battery level.
 
-![SimpleLedControl eg 2 - Battery charge indication](images/SimpleLedControl_eg2_Battery.png){: .glightbox }
+        ![SimpleLedControl eg 2 - Battery charge indication](images/SimpleLedControl_eg2_Battery.png){: .glightbox }
 
-__e.g. 3:__ Setting up a _Special Action_ to make the LEDs reflect the controller's battery level.
+        __e.g. 3:__ Setting up a _Special Action_ to make the LEDs reflect the controller's battery level.
 
-![SimpleLedControl eg 3 - Macro example](images/SimpleLedControl_eg3_Macro.png){: .glightbox }
+        ![SimpleLedControl eg 3 - Macro example](images/SimpleLedControl_eg3_Macro.png){: .glightbox }
 
-### Complete LED control
+    === "Complete LED control"
 
-- "Harder" to set-up (not really)
-- Allows any combination of LEDs on
-- Useful if the user wants to differentiate between more than 4 profiles
+        - "Harder" to set-up (not really)
+        - Allows any combination of LEDs on
+        - Useful if the user wants to differentiate between more than 4 profiles
 
-__HOW TO ACTIVATE:__ Green and Blue = 255
+        __HOW TO ACTIVATE:__ Green and Blue = 255
 
-When this form of translation is active, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
+        When this form of translation is active, the Red color value from 0 to 15 will be translated to the LEDs state according to the following table:
 
-| LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |
-| :---: | :---: | :---: | :---: | :---: |
-|  |  |  |  | 0 |
-|  |  |  | ON | 1 |
-|  |  | ON |  | 2 |
-|  |  | ON | ON | 3 |
-|  | ON |  |  | 4 |
-|  | ON |  | ON | 5 |
-|  | ON | ON |  | 6 |
-|  | ON | ON | ON | 7 |
-| ON |  |  |  | 8 |
-| ON |  |  | ON | 9 |
-| ON |  | ON |  | 10 |
-| ON |  | ON | ON | 11 |
-| ON | ON |  |  | 12 |
-| ON | ON |  | ON | 13 |
-| ON | ON | ON |  | 14 |
-| ON | ON | ON | ON | 15 |
+        | LED 4 |  LED 3 | LED 2 | LED 1 |  RED value (Dec) |
+        | :---: | :---: | :---: | :---: | :---: |
+        |  |  |  |  | 0 |
+        |  |  |  | ON | 1 |
+        |  |  | ON |  | 2 |
+        |  |  | ON | ON | 3 |
+        |  | ON |  |  | 4 |
+        |  | ON |  | ON | 5 |
+        |  | ON | ON |  | 6 |
+        |  | ON | ON | ON | 7 |
+        | ON |  |  |  | 8 |
+        | ON |  |  | ON | 9 |
+        | ON |  | ON |  | 10 |
+        | ON |  | ON | ON | 11 |
+        | ON | ON |  |  | 12 |
+        | ON | ON |  | ON | 13 |
+        | ON | ON | ON |  | 14 |
+        | ON | ON | ON | ON | 15 |
 
-__e.g.:__ Setting up a profile to be represented as LEDs 4 and 2.
+        __e.g.:__ Setting up a profile to be represented as LEDs 4 and 2.
 
-![TotalLedControl eg - LEDs 4 and 2](images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
+        ![TotalLedControl eg - LEDs 4 and 2](images/TotalLedControl_eg_LEDs_4_2.png){: .glightbox }
 
 ## Frequently Asked Questions
 
