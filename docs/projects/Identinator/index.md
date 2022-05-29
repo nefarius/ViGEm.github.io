@@ -10,6 +10,14 @@ TBD
 
 ![Before](images/mmc_ME74WR3tG2.png){: .glightbox }
 
+![Hardware IDs](images/mmc_hzP9mpgCmB.png){: .glightbox }
+
+![Compatible IDs](images/mmc_VaF4BO0OnD.png){: .glightbox }
+
 ### After
 
 ![Before](images/mmc_lb8TghMekj.png){: .glightbox }
+
+![Hardware IDs](images/mmc_JIqFmaIMoB.png){: .glightbox }
+
+![Compatible IDs](images/mmc_9AOKamFJ91.png){: .glightbox }
