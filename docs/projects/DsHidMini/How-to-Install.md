@@ -26,7 +26,7 @@ No matter what software you may have preinstalled, this step is always the same 
     ![DRYeurZsPs.png](images/DRYeurZsPs.png)
     - Should only take a moment until success dialog  
     ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
-- Right-click on `igfilter.inf` and select Install (**no not miss this step**)  
+- Right-click on `igfilter.inf` and select Install (**do not miss this step**)  
     ![oAjtjJRW9B.png](images/oAjtjJRW9B.png)
 - Now **connect your controller via USB**
     - 🐵 This will automatically pair it to your Windows Bluetooth host *if* you have working Bluetooth at the time of plugging it in 🐵
