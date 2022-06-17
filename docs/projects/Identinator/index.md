@@ -49,6 +49,9 @@ Each device may have additional status indicators next to their name:
 
 ![Rewrite](images/Identinator_nM6aJIcshs.png){: .glightbox } 
 
+!!! important "Rewriting for all devices gets disabled on each reboot"
+    As a safety mechanism the global rewriting switch gets **turned off automatically on each reboot**. This is by design and ensures that the system is in its original state on a fresh boot, should something catastrophic happen while rewrite is active (loss of mouse and keyboard, BSOD due to incompatible driver etc.)!
+
 ### "Filter Driver" tab
 
 Driver version and less important settings an be reviewed here. The filter driver can be (re-)installed or uninstalled from here.
