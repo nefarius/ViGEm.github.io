@@ -7,6 +7,17 @@
 
 The Identinator allows the user to alter (rewrite, masquerade) [Device ID](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/device-ids), [Hardware ID](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/hardware-ids) and [Compatible ID](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/compatible-ids) properties of any USB device (Bluetooth support in the works) on a Microsoft Windows system. The solution consist of a bus filter driver (`nssidswap.sys`) and .NET UI tool to configure said driver. The changes can be applied during runtime and are instantaneous (within a few milliseconds) which can be used to "on-the-fly" swap out the function driver for e.g. HID devices.
 
+!!! note "This is NOT a firmware flash utility"
+    Identinator **does not flash** any device, the changes happen at driver level, are temporary and only apply to the machine where Identinator is installed and configured. **No changes are made** to any EEPROM, flash or other potentially reprogrammable sections of any USB device. This tool does not alter device or configuration descriptors.
+
+## Why
+
+While working on the [new DS4Windows fork](https://github.com/CircumSpector/DS4Windows) with a team of volunteer developers we brainstormed about various ideas on how to make the issue of device hiding a more smooth and less error-prone experience. Yes, we've got [HidHide](https://github.com/ViGEm/HidHide) integration but that project has its own weaknesses (simply due to how device stacks operate in Windows) which can't really be addressed unless you consider a serious redesign or extension of the existing design. We were reminded on how [SCP](https://github.com/nefarius/ScpToolkit/) shipped around that: by brute-force just completely replacing the function driver of the device with [WinUSB](https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/winusb). This approach is not a simple undertaking, especially if you support more than one device you didn't manufacture and have no control over its firmware or driver packages. While there are [automated solutions available](https://github.com/pbatard/libwdi) to on-the-fly craft custom driver packages (INF file for WinUSB and self-signed catalogue file) they are in danger of becoming obsolete with tightening restrictions on driver signatures in future versions of Windows. Hot-swapping driver of HID devices is always a gamble simply due to the fact that most will have open handles during its lifetime and the unloading of the current driver may simple be not possible without a reboot. 
+
+## How
+
+TBD
+
 ## UI overview
 
 ### "USB Devices" tab
