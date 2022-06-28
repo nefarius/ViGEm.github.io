@@ -13,6 +13,7 @@ No matter what software you may have preinstalled, this step is always the same 
 
 ### Version 2.x.x
 
+- **Make sure your UAC is enabled** ([see here](https://articulate.com/support/article/how-to-turn-user-account-control-on-or-off-in-windows-10))!
 - **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/latest) (optional for USB)
 - [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/latest)
 - Download the attached `dshidmini_vX.X.X.X.zip` archive to an arbitrary location on your machine
