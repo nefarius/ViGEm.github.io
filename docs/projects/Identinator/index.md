@@ -18,7 +18,19 @@ But then I remembered a product that actually *could* pull off runtime driver sw
 
 ## How
 
-TBD
+Let's start with understanding how VMware pulls off the smooth transition from host to VM. First the device of interest needs to be "hidden" from the host machine since only one system at a time is allowed to have authority over said device and send requests to it. This is achieved by swapping the primary (function) driver from whatever default to `vmusb.sys` (similar to `WinUSB.sys`), effectively handing over control to VMware's processes. Now VMware tools can spawn a virtual replica of the USB device within the VM and traffic to (and from) this device will be passed to the real physical device on the host. Sounds simple enough, right? Well, in reality we face a few problems. Most USB devices (predominantly HID devices) can not hot-swap their function driver because of open handles and other drivers higher up in the stack, so after wasting a couple of seconds this procedure would most probably error out because the driver swap and necessary device restart couldn't finish successfully during runtime. So we need to pull another trick which restarts the device and somehow alters it in a way which causes the PnP subsystem into loading `vmusb.sys` instead.
+
+Another driver enters the scene: `vmci.sys`. This one acts as a bus filter driver for USB host controllers and hubs and does something very smart. When instructed by VMware's processes, it swaps the Hardware ID of the USB device from whatever original value to `USB\Vid_0E0F&Pid_0001` and power-cycles (port reset) the device which causes `vmusb.sys` to load onto it. `vmci.sys` intercepts [IRP_MJ_PNP](https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/irp-mj-pnp) requests made to the USB bus and alters the reported hardware ID string, therefore causing the PnP manager to look for the custom function driver instead. To pull the swap off in seconds the following sequence happens:
+
+- User chose device (e.g. a USB joystick) to get forwarded into VM
+- `vmci.sys` gets instructed to power-cycle the joystick by sending a port reset to the parent hub device
+  - USB devices are "surprise removal" capable, meaning they have to expect to be unplugged at anytime, a port reset is basically a quick "reboot" of the device
+- When the device comes online this time `vmci.sys` alters the hardware ID to `USB\Vid_0E0F&Pid_0001` which causes Windows to match and load `vmusb.sys` as the new function driver
+- Now that `vmusb.sys` is in charge of our joystick, packets can be exchanged with the VM and the host system can no longer "see" a joystick but a custom vendor-defined USB device
+
+The same trick is pulled off by Identinator by utilizing the `nssidswap.sys` bus filter driver which basically performs a subset of tasks like `vmci.sys` and rewrites Device ID, Hardware ID(s) and Compatible ID(s) in a way that the OS-shipped `WinUSB.sys` gets loaded instead of the original function driver.
+
+With these quick-switch capabilities we're now able to switch to and from WinUSB during runtime without any delay or locked devices and communicate with the device directly in our software!
 
 ## UI overview
 
