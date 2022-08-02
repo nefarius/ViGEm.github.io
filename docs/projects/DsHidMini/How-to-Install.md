@@ -13,6 +13,8 @@ No matter what software you may have preinstalled, this step is always the same 
 
 ### Version 2.x.x
 
+This is the current latest stable major version.
+
 - **Make sure your UAC is enabled** ([see here](https://articulate.com/support/article/how-to-turn-user-account-control-on-or-off-in-windows-10))!
 - **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/latest) (optional for USB)
 - [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/latest)
@@ -37,31 +39,31 @@ No matter what software you may have preinstalled, this step is always the same 
 
 By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
 
-### Version 1.x.x
+??? info "Version 1.x.x"
 
-!!! important "Obsolete version"
-    Version 1 has been deprecated and replaced by version 2, which is not backwards compatible, so study the installations instructions carefully and make sure you use the versions outlined!
-
-- **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/tag/setup-v1.3.127) (optional for USB)
-- [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/tag/v1.4.222.0)
-- Download the attached `dshidmini_vX.X.X.X.zip` archive to an arbitrary location on your machine
-- Extract the archive (doesn't matter where to, e.g. your Downloads folder)
-- [Make sure you know your architecture](https://vigem.org/research/How-to-check-architecture/)
-    - On x64 navigate to `x64\dshidmini`
-    - On x86 navigate to `x86\dshidmini`
-- Right-click on `dshidmini.inf` and select Install
-    ![hIh7PcxkC9.png](images/hIh7PcxkC9.png)
-    - If you've never installed great software before 😉 this might show up (hit Install):  
-    ![DRYeurZsPs.png](images/DRYeurZsPs.png)
-    - Should only take a moment until success dialog
-    ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
-- Now **connect your controller via USB**
-    - This will automatically pair it to your Windows Bluetooth host *if* you have working Bluetooth at the time of plugging it in
-- With your controller connected by USB, open the DsHidMini Control Utility (the `DSHMC.exe` file that comes along the driver archive) to see if the controller gets detected
-    - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
-    - It is not required to keep the utility running for the driver to function, only if you want to observe battery level or change settings
-
-By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
+    !!! important "Obsolete version"
+        Version 1 has been deprecated and replaced by version 2, which is not backwards compatible, so study the installations instructions carefully and make sure     you use the versions outlined!
+    
+    - **If you want Bluetooth support** you need to [install BthPS3 first](https://github.com/ViGEm/BthPS3/releases/tag/setup-v1.3.127) (optional for USB)
+    - [Grab the release from GitHub](https://github.com/ViGEm/DsHidMini/releases/tag/v1.4.222.0)
+    - Download the attached `dshidmini_vX.X.X.X.zip` archive to an arbitrary location on your machine
+    - Extract the archive (doesn't matter where to, e.g. your Downloads folder)
+    - [Make sure you know your architecture](https://vigem.org/research/How-to-check-architecture/)
+        - On x64 navigate to `x64\dshidmini`
+        - On x86 navigate to `x86\dshidmini`
+    - Right-click on `dshidmini.inf` and select Install
+        ![hIh7PcxkC9.png](images/hIh7PcxkC9.png)
+        - If you've never installed great software before 😉 this might show up (hit Install):  
+        ![DRYeurZsPs.png](images/DRYeurZsPs.png)
+        - Should only take a moment until success dialog
+        ![InfDefaultInstall_La1TsZO9P0.png](images/InfDefaultInstall_La1TsZO9P0.png)
+    - Now **connect your controller via USB**
+        - This will automatically pair it to your Windows Bluetooth host *if* you have working Bluetooth at the time of plugging it in
+    - With your controller connected by USB, open the DsHidMini Control Utility (the `DSHMC.exe` file that comes along the driver archive) to see if the controller     gets detected
+        - Run it as Administrator to change settings, [check the documentation for details](../HID-Device-Modes-Explained)
+        - It is not required to keep the utility running for the driver to function, only if you want to observe battery level or change settings
+    
+    By now if you plug in your controller (or reboot the machine) chances are high that everything already works as expected. If it doesn't, worry not, [read on here](#troubleshooting)!
 
 ## Updating
 
