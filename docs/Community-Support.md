@@ -9,10 +9,11 @@ Struggling with some project and need help? We've got you covered! In addition t
 
 Wanna have a quick chat? [Be our guest on Discord](https://discord.vigem.org)! Various helpful people can be found here happy to chat. Do keep in mind that time zones are a thing so answers might come with a delay 😉 Read and respect the rules ❤️
 
+<!--
 ## Forums
 
 Browse [the forums](https://forums.vigem.org/) to find discussions about similar issues you face or start a new conversation. You need a [GitHub](https://github.com/login) account to sign in ❤️
-
+-->
 ## GitHub Discussions
 
 ![Discussions](images/msedge_1qPOS2VyOI.png)
