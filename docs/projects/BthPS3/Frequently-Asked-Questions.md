@@ -87,6 +87,6 @@ Follow the instructions of the uninstaller and you're all set! 👋
 
 If you're running [Windows on Raspberry](https://worproject.com/) and attempt to install BthPS3 you will be greeted by error `Code 31` in Device Manager:
 
-[![vEOfeRh9vF.png](/images/vEOfeRh9vF.png)](/images/vEOfeRh9vF.png){: .glightbox }
+[![vEOfeRh9vF.png](/images/vEOfeRh9vF.png)](images/vEOfeRh9vF.png){: .glightbox }
 
 Note the `UART` in the parent device. Unfortunately the mandatory filter driver that ships with BthPS3 work with **USB only**, not UART. Therefore this solution is unable to operate on the Raspberry Pi 4 and any other device that uses UART for Bluetooth.
