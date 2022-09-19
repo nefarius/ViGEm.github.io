@@ -44,9 +44,9 @@ Since the user has no KB+M, they can't use Windows' option to reboot directly in
     - If possible, wait for the white dots to start spinning before force-restarting
 1. When the message "Preparing Automatic Repair" appears then that means Windows will enter recovery mode
 
-![Force shutdown here](images7Manual_Removal_Images/1_Force_Shutdown.png){: .glightbox }
+![Force shutdown here](images/Manual_Removal_Images/1_Force_Shutdown.png){: .glightbox }
 
-![Entering recovery mode](images7Manual_Removal_Images/2_Preparing_Automatic_Repair.png){: .glightbox }
+![Entering recovery mode](images/Manual_Removal_Images/2_Preparing_Automatic_Repair.png){: .glightbox }
 
 ### Part 2: Opening the Registry Editor
 
@@ -143,7 +143,7 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 === "Step 3 - XnaComposite"
 
-    ![19_Delete_XnaComp_upperfilter](images7Manual_Removal_Images/19_Delete_XnaComp_upperfilter.png){: .glightbox }
+    ![19_Delete_XnaComp_upperfilter](images/Manual_Removal_Images/19_Delete_XnaComp_upperfilter.png){: .glightbox }
 
 ??? note "Full address of where the entries reside"
 
