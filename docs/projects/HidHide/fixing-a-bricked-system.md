@@ -158,7 +158,7 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 1. On the left side, look again for the `_TempSYSTEM` item/folder then select it so it stays highlighted/marked
 1. On the top of the Registry Editor window, click on the [File] tab then [Unload hive]
     - If for some reason there is a "access denied" message when attempting to unload the hive, then do the following:
-        1. close the Registry Editor window and then close the Command Prommpt
+        1. close the Registry Editor window and then close the Command Prompt
         2. open again the command prompt then type "regedit" to open the registry editor once more
         3. Highlight the _TempSYSTEM folder inside the HKEY_LOCAL_MACHINE and then attempt to unload the hive again
 1. Confirm that the `_TempSYSTEM` item vanished, then close the Registry Editor and then the Command Prompt (black window)
