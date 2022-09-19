@@ -118,7 +118,7 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 1. Highlight, by clicking on it, the `_TempSYSTEM` entry that now appears under `HKEY_LOCAL_MACHINE`
 1. Press `Ctrl + F` to open the Search menu, then write `HidHide` in the search box
-1. Use the [Find Next] to search throughout the registry for the `UpperFilter` entries that have `HidHide` as their DATA and then delete them (Check the images below!)
+1. Use the [Find Next] to search throughout the registry for the `UpperFilter` entries that have `HidHide` as their DATA. Once you confirm you have the correct item, delete them (double check if you have the correct item by looking at the images below)
     - **You MUST NOT delete the whole folder nor any other entries** (please, check the images)
     - **The entries that need to be deleted are**...:
         - the `UpperFilter / HidHide` entry in the same list as the `Class / XboxComposite` entry
