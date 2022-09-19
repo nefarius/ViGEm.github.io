@@ -1,0 +1,9 @@
+Computer\HKEY_LOCAL_MACHINE\_TempSYSTEM\ControlSet001\Control\Class\{05f5cfe2-4733-4950-a6bb-07aad01a3a84} (Xinput)
+Computer\HKEY_LOCAL_MACHINE\_TempSYSTEM\ControlSet001\Control\Class\{745a17a0-74d3-11d0-b6fe-00a0c90f57da} (HID)
+Computer\HKEY_LOCAL_MACHINE\_TempSYSTEM\ControlSet001\Control\Class\{d61ca365-5af4-4486-998b-9db4734c6ca3} (Xusb)
+
+If for some reason there is a "access denied" message when attempting to unload the hive, then do the following:
+
+1. close the registry editor window and then command prommpt
+2. open again the command prompt then type "regedit" to open the registry editor once more
+3. Highlight the _TempSYSTEM folder inside the HKEY_LOCAL_MACHINE and then attempt to unload the hive again
