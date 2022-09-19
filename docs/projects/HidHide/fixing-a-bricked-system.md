@@ -10,7 +10,7 @@ If your system is working as normal and you just want to uninstall HidHide open 
 
 This guide does NOT apply to those that...
 
-- If your system is working as normal and you just want to uninstall HidHide
+- have their system working as normal and you just want to uninstall HidHide
     - Just open Windows' Apps and Features menu and search for HidHide's uninstaller there
 - can use their Keyboard and Mouse as normal in Windows
 - _think_ their controller is not working because of HidHide
