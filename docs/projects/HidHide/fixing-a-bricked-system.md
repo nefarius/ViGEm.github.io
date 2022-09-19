@@ -44,9 +44,9 @@ Since the user has no KB+M, they can't use Windows' option to reboot directly in
     - If possible, wait for the white dots to start spinning before force-restarting
 1. When the message "Preparing Automatic Repair" appears then that means Windows will enter recovery mode
 
-![Force shutdown here](images\Manual_Removal_Images\1_Force_Shutdown.png){: .glightbox }
+![Force shutdown here](images7Manual_Removal_Images/1_Force_Shutdown.png){: .glightbox }
 
-![Entering recovery mode](images\Manual_Removal_Images\2_Preparing_Automatic_Repair.png){: .glightbox }
+![Entering recovery mode](images7Manual_Removal_Images/2_Preparing_Automatic_Repair.png){: .glightbox }
 
 ### Part 2: Opening the Registry Editor
 
@@ -61,31 +61,31 @@ Now that you are in recovery mode, navigate the menu as the following:
 
 === "Step 1"
 
-    ![Recovery mode starting options](images\Manual_Removal_Images\3_Automatic_Repair_Advanced_Options.png){: .glightbox }
+    ![Recovery mode starting options](images/Manual_Removal_Images/3_Automatic_Repair_Advanced_Options.png){: .glightbox }
 
 === "Step 2"
 
-    ![Troubleshoot option](images\Manual_Removal_Images\4_Choose_an_option_Troubleshoot.png){: .glightbox }
+    ![Troubleshoot option](images/Manual_Removal_Images/4_Choose_an_option_Troubleshoot.png){: .glightbox }
 
 === "Step 3"
 
-    ![Troubleshoot - Advanced](images\Manual_Removal_Images\5_Troubleshoot_Advanced_options.png){: .glightbox }
+    ![Troubleshoot - Advanced](images/Manual_Removal_Images/5_Troubleshoot_Advanced_options.png){: .glightbox }
 
 === "Step 4"
 
-    ![Advanced - Command Prompt](images\Manual_Removal_Images\6_Advanced_Command_Prompt.png){: .glightbox }    
+    ![Advanced - Command Prompt](images/Manual_Removal_Images/6_Advanced_Command_Prompt.png){: .glightbox }    
 
 === "Step 5.1"
 
-    ![CMD Blue Screen - Choose User Account](images\Manual_Removal_Images\7_Command_Prompt_Choosen_an_account.png){: .glightbox }   
+    ![CMD Blue Screen - Choose User Account](images/Manual_Removal_Images/7_Command_Prompt_Choosen_an_account.png){: .glightbox }   
 
 === "Step 5.2"
 
-    ![Enter password](images\Manual_Removal_Images\8_Login_into_account.png){: .glightbox }   
+    ![Enter password](images/Manual_Removal_Images/8_Login_into_account.png){: .glightbox }   
 
 === "Step 6"
 
-    ![CMD - Enter "regedit"](images\Manual_Removal_Images\9_CMD_Regedit.png){: .glightbox }   
+    ![CMD - Enter "regedit"](images/Manual_Removal_Images/9_CMD_Regedit.png){: .glightbox }   
 
 ### Part 3: Loading your system's registry file
 
@@ -102,15 +102,15 @@ Now, this Registry that appears does not contain your system's actual registry e
 
 === "Step 1 and 2"
 
-    ![Highlight local machine then load Hive](images\Manual_Removal_Images\10_Highlight_Local_Machine_then_Load_Hive.png){: .glightbox }   
+    ![Highlight local machine then load Hive](images/Manual_Removal_Images/10_Highlight_Local_Machine_then_Load_Hive.png){: .glightbox }   
 
 === "End of steps 3-5"
 
-    ![Navigating to X:\Windows\System32\config](images\Manual_Removal_Images\12_Navigating_to_system.png){: .glightbox }   
+    ![Navigating to X:\Windows\System32\config](images/Manual_Removal_Images/12_Navigating_to_system.png){: .glightbox }   
 
 === "Step 6"
 
-    ![Naming TempSYSTEM](images\Manual_Removal_Images\13_Naming_TempSYSTEM.png){: .glightbox }   
+    ![Naming TempSYSTEM](images/Manual_Removal_Images/13_Naming_TempSYSTEM.png){: .glightbox }   
 
 ### Part 4: Finding and deleting the correct HidHide entries
 
@@ -131,19 +131,19 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 === "Step 1 and 2"
 
-    ![14_Highlight_TempSystem_then_Search](images\Manual_Removal_Images\14_Highlight_TempSystem_then_Search.png){: .glightbox }   
+    ![14_Highlight_TempSystem_then_Search](images/Manual_Removal_Images/14_Highlight_TempSystem_then_Search.png){: .glightbox }   
 
 === "Step 3 - XboxComposite"
 
-    ![15_Delete_XboxComp_upperfilter](images\Manual_Removal_Images\15_Delete_XboxComp_upperfilter.png){: .glightbox }   
+    ![15_Delete_XboxComp_upperfilter](images/Manual_Removal_Images\15_Delete_XboxComp_upperfilter.png){: .glightbox }   
 
 === "Step 3 - HIDClass"
 
-    ![17_Delete_HID_upperfilter](images\Manual_Removal_Images\17_Delete_HID_upperfilter.png){: .glightbox }   
+    ![17_Delete_HID_upperfilter](images/Manual_Removal_Images\17_Delete_HID_upperfilter.png){: .glightbox }   
 
 === "Step 3 - XnaComposite"
 
-    ![19_Delete_XnaComp_upperfilter](images\Manual_Removal_Images\19_Delete_XnaComp_upperfilter.png){: .glightbox }
+    ![19_Delete_XnaComp_upperfilter](images7Manual_Removal_Images/19_Delete_XnaComp_upperfilter.png){: .glightbox }
 
 ??? note "Full address of where the entries reside"
 
@@ -166,15 +166,15 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 === "Step 1 and 2"
 
-    ![20_Highlight_TempSYSTEM_then_Unload_Hive](images\Manual_Removal_Images\20_Highlight_TempSYSTEM_then_Unload_Hive.png){: .glightbox }
+    ![20_Highlight_TempSYSTEM_then_Unload_Hive](images7Manual_Removal_Images/20_Highlight_TempSYSTEM_then_Unload_Hive.png){: .glightbox }
 
 === "Step 3"
 
-    ![21_ClosingRegeditThenCMD](images\Manual_Removal_Images\21_ClosingRegeditThenCMD.png){: .glightbox }
+    ![21_ClosingRegeditThenCMD](images7Manual_Removal_Images/21_ClosingRegeditThenCMD.png){: .glightbox }
 
 === "Step 4"
 
-    ![22_RebootIntoWindows](images\Manual_Removal_Images\22_RebootIntoWindows.png){: .glightbox }
+    ![22_RebootIntoWindows](images7Manual_Removal_Images/22_RebootIntoWindows.png){: .glightbox }
 
 ## Credits and sources
 
