@@ -166,15 +166,15 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 === "Step 1 and 2"
 
-    ![20_Highlight_TempSYSTEM_then_Unload_Hive](images7Manual_Removal_Images/20_Highlight_TempSYSTEM_then_Unload_Hive.png){: .glightbox }
+    ![20_Highlight_TempSYSTEM_then_Unload_Hive](images/Manual_Removal_Images/20_Highlight_TempSYSTEM_then_Unload_Hive.png){: .glightbox }
 
 === "Step 3"
 
-    ![21_ClosingRegeditThenCMD](images7Manual_Removal_Images/21_ClosingRegeditThenCMD.png){: .glightbox }
+    ![21_ClosingRegeditThenCMD](images/Manual_Removal_Images/21_ClosingRegeditThenCMD.png){: .glightbox }
 
 === "Step 4"
 
-    ![22_RebootIntoWindows](images7Manual_Removal_Images/22_RebootIntoWindows.png){: .glightbox }
+    ![22_RebootIntoWindows](images/Manual_Removal_Images/22_RebootIntoWindows.png){: .glightbox }
 
 ## Credits and sources
 
