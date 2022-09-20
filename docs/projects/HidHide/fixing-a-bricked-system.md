@@ -135,11 +135,11 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 === "Step 3 - XboxComposite"
 
-    ![15_Delete_XboxComp_upperfilter](images/Manual_Removal_Images\15_Delete_XboxComp_upperfilter.png){: .glightbox }   
+    ![15_Delete_XboxComp_upperfilter](images/Manual_Removal_Images/15_Delete_XboxComp_upperfilter.png){: .glightbox }   
 
 === "Step 3 - HIDClass"
 
-    ![17_Delete_HID_upperfilter](images/Manual_Removal_Images\17_Delete_HID_upperfilter.png){: .glightbox }   
+    ![17_Delete_HID_upperfilter](images/Manual_Removal_Images/17_Delete_HID_upperfilter.png){: .glightbox }   
 
 === "Step 3 - XnaComposite"
 
