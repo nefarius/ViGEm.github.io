@@ -21,7 +21,7 @@ This guide does NOT apply to those that...
 
 ## "My keyboard/mouse (KB+M) stopped working when trying to remove HidHide. What happened?"
 
-Windows has instructions to "load" HidHide into every Human Interface Device (HID) and XInput compatible device, which means basically every USB mouse, keyboard, gamepads etc. If the HidHide driver is forcefully removed without first removing its loading instruction then this will cause these devices to fail to start since Windows will try and fail to load HidHide.
+Windows has instructions to "load" HidHide into every Human Interface Device (HID) and XInput compatible device, which means basically every USB mouse, keyboard, gamepads etc. If the HidHide driver is forcefully removed without first removing its loading instruction then these devices will fail to start.
 
 HidHide's own uninstaller takes care of first removing the loading instructions before actually deleting the driver. 99.9% of the cases in which users had issues when trying to remove HidHide were caused by them forcefully deleting the HidHide driver via Device Manager or other software.
 
