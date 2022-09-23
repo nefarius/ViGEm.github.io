@@ -10,7 +10,7 @@ If your system is working as normal and you just want to uninstall HidHide open 
 
 This guide does NOT apply to those that...
 
-- If your system is working as normal and you just want to uninstall HidHide
+- have their system working as normal and just want to uninstall HidHide
     - Just open Windows' Apps and Features menu and search for HidHide's uninstaller there
 - can use their Keyboard and Mouse as normal in Windows
 - _think_ their controller is not working because of HidHide
@@ -21,7 +21,7 @@ This guide does NOT apply to those that...
 
 ## "My keyboard/mouse (KB+M) stopped working when trying to remove HidHide. What happened?"
 
-Windows has instructions to "load" HidHide into every Human Interface Device (HID) and XInput compatible device, which means basically every USB mouse, keyboard, gamepads etc. If the HidHide driver is forcefully removed without first removing its loading instruction then this will cause these devices to fail to start since Windows will try and fail to load HidHide.
+Windows has instructions to "load" HidHide into every Human Interface Device (HID) and XInput compatible device, which means basically every USB mouse, keyboard, gamepads etc. If the HidHide driver is forcefully removed without first removing its loading instruction then these devices will fail to start.
 
 HidHide's own uninstaller takes care of first removing the loading instructions before actually deleting the driver. 99.9% of the cases in which users had issues when trying to remove HidHide were caused by them forcefully deleting the HidHide driver via Device Manager or other software.
 
@@ -44,9 +44,9 @@ Since the user has no KB+M, they can't use Windows' option to reboot directly in
     - If possible, wait for the white dots to start spinning before force-restarting
 1. When the message "Preparing Automatic Repair" appears then that means Windows will enter recovery mode
 
-![Force shutdown here](images7Manual_Removal_Images/1_Force_Shutdown.png){: .glightbox }
+![Force shutdown here](images/Manual_Removal_Images/1_Force_Shutdown.png){: .glightbox }
 
-![Entering recovery mode](images7Manual_Removal_Images/2_Preparing_Automatic_Repair.png){: .glightbox }
+![Entering recovery mode](images/Manual_Removal_Images/2_Preparing_Automatic_Repair.png){: .glightbox }
 
 ### Part 2: Opening the Registry Editor
 
@@ -118,7 +118,7 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 1. Highlight, by clicking on it, the `_TempSYSTEM` entry that now appears under `HKEY_LOCAL_MACHINE`
 1. Press `Ctrl + F` to open the Search menu, then write `HidHide` in the search box
-1. Use the [Find Next] to search throughout the registry for the `UpperFilter` entries that have `HidHide` as their DATA and then delete them (Check the images below!)
+1. Use the [Find Next] to search throughout the registry for the `UpperFilter` entries that have `HidHide` as their DATA. Once you confirm you have the correct item, delete them (double check if you have the correct item by looking at the images below)
     - **You MUST NOT delete the whole folder nor any other entries** (please, check the images)
     - **The entries that need to be deleted are**...:
         - the `UpperFilter / HidHide` entry in the same list as the `Class / XboxComposite` entry
@@ -135,15 +135,15 @@ In this step we'll search for and delete ONLY the HidHide entries related to the
 
 === "Step 3 - XboxComposite"
 
-    ![15_Delete_XboxComp_upperfilter](images/Manual_Removal_Images\15_Delete_XboxComp_upperfilter.png){: .glightbox }   
+    ![15_Delete_XboxComp_upperfilter](images/Manual_Removal_Images/15_Delete_XboxComp_upperfilter.png){: .glightbox }   
 
 === "Step 3 - HIDClass"
 
-    ![17_Delete_HID_upperfilter](images/Manual_Removal_Images\17_Delete_HID_upperfilter.png){: .glightbox }   
+    ![17_Delete_HID_upperfilter](images/Manual_Removal_Images/17_Delete_HID_upperfilter.png){: .glightbox }   
 
 === "Step 3 - XnaComposite"
 
-    ![19_Delete_XnaComp_upperfilter](images7Manual_Removal_Images/19_Delete_XnaComp_upperfilter.png){: .glightbox }
+    ![19_Delete_XnaComp_upperfilter](images/Manual_Removal_Images/19_Delete_XnaComp_upperfilter.png){: .glightbox }
 
 ??? note "Full address of where the entries reside"
 
