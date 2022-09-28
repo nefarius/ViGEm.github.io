@@ -21,6 +21,7 @@ Hardware ID | Name | Status | Remarks
 `USB\VID_0BB4&PID_0306` | Broadcom BCM20703 | ❌ | HTC VIVE (Steam OpenVR) customized device. Can be used in parallel with "vanilla" dongle without issues though.
 `USB\VID_0BDA&PID_8771` | Orico BTA-508 | ✔️ | Uses a Realtek RTL8761B chipset.
 `USB\VID_2357&PID_0604` | TP-LINK UB500 (bt 5.0) | ✔️ | 
+`USB\VID_0A12&PID_0001` | TP-LINK UB400 (bt 4.0) | ✔️ |
 
 ## Integrated Modules/Chips in Laptops or other Devices
 
