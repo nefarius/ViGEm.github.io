@@ -130,38 +130,6 @@ Submits the new global status of blocking capabilities. Sets a boolean value if 
 | `lpOutBuffer` | `NULL` |
 | `nOutBufferSize` | `0` |
 
-## Usage examples
+## API wrappers
 
-The API usage should be fairly self-explanatory to anyone experienced with the basic Windows API, if in doubt, consult the Microsoft documentation for usage details 😉 For other high-level languages like C#/.NET wrapper libraries exist for the few required functions. A sample implementation is provided below (C#).
-
-### Preparation
-
-First, since .NET doesn't really offer any convenience methods to deal with double-null-terminated wide-character-string literals I've thrown together this simple helper class:
-
-<script src="https://gist.github.com/nefarius/59ee8d8bccd1f97039fc2ed9b61f0aa9.js"></script>
-
-Dealing with the application list requires translating the native executable file path to the DOS device path the driver works with. This is a tricky task as it involves quite a few native API calls and logic taking NTFS mount points (junctions) into account. Feel free to utilise yet another helper class:
-
-<script src="https://gist.github.com/nefarius/639b582dd8149b0ca63c4f7ca68a9761.js"></script>
-
-With that out of the way we need the IOCTL definitions for the `DeviceIoControl` call. The values are simply computed from the helper macros which are not available in managed code:
-
-!!! example "IOCTL code definitions"
-
-    === "C#"
-        ```csharp
-        private const uint IOCTL_GET_WHITELIST = 0x80016000;
-        private const uint IOCTL_SET_WHITELIST = 0x80016004;
-        private const uint IOCTL_GET_BLACKLIST = 0x80016008;
-        private const uint IOCTL_SET_BLACKLIST = 0x8001600C;
-        private const uint IOCTL_GET_ACTIVE = 0x80016010;
-        private const uint IOCTL_SET_ACTIVE = 0x80016014;
-        ```
-
-### Retrieve, alter and submit deny-list
-
-<script src="https://gist.github.com/nefarius/880845646d177c74e94880f0568909d1.js"></script>
-
-### Retrieve, alter and submit allow-list
-
-<script src="https://gist.github.com/nefarius/85c737da316ca5b68169a29f6e71d770.js"></script>
+For .NET [an official NuGet is provided](https://github.com/nefarius/Nefarius.Drivers.HidHide) as abstractions for the common driver settings.
