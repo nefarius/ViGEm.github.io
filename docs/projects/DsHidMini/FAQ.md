@@ -97,11 +97,25 @@ The recommended method is the following:
 
 The only emulator that can use the DS3 motion sensors is the RPCS3 when using the DualShock 3 handler.
 
-For now, __it's impossible to use the controller's motion with other emulators__, like CEMU, Yuzu, Dolphin etc. The reason for this is that the PS3 controller only has 1 gyroscope, while modern controllers have 3 gyros. While it's possible to "emulate" the missing gyros by using the sensors it does have, the whole process involves many _maths_ that are not implemented at the moment and are at the very bottom of DsHidMini's To-Do list.
+For now, **it's impossible to use the controller's motion with other emulators**, like CEMU, Yuzu, Dolphin etc. The reason for this is that the PS3 controller only has 1 gyroscope, while modern controllers have 3 gyros. While it's possible to "emulate" the missing gyros by using the sensors it does have, the whole process involves many _maths_ that are not implemented at the moment and are at the very bottom of DsHidMini's To-Do list.
+
+## I did everything right and it just won't connect via Bluetooth!
+
+**Tripplecheck** that you didn't attempt "conventional pairing" in the past, if you did so **the controller will never ever successfully connect**, no matter what you do. To check this, open the Bluetooth Settings page within Windows and check the list for entries similar to:
+
+![BluetoothDialog.png](images/BluetoothDialog.png){: .glightbox }  
+
+![explorer_7O9IulBc4C2.png](images/explorer_7O9IulBc4C2.png){: .glightbox }  
+
+Select it and click the "Remove device" button. Then properly pair it once by plugging it into USB, unplug and press the PS button. Should all work now!
+
+Another hint would be if you see an active connection in the notifications panel but the controller doesn't appear in DSHMC:
+
+![BluetoothConnected.png](images/BluetoothConnected.png){: .glightbox }  
 
 ## I'm having "X" problem when using DsHidMini, what should I do?
 
-- __Trouble when installing DsHidMini or connecting your controllers to the computer:__ check the [_How to Install Troubleshooting_ section](../How-to-Install/#troubleshooting)
-- __Controller works normally most of the time but have random button presses or buttons fail to register:__ most likely a hardware fault, not related to DsHidMini
+- **Trouble when installing DsHidMini or connecting your controllers to the computer:** check the [_How to Install Troubleshooting_ section](../How-to-Install/#troubleshooting)
+- **Controller works normally most of the time but have random button presses or buttons fail to register:** most likely a hardware fault, not related to DsHidMini
 
 If you have a different situation than the ones above, feel free to [reach us through the proper means](https://vigem.org/Community-Support/).
