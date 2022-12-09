@@ -12,7 +12,7 @@ First, **triple-check** that you've got a local symbol cache configured **and** 
 .sympath cache*D:\symbols;srv*https://msdl.microsoft.com/download/symbols
 ```
 
-In this example, my local path where symbols get stored and looked up from is `D:\symbols`, adjust to your system accordingly. Then turn on "noisy symbol loading" to get vital details about the symbol loading process:
+In this example, my local path where symbols get stored and looked up from is `D:\symbols`, adjust to your system accordingly. Symbol loading can be sped up tremendously if you keep the same local cache path in between debugging sessions. Then turn on "noisy symbol loading" to get vital details about the symbol loading process:
 
 ```text
 !sym noisy
