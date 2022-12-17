@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-## I have a question, how can I reach you folks?
+## I have a different question, how can I reach you folks?
 
 [Head over to the support page](https://vigem.org/Community-Support/), we prefer Discord.
 
