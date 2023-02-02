@@ -10,3 +10,4 @@ Sources of [ViGEm Website](https://vigem.github.io/).
 - [PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/)
 - [Python-Markdown](https://python-markdown.github.io/)
 - [GLightbox](https://github.com/biati-digital/glightbox)
+- [Emfed](https://github.com/sampsyo/emfed)
