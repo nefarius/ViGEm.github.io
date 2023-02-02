@@ -26,7 +26,6 @@ extra_css:
   - stylesheets/toots.css
 extra_javascript:
   - javascripts/glightbox.js
-  - javascripts/emfed.js
   - javascripts/main.js  
 
 plugins:
