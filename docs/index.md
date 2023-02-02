@@ -8,5 +8,4 @@ Feel free to look around, you'll find links and documents to popular projects li
 
 <a class="mastodon-feed"
    href="https://fosstodon.org/@Nefarius"
-   data-toot-limit="4"
-   >follow me into on Fosstodon</a>
+   data-toot-limit="4">follow me on Mastodon</a>
