@@ -23,9 +23,11 @@ extra:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/glightbox.css
+  - stylesheets/toots.css
 extra_javascript:
   - javascripts/glightbox.js
-  - javascripts/main.js
+  - javascripts/emfed.js
+  - javascripts/main.js  
 
 plugins:
   - search:
