@@ -18,7 +18,13 @@ function Invoke-CmdScript {
   }
 }
 
-Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+function Setup-VS2019 {
+  Invoke-CmdScript "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+}
+
+function Setup-VS2022 {
+  Invoke-CmdScript "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64
+}
 ```
 
-Replace the Visual Studio version in the path with your installed version and you're good to go!
+Now whenever you need to build using Visual Studio 2019 simply invoke `Setup-VS2019` or `Setup-VS2022` for Visual Studio 2022, cheers!
