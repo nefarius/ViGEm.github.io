@@ -1,4 +1,4 @@
-# Virtual Vendor and Product IDs used by NSS drivers
+# Vendor and Product IDs used by NSS drivers
 
 ## VID `0x7331`
 
