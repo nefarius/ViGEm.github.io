@@ -5,15 +5,18 @@
 
 ## ViGEmApiDriverNotFoundException
 
-TBD
+No compatible driver was found on the system. Please make sure that driver and runtime are present on the machine by executing the latest setup.
 
 ## ViGEmApiDriverAccessFailedException
 
-TBD
+A driver was found but couldn't be accessed. This can hint at multiple issues:
+
+- The process using the runtime API is not trusted by it.
+- There's been some unforeseen internal error that needs additional debugging to figure out the root cause.
 
 ## ViGEmApiDriverVersionMismatchException
 
-TBD
+The invoked API is not available with the driver version currently present on the system. Please update to a newer version of the driver (and runtime setup) and retry.
 
 ## ViGEmApiDriverLicenseExpiredException
 
