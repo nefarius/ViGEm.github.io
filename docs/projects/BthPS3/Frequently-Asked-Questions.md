@@ -23,7 +23,7 @@ Let's assume you downloaded `BthPS3Setup_x64.msi` to `F:\Downloads` (adjust for 
 In the resulting window insert the following lines (followed by an Enter key press):
 
 - `cd "F:\Downloads\"`
-  - Replace `F:\Downloads\` with wherever **you** downloaded the setup to!
+    - Replace `F:\Downloads\` with wherever **you** downloaded the setup to!
 - `.\BthPS3Setup_x64.msi FILTERNOTFOUND="1"`
 
 Now the setup should launch bypassing the error message. Follow the setup's instructions and you're done.
