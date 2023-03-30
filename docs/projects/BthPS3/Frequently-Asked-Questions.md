@@ -8,6 +8,26 @@ Got questions? Who can blame you 😅 we can provide some answers, though! Read 
 
 Your Bluetooth isn't working 🙂 If you're on a Laptop, make sure you haven't disabled wireless either via a physical switch or a key combination (depends on the device model). On Desktop, make sure you actually have a Bluetooth dongle plugged in 😉 If you had other solutions like ScpToolkit or AirBender installed, make sure they have been removed completely and you run stock drivers. If you don't see the little Bluetooth tray icon in your taskbar, chances are your Bluetooth isn't working or turned on. Fix it and setup will be happy 😘
 
+## How to fix "previous version found" on reinstall?
+
+If you're getting this setup error...
+
+[![Error message](/images/previous-version-found.png)](/images/previous-version-found.png){: .glightbox }
+
+...and can't get rid of it, do the following:
+
+Let's assume you downloaded `BthPS3Setup_x64.msi` to `F:\Downloads` (adjust for your particular system's paths accordingly), open a `cmd`/`PowerShell`/`Terminal` as Administrator:
+
+[![Start menu](/images/JfVi16IRZJ.png)](/images/JfVi16IRZJ.png){: .glightbox }
+
+In the resulting window insert the following lines (followed by an Enter key press):
+
+- `cd "F:\Downloads\"`
+  - Replace `F:\Downloads\` with wherever **you** downloaded the setup to!
+- `.\BthPS3Setup_x64.msi FILTERNOTFOUND="1"`
+
+Now the setup should launch bypassing the error message. Follow the setup's instructions and you're done.
+
 ## How to fix Bluetooth device error codes 19 & 39?
 
 ... or Code 31 or Code 43. If you end up with a damaged/partial installation for whatever reason (computers, right? 😅) the setup or uninstaller might not even be able to do its work. Worry not though, if you check Device Manager and see that yellow exclamation mark on your Bluetooth host device, check the details and if they give you a familiar error code, like...
