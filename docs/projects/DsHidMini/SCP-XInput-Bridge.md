@@ -13,5 +13,5 @@ User feedback required 🙃
 ### PCSX2 Qt edition
 
 <div class="video-wrapper">
-  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=gnC7cFKXpiw" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/gnC7cFKXpiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
