@@ -23,7 +23,7 @@ The games and tools outlined here are **recommendations**, please feel free to e
 ### SDF
 
 !!! important "TL;DR:"
-    Use this mode for best compatibility with the [PCSX2 PlayStation 2 Emulator](https://pcsx2.net/).
+    Use this mode for best compatibility with the **older pre-Qt versions** of the [PCSX2 PlayStation 2 Emulator](https://pcsx2.net/). For PCSX2 Qt [follow this video guide](SCP-XInput-Bridge/#pcsx2-qt-edition)!
 
 **Single Device** with **Force Feedback** mode. In this mode, the controller is presented as one "almost"-DirectInput-compatible HID device with **pressure sensitive** features exposed as additional sliders. The rumble motors can be controlled via **Force Feedback effects** (Constant Force Effect). The advantage of this mode is a 100% compatibility with all unmodified versions of PCSX2 with the LilyPad gamepad plugin (shipped by default).
 
