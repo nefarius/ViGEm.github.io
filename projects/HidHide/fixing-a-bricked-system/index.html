@@ -1,0 +1,2102 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Projects devoted to USB input device emulation and game peripherals reverse engineering">
+      
+      
+      
+        <link rel="canonical" href="https://vigem.org/projects/HidHide/fixing-a-bricked-system/">
+      
+      
+        <link rel="prev" href="../Simple-Setup-Guide/">
+      
+      
+        <link rel="next" href="../../Identinator/">
+      
+      <link rel="icon" href="../../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>Fixing an improper removal of HidHide - Virtual Gamepad Emulation Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/glightbox.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/toots.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+  <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"Nefarius",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fixing-an-improper-removal-of-hidhide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Virtual Gamepad Emulation Framework" class="md-header__button md-logo" aria-label="Virtual Gamepad Emulation Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Virtual Gamepad Emulation Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fixing an improper removal of HidHide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ViGEm/ViGEm.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Welcome
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../Community-Support/" class="md-tabs__link">
+      Community and Support
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../Donations/" class="md-tabs__link">
+      Donations
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../Downloads/" class="md-tabs__link">
+      Downloads
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Projects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../research/" class="md-tabs__link">
+        Research
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Virtual Gamepad Emulation Framework" class="md-nav__button md-logo" aria-label="Virtual Gamepad Emulation Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Virtual Gamepad Emulation Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ViGEm/ViGEm.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Community-Support/" class="md-nav__link">
+        Community and Support
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Donations/" class="md-nav__link">
+        Donations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Downloads/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        About Projects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          AirBender
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          AirBender
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AirBender/" class="md-nav__link">
+        About AirBender
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AirBender/Removal-Guide/" class="md-nav__link">
+        AirBender Removal Guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          BthPS3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BthPS3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/" class="md-nav__link">
+        About BthPS3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/API-Documentation/" class="md-nav__link">
+        API Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/About-Controller-Compatibility/" class="md-nav__link">
+        A word about controller compatibility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/Amazon-Choice-Pro-Controller/" class="md-nav__link">
+        Amazon's Choice "Pro Controller" Compatibility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/Compatible-Bluetooth-Devices/" class="md-nav__link">
+        Compatible Bluetooth Devices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/Debugging-the-drivers/" class="md-nav__link">
+        Getting a kernel driver to talk
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/Driver-Configuration-Utility-Explained/" class="md-nav__link">
+        Driver Configuration Utility Explained
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/DualShock-4-FAQ/" class="md-nav__link">
+        Frequently Asked Questions about the DS4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/Frequently-Asked-Questions/" class="md-nav__link">
+        Frequently Asked Questions about BthPS3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BthPS3/Installation-Guide-Shibari-Edition/" class="md-nav__link">
+        Installation Guide (Shibari Edition)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          DsHidMini
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          DsHidMini
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/" class="md-nav__link">
+        About DsHidMini
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/DS4-Mode-User-Guide/" class="md-nav__link">
+        DS4Windows Mode User Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/HID-Device-Modes-Explained/" class="md-nav__link">
+        HID Device Modes Explained
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/How-to-Install/" class="md-nav__link">
+        How to Install/Remove
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/Output-Rate-Control-Explained/" class="md-nav__link">
+        Output Rate Control Explained
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/SCP-XInput-Bridge/" class="md-nav__link">
+        SCP XInput Bridge (Proxy DLL)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/SIXAXIS.SYS-to-DsHidMini-Guide/" class="md-nav__link">
+        Switch from SIXAXIS.SYS to DsHidMini
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DsHidMini/XInput-Mode-Explained/" class="md-nav__link">
+        XInput Mode Explained
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          FireShock
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          FireShock
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FireShock/" class="md-nav__link">
+        About FireShock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FireShock/Removal-Guide/" class="md-nav__link">
+        FireShock Removal Guide
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+          HidGuardian
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          HidGuardian
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HidGuardian/" class="md-nav__link">
+        About HidGuardian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HidGuardian/Hall-of-fame/" class="md-nav__link">
+        Users of HidGuardian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HidGuardian/HidGuardian-Gen1-Installation/" class="md-nav__link">
+        HidGuardian (Gen1) Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HidGuardian/Taming-HidGuardian-Gen1/" class="md-nav__link">
+        Taming HidGuardian (Gen1)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+          HidHide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          HidHide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        About HidHide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API-Documentation/" class="md-nav__link">
+        API Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Setup-Guide/" class="md-nav__link">
+        Simple setup guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Fixing an improper removal of HidHide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Fixing an improper removal of HidHide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-whom-this-guide-applies-to" class="md-nav__link">
+    To whom this guide applies to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-whom-this-guide-does-not-apply" class="md-nav__link">
+    To whom this guide does NOT apply
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-keyboardmouse-kbm-stopped-working-when-trying-to-remove-hidhide-what-happened" class="md-nav__link">
+    "My keyboard/mouse (KB+M) stopped working when trying to remove HidHide. What happened?"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-fix-this" class="md-nav__link">
+    "How do I fix this?"
+  </a>
+  
+    <nav class="md-nav" aria-label=""How do I fix this?"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-boot-windows-in-recovery-mode" class="md-nav__link">
+    Part 1: Boot Windows in Recovery Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-opening-the-registry-editor" class="md-nav__link">
+    Part 2: Opening the Registry Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-loading-your-systems-registry-file" class="md-nav__link">
+    Part 3: Loading your system's registry file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-finding-and-deleting-the-correct-hidhide-entries" class="md-nav__link">
+    Part 4: Finding and deleting the correct HidHide entries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-5-finishing-steps" class="md-nav__link">
+    Part 5: Finishing steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits-and-sources" class="md-nav__link">
+    Credits and sources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+          Identinator
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          Identinator
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Identinator/" class="md-nav__link">
+        About Nefarius' Identinator
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+          ScpToolkit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          ScpToolkit
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ScpToolkit/" class="md-nav__link">
+        About ScpToolkit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ScpToolkit/History/" class="md-nav__link">
+        History of SCP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ScpToolkit/ScpToolkit-Removal-Guide/" class="md-nav__link">
+        Manual removal of ScpToolkit residue
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+          Shibari
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          Shibari
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Shibari/" class="md-nav__link">
+        About Shibari
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
+          ViGEm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_11">
+          <span class="md-nav__icon md-icon"></span>
+          ViGEm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ViGEm/" class="md-nav__link">
+        About ViGEm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ViGEm/How-to-Install/" class="md-nav__link">
+        How to Install/Remove
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_11_3" id="__nav_5_11_3_label" tabindex="0">
+          Runtime
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_11_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_11_3">
+          <span class="md-nav__icon md-icon"></span>
+          Runtime
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ViGEm/Runtime/" class="md-nav__link">
+        About ViGEm Runtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ViGEm/Runtime/Exceptions/" class="md-nav__link">
+        ViGEm Runtime .NET Exceptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ViGEm/Runtime/FAQ/" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
+          WireShock
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_12">
+          <span class="md-nav__icon md-icon"></span>
+          WireShock
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WireShock/" class="md-nav__link">
+        About WireShock
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Research
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Research
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/" class="md-nav__link">
+        Research area
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/CORSAIR-GLAIVE-RGB-native-HID-Report-Descriptor/" class="md-nav__link">
+        CORSAIR GLAIVE RGB native HID Report Descriptor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/How-to-check-architecture/" class="md-nav__link">
+        How to check which architecture I'm running
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/PDB-in-WinDbg-Session/" class="md-nav__link">
+        Fix Symbol loading for Kernel Driver minidump analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/SIXAXIS-native-HID-Report-Descriptor/" class="md-nav__link">
+        SIXAXIS/DualShock 3 native HID Report Descriptor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/Sign-dotnet-assemblies-on-build/" class="md-nav__link">
+        Sign .NET assemblies during build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/Virtual-VID-PID-used-by-NSS/" class="md-nav__link">
+        Vendor and Product IDs used by NSS drivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/nmake-in-PowerShell/" class="md-nav__link">
+        Have MSBuild/nmake available in PowerShell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../research/vJoy-HID-Report-Descriptor/" class="md-nav__link">
+        vJoy HID Report Descriptor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-whom-this-guide-applies-to" class="md-nav__link">
+    To whom this guide applies to
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-whom-this-guide-does-not-apply" class="md-nav__link">
+    To whom this guide does NOT apply
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-keyboardmouse-kbm-stopped-working-when-trying-to-remove-hidhide-what-happened" class="md-nav__link">
+    "My keyboard/mouse (KB+M) stopped working when trying to remove HidHide. What happened?"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-fix-this" class="md-nav__link">
+    "How do I fix this?"
+  </a>
+  
+    <nav class="md-nav" aria-label=""How do I fix this?"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-boot-windows-in-recovery-mode" class="md-nav__link">
+    Part 1: Boot Windows in Recovery Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-opening-the-registry-editor" class="md-nav__link">
+    Part 2: Opening the Registry Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-loading-your-systems-registry-file" class="md-nav__link">
+    Part 3: Loading your system's registry file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-finding-and-deleting-the-correct-hidhide-entries" class="md-nav__link">
+    Part 4: Finding and deleting the correct HidHide entries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-5-finishing-steps" class="md-nav__link">
+    Part 5: Finishing steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits-and-sources" class="md-nav__link">
+    Credits and sources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="fixing-an-improper-removal-of-hidhide">Fixing an improper removal of HidHide</h1>
+<h2 id="to-whom-this-guide-applies-to">To whom this guide applies to</h2>
+<p>This page's objective is to guide the user in how to recover the system from a forced HidHide removal attempt that resulted in XInput and HID Devices (Keyboard, Mouse, Controllers) not working anymore.</p>
+<p>If your system is working as normal and you just want to uninstall HidHide open Windows' Apps and Features menu and search for HidHide's uninstaller there.</p>
+<h2 id="to-whom-this-guide-does-not-apply">To whom this guide does NOT apply</h2>
+<p>This guide does NOT apply to those that...</p>
+<ul>
+<li>have their system working as normal and just want to uninstall HidHide<ul>
+<li>Just open Windows' Apps and Features menu and search for HidHide's uninstaller there</li>
+</ul>
+</li>
+<li>can use their Keyboard and Mouse as normal in Windows</li>
+<li><em>think</em> their controller is not working because of HidHide<ul>
+<li>There are other more likely causes for this than HidHide being "broken". If your keyboard and mouse is working as normal but not your controllers then try the following:<ul>
+<li>Use the <a href="https://github.com/nefarius/Legacinator/releases">Nefarius' Legacinator tool</a> to check if you have HidGUARDIAN installed and uninstall it in case if positive (reboot after)</li>
+<li>Disable HidHide by opening its Configuration Client, going into the "Devices" tab then just un-marking the "Enbable device hiding" checkbox</li>
+<li>Properly uninstalling HidHide in Windows' Apps and Features menu</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="my-keyboardmouse-kbm-stopped-working-when-trying-to-remove-hidhide-what-happened">"My keyboard/mouse (KB+M) stopped working when trying to remove HidHide. What happened?"</h2>
+<p>Windows has instructions to "load" HidHide into every Human Interface Device (HID) and XInput compatible device, which means basically every USB mouse, keyboard, gamepads etc. If the HidHide driver is forcefully removed without first removing its loading instruction then these devices will fail to start.</p>
+<p>HidHide's own uninstaller takes care of first removing the loading instructions before actually deleting the driver. 99.9% of the cases in which users had issues when trying to remove HidHide were caused by them forcefully deleting the HidHide driver via Device Manager or other software.</p>
+<h2 id="how-do-i-fix-this">"How do I fix this?"</h2>
+<p>To make Windows stop trying to load HidHide it is necessary to edit Windows' Registry and manually remove 3 specific entries, which is made kinda hard since the user has no KB+M to use. To workaround this, users have the following options:</p>
+<ol>
+<li>Boot Windows in Recovery Mode, in which KB+M will work as normal, then edit the system's Registry from there</li>
+<li>"PS/2" keyboard and mouses will still work, so if the user has a Desktop PC with these type of motherboard connections they can just use them and them follow the instructions below<ol>
+<li>Jump to the "Part 4" of this guide once they boot into Windows as normal and ignore the steps involving "_TempSYSTEM" since the proper registry is already loaded</li>
+<li>Reboot once they delete the 3 <code>UpperFilters / HidHide</code> entries as instructed in the guide</li>
+</ol>
+</li>
+</ol>
+<p>Because most users don't have PS/2 devices anymore the <strong>guide here will be focused on editing the registry from recovery mode</strong>.</p>
+<h3 id="part-1-boot-windows-in-recovery-mode">Part 1: Boot Windows in Recovery Mode</h3>
+<p>Since the user has no KB+M, they can't use Windows' option to reboot directly into recovery, so we'll need to force it to appear by making Windows fail to start 3 times.</p>
+<ol>
+<li>Reboot your system and every time it reachs the black loading screen (with the blue Windows logo) force-restart or shutdown your computer 3 times<ul>
+<li>If possible, wait for the white dots to start spinning before force-restarting</li>
+</ul>
+</li>
+<li>When the message "Preparing Automatic Repair" appears then that means Windows will enter recovery mode</li>
+</ol>
+<p><img alt="Force shutdown here" class="glightbox" src="../images/Manual_Removal_Images/1_Force_Shutdown.png" /></p>
+<p><img alt="Entering recovery mode" class="glightbox" src="../images/Manual_Removal_Images/2_Preparing_Automatic_Repair.png" /></p>
+<h3 id="part-2-opening-the-registry-editor">Part 2: Opening the Registry Editor</h3>
+<p>Now that you are in recovery mode, navigate the menu as the following:</p>
+<ol>
+<li>Advanced options</li>
+<li>Troubleshoot</li>
+<li>Advanced options (again)</li>
+<li>Command Prompt</li>
+<li>In the Command Prompt blue menu, login into your account if asked to do so</li>
+<li>When the actual Command Prompt appears (black window), type <code>regedit</code> then press <code>Enter</code></li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Step 1</label><label for="__tabbed_1_2">Step 2</label><label for="__tabbed_1_3">Step 3</label><label for="__tabbed_1_4">Step 4</label><label for="__tabbed_1_5">Step 5.1</label><label for="__tabbed_1_6">Step 5.2</label><label for="__tabbed_1_7">Step 6</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Recovery mode starting options" class="glightbox" src="../images/Manual_Removal_Images/3_Automatic_Repair_Advanced_Options.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Troubleshoot option" class="glightbox" src="../images/Manual_Removal_Images/4_Choose_an_option_Troubleshoot.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Troubleshoot - Advanced" class="glightbox" src="../images/Manual_Removal_Images/5_Troubleshoot_Advanced_options.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Advanced - Command Prompt" class="glightbox" src="../images/Manual_Removal_Images/6_Advanced_Command_Prompt.png" />    </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="CMD Blue Screen - Choose User Account" class="glightbox" src="../images/Manual_Removal_Images/7_Command_Prompt_Choosen_an_account.png" />   </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Enter password" class="glightbox" src="../images/Manual_Removal_Images/8_Login_into_account.png" />   </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="CMD - Enter &quot;regedit&quot;" class="glightbox" src="../images/Manual_Removal_Images/9_CMD_Regedit.png" />   </p>
+</div>
+</div>
+</div>
+<h3 id="part-3-loading-your-systems-registry-file">Part 3: Loading your system's registry file</h3>
+<p>Now, this Registry that appears does not contain your system's actual registry entries for now, so...:</p>
+<ol>
+<li>Click in the <code>HKEY_LOCAL_MACHINE</code> entry so it's highlighted in blue</li>
+<li>Now, in the top of the Registry Editor Window, select the [View] tab then select [Load Hive...]</li>
+<li>Select "This PC" button on the left, then find and open the Disk in which your Windows system is installed<ul>
+<li>It is usually the "D" disk, but may vary from system to system</li>
+</ul>
+</li>
+<li>Navigate to the following location: <code>D:\Windows\System32\config</code><ul>
+<li>May be different than disk "D" depending on which disk/partition Windows is installed</li>
+</ul>
+</li>
+<li>Select the "SYSTEM" file that has no file extension</li>
+<li>Click in the [Open] button. When prompted enter <code>_TempSYSTEM</code> as a key name and click [OK] button</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Step 1 and 2</label><label for="__tabbed_2_2">End of steps 3-5</label><label for="__tabbed_2_3">Step 6</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="Highlight local machine then load Hive" class="glightbox" src="../images/Manual_Removal_Images/10_Highlight_Local_Machine_then_Load_Hive.png" />   </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Navigating to X:\Windows\System32\config" class="glightbox" src="../images/Manual_Removal_Images/12_Navigating_to_system.png" />   </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="Naming TempSYSTEM" class="glightbox" src="../images/Manual_Removal_Images/13_Naming_TempSYSTEM.png" />   </p>
+</div>
+</div>
+</div>
+<h3 id="part-4-finding-and-deleting-the-correct-hidhide-entries">Part 4: Finding and deleting the correct HidHide entries</h3>
+<p>In this step we'll search for and delete ONLY the HidHide entries related to the "Class UpperFilter".</p>
+<ol>
+<li>Highlight, by clicking on it, the <code>_TempSYSTEM</code> entry that now appears under <code>HKEY_LOCAL_MACHINE</code></li>
+<li>Press <code>Ctrl + F</code> to open the Search menu, then write <code>HidHide</code> in the search box</li>
+<li>Use the [Find Next] to search throughout the registry for the <code>UpperFilter</code> entries that have <code>HidHide</code> as their DATA. Once you confirm you have the correct item, delete them (double check if you have the correct item by looking at the images below)<ul>
+<li><strong>You MUST NOT delete the whole folder nor any other entries</strong> (please, check the images)</li>
+<li><strong>The entries that need to be deleted are</strong>...:<ul>
+<li>the <code>UpperFilter / HidHide</code> entry in the same list as the <code>Class / XboxComposite</code> entry</li>
+<li>the <code>UpperFilter / HidHide</code> entry in the same list as the <code>Class / HIDClass</code> entry</li>
+<li>the <code>UpperFilter / HidHide</code> entry in the same list as the <code>Class /XnaComposite</code> entry</li>
+</ul>
+</li>
+<li>Remember that:<ul>
+<li>You can always re-open the search box by pressing <code>Ctrl + F</code></li>
+<li>If you accidentaly miss one of them, just keep hitting the [Find Next] button in the search box and it will keep cycling over the registry</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Step 1 and 2</label><label for="__tabbed_3_2">Step 3 - XboxComposite</label><label for="__tabbed_3_3">Step 3 - HIDClass</label><label for="__tabbed_3_4">Step 3 - XnaComposite</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="14_Highlight_TempSystem_then_Search" class="glightbox" src="../images/Manual_Removal_Images/14_Highlight_TempSystem_then_Search.png" />   </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="15_Delete_XboxComp_upperfilter" class="glightbox" src="../images/Manual_Removal_Images/15_Delete_XboxComp_upperfilter.png" />   </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="17_Delete_HID_upperfilter" class="glightbox" src="../images/Manual_Removal_Images/17_Delete_HID_upperfilter.png" />   </p>
+</div>
+<div class="tabbed-block">
+<p><img alt="19_Delete_XnaComp_upperfilter" class="glightbox" src="../images/Manual_Removal_Images/19_Delete_XnaComp_upperfilter.png" /></p>
+</div>
+</div>
+</div>
+<details class="note">
+<summary>Full address of where the entries reside</summary>
+<p>The full registry locations for where the entries with [ Name: UpperFilter / Data: HidHide ] are located are:</p>
+<ul>
+<li>XboxComposite: <code>Computer\HKEY_LOCAL_MACHINE\_TempSYSTEM\ControlSet001\Control\Class\{05f5cfe2-4733-4950-a6bb-07aad01a3a84}</code></li>
+<li>HIDClass: <code>Computer\HKEY_LOCAL_MACHINE\_TempSYSTEM\ControlSet001\Control\Class\{745a17a0-74d3-11d0-b6fe-00a0c90f57da}</code></li>
+<li>XnaComposite: <code>Computer\HKEY_LOCAL_MACHINE\_TempSYSTEM\ControlSet001\Control\Class\{d61ca365-5af4-4486-998b-9db4734c6ca3}</code></li>
+</ul>
+</details>
+<h3 id="part-5-finishing-steps">Part 5: Finishing steps</h3>
+<ol>
+<li>On the left side, look again for the <code>_TempSYSTEM</code> item/folder then select it so it stays highlighted/marked</li>
+<li>On the top of the Registry Editor window, click on the [File] tab then [Unload hive]<ul>
+<li>If for some reason there is a "access denied" message when attempting to unload the hive, then do the following:<ol>
+<li>close the Registry Editor window and then close the Command Prompt</li>
+<li>open again the command prompt then type "regedit" to open the registry editor once more</li>
+<li>Highlight the _TempSYSTEM folder inside the HKEY_LOCAL_MACHINE and then attempt to unload the hive again</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Confirm that the <code>_TempSYSTEM</code> item vanished, then close the Registry Editor and then the Command Prompt (black window)</li>
+<li>Boot again into Windows by using the [Continue / Exit and continue to Windows] option or any other reboot option then test your Keyboard/Mouse</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Step 1 and 2</label><label for="__tabbed_4_2">Step 3</label><label for="__tabbed_4_3">Step 4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="20_Highlight_TempSYSTEM_then_Unload_Hive" class="glightbox" src="../images/Manual_Removal_Images/20_Highlight_TempSYSTEM_then_Unload_Hive.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="21_ClosingRegeditThenCMD" class="glightbox" src="../images/Manual_Removal_Images/21_ClosingRegeditThenCMD.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="22_RebootIntoWindows" class="glightbox" src="../images/Manual_Removal_Images/22_RebootIntoWindows.png" /></p>
+</div>
+</div>
+</div>
+<h2 id="credits-and-sources">Credits and sources</h2>
+<ul>
+<li>Guide adapted from <a href="https://github.com/x360ce/x360ce/wiki/HID-Guardian#how-to-remove-hid-guardian-if-access-to-your-mouse-and-keyboard-is-lost">x360ce's HidGuardian page</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2020 - 2023 <a href="https://github.com/nefarius" target="_blank" rel="noopener">Benjamin Höglinger-Stelzer</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ViGEm" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.vigem.org" target="_blank" rel="noopener" title="discord.vigem.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+  <!-- Add scripts that need to run before here -->
+  
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../../javascripts/glightbox.js"></script>
+        
+      
+        
+          <script src="../../../javascripts/main.js"></script>
+        
+      
+    
+  <!-- Add scripts that need to run afterwards here -->
+  <script type="module" src="https://esm.sh/emfed"></script>
+
+  </body>
+</html>
