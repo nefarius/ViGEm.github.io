@@ -38,7 +38,7 @@ A few videos about various topics and progress reports over the development cycl
 
 <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/2020-03-18-15-28-03-DsHidMini-Demo-PCSX2-1.5.0/d9e08359adf4763130b007161be0853271e4a146?r=EF18PBBCqrYYikMYYk7Gkq32SAU7j8H1" allowfullscreen></iframe>
 
-!!! important "Copyright (C) 2020-2021 - Nefarius Software Solutions e.U."
+!!! important "Copyright (C) 2020-2023 - Nefarius Software Solutions e.U."
     This is a community project and not affiliated with Sony Interactive Entertainment Inc. in any way.
 
     "PlayStation", "PSP", "PS2", "PS one", "DUALSHOCK" and "SIXAXIS" are registered trademarks of Sony Interactive Entertainment Inc.
