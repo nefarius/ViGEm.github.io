@@ -1,3 +1,9 @@
+---
+
+⚠️ This content got migrated over to [docs.nefarius.at](https://github.com/nefarius/docs.nefarius.at) in July 2023, this repository will no longer be maintained. ⚠️
+
+---
+
 # ViGEm.github.io
 
 Sources of [ViGEm Website](https://vigem.github.io/).
